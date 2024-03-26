@@ -1,0 +1,84 @@
+# https://help.github.com/en/categories/automating-your-workflow-with-github-actions
+
+name: "Lint"
+
+on: # yamllint disable-line rule:truthy
+    # eslint-disable-next-line yml/no-empty-mapping-value
+    pull_request: # yamllint disable-line rule:empty-values
+        types: ["opened", "synchronize"]
+    merge_group: # yamllint disable-line rule:empty-values
+
+concurrency:
+    group: "ci-lint-${{ github.ref }}-1"
+    cancel-in-progress: true
+
+permissions:
+    contents: "read" # to fetch code (actions/checkout)
+
+jobs:
+    yaml-lint:
+        name: "Lint (yaml)"
+        runs-on: "ubuntu-latest"
+        steps:
+            - name: "Harden Runner"
+              uses: "step-security/harden-runner@63c24ba6bd7ba022e95695ff85de572c04a18142" # v2.7.0
+              with:
+                  egress-policy: "audit"
+
+            - name: "Git checkout ${{ env.HEAD_REPOSITORY }}:${{ env.HEAD_REF }}"
+              uses: "actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11" # v4.1.1
+              env:
+                  GIT_COMMITTER_NAME: "GitHub Actions Shell"
+                  GIT_AUTHOR_NAME: "GitHub Actions Shell"
+                  EMAIL: "github-actions[bot]@users.noreply.github.com"
+
+            - name: "Lint YAML files"
+              uses: "ibiqlik/action-yamllint@2576378a8e339169678f9939646ee3ee325e845c" # v3.1.1
+              with:
+                  config_file: ".yamllint.yaml"
+                  file_or_dir: "."
+                  strict: true
+
+    lint-workflows:
+        runs-on: "ubuntu-latest"
+        steps:
+            - name: "Harden Runner"
+              uses: "step-security/harden-runner@63c24ba6bd7ba022e95695ff85de572c04a18142" # v2.7.0
+              with:
+                  egress-policy: "audit"
+
+            - name: "Git checkout"
+              uses: "actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11" # v4.1.1
+              env:
+                  GIT_COMMITTER_NAME: "GitHub Actions Shell"
+                  GIT_AUTHOR_NAME: "GitHub Actions Shell"
+                  EMAIL: "github-actions[bot]@users.noreply.github.com"
+
+            # From https://github.com/rhysd/actionlint/blob/main/docs/usage.md#use-actionlint-on-github-actions
+            - name: "Lint github workflows"
+              run: |
+                  bash <(curl https://raw.githubusercontent.com/rhysd/actionlint/main/scripts/download-actionlint.bash)
+                  # The -ignore flag is used to ignore a specific error for a working solution in test.yml
+                  ./actionlint -color -shellcheck=""
+
+    # This check runs once all dependant jobs have passed
+    # It symbolizes that all required Frontend checks have succesfully passed (Or skipped)
+    # This check is the only required Github check
+    test-required-check:
+        needs: ["yaml-lint", "lint-workflows"] # TODO add "markdown-lint"
+        name: "Check Lint Run"
+        # This is necessary since a failed/skipped dependent job would cause this job to be skipped
+        if: "always()"
+        runs-on: "ubuntu-22.04"
+        steps:
+            # If any jobs we depend on fail, we will fail since this is a required check
+            # NOTE: A timeout is considered a failure
+            - name: "Harden Runner"
+              uses: "step-security/harden-runner@63c24ba6bd7ba022e95695ff85de572c04a18142" # v2.7.0
+              with:
+                  egress-policy: "audit"
+
+            - name: "Check for failures"
+              if: "contains(needs.*.result, 'failure') || contains(needs.*.result, 'cancelled')"
+              run: |
+                  echo "One of the dependent jobs have failed. You may need to re-run it." && exit 1
