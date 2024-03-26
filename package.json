@@ -1,0 +1,39 @@
+{
+    "name": "gh-actions",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "audit": "pnpm dlx audit-ci@^6 --config ./audit-ci.jsonc",
+        "preinstall": "node verify-node-version.cjs && npx only-allow pnpm",
+        "prepare": "is-ci || husky install || exit 0",
+        "sort-package-json": "sort-package-json ./package.json"
+    },
+    "dependencies": {
+        "@anolilab/commitlint-config": "^5.0.3",
+        "@anolilab/lint-staged-config": "^2.1.7",
+        "@anolilab/prettier-config": "^5.0.14",
+        "@anolilab/semantic-release-preset": "^8.0.3",
+        "@commitlint/cli": "^19.2.1",
+        "@commitlint/config-conventional": "^19.1.0",
+        "@secretlint/secretlint-rule-preset-recommend": "^8.1.2",
+        "commitizen": "^4.3.0",
+        "cross-env": "^7.0.3",
+        "husky": "^9.0.11",
+        "is-ci": "^3.0.1",
+        "lint-staged": "^15.2.2",
+        "prettier": "^3.2.5",
+        "secretlint": "8.1.2",
+        "semantic-release": "^23.0.5",
+        "sort-package-json": "^2.8.0"
+    },
+    "packageManager": "pnpm@8.15.5",
+    "engines": {
+        "node": ">=18.* <=21.*"
+    },
+    "pnpm": {
+        "overrides": {
+            "@commitlint/config-conventional": "^19.1.0",
+            "typescript": "^5.4.3"
+        }
+    }
+}
