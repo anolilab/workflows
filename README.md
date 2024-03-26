@@ -49,6 +49,6 @@ We have a list of [good first issues](https://github.com/visulima/visulima/label
 
 ## License
 
-The anolilab gh-actions is open-sourced software licensed under the [MIT][license-url]
+The anolilab workflows is open-sourced software licensed under the [MIT][license-url]
 
 [license-url]: LICENSE.md "license"

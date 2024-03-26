@@ -186,7 +186,7 @@ repository:
     has_wiki: false
     enable_vulnerability_alerts: true
     enable_automated_security_fixes: true
-    name: "gh-actions"
+    name: "workflows"
     private: false
 
     # https://developer.github.com/v3/repos/branches/#remove-branch-protection
