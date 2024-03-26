@@ -31,7 +31,7 @@ jobs:
     allo-allo:
         if: "github.repository == inputs.target-repo"
         name: "The welcome bot"
-        runs-on: ubuntu-latest
+        runs-on: "ubuntu-latest"
 
         steps:
             - name: "AlloAllo"
