@@ -19,7 +19,7 @@ jobs:
             issues: "write" # for actions/stale to close stale issues
             pull-requests: "write" # for actions/stale to close stale PRs
         timeout-minutes: 1
-        if: github.repository == inputs.target-repo
+        if: "github.repository == inputs.target-repo"
         runs-on: "ubuntu-latest"
         steps:
             - name: "Harden Runner"
@@ -45,7 +45,7 @@ jobs:
             issues: "write" # for actions/stale to close stale issues
             pull-requests: "write" # for actions/stale to close stale PRs
         timeout-minutes: 1
-        if: github.repository == inputs.target-repo
+        if: "github.repository == inputs.target-repo"
         runs-on: "ubuntu-latest"
         steps:
             - name: "Harden Runner"
@@ -69,7 +69,7 @@ jobs:
             issues: "write" # for actions/stale to close stale issues
             pull-requests: "write" # for actions/stale to close stale PRs
         timeout-minutes: 1
-        if: github.repository == inputs.target-repo
+        if: "github.repository == inputs.target-repo"
         runs-on: "ubuntu-latest"
         steps:
             - name: "Harden Runner"
@@ -93,7 +93,7 @@ jobs:
             issues: "write" # for actions/stale to close stale issues
             pull-requests: "write" # for actions/stale to close stale PRs
         timeout-minutes: 1
-        if: github.repository == inputs.target-repo
+        if: "github.repository == inputs.target-repo"
         runs-on: "ubuntu-latest"
         steps:
             - name: "Harden Runner"
