@@ -177,7 +177,7 @@ repository:
     archived: false
     default_branch: "main"
     delete_branch_on_merge: true
-    description: "Shared github action workflows for Single and Mono Repository Node projects."
+    description: "Shared Github Actions for Node.js projects and Monorepos."
     has_discussions: true
     has_downloads: true
     has_issues: true
