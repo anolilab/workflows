@@ -5,8 +5,8 @@ settings:
   excludeLinksFromLockfile: false
 
 overrides:
-  typescript: ^5.4.3
   '@commitlint/config-conventional': ^19.1.0
+  typescript: ^5.4.3
 
 dependencies:
   '@anolilab/commitlint-config':
