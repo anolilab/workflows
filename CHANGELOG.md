@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/anolilab/workflows/compare/v1.1.0...v1.1.1) (2024-05-20)
+
+
+### Bug Fixes
+
+* fixed wrong link in doc of set-default-labels.md ([57a0600](https://github.com/anolilab/workflows/commit/57a06002fa6142d8affb6fc3d4d5e7ae19f7bd1f))
+
 ## [1.1.0](https://github.com/anolilab/workflows/compare/v1.0.1...v1.1.0) (2024-05-20)
 
 
