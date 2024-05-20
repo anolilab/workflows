@@ -15,19 +15,19 @@ on: # yamllint disable-line rule:truthy
                 required: false
                 type: "boolean"
             dry-run:
-                description: "If enabled, changes will not be applied.",
+                description: "If enabled, changes will not be applied."
                 default: "${{ github.event_name == 'pull_request' }}"
                 required: false
                 type: "boolean"
             yaml-file:
-                description: "Path to YAML file containing labels definitions.",
+                description: "Path to YAML file containing labels definitions."
                 default: ".github/labels.yml"
                 required: false
                 type: "string"
 
 permissions:
-  # Issues and related comments, assignees, labels, and milestones.
-  issues: write
+    # Issues and related comments, assignees, labels, and milestones.
+    issues: "write"
 
 jobs:
     set-default-labels:
