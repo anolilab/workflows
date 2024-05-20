@@ -41,7 +41,7 @@ jobs:
                 egress-policy: "audit"
 
             - name: "AlloAllo"
-              uses: "mechanical-ink/allo-allo@v1.0.1"
+              uses: "mechanical-ink/allo-allo@a73509525c37fba22bc0d0c4a076c6d6b963fb06" # v1.0.1
               with:
                   issueWelcome: "${{ inputs.issue-welcome }}"
                   prWelcome: "${{ inputs.pr-welcome }}"
