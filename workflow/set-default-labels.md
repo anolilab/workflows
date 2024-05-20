@@ -35,24 +35,20 @@ This is an optional `boolean` input that is `"${{ github.event_name == 'pull_req
 
 ## Usage
 
-In the repository that will call this action, you will need to create the following file: `.github/labels.json`. The content of the file can be something like the following:
+In the repository that will call this action, you will need to create the following file: `.github/labels.yaml`. The content of the file can be something like the following:
 
-```json
-[
-    {
-        "name": "bug",
-        "color": "#d73a4a",
-        "description": "something isn’t working"
-    },
-    {
-        "name": "chore",
-        "color": "#fef2c0",
-        "description": "keeping the lights on"
-    }
-]
+```yaml
+- name: "help wanted"
+  description: "Extra attention is needed"
+  color: "008672"
+
+- name: "breaking change"
+  description: "Cannot be merged when next version is not a major release"
+  color: "B05D08"
+
 ```
 
-You can find more details about the above on the [issue-label-manager-action documentation](https://github.com/marketplace/actions/issue-label-manager-action#issue-label-manager-action). The next item you need to create in the repository that will call this action, is a workflow file. You can name the file `workflows/set-default-labels.yml` and add the following content:
+You can find more details about the above on the [ghaction-github-labeler](https://github.com/crazy-max/ghaction-github-labeler). The next item you need to create in the repository that will call this action, is a workflow file. You can name the file `workflows/set-default-labels.yml` and add the following content:
 
 ### With defaults
 
