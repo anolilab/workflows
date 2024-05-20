@@ -26,6 +26,10 @@ inputs:
         description: "The node.js version to use"
         required: false
         default: "18"
+    upgrade-npm-version:
+        description: "The npm version to use"
+        required: false
+        default: "true"
     npm-version:
         description: "The npm version to use"
         required: false
@@ -71,6 +75,7 @@ runs:
 
         # @see: npm install -g npm@latest is necessary to make provenance available. More info: https://docs.npmjs.com/generating-provenance-statements
         - name: "Upgrade npm to ${{ inputs.npm-version }} version"
+          if: "inputs.upgrade-npm-version == 'true'"
           shell: "bash"
           run: "npm install --global npm@${{ inputs.npm-version }}"
           env:
@@ -159,3 +164,7 @@ runs:
           if: "inputs.enable-node-modules-cache == 'true'"
           shell: "bash"
           run: "tar -cf - node_modules | lz4 > /tmp/node_modules.tar.lz4" # compress node_modules
+
+        - name: "npm v8.5+ requires workspaces-update to be set to false"
+          shell: "bash"
+          run: "echo 'workspaces-update=false' >> .npmrc"
