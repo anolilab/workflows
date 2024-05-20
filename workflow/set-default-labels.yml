@@ -34,7 +34,18 @@ jobs:
         if: "github.repository == inputs.target-repo"
         runs-on: "ubuntu-latest"
         steps:
-            - uses: "actions/checkout@v4"
+            - name: "Harden Runner"
+              uses: "step-security/harden-runner@63c24ba6bd7ba022e95695ff85de572c04a18142" # v2.7.0
+              with:
+                egress-policy: "audit"
+
+            - name: "Git checkout"
+              uses: "actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11" # v4.1.1
+              env:
+                  GIT_COMMITTER_NAME: "GitHub Actions Shell"
+                  GIT_AUTHOR_NAME: "GitHub Actions Shell"
+                  EMAIL: "github-actions[bot]@users.noreply.github.com"
+
             - uses: "crazy-max/ghaction-github-labeler@de749cf181958193cb7debf1a9c5bb28922f3e1b" # v5.0.0
               with:
                   github-token: "${{ secrets.GITHUB_TOKEN }}"

@@ -28,6 +28,11 @@ jobs:
         if: "github.repository == inputs.target-repo"
         runs-on: "ubuntu-latest"
         steps:
+            - name: "Harden Runner"
+              uses: "step-security/harden-runner@63c24ba6bd7ba022e95695ff85de572c04a18142" # v2.7.0
+              with:
+                egress-policy: "audit"
+
             - uses: "dessant/lock-threads@v5"
               with:
                   issue-inactive-days: "${{ inputs.issue-inactive-days }}"
