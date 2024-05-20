@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/anolilab/workflows/compare/v1.0.0...v1.0.1) (2024-05-20)
+
+
+### Bug Fixes
+
+* fixed set-default-labels.yml ([84284de](https://github.com/anolilab/workflows/commit/84284de518d89599a4628e40e532eebec7082995))
+
 ## 1.0.0 (2024-05-20)
 
 
