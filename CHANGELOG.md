@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/anolilab/workflows/compare/v1.2.0...v1.2.1) (2024-05-20)
+
+
+### Bug Fixes
+
+* added cleanup-branch-cache permissions ([2a834c8](https://github.com/anolilab/workflows/commit/2a834c83c4ff35b7327ebc6d47aef4f3159478ea))
+
 ## [1.2.0](https://github.com/anolilab/workflows/compare/v1.1.1...v1.2.0) (2024-05-20)
 
 
