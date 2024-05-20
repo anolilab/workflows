@@ -9,11 +9,25 @@ on: # yamllint disable-line rule:truthy
                 description: "The repo to run this action on. This is to prevent actions from running on forks unless intended."
                 required: true
                 type: "string"
-            should-delete-labels:
+            skip-delete:
                 description: "Delete labels that are not in the list"
                 default: false
                 required: false
                 type: "boolean"
+            dry-run:
+                description: "If enabled, changes will not be applied.",
+                default: "${{ github.event_name == 'pull_request' }}"
+                required: false
+                type: "boolean"
+            yaml-file:
+                description: "Path to YAML file containing labels definitions.",
+                default: ".github/labels.yml"
+                required: false
+                type: "string"
+
+permissions:
+  # Issues and related comments, assignees, labels, and milestones.
+  issues: write
 
 jobs:
     set-default-labels:
@@ -21,8 +35,9 @@ jobs:
         runs-on: "ubuntu-latest"
         steps:
             - uses: "actions/checkout@v4"
-            - uses: "lannonbr/issue-label-manager-action@4.0.0"
-              env:
-                  GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+            - uses: "crazy-max/ghaction-github-labeler@de749cf181958193cb7debf1a9c5bb28922f3e1b" # v5.0.0
               with:
-                  delete: "${{ inputs.should-delete-labels }}"
+                  github-token: "${{ secrets.GITHUB_TOKEN }}"
+                  yaml-file: "${{ inputs.yaml-file }}"
+                  dry-run: "${{ inputs.dry-run }}"
+                  skip-delete: "${{ inputs.skip-delete }}"

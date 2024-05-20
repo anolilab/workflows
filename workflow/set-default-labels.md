@@ -21,9 +21,17 @@ Specify the target repository this action should run on. This is used to prevent
 
 ### Optional inputs
 
-#### should-delete-labels
+#### skip-delete
 
-This is an optional `boolean` input that is `false` by default. If set to `true`, the action will delete any existing labels that are not listed in the JSON file mentioned previously.
+This is an optional `boolean` input that is `false` by default. If set to `true`, the action will not delete labels not found in the YAML file.
+
+#### yaml-file
+
+Path to YAML file containing labels definitions. `(default .github/labels.yml)`
+
+#### dry-run
+
+This is an optional `boolean` input that is `"${{ github.event_name == 'pull_request' }}"` by default. If set to `true`, changes will not be applied.
 
 ## Usage
 
@@ -72,7 +80,7 @@ jobs:
         uses: "anolilab/workflows/workflow/set-default-labels.yml@main"
         with:
             target-repo: "anolilab/workflows"
-            should-delete-labels: true
+            skip-delete: false
 ```
 
 Because of the nature of this action, it must be run manually. You can learn more about [manually running actions on GitHub](https://docs.github.com/en/actions/managing-workflow-runs/manually-running-a-workflow).

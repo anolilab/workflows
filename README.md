@@ -18,6 +18,15 @@ To use these workflows, simply reference them from your project's workflows. Ins
 
 Read more about [reusing workflows](https://docs.github.com/en/actions/using-workflows/reusing-workflows).
 
+### Repository Settings
+
+Configure GitHub Actions permissions: Go to repo Settings > Actions > General and make sure to
+configure the following:
+
+- `Actions permissions` should be set to `Allow all actions and reusable workflows`
+- `Workflow permissions` should be set to `Read and write permissions`, and make sure the
+  `Allow GitHub Actions to create and approve pull requests` option is active.
+
 ## Available steps and workflows
 
 ### Steps
