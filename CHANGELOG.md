@@ -1,3 +1,10 @@
+## [1.2.2](https://github.com/anolilab/workflows/compare/v1.2.1...v1.2.2) (2024-05-20)
+
+
+### Bug Fixes
+
+* use git hash as version ([8e96cc1](https://github.com/anolilab/workflows/commit/8e96cc1ce9c603fadf010fc7aa8cae829ae1ca4d))
+
 ## [1.2.1](https://github.com/anolilab/workflows/compare/v1.2.0...v1.2.1) (2024-05-20)
 
 
