@@ -1,3 +1,15 @@
+## [1.1.0](https://github.com/anolilab/workflows/compare/v1.0.1...v1.1.0) (2024-05-20)
+
+
+### Features
+
+* added step-security ([bd2c2f6](https://github.com/anolilab/workflows/commit/bd2c2f605f3b267a879605459a145f314c7aa937))
+
+
+### Miscellaneous Chores
+
+* **deps:** update pnpm/action-setup action to v4 ([#24](https://github.com/anolilab/workflows/issues/24)) ([a377305](https://github.com/anolilab/workflows/commit/a377305c56d3684230b27bbf2f94881e45d9a09a))
+
 ## [1.0.1](https://github.com/anolilab/workflows/compare/v1.0.0...v1.0.1) (2024-05-20)
 
 
