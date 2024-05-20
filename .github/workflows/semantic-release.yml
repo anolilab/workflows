@@ -55,13 +55,10 @@ jobs:
 
             - name: "Setup resources and environment"
               id: "setup"
-              uses: "./actions/setup"
+              uses: "./step/setup"
               with:
                   node-version: "18.x"
                   cache-prefix: "semantic-release"
-
-            - name: "npm v8.5+ requires workspaces-update to be set to false"
-              run: "echo 'workspaces-update=false' >> .npmrc"
 
             - name: "Semantic Release"
               if: "success()"
