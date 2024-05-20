@@ -1,4 +1,5 @@
-# https://help.github.com/en/categories/automating-your-workflow-with-github-actions
+# Note: this is a shared pipeline used by other repositories.
+# Docs: https://docs.github.com/en/actions/using-workflows/reusing-workflows
 
 name: "Lock old issues and pull requests"
 
