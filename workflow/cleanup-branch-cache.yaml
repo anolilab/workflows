@@ -1,3 +1,4 @@
+# From https://github.com/actions/cache/blob/main/tips-and-workarounds.md#force-deletion-of-caches-overriding-default-cache-eviction-policy
 name: "Cleanup caches by a branch"
 
 on: # yamllint disable-line rule:truthy
@@ -11,6 +12,11 @@ jobs:
     cleanup:
         if: "github.repository == inputs.target-repo"
         runs-on: "ubuntu-latest"
+        permissions:
+            # `actions:write` permission is required to delete caches
+            #   See also: https://docs.github.com/en/rest/actions/cache?apiVersion=2022-11-28#delete-a-github-actions-cache-for-a-repository-using-a-cache-id
+            actions: write
+            contents: read
         steps:
             - name: "Harden Runner"
               uses: "step-security/harden-runner@63c24ba6bd7ba022e95695ff85de572c04a18142" # v2.7.0
