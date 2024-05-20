@@ -5,7 +5,7 @@ The `set-default-labels` reusable action is located at [`./workflow/set-default-
 This reusable action depends on the following actions:
 
 -   [checkout](https://github.com/marketplace/actions/checkout)
--   [lannonbr/issue-label-manager-action](https://github.com/marketplace/actions/issue-label-manager-action)
+-   [crazy-max/ghaction-github-labeler](https://github.com/crazy-max/ghaction-github-labeler)
 
 ## Inputs
 
