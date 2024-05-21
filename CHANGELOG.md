@@ -1,3 +1,10 @@
+## [2.0.1](https://github.com/anolilab/workflows/compare/v2.0.0...v2.0.1) (2024-05-21)
+
+
+### Bug Fixes
+
+* fixed npm package audit, added new run-npm-audit option ([6f06744](https://github.com/anolilab/workflows/commit/6f0674409ae3baf074edbdd6d9ebf8bb4c8e6fd0))
+
 ## [2.0.0](https://github.com/anolilab/workflows/compare/v1.2.2...v2.0.0) (2024-05-21)
 
 
