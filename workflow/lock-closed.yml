@@ -12,9 +12,40 @@ on: # yamllint disable-line rule:truthy
                 type: "string"
             issue-inactive-days:
                 description: "The number of days before an issue is considered inactive."
-                default: "365"
+                default: "30"
                 required: false
                 type: "string"
+            issue-comment:
+                description: "Comment to post before locking an issue"
+                default: >
+                    This issue has been automatically locked since there has not been any recent activity after it was closed. Please open a new issue for related bugs.
+
+                    Please note this issue tracker is not a help forum. We recommend using our GitHub Discussions tab for questions.
+                required: false
+                type: "string"
+            pr-inactive-days:
+                description: "Number of days of inactivity before a closed pull request is locked"
+                default: "30"
+                required: false
+                type: "string"
+            pr-comment:
+                description: "Comment to post before locking a pull request"
+                default: >
+                    This pull request has been automatically locked since there has not been any recent activity after it was closed. Please open a new issue for related bugs.
+
+                    Please note this issue tracker is not a help forum. We recommend using our GitHub Discussions tab for questions.
+                required: false
+                type: "string"
+            exclude-any-issue-labels:
+                description: "Do not lock issues with any of these labels, value must be a comma separated list of labels or ''"
+                default: "p: 2-high,p: 3-urgent,do NOT merge yet,good first issue"
+                required: false
+                type: "string"
+            add-issue-labels:
+                description: "Labels to add before locking an issue, value must be a comma separated list of labels or ''"
+                default: "bot: closed"
+                required: false
+                type: string
 
 permissions:
     issues: "write"
@@ -35,4 +66,9 @@ jobs:
 
             - uses: "dessant/lock-threads@1bf7ec25051fe7c00bdd17e6a7cf3d7bfb7dc771" # v5.0.1
               with:
+                  exclude-any-issue-labels: "${{ inputs.exclude-any-issue-labels }}"
+                  add-issue-labels: "${{ inputs.add-issue-labels }}"
                   issue-inactive-days: "${{ inputs.issue-inactive-days }}"
+                  issue-comment: "${{ inputs.issue-comment }}"
+                  pr-inactive-days: "${{ inputs.pr-inactive-days }}"
+                  pr-comment: "${{ inputs.pr-comment }}"

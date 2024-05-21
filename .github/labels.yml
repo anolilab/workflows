@@ -123,3 +123,7 @@
 - name: "breaking change"
   description: "Cannot be merged when next version is not a major release"
   color: "B05D08"
+
+- name: "bot: closed"
+  description: ""
+  color: "fef2c0"
