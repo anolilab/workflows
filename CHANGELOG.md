@@ -1,3 +1,25 @@
+## [2.0.0](https://github.com/anolilab/workflows/compare/v1.2.2...v2.0.0) (2024-05-21)
+
+
+### ⚠ BREAKING CHANGES
+
+* Changed default of issue-inactive-days from 365 to 30
+
+### Features
+
+* added more options and defaults to lock-closed ([2ffc985](https://github.com/anolilab/workflows/commit/2ffc9855558793b6920f8f914fbc512082da3b0b))
+
+
+### Bug Fixes
+
+* fixed broken update of action ([fb0e155](https://github.com/anolilab/workflows/commit/fb0e155617f39acc057ae3e1657ede68d38a21be))
+* upgraded dessant/lock-threads version ([6d40f6f](https://github.com/anolilab/workflows/commit/6d40f6ff11c5587399f8af8bce31ac419a87bd7f))
+
+
+### Miscellaneous Chores
+
+* **release:** v1.2.3 [skip ci]\n\n## [1.2.3](https://github.com/anolilab/workflows/compare/v1.2.2...v1.2.3) (2024-05-21) ([c1f5847](https://github.com/anolilab/workflows/commit/c1f5847be7e4edcf57ef5e1d54c37af771a8bb80))
+
 ## [1.2.3](https://github.com/anolilab/workflows/compare/v1.2.2...v1.2.3) (2024-05-21)
 
 
