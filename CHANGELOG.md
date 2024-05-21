@@ -1,3 +1,10 @@
+## [1.2.3](https://github.com/anolilab/workflows/compare/v1.2.2...v1.2.3) (2024-05-21)
+
+
+### Bug Fixes
+
+* upgraded dessant/lock-threads version ([6d40f6f](https://github.com/anolilab/workflows/commit/6d40f6ff11c5587399f8af8bce31ac419a87bd7f))
+
 ## [1.2.2](https://github.com/anolilab/workflows/compare/v1.2.1...v1.2.2) (2024-05-20)
 
 
