@@ -7,7 +7,7 @@ It is intended to reduce "necrobumping" (the addition of comments, including spa
 
 This reusable action depends on the following actions:
 
--   [dessant/lock-threads@v3](https://github.com/dessant/lock-threads)
+-   [dessant/lock-threads@v5](https://github.com/dessant/lock-threads)
 
 ## Inputs
 
