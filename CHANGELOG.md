@@ -1,3 +1,10 @@
+## [2.0.3](https://github.com/anolilab/workflows/compare/v2.0.2...v2.0.3) (2024-05-22)
+
+
+### Bug Fixes
+
+* moved semantic-pull-request permission on level up ([2c48ac8](https://github.com/anolilab/workflows/commit/2c48ac8d531261ee13ecba0e2510e072c2eeb271))
+
 ## [2.0.2](https://github.com/anolilab/workflows/compare/v2.0.1...v2.0.2) (2024-05-22)
 
 
