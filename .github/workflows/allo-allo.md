@@ -61,7 +61,7 @@ on: # yamllint disable-line rule:truthy
 
 jobs:
     allo-allo:
-        uses: "anolilab/workflows/workflow/allo-allo.yml@main"
+        uses: "anolilab/workflows/.github/workflows/allo-allo.yml@main"
         with:
             target-repo: "anolilab/workflows"
             issue-welcome: >
@@ -96,7 +96,7 @@ on: # yamllint disable-line rule:truthy
 
 jobs:
     allo-allo:
-        uses: "anolilab/workflows/workflow/allo-allo.yml@main"
+        uses: "anolilab/workflows/.github/workflows/allo-allo.yml@main"
         with:
             target-repo: "anolilab/workflows"
             issue-welcome: |
@@ -122,7 +122,7 @@ on: # yamllint disable-line rule:truthy
 
 jobs:
     allo-allo:
-        uses: "anolilab/workflows/workflow/allo-allo.yml@main"
+        uses: "anolilab/workflows/.github/workflows/allo-allo.yml@main"
         with:
             target-repo: "anolilab/workflows"
             pr-welcome: >
@@ -149,7 +149,7 @@ on: # yamllint disable-line rule:truthy
 
 jobs:
     allo-allo:
-        uses: "anolilab/workflows/workflow/allo-allo.yml@main"
+        uses: "anolilab/workflows/.github/workflows/allo-allo.yml@main"
         with:
             target-repo: "anolilab/workflows"
             pr-merged: >

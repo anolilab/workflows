@@ -1,10 +1,15 @@
-# https://help.github.com/en/categories/automating-your-workflow-with-github-actions
+# Note: this is a shared pipeline used by other repositories.
+# Docs: https://docs.github.com/en/actions/using-workflows/reusing-workflows
 
-name: "Close stale issues"
+name: "Mark issues and pull requests as stale"
 
 on: # yamllint disable-line rule:truthy
-    schedule:
-        - cron: "0 0 * * *"
+    workflow_call:
+        inputs:
+            target-repo:
+                description: "The repo to run this action on. This is to prevent actions from running on forks unless intended."
+                required: true
+                type: "string"
 
 permissions:
     contents: "read"
@@ -15,6 +20,7 @@ jobs:
             issues: "write" # for actions/stale to close stale issues
             pull-requests: "write" # for actions/stale to close stale PRs
         timeout-minutes: 1
+        if: "github.repository == inputs.target-repo"
         runs-on: "ubuntu-latest"
         steps:
             - name: "Harden Runner"
@@ -40,6 +46,7 @@ jobs:
             issues: "write" # for actions/stale to close stale issues
             pull-requests: "write" # for actions/stale to close stale PRs
         timeout-minutes: 1
+        if: "github.repository == inputs.target-repo"
         runs-on: "ubuntu-latest"
         steps:
             - name: "Harden Runner"
@@ -63,6 +70,7 @@ jobs:
             issues: "write" # for actions/stale to close stale issues
             pull-requests: "write" # for actions/stale to close stale PRs
         timeout-minutes: 1
+        if: "github.repository == inputs.target-repo"
         runs-on: "ubuntu-latest"
         steps:
             - name: "Harden Runner"
@@ -86,9 +94,8 @@ jobs:
             issues: "write" # for actions/stale to close stale issues
             pull-requests: "write" # for actions/stale to close stale PRs
         timeout-minutes: 1
-
+        if: "github.repository == inputs.target-repo"
         runs-on: "ubuntu-latest"
-
         steps:
             - name: "Harden Runner"
               uses: "step-security/harden-runner@a4aa98b93cab29d9b1101a6143fb8bce00e2eac4" # v2.7.1

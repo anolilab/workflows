@@ -3,18 +3,19 @@
 name: "Semantic Pull Request"
 
 on: # yamllint disable-line rule:truthy
-    pull_request_target:
-        types:
-            - "opened"
-            - "reopened"
-            - "edited"
-            - "synchronize"
-    merge_group: # yamllint disable-line rule:empty-values
+    workflow_call:
+        inputs:
+            target-repo:
+                description: "The repo to run this action on. This is to prevent actions from running on forks unless intended."
+                required: true
+                type: "string"
 
-permissions: {}
+permissions:
+    contents: "read"
 
 jobs:
     main:
+        if: "github.repository == inputs.target-repo"
         permissions:
             pull-requests: "write" # to analyze PRs (amannn/action-semantic-pull-request)
             statuses: "write" # to mark status of analyzed PR (amannn/action-semantic-pull-request)
@@ -36,20 +37,17 @@ jobs:
                       build
                       chore
                       ci
-                      deps
                       docs
                       feat
                       fix
                       perf
+                      infra
                       refactor
                       revert
-                      security
-                      style
                       test
-                      translation
 
             - uses: "marocchino/sticky-pull-request-comment@331f8f5b4215f0445d3c07b4967662a32a2d3e31" # v2.9.0
-              # When the previous steps fails, the workflow would stop. By adding this
+              # When the previous steps fail, the workflow would stop. By adding this
               # condition you can continue the execution with the populated error message.
               if: "always() && (steps.lint_pr_title.outputs.error_message != null)"
               with:

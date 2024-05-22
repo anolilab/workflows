@@ -33,7 +33,7 @@ on: # yamllint disable-line rule:truthy
 
 jobs:
     cleanup-branch-cache:
-        uses: "anolilab/workflows/workflow/cleanup-branch-cache.yml@main"
+        uses: "anolilab/workflows/.github/workflows/cleanup-branch-cache.yml@main"
         with:
             target-repo: "anolilab/workflows"
 ```

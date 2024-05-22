@@ -81,7 +81,7 @@ on: # yamllint disable-line rule:truthy
 
 jobs:
     lock-closed:
-        uses: "anolilab/workflows/workflow/lock-closed.yml@main"
+        uses: "anolilab/workflows/.github/workflows/lock-closed.yml@main"
         with:
             target-repo: "anolilab/workflows"
 ```
@@ -98,7 +98,7 @@ on: # yamllint disable-line rule:truthy
 
 jobs:
     lock-closed:
-        uses: "anolilab/workflows/workflow/lock-closed.yml@main"
+        uses: "anolilab/workflows/.github/workflows/lock-closed.yml@main"
         with:
             issue-inactive-days: 42
             target-repo: "anolilab/workflows"

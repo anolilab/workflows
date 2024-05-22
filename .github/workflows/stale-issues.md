@@ -31,7 +31,7 @@ on: # yamllint disable-line rule:truthy
 
 jobs:
     stale-issues:
-        uses: anolilab/workflows/workflow/stale-issues.yml@main
+        uses: anolilab/workflows/.github/workflows/stale-issues.yml@main
         with:
             target-repo: "anolilab/workflows"
 ```

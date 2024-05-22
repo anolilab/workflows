@@ -36,10 +36,12 @@ configure the following:
 
 ### Workflows
 
-- [allo-allo](./workflow/allo-allo.yml) ([docs](./workflow/allo-allo.md)) - a welcome bot for new contributors
-- [lock-closed](./workflow/lock-closed.yml) ([docs](./workflow/lock-closed.md)) - locks issues and PRs that have been closed for more than a year
-- [stale-issues](./workflow/stale-issues.yml) ([docs](./workflow/stale-issues.md)) - closes stale issues
-- [set-default-labels](./workflow/set-default-labels.yml) ([docs](./workflow/set-default-labels.md)) - sets default labels on issues and PRs
+- [allo-allo](./.github/workflows/allo-allo.yml) ([docs](./.github/workflows/allo-allo.md)) - a welcome bot for new contributors
+- [cleanup-branch-cache](./.github/workflows/cleanup-branch-cache.yml) ([docs](./.github/workflows/cleanup-branch-cache.md)) - automatically cleans all cache key if a branch is closed.
+- [lock-closed](./.github/workflows/lock-closed.yml) ([docs](./.github/workflows/lock-closed.md)) - locks issues and PRs that have been closed for more than a year
+- [semantic-pull-request](./.github/workflows/semantic-pull-request.yml) ([docs](./.github/workflows/semantic-pull-request.md)) - validates if the PR title has a defined semantic title
+- [set-default-labels](./.github/workflows/set-default-labels.yml) ([docs](./.github/workflows/set-default-labels.md)) - sets default labels on issues and PRs
+- [stale-issues](./.github/workflows/stale-issues.yml) ([docs](./.github/workflows/stale-issues.md)) - closes stale issues
 
 ## Contributing
 

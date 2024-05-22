@@ -59,7 +59,7 @@ on: # yamllint disable-line rule:truthy
 
 jobs:
     set-default-labels:
-        uses: "anolilab/workflows/workflow/set-default-labels.yml@main"
+        uses: "anolilab/workflows/.github/workflows/set-default-labels.yml@main"
         with:
             target-repo: "anolilab/workflows"
 ```
@@ -73,7 +73,7 @@ on: # yamllint disable-line rule:truthy
 
 jobs:
     set-default-labels:
-        uses: "anolilab/workflows/workflow/set-default-labels.yml@main"
+        uses: "anolilab/workflows/.github/workflows/set-default-labels.yml@main"
         with:
             target-repo: "anolilab/workflows"
             skip-delete: false
