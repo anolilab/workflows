@@ -1,3 +1,10 @@
+## [2.0.2](https://github.com/anolilab/workflows/compare/v2.0.1...v2.0.2) (2024-05-22)
+
+
+### Bug Fixes
+
+* moved workflow files into the .github/workflows folder to run the workflows ([8f8a32b](https://github.com/anolilab/workflows/commit/8f8a32b8102a25f05e4a812c64db1ed2e59867a5))
+
 ## [2.0.1](https://github.com/anolilab/workflows/compare/v2.0.0...v2.0.1) (2024-05-21)
 
 
