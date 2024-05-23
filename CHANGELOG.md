@@ -1,3 +1,10 @@
+## [2.2.0](https://github.com/anolilab/workflows/compare/v2.1.0...v2.2.0) (2024-05-23)
+
+
+### Features
+
+* show in witch folder codecov runs ([6a4b825](https://github.com/anolilab/workflows/commit/6a4b825ffe2d8cfac00cc0ed76ac0758463819c4))
+
 ## [2.1.0](https://github.com/anolilab/workflows/compare/v2.0.3...v2.1.0) (2024-05-23)
 
 
