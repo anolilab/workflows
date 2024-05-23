@@ -1,3 +1,15 @@
+## [2.1.0](https://github.com/anolilab/workflows/compare/v2.0.3...v2.1.0) (2024-05-23)
+
+
+### Features
+
+* added exclude-projects to codecov ([5c3eca4](https://github.com/anolilab/workflows/commit/5c3eca488fecb72ca2ce0fc5af69993d13cb3b64))
+
+
+### Reverts
+
+* moving permissions back ([24c23f9](https://github.com/anolilab/workflows/commit/24c23f9d4503980cadf0169e0b94c959273c6293))
+
 ## [2.0.3](https://github.com/anolilab/workflows/compare/v2.0.2...v2.0.3) (2024-05-22)
 
 
