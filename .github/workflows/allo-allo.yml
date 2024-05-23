@@ -38,7 +38,7 @@ jobs:
             - name: "Harden Runner"
               uses: "step-security/harden-runner@63c24ba6bd7ba022e95695ff85de572c04a18142" # v2.7.0
               with:
-                egress-policy: "audit"
+                  egress-policy: "audit"
 
             - name: "AlloAllo"
               uses: "mechanical-ink/allo-allo@a73509525c37fba22bc0d0c4a076c6d6b963fb06" # v1.0.1

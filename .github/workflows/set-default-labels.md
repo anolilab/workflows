@@ -45,7 +45,6 @@ In the repository that will call this action, you will need to create the follow
 - name: "breaking change"
   description: "Cannot be merged when next version is not a major release"
   color: "B05D08"
-
 ```
 
 You can find more details about the above on the [ghaction-github-labeler](https://github.com/crazy-max/ghaction-github-labeler). The next item you need to create in the repository that will call this action, is a workflow file. You can name the file `workflows/set-default-labels.yml` and add the following content:

@@ -45,7 +45,7 @@ on: # yamllint disable-line rule:truthy
                 description: "Labels to add before locking an issue, value must be a comma separated list of labels or ''"
                 default: "bot: closed"
                 required: false
-                type: string
+                type: "string"
 
 permissions:
     issues: "write"
@@ -62,7 +62,7 @@ jobs:
             - name: "Harden Runner"
               uses: "step-security/harden-runner@63c24ba6bd7ba022e95695ff85de572c04a18142" # v2.7.0
               with:
-                egress-policy: "audit"
+                  egress-policy: "audit"
 
             - uses: "dessant/lock-threads@1bf7ec25051fe7c00bdd17e6a7cf3d7bfb7dc771" # v5.0.1
               with:
