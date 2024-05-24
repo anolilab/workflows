@@ -1,3 +1,21 @@
+## [2.2.1](https://github.com/anolilab/workflows/compare/v2.2.0...v2.2.1) (2024-05-24)
+
+
+### Bug Fixes
+
+* deleting .github/settings.yml ([7e2cfbd](https://github.com/anolilab/workflows/commit/7e2cfbdc127b7e05d20e086b45544a147f19d610))
+
+
+### Styles
+
+* cs fixes ([19cf46f](https://github.com/anolilab/workflows/commit/19cf46fef43ca48c9654b133d85a3fa52e4a649b))
+
+
+### Miscellaneous Chores
+
+* **deps:** update actions/checkout action to v4.1.6 ([#25](https://github.com/anolilab/workflows/issues/25)) ([0135a7e](https://github.com/anolilab/workflows/commit/0135a7e51f879e368df4fb842fcbc2f76b0de820))
+* **deps:** update dependency @anolilab/semantic-release-preset to ^8.1.0 ([#22](https://github.com/anolilab/workflows/issues/22)) ([47e71cf](https://github.com/anolilab/workflows/commit/47e71cf799f5e83c7b479117fe34e213d18664d1))
+
 ## [2.2.0](https://github.com/anolilab/workflows/compare/v2.1.0...v2.2.0) (2024-05-23)
 
 
