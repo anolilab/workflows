@@ -34,6 +34,10 @@ inputs:
         description: "Run the audit-ci audit before we run pnpm install"
         required: false
         default: "true"
+    run-signatures-audit:
+        description: "Run the npm audit signatures after we run pnpm install"
+        required: false
+        default: "true"
     npm-version:
         description: "The npm version to use"
         required: false
@@ -50,6 +54,10 @@ inputs:
         description: "Install Cypress Binary"
         required: false
         default: "false"
+    audit-ci-version:
+        description: "The audit-ci version to use"
+        required: false
+        default: "^7"
 
 runs:
     using: "composite"
@@ -146,10 +154,10 @@ runs:
           shell: "bash"
           run: "lz4 -d /tmp/nx_cache.tar.lz4 | tar -xf - ;" # decompress nx cache
 
-        - name: "Verify the integrity of provenance attestations and registry signatures for installed dependencies"
+        - name: "Verify the node packages of vulnerabilities"
           if: "inputs.run-npm-audit == 'true'"
           shell: "bash"
-          run: "pnpm dlx audit-ci@^6 --config ./audit-ci.jsonc --report-type=summary"
+          run: "pnpm dlx audit-ci@${{ inputs.audit-ci-version }} --config ./audit-ci.jsonc --report-type=summary"
 
         - name: "Install packages"
           shell: "bash"
@@ -159,6 +167,11 @@ runs:
               "CYPRESS_INSTALL_BINARY": "${{ inputs.install-cypress-binary }}"
               "SKIP_CHECK": "true" # is used to skip the check for the node version
               "HUSKY": 0 # disable husky hooks on ci
+
+        - name: "Verify the integrity of provenance attestations and registry signatures for installed dependencies"
+          shell: "bash"
+          if: "inputs.run-signatures-audit == 'true'"
+          run: "npm audit signatures"
 
         - name: "Install Bun for tests"
           if: "inputs.install-bun == 'true'"
