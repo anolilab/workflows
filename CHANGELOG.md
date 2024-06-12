@@ -1,3 +1,16 @@
+## [2.3.0](https://github.com/anolilab/workflows/compare/v2.2.1...v2.3.0) (2024-06-12)
+
+### Features
+
+* added new run-signatures-audit step and a variable for audit-ci-version switch ([d81183f](https://github.com/anolilab/workflows/commit/d81183f9d82384e23ee5fe0578e1c73a715f4b22))
+
+### Miscellaneous Chores
+
+* **deps:** lock file maintenance ([#29](https://github.com/anolilab/workflows/issues/29)) ([3802ce0](https://github.com/anolilab/workflows/commit/3802ce0d826cffb5827e9607aa026c3c463f1ff6))
+* **deps:** update github/codeql-action action to v3.25.6 ([#27](https://github.com/anolilab/workflows/issues/27)) ([e104c10](https://github.com/anolilab/workflows/commit/e104c100018838178b2490554f691f6bd00a13cd))
+* **deps:** update ljharb/require-allow-edits digest to 13f90bc ([#26](https://github.com/anolilab/workflows/issues/26)) ([474a976](https://github.com/anolilab/workflows/commit/474a97680aaa3faa59eacc4b4387009ac976b624))
+* **deps:** update step-security/harden-runner action to v2.8.0 ([#28](https://github.com/anolilab/workflows/issues/28)) ([269d1e5](https://github.com/anolilab/workflows/commit/269d1e5840563e6e8836db84a2842e6cac771b14))
+
 ## [2.2.1](https://github.com/anolilab/workflows/compare/v2.2.0...v2.2.1) (2024-05-24)
 
 
