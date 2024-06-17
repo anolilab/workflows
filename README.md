@@ -1,4 +1,4 @@
-# Shared Github Actions
+# Shared GitHub Actions
 
 This repository serves as a collection of reusable GitHub Action workflows specifically designed for usage in Node and Monorepo projects.
 The workflows stored here encapsulate common and repetitive tasks, allowing them to be easily integrated into multiple projects.
@@ -39,6 +39,7 @@ configure the following:
 - [allo-allo](./.github/workflows/allo-allo.yml) ([docs](./.github/workflows/allo-allo.md)) - a welcome bot for new contributors
 - [cleanup-branch-cache](./.github/workflows/cleanup-branch-cache.yml) ([docs](./.github/workflows/cleanup-branch-cache.md)) - automatically cleans all cache key if a branch is closed.
 - [lock-closed](./.github/workflows/lock-closed.yml) ([docs](./.github/workflows/lock-closed.md)) - locks issues and PRs that have been closed for more than a year
+- [lock-file-maintenance](./.github/workflows/lock-file-maintenance.yml) ([docs](./.github/workflows/lock-file-maintenance.md)) - This action will check if the pull request title follows the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) specification.
 - [semantic-pull-request](./.github/workflows/semantic-pull-request.yml) ([docs](./.github/workflows/semantic-pull-request.md)) - validates if the PR title has a defined semantic title
 - [set-default-labels](./.github/workflows/set-default-labels.yml) ([docs](./.github/workflows/set-default-labels.md)) - sets default labels on issues and PRs
 - [stale-issues](./.github/workflows/stale-issues.yml) ([docs](./.github/workflows/stale-issues.md)) - closes stale issues
