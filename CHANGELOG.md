@@ -1,3 +1,9 @@
+## [2.4.2](https://github.com/anolilab/workflows/compare/v2.4.1...v2.4.2) (2024-06-17)
+
+### Bug Fixes
+
+* added missing usage doc for lock-file-maintenance.yml ([037b4a7](https://github.com/anolilab/workflows/commit/037b4a7ca7e2853bf8a32b22f0e34d55673c07c3))
+
 ## [2.4.1](https://github.com/anolilab/workflows/compare/v2.4.0...v2.4.1) (2024-06-17)
 
 ### Bug Fixes
