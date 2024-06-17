@@ -1,3 +1,9 @@
+## [2.4.1](https://github.com/anolilab/workflows/compare/v2.4.0...v2.4.1) (2024-06-17)
+
+### Bug Fixes
+
+* changed Github to GitHub, added missing hint for lock-file-maintenance ([817ccc7](https://github.com/anolilab/workflows/commit/817ccc75a932509b1bb985aebfe46b67f461510d))
+
 ## [2.4.0](https://github.com/anolilab/workflows/compare/v2.3.0...v2.4.0) (2024-06-17)
 
 ### Features
