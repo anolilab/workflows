@@ -1,3 +1,14 @@
+## [2.4.0](https://github.com/anolilab/workflows/compare/v2.3.0...v2.4.0) (2024-06-17)
+
+### Features
+
+* added lock-file-maintenance and docs for semantic-pull-request ([6870c81](https://github.com/anolilab/workflows/commit/6870c819e11297e752c835052d516d99f7326d90))
+
+### Miscellaneous Chores
+
+* **deps:** update actions/dependency-review-action action to v4.3.3 ([#30](https://github.com/anolilab/workflows/issues/30)) ([68ab7d8](https://github.com/anolilab/workflows/commit/68ab7d89200bcb2b1f16d43431b1437df53a8bec))
+* **deps:** update step-security/harden-runner action to v2.8.1 ([#31](https://github.com/anolilab/workflows/issues/31)) ([b5d1d9d](https://github.com/anolilab/workflows/commit/b5d1d9d0cd4a9e43630a1bff9f6a26cc76236f5e))
+
 ## [2.3.0](https://github.com/anolilab/workflows/compare/v2.2.1...v2.3.0) (2024-06-12)
 
 ### Features
