@@ -12,7 +12,7 @@ on: # yamllint disable-line rule:truthy
             node-version:
                 description: "The node.js version to use"
                 required: false
-                type: string
+                type: "string"
                 default: "18.x"
 
 permissions:
