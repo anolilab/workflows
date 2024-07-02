@@ -46,6 +46,10 @@ inputs:
         description: "Install Bun for tests"
         required: false
         default: "false"
+    install-packages:
+        description: "Install npm packages"
+        required: false
+        default: "true"
     skip-playwright:
         description: "Skip Playwright installation"
         required: false
@@ -160,6 +164,7 @@ runs:
           run: "pnpm dlx audit-ci@${{ inputs.audit-ci-version }} --config ./audit-ci.jsonc --report-type=summary"
 
         - name: "Install packages"
+          if: "inputs.install-packages == 'true'"
           shell: "bash"
           run: "pnpm install --frozen-lockfile --prefer-offline"
           env:

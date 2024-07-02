@@ -50,6 +50,7 @@ jobs:
               with:
                   node-version: "${{ inputs.node-version }}"
                   cache-prefix: "lock-file"
+                  install-packages: "false"
 
             - name: "Update lock file"
               if: "success()"
@@ -60,7 +61,7 @@ jobs:
               uses: "stefanzweifel/git-auto-commit-action@8621497c8c39c72f3e2a999a26b4ca1b5058a842" # v5.0.1
               with:
                   file_pattern: "pnpm-lock.yaml"
-                  commit_message: "chore: update lock file [ci skip]"
+                  commit_message: "chore: updated lock file [ci skip]"
                   commit_user_name: "github-actions-shell"
                   commit_user_email: "github-actions[bot]@users.noreply.github.com"
                   commit_author: "github-actions-shell <github-actions[bot]@users.noreply.github.com>"
