@@ -1,3 +1,20 @@
+## [2.5.0](https://github.com/anolilab/workflows/compare/v2.4.2...v2.5.0) (2024-07-02)
+
+### Features
+
+* added new option to disable package install ([e965baf](https://github.com/anolilab/workflows/commit/e965baf968fa230cab89bfb4cf20e6fa2d2b2f7f))
+
+### Styles
+
+* cs fix ([e9e5b09](https://github.com/anolilab/workflows/commit/e9e5b09cbcacd5552489ee0d8390b3f6a8b7f6aa))
+
+### Miscellaneous Chores
+
+* **deps:** update actions/checkout action to v4.1.7 ([#35](https://github.com/anolilab/workflows/issues/35)) ([c5d902e](https://github.com/anolilab/workflows/commit/c5d902e8e92a4d51f7fda337113d67e9a268ed57))
+* **deps:** update dependency lint-staged to ^15.2.7 ([#33](https://github.com/anolilab/workflows/issues/33)) ([5e246d3](https://github.com/anolilab/workflows/commit/5e246d31516c1cf2a378db33bfad7914ca7452e3))
+* **deps:** update github/codeql-action action to v3.25.10 ([#32](https://github.com/anolilab/workflows/issues/32)) ([6ccba56](https://github.com/anolilab/workflows/commit/6ccba561070bba87c623bfbfe56e53037ce72f73))
+* **deps:** update pnpm to v9.4.0 ([#34](https://github.com/anolilab/workflows/issues/34)) ([9a6afb0](https://github.com/anolilab/workflows/commit/9a6afb0fa8306608ccde6ef85f7555c293a1ce8a))
+
 ## [2.4.2](https://github.com/anolilab/workflows/compare/v2.4.1...v2.4.2) (2024-06-17)
 
 ### Bug Fixes
