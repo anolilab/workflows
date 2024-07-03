@@ -1,3 +1,9 @@
+## [2.6.0](https://github.com/anolilab/workflows/compare/v2.5.3...v2.6.0) (2024-07-03)
+
+### Features
+
+* added commit-token for protected branches in lock-file-maintenance.yml ([41741cb](https://github.com/anolilab/workflows/commit/41741cbaa56f34f97874f6d2483107c9d286e915))
+
 ## [2.5.3](https://github.com/anolilab/workflows/compare/v2.5.2...v2.5.3) (2024-07-03)
 
 ### Bug Fixes
