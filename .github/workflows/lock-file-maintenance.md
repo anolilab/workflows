@@ -44,6 +44,8 @@ jobs:
         uses: "anolilab/workflows/.github/workflows/lock-file-maintenance.yml@main"
         permissions:
             contents: "write" # commit and push
+            id-token: "write" # for checkout
         with:
             target-repo: "visulima/visulima"
+        secrets: "inherit"
 ```
