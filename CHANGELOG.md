@@ -1,3 +1,9 @@
+## [2.5.2](https://github.com/anolilab/workflows/compare/v2.5.1...v2.5.2) (2024-07-03)
+
+### Bug Fixes
+
+* remove wrong env token from checkout in lock-file-maintenance.yml ([6a7720d](https://github.com/anolilab/workflows/commit/6a7720d1d449227579826c88f742f1131ae55cc8))
+
 ## [2.5.1](https://github.com/anolilab/workflows/compare/v2.5.0...v2.5.1) (2024-07-03)
 
 ### Bug Fixes
