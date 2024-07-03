@@ -1,3 +1,9 @@
+## [2.6.3](https://github.com/anolilab/workflows/compare/v2.6.2...v2.6.3) (2024-07-03)
+
+### Bug Fixes
+
+* added the missing secret ([fecd6a3](https://github.com/anolilab/workflows/commit/fecd6a322ac6b668fb413612929a41d6a7fafa5f))
+
 ## [2.6.2](https://github.com/anolilab/workflows/compare/v2.6.1...v2.6.2) (2024-07-03)
 
 ### Bug Fixes
