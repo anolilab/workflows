@@ -1,3 +1,9 @@
+## [2.6.1](https://github.com/anolilab/workflows/compare/v2.6.0...v2.6.1) (2024-07-03)
+
+### Bug Fixes
+
+* github has a bug that it not allows to use secret as input value on shared workflow ([5e6cddd](https://github.com/anolilab/workflows/commit/5e6cdddb44a1100d5b7f778a6c286a19d05ec0c7))
+
 ## [2.6.0](https://github.com/anolilab/workflows/compare/v2.5.3...v2.6.0) (2024-07-03)
 
 ### Features
