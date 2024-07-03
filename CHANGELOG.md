@@ -1,3 +1,9 @@
+## [2.6.4](https://github.com/anolilab/workflows/compare/v2.6.3...v2.6.4) (2024-07-03)
+
+### Bug Fixes
+
+* remove the lock-file-maintenance.yml ([ca7ee66](https://github.com/anolilab/workflows/commit/ca7ee66b24d5d8e59861bb5bb11ba14e5264ac89))
+
 ## [2.6.3](https://github.com/anolilab/workflows/compare/v2.6.2...v2.6.3) (2024-07-03)
 
 ### Bug Fixes
