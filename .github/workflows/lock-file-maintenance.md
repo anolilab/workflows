@@ -26,8 +26,6 @@ This is used to ensure that the correct version of node.js is used when running 
 > For protected branches, the action will need to be able to commit and push to the repository.
 >
 > By creating a new [Personal Access Token (PAT)](https://github.com/settings/tokens/new), storing the token as a secret in your repository and then passing the new token to the Action step.
->
-> You need to save the token with the secret name `LOCK_MAINTENANCE_GITHUBG_TOKEN`
 
 ## Usage
 
@@ -54,5 +52,6 @@ jobs:
             id-token: "write" # for checkout
         with:
             target-repo: "visulima/visulima"
-        secrets: "inherit"
+        secrets:
+            LOCK_MAINTENANCE_GITHUB_TOKEN: ${{ secrets.LOCK_MAINTENANCE_GITHUB_TOKEN }}
 ```
