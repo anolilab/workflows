@@ -22,6 +22,25 @@ This is used to ensure that the correct version of node.js is used when running 
 
 -   This `input` is optional. (`type:string`, `default:18.x`)
 
+### commit-token
+
+This is used to commit and push changes to a protected branch.
+
+-   This `input` is optional. (`type:string`)
+
+By creating a new [Personal Access Token (PAT)](https://github.com/settings/tokens/new), storing the token as a secret in your repository and then passing the new token to the Action step.
+
+```yml
+- uses: "anolilab/workflows/.github/workflows/lock-file-maintenance.yml@main"
+  permissions:
+      contents: "write" # commit and push
+      id-token: "write" # for checkout
+  with:
+      target-repo: "visulima/visulima"
+      commit-token: "${{ secrets.PAT }}"
+  secrets: "inherit"
+```
+
 ## Usage
 
 In the repository that will call this action, you will need to create a workflow file. You can name the file `workflows/lock-file-maintenance.yml` and add the following content:
