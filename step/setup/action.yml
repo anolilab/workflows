@@ -175,7 +175,7 @@ runs:
 
         - name: "Verify the integrity of provenance attestations and registry signatures for installed dependencies"
           shell: "bash"
-          if: "inputs.run-signatures-audit == 'true'"
+          if: "inputs.run-signatures-audit == 'true' && inputs.install-packages == 'true'"
           run: "npm audit signatures"
 
         - name: "Install Bun for tests"
