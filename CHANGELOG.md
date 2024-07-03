@@ -1,3 +1,9 @@
+## [2.5.1](https://github.com/anolilab/workflows/compare/v2.5.0...v2.5.1) (2024-07-03)
+
+### Bug Fixes
+
+* removed wrong permissions from lock-file-maintenance.yml ([f223b0b](https://github.com/anolilab/workflows/commit/f223b0b9e933f7f9afbc745b711e6ad9718caf42))
+
 ## [2.5.0](https://github.com/anolilab/workflows/compare/v2.4.2...v2.5.0) (2024-07-02)
 
 ### Features
