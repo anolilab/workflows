@@ -42,6 +42,8 @@ permissions:
 jobs:
     stale-issues:
         uses: "anolilab/workflows/.github/workflows/lock-file-maintenance.yml@main"
+        permissions:
+            contents: "write" # commit and push
         with:
             target-repo: "visulima/visulima"
 ```
