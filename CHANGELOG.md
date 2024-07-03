@@ -1,3 +1,10 @@
+## [2.5.3](https://github.com/anolilab/workflows/compare/v2.5.2...v2.5.3) (2024-07-03)
+
+### Bug Fixes
+
+* added input check for install-packages on npm audit signatures ([b6c86f9](https://github.com/anolilab/workflows/commit/b6c86f9fe2e02106b474dc0394cb6fccb4ade697))
+* added input check for install-packages on Prepare node_modules cache ([7af979e](https://github.com/anolilab/workflows/commit/7af979ed806f5425ef64ca5c9c3b0e2216839e72))
+
 ## [2.5.2](https://github.com/anolilab/workflows/compare/v2.5.1...v2.5.2) (2024-07-03)
 
 ### Bug Fixes
