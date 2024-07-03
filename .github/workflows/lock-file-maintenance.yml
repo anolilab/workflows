@@ -14,10 +14,6 @@ on: # yamllint disable-line rule:truthy
                 required: false
                 type: "string"
                 default: "18.x"
-            commit-token:
-                description: "The token that will be use for committing and pushing to a protected branch."
-                required: false
-                type: "string"
 
 permissions:
     contents: "read" # for checkout
@@ -39,7 +35,7 @@ jobs:
             - name: "Git checkout"
               uses: "actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332" # v4.1.7
               with:
-                  token: "${{ inputs.commit-token }}"
+                  token: "${{ secrets.LOCK_MAINTENANCE_GITHUBG_TOKEN }}"
               env:
                   GIT_COMMITTER_NAME: "GitHub Actions Shell"
                   GIT_AUTHOR_NAME: "GitHub Actions Shell"
