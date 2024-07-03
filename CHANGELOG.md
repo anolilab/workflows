@@ -1,3 +1,9 @@
+## [2.6.2](https://github.com/anolilab/workflows/compare/v2.6.1...v2.6.2) (2024-07-03)
+
+### Bug Fixes
+
+* fixed wrong name LOCK_MAINTENANCE_GITHUBG_TOKEN to LOCK_MAINTENANCE_GITHUB_TOKEN ([02ee2b7](https://github.com/anolilab/workflows/commit/02ee2b79d24f4bae664c83edd0e521798bd53598))
+
 ## [2.6.1](https://github.com/anolilab/workflows/compare/v2.6.0...v2.6.1) (2024-07-03)
 
 ### Bug Fixes
