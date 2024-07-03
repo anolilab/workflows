@@ -4,6 +4,10 @@ name: "Lock File Maintenance"
 
 on: # yamllint disable-line rule:truthy
     workflow_call:
+        secrets:
+            LOCK_MAINTENANCE_GITHUB_TOKEN:
+                description: 'A token passed from the caller workflow'
+                required: true
         inputs:
             target-repo:
                 description: "The repo to run this action on. This is to prevent actions from running on forks unless intended."

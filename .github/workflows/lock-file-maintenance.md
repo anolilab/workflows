@@ -52,6 +52,6 @@ jobs:
             id-token: "write" # for checkout
         with:
             target-repo: "visulima/visulima"
-        secrets:
-            LOCK_MAINTENANCE_GITHUB_TOKEN: ${{ secrets.LOCK_MAINTENANCE_GITHUB_TOKEN }}
+            secrets:
+                LOCK_MAINTENANCE_GITHUB_TOKEN: ${{ secrets.LOCK_MAINTENANCE_GITHUB_TOKEN }}
 ```
