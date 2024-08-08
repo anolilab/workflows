@@ -85,7 +85,7 @@ runs:
               echo "CURRENT_BRANCH=$(echo ${GITHUB_REF#refs/heads/} | sed -r 's,/,-,g')" >> $GITHUB_OUTPUT
 
         - name: "Set node version to ${{ inputs.node-version }}"
-          uses: "actions/setup-node@60edb5dd545a775178f52524783378180af0d1f8" # v4.0.2
+          uses: "actions/setup-node@1e60f620b9541d16bece96c5465dc8ee9832be0b" # v4.0.3
           with:
               node-version: "${{ inputs.node-version }}"
 
