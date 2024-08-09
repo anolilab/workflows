@@ -13,7 +13,7 @@
         "@anolilab/lint-staged-config": "^2.1.7",
         "@anolilab/prettier-config": "^5.0.14",
         "@anolilab/semantic-release-preset": "^9.0.0",
-        "@commitlint/cli": "^19.3.0",
+        "@commitlint/cli": "^19.4.0",
         "@commitlint/config-conventional": "^19.2.2",
         "@secretlint/secretlint-rule-preset-recommend": "^8.2.4",
         "commitizen": "^4.3.0",
