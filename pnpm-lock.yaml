@@ -33,8 +33,8 @@ importers:
         specifier: ^8.2.4
         version: 8.2.4
       commitizen:
-        specifier: ^4.3.0
-        version: 4.3.0(@types/node@20.14.10)(typescript@5.5.3)
+        specifier: ^4.3.1
+        version: 4.3.1(@types/node@20.14.10)(typescript@5.5.3)
       conventional-changelog-conventionalcommits:
         specifier: 8.0.0
         version: 8.0.0
@@ -720,8 +720,8 @@ packages:
     resolution: {integrity: sha512-Vw8qHK3bZM9y/P10u3Vib8o/DdkvA2OtPtZvD871QKjy74Wj1WSKFILMPRPSdUSx5RFK1arlJzEtA4PkFgnbuA==}
     engines: {node: '>=18'}
 
-  commitizen@4.3.0:
-    resolution: {integrity: sha512-H0iNtClNEhT0fotHvGV3E9tDejDeS04sN1veIebsKYGMuGscFaswRoYJKmT3eW85eIJAs0F28bG2+a/9wCOfPw==}
+  commitizen@4.3.1:
+    resolution: {integrity: sha512-gwAPAVTy/j5YcOOebcCRIijn+mSjWJC+IYKivTu6aG8Ei/scoXgfsMRnuAk6b0GRste2J4NGxVdMN3ZpfNaVaw==}
     engines: {node: '>= 12'}
     hasBin: true
 
@@ -2496,7 +2496,7 @@ snapshots:
       '@commitlint/cli': 19.5.0(@types/node@20.14.10)(typescript@5.5.3)
       '@commitlint/config-conventional': 19.5.0
       '@commitlint/core': 18.6.1(@types/node@20.14.10)(typescript@5.5.3)
-      commitizen: 4.3.0(@types/node@20.14.10)(typescript@5.5.3)
+      commitizen: 4.3.1(@types/node@20.14.10)(typescript@5.5.3)
       conventional-changelog-conventionalcommits: 7.0.2
       cz-conventional-changelog: 3.3.0(@types/node@20.14.10)(typescript@5.5.3)
     transitivePeerDependencies:
@@ -3338,7 +3338,7 @@ snapshots:
 
   commander@12.1.0: {}
 
-  commitizen@4.3.0(@types/node@20.14.10)(typescript@5.5.3):
+  commitizen@4.3.1(@types/node@20.14.10)(typescript@5.5.3):
     dependencies:
       cachedir: 2.3.0
       cz-conventional-changelog: 3.3.0(@types/node@20.14.10)(typescript@5.5.3)
@@ -3462,7 +3462,7 @@ snapshots:
   cz-conventional-changelog@3.3.0(@types/node@20.14.10)(typescript@5.5.3):
     dependencies:
       chalk: 2.4.2
-      commitizen: 4.3.0(@types/node@20.14.10)(typescript@5.5.3)
+      commitizen: 4.3.1(@types/node@20.14.10)(typescript@5.5.3)
       conventional-commit-types: 3.0.0
       lodash.map: 4.6.0
       longest: 2.0.1
