@@ -110,7 +110,7 @@ runs:
               echo "YEAR_MONTH=$(/bin/date -u "+%Y%m")" >> $GITHUB_OUTPUT
 
         - name: "Setup pnpm cache"
-          uses: "actions/cache@3624ceb22c1c5a301c8db4169662070a689d9ea8" # v4.1.1
+          uses: "actions/cache@6849a6489940f00c2f30c0fb92c6274307ccb58a" # v4.1.2
           id: "pnpm-store-cache"
           with:
               path: "${{ steps.pnpm-config.outputs.STORE_PATH }}"
@@ -130,7 +130,7 @@ runs:
         - name: "Check for node_modules cache"
           if: "inputs.enable-node-modules-cache == 'true'"
           id: "node-modules-cache"
-          uses: "actions/cache@3624ceb22c1c5a301c8db4169662070a689d9ea8" # v4.1.1
+          uses: "actions/cache@6849a6489940f00c2f30c0fb92c6274307ccb58a" # v4.1.2
           with:
               path: "/tmp/node_modules.tar.lz4"
               key: "pnpm-nm-cache-${{ inputs.cache-prefix }}-${{ runner.os }}-${{ inputs.node-version }}-${{ hashFiles('**/pnpm-lock.yaml') }}"
@@ -145,7 +145,7 @@ runs:
         - name: "Check for Nx cache"
           if: "inputs.enable-nx-cache == 'true'"
           id: "nx-cache"
-          uses: "actions/cache@3624ceb22c1c5a301c8db4169662070a689d9ea8" # v4.1.1
+          uses: "actions/cache@6849a6489940f00c2f30c0fb92c6274307ccb58a" # v4.1.2
           with:
               path: "/tmp/nx_cache.tar.lz4"
               key: "cache-nx-${{ inputs.cache-prefix }}-${{ runner.os }}-${{ inputs.node-version }}-${{ hashFiles('pnpm-lock.yaml') }}-${{ github.sha }}"
