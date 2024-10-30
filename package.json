@@ -12,7 +12,7 @@
         "@anolilab/commitlint-config": "^5.0.3",
         "@anolilab/lint-staged-config": "^2.1.7",
         "@anolilab/prettier-config": "^5.0.14",
-        "@anolilab/semantic-release-preset": "^9.0.0",
+        "@anolilab/semantic-release-preset": "^9.0.1",
         "@commitlint/cli": "^19.5.0",
         "@commitlint/config-conventional": "^19.5.0",
         "@secretlint/secretlint-rule-preset-recommend": "^9.0.0",
@@ -27,7 +27,7 @@
         "semantic-release": "^24.2.0",
         "sort-package-json": "^2.10.1"
     },
-    "packageManager": "pnpm@9.12.2",
+    "packageManager": "pnpm@9.12.3",
     "engines": {
         "node": ">=18.* <=21.*"
     },
