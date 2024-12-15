@@ -7,7 +7,8 @@ You can specify all three inputs or a single input depending on your needs.
 
 This reusable action depends on the following actions:
 
-- [welcome-bot](https://github.com/actions/first-interaction)
+- [first-interaction](https://github.com/actions/first-interaction)
+- [github-script](https://github.com/actions/github-script)
 
 ## Inputs
 
