@@ -150,9 +150,13 @@ jobs:
                           }
                         }
 
-                        const message = process.env.PR_MERGED_MESSAGE ? process.env.PR_MERGED_MESSAGE : 
-                          (typeof prCount === 'number' ? getMessage(prCount) : 
-                           `${getRandomEmoji()} Thank you for your contribution, @${author}! 🎉`);
+                        let message = `${getRandomEmoji()} Thank you for your contribution, @${author}! 🎉`);
+
+                        if (process.env.PR_MERGED_MESSAGE) {
+                            message = process.env.PR_MERGED_MESSAGE;
+                        } else if (typeof prCount === 'number') {
+                            message = getMessage(prCount);
+                        }
 
                         await github.rest.issues.createComment({
                           owner: process.env.OWNER,
