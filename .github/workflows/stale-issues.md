@@ -4,7 +4,7 @@ The `set-default-labels` reusable action is located at [`./workflow/stale-issues
 
 This reusable action depends on the following actions:
 
--   [stale](https://github.com/marketplace/actions/close-stale-issues)
+- [stale](https://github.com/marketplace/actions/close-stale-issues)
 
 ## Inputs
 
@@ -14,7 +14,7 @@ This reusable action depends on the following actions:
 
 Specify the target repository this action should run on. This is used to prevent actions from running on repositories other than the target repository. For example, specifying a `target-repo` of `mdn/workflows` will prevent the action from running on forks of `mdn/workflows`.
 
--   This `input` is required.
+- This `input` is required.
 
 ## Usage
 

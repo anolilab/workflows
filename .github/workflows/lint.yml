@@ -62,10 +62,10 @@ jobs:
                   ./actionlint -color -shellcheck=""
 
     # This check runs once all dependant jobs have passed
-    # It symbolizes that all required Frontend checks have succesfully passed (Or skipped)
+    # It symbolizes that all required Frontend checks have successfully passed (Or skipped)
     # This check is the only required GitHub check
     test-required-check:
-        needs: ["yaml-lint", "lint-workflows"] # TODO add "markdown-lint"
+        needs: ["yaml-lint", "lint-workflows"]
         name: "Check Lint Run"
         # This is necessary since a failed/skipped dependent job would cause this job to be skipped
         if: "always()"

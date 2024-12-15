@@ -4,8 +4,8 @@ The `set-default-labels` reusable action is located at [`./workflow/set-default-
 
 This reusable action depends on the following actions:
 
--   [checkout](https://github.com/marketplace/actions/checkout)
--   [crazy-max/ghaction-github-labeler](https://github.com/crazy-max/ghaction-github-labeler)
+- [checkout](https://github.com/marketplace/actions/checkout)
+- [crazy-max/ghaction-github-labeler](https://github.com/crazy-max/ghaction-github-labeler)
 
 ## Inputs
 
@@ -17,7 +17,7 @@ The action has the following inputs:
 
 Specify the target repository this action should run on. This is used to prevent actions from running on repositories other than the target repository. For example, specifying a `target-repo` of `anolilab/workflows` will prevent the action from running on forks of `anolilab/workflows`.
 
--   This `input` is required. (`type:string`)
+- This `input` is required. (`type:string`)
 
 ### Optional inputs
 
