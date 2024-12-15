@@ -1,3 +1,53 @@
+## [3.0.0](https://github.com/anolilab/workflows/compare/v2.6.5...v3.0.0) (2024-12-15)
+
+### ⚠ BREAKING CHANGES
+
+* the allo-allo workflow was deleted
+
+### Features
+
+* reworking the allo-allo workflow ([2908b54](https://github.com/anolilab/workflows/commit/2908b54c049c770533784cd224015918269483dd))
+
+### Bug Fixes
+
+* fixed version ([9250879](https://github.com/anolilab/workflows/commit/925087906e121e2b338481b8935c05385e66aba5))
+* updated versions ([7e69066](https://github.com/anolilab/workflows/commit/7e690661b3face4f59f8b771b9ace43a19f267bc))
+
+### Styles
+
+* cs fixes ([577bdba](https://github.com/anolilab/workflows/commit/577bdbab894baf2c5094d68c1c1c43d0342ae483))
+* cs fixes ([7c6ae13](https://github.com/anolilab/workflows/commit/7c6ae1316d9194422a8186d04eadb7c9b214d7e8))
+
+### Miscellaneous Chores
+
+* **deps:** update actions/cache action to v4.2.0 ([#104](https://github.com/anolilab/workflows/issues/104)) ([3aeed8c](https://github.com/anolilab/workflows/commit/3aeed8cf3c8a7afcffd005bd773372c113d708b6))
+* **deps:** update actions/dependency-review-action action to v4.4.0 ([#88](https://github.com/anolilab/workflows/issues/88)) ([48a311e](https://github.com/anolilab/workflows/commit/48a311e4dc314f0e926a1984d73e4ac7eb99320f))
+* **deps:** update actions/dependency-review-action action to v4.5.0 ([#98](https://github.com/anolilab/workflows/issues/98)) ([818308e](https://github.com/anolilab/workflows/commit/818308e4163944cf3153eed15992f23ddb4e73ef))
+* **deps:** update actions/setup-node action to v4.1.0 ([#86](https://github.com/anolilab/workflows/issues/86)) ([e1ea1fc](https://github.com/anolilab/workflows/commit/e1ea1fcb07581ea47d3a9595d252bfdb8ca06ce3))
+* **deps:** update commitlint monorepo to ^19.6.0 ([#95](https://github.com/anolilab/workflows/issues/95)) ([b06c22a](https://github.com/anolilab/workflows/commit/b06c22a0bcd3a8eef4c187cacfa83788b280d186))
+* **deps:** update crazy-max/ghaction-github-labeler action to v5.1.0 ([#89](https://github.com/anolilab/workflows/issues/89)) ([010acfa](https://github.com/anolilab/workflows/commit/010acfade47e23fa6c01d28bfd39ef5b22e17fbe))
+* **deps:** update dependency @anolilab/semantic-release-preset to ^9.0.2 ([#90](https://github.com/anolilab/workflows/issues/90)) ([b72ced0](https://github.com/anolilab/workflows/commit/b72ced0b2ffeb0ba4b6ca31b373a9908ec2e3108))
+* **deps:** update dependency lint-staged to ^15.2.11 ([#107](https://github.com/anolilab/workflows/issues/107)) ([62d9c12](https://github.com/anolilab/workflows/commit/62d9c126828723b72d561abd9fde8758024f1764))
+* **deps:** update dependency prettier to ^3.4.1 ([#100](https://github.com/anolilab/workflows/issues/100)) ([6ca1a36](https://github.com/anolilab/workflows/commit/6ca1a3689646aa5b5eaac7c675d558d93f5d44a7))
+* **deps:** update dependency prettier to ^3.4.2 ([#103](https://github.com/anolilab/workflows/issues/103)) ([7445a16](https://github.com/anolilab/workflows/commit/7445a16a40fed3c586488a84b7f4d5c5e098a382))
+* **deps:** update github/codeql-action action to v3.27.4 ([#92](https://github.com/anolilab/workflows/issues/92)) ([c40e11c](https://github.com/anolilab/workflows/commit/c40e11c6ec1ad1e6bc494833d6a2362f5222336e))
+* **deps:** update github/codeql-action action to v3.27.5 ([#96](https://github.com/anolilab/workflows/issues/96)) ([5e6ea82](https://github.com/anolilab/workflows/commit/5e6ea826b7f6a08858279391e57ca0d76d1bc9c4))
+* **deps:** update github/codeql-action action to v3.27.6 ([#102](https://github.com/anolilab/workflows/issues/102)) ([c8c6fa7](https://github.com/anolilab/workflows/commit/c8c6fa705bb7f604f48e94d42fe87d0fd7c5036b))
+* **deps:** update github/codeql-action action to v3.27.9 ([#108](https://github.com/anolilab/workflows/issues/108)) ([0410754](https://github.com/anolilab/workflows/commit/04107549fb952fe2e56c90e457c9ea245ca60dc4))
+* **deps:** update patch updates ([#85](https://github.com/anolilab/workflows/issues/85)) ([89bbbbe](https://github.com/anolilab/workflows/commit/89bbbbe71204233f6e9480a7233fbc573017b059))
+* **deps:** update patch updates (patch) ([#97](https://github.com/anolilab/workflows/issues/97)) ([307fe9e](https://github.com/anolilab/workflows/commit/307fe9ed780fa59fbfb1442fa2bf550d4f836fa3))
+* **deps:** update pnpm to v9.13.0 ([#91](https://github.com/anolilab/workflows/issues/91)) ([986ff5c](https://github.com/anolilab/workflows/commit/986ff5c24094d9fb2593354dcba49743c35b0ef0))
+* **deps:** update pnpm to v9.13.2 ([#93](https://github.com/anolilab/workflows/issues/93)) ([a86712c](https://github.com/anolilab/workflows/commit/a86712c1b61c276ded7ca9520ef03672b2a1fd34))
+* **deps:** update pnpm to v9.14.2 ([#99](https://github.com/anolilab/workflows/issues/99)) ([c64e277](https://github.com/anolilab/workflows/commit/c64e277109b287a8bbd09601a0175ae855233d40))
+* **deps:** update pnpm to v9.14.4 ([#101](https://github.com/anolilab/workflows/issues/101)) ([7c404e2](https://github.com/anolilab/workflows/commit/7c404e240e3fd0579b4ff30fa81c416fee5940b0))
+* **deps:** update pnpm to v9.15.0 ([#105](https://github.com/anolilab/workflows/issues/105)) ([ae6197b](https://github.com/anolilab/workflows/commit/ae6197b0e8370578755f0c777c0fe6645dd9a4db))
+* **deps:** update step-security/harden-runner action to v2.10.2 ([#94](https://github.com/anolilab/workflows/issues/94)) ([d9b6639](https://github.com/anolilab/workflows/commit/d9b6639da0001693363659b906d2b7b7a8250e7c))
+* fixed audit issue ([991f4a6](https://github.com/anolilab/workflows/commit/991f4a636ff425819fa407c7395ddec4bd7f6884))
+
+### Continuous Integration
+
+* use github for yaml lint ([5dd2b8e](https://github.com/anolilab/workflows/commit/5dd2b8e2fdece24e0509db974ee36c6362fc6c3f))
+
 ## [2.6.5](https://github.com/anolilab/workflows/compare/v2.6.4...v2.6.5) (2024-10-25)
 
 ### Bug Fixes
