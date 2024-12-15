@@ -64,9 +64,11 @@ jobs:
                   REPO: "${{ github.event.repository.name }}"
                   OWNER: "${{ github.event.repository.owner.login }}"
               run: |
-                  echo "AUTHOR=${AUTHOR}" >> $GITHUB_ENV
-                  echo "REPO=${REPO}" >> $GITHUB_ENV
-                  echo "OWNER=${OWNER}" >> $GITHUB_ENV
+                  {
+                    echo "AUTHOR=${AUTHOR}"
+                    echo "REPO=${REPO}"
+                    echo "OWNER=${OWNER}"
+                  } >> "$GITHUB_ENV"
 
             - name: "Count Merged Pull Requests"
               id: "count_merged_pull_requests"
@@ -148,7 +150,9 @@ jobs:
                           }
                         }
 
-                        const message = process.env.PR_MERGED_MESSAGE ? process.env.PR_MERGED_MESSAGE : getMessage(prCount);
+                        const message = process.env.PR_MERGED_MESSAGE ? process.env.PR_MERGED_MESSAGE : 
+                          (typeof prCount === 'number' ? getMessage(prCount) : 
+                           `${getRandomEmoji()} Thank you for your contribution, @${author}! 🎉`);
 
                         await github.rest.issues.createComment({
                           owner: process.env.OWNER,
