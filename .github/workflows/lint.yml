@@ -33,11 +33,8 @@ jobs:
                   EMAIL: "github-actions[bot]@users.noreply.github.com"
 
             - name: "Lint YAML files"
-              uses: "ibiqlik/action-yamllint@2576378a8e339169678f9939646ee3ee325e845c" # v3.1.1
-              with:
-                  config_file: ".yamllint.yaml"
-                  file_or_dir: "."
-                  strict: true
+              run: |
+                  yamllint . --strict -c .yamllint.yaml
 
     lint-workflows:
         runs-on: "ubuntu-latest"
