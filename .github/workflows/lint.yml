@@ -33,11 +33,8 @@ jobs:
                   EMAIL: "github-actions[bot]@users.noreply.github.com"
 
             - name: "Lint YAML files"
-              uses: "ibiqlik/action-yamllint@2576378a8e339169678f9939646ee3ee325e845c" # v3.1.1
-              with:
-                  config_file: ".yamllint.yaml"
-                  file_or_dir: "."
-                  strict: true
+              run: |
+                  yamllint . --strict -c .yamllint.yaml
 
     lint-workflows:
         runs-on: "ubuntu-latest"
@@ -62,10 +59,10 @@ jobs:
                   ./actionlint -color -shellcheck=""
 
     # This check runs once all dependant jobs have passed
-    # It symbolizes that all required Frontend checks have succesfully passed (Or skipped)
+    # It symbolizes that all required Frontend checks have successfully passed (Or skipped)
     # This check is the only required GitHub check
     test-required-check:
-        needs: ["yaml-lint", "lint-workflows"] # TODO add "markdown-lint"
+        needs: ["yaml-lint", "lint-workflows"]
         name: "Check Lint Run"
         # This is necessary since a failed/skipped dependent job would cause this job to be skipped
         if: "always()"

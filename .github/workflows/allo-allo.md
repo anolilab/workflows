@@ -7,7 +7,8 @@ You can specify all three inputs or a single input depending on your needs.
 
 This reusable action depends on the following actions:
 
--   [Allo-Allo](https://github.com/mechanical-ink/allo-allo)
+- [first-interaction](https://github.com/actions/first-interaction)
+- [github-script](https://github.com/actions/github-script)
 
 ## Inputs
 
@@ -19,7 +20,7 @@ The action has the following inputs:
 
 Specify the target repository this action should run on. This is used to prevent actions from running on repositories other than the target repository. For example, specifying a `target-repo` of `anolilab/workflows` will prevent the action from running on forks of `anolilab/workflows`.
 
--   This `input` is required
+- This `input` is required
 
 ### Optional inputs
 
@@ -27,19 +28,19 @@ Specify the target repository this action should run on. This is used to prevent
 
 Message to show to a contributor opening their first issue.
 
--   This `input` is optional.
+- This `input` is optional.
 
 #### pr-welcome
 
 Message to show to a contributor opening their first pull request.
 
--   This `input` is optional.
+- This `input` is optional.
 
 #### pr-merged
 
 Message to show to a contributor after first merged pull request.
 
--   This `input` is optional.
+- This `input` is optional.
 
 ## Usage
 

@@ -4,9 +4,9 @@ This action will check if the pull request title follows the [Conventional Commi
 
 This reusable action depends on the following actions:
 
--   [checkout](https://github.com/marketplace/actions/checkout)
--   [amannn/action-semantic-pull-request](https://github.com/amannn/action-semantic-pull-request)
--   [marocchino/sticky-pull-request-comment](https://github.com/marocchino/sticky-pull-request-comment)
+- [checkout](https://github.com/marketplace/actions/checkout)
+- [amannn/action-semantic-pull-request](https://github.com/amannn/action-semantic-pull-request)
+- [marocchino/sticky-pull-request-comment](https://github.com/marocchino/sticky-pull-request-comment)
 
 # Inputs
 
@@ -18,7 +18,7 @@ The action has the following inputs:
 
 Specify the target repository this action should run on. This is used to prevent actions from running on repositories other than the target repository. For example, specifying a `target-repo` of `anolilab/workflows` will prevent the action from running on forks of `anolilab/workflows`.
 
--   This `input` is required. (`type:string`)
+- This `input` is required. (`type:string`)
 
 ## Usage
 

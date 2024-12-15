@@ -39,8 +39,5 @@ node_modules/
 .env.test.local
 .env.production.local
 .env.local
-/.idea/.gitignore
-/.idea/gh-actions.iml
-/.idea/modules.xml
-/.idea/prettier.xml
-/.idea/vcs.xml
+
+.idea

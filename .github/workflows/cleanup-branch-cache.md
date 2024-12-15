@@ -6,7 +6,7 @@ The `cleanup-branch-cache` GitHub Action automatically cleans all cache key if a
 
 This reusable action depends on the following actions:
 
--   [checkout](https://github.com/marketplace/actions/checkout)
+- [checkout](https://github.com/marketplace/actions/checkout)
 
 ## Inputs
 
@@ -18,7 +18,7 @@ The action has the following inputs:
 
 Specify the target repository this action should run on. This is used to prevent actions from running on repositories other than the target repository. For example, specifying a `target-repo` of `anolilab/workflows` will prevent the action from running on forks of `anolilab/workflows`.
 
--   This `input` is required. (`type:string`)
+- This `input` is required. (`type:string`)
 
 # Usage
 
