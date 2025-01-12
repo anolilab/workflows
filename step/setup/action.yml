@@ -41,7 +41,7 @@ inputs:
     npm-version:
         description: "The npm version to use"
         required: false
-        default: "10.5.x"
+        default: "10.9.x"
     install-bun:
         description: "Install Bun for tests"
         required: false
