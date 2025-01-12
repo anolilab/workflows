@@ -1,3 +1,14 @@
+## [3.0.2](https://github.com/anolilab/workflows/compare/v3.0.1...v3.0.2) (2025-01-12)
+
+### Bug Fixes
+
+* update npm version to 10.9.x ([d213345](https://github.com/anolilab/workflows/commit/d21334519aca4d940a61de233fbd9de3543e063a))
+
+### Miscellaneous Chores
+
+* **deps:** update actions/upload-artifact action to v4.6.0 ([#118](https://github.com/anolilab/workflows/issues/118)) ([1034733](https://github.com/anolilab/workflows/commit/1034733e4b2a84f780857f9e14a52d96454cc7d3))
+* **deps:** update github/codeql-action action to v3.28.1 ([#119](https://github.com/anolilab/workflows/issues/119)) ([11b77a7](https://github.com/anolilab/workflows/commit/11b77a7f2db3062f734237b7a79dda7ceb8a865c))
+
 ## [3.0.1](https://github.com/anolilab/workflows/compare/v3.0.0...v3.0.1) (2025-01-12)
 
 ### Bug Fixes
