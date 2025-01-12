@@ -3,7 +3,7 @@
     "private": true,
     "type": "module",
     "scripts": {
-        "audit": "pnpm dlx audit-ci@^6 --config ./audit-ci.jsonc",
+        "audit": "audit-ci --config ./audit-ci.jsonc",
         "preinstall": "node verify-node-version.cjs && npx only-allow pnpm",
         "prepare": "is-ci || husky || exit 0",
         "sort-package-json": "sort-package-json ./package.json"
@@ -16,6 +16,7 @@
         "@commitlint/cli": "^19.6.1",
         "@commitlint/config-conventional": "^19.6.0",
         "@secretlint/secretlint-rule-preset-recommend": "^9.0.0",
+        "audit-ci": "^7.1.0",
         "commitizen": "^4.3.1",
         "conventional-changelog-conventionalcommits": "8.0.0",
         "cross-env": "^7.0.3",
@@ -34,8 +35,8 @@
     "pnpm": {
         "overrides": {
             "@commitlint/config-conventional": "^19.6.0",
-            "micromatch@<4.0.8": ">=4.0.8",
-            "cross-spawn@>=7.0.0 <7.0.5": ">=7.0.5"
+            "cross-spawn@>=7.0.0 <7.0.5": ">=7.0.5",
+            "micromatch@<4.0.8": ">=4.0.8"
         }
     }
 }
