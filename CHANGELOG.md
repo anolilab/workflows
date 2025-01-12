@@ -1,3 +1,20 @@
+## [3.0.1](https://github.com/anolilab/workflows/compare/v3.0.0...v3.0.1) (2025-01-12)
+
+### Bug Fixes
+
+* fixed npm version ([09d0577](https://github.com/anolilab/workflows/commit/09d0577de2f48dd1e1220286d86331f481b94b48))
+
+### Miscellaneous Chores
+
+* **deps:** update actions/upload-artifact action to v4.5.0 ([941108d](https://github.com/anolilab/workflows/commit/941108d13ecfe277cd1fcfd07b538bf11e1e474e))
+* **deps:** update dependency lint-staged to ^15.3.0 ([#114](https://github.com/anolilab/workflows/issues/114)) ([5c04dfc](https://github.com/anolilab/workflows/commit/5c04dfcadae464d88a7086ce89a35b9c99d22836))
+* **deps:** update dependency semantic-release to ^24.2.1 ([#115](https://github.com/anolilab/workflows/issues/115)) ([b9ceddc](https://github.com/anolilab/workflows/commit/b9ceddc5e39b164658a102ee94b35f20ae57a98c))
+* **deps:** update github/codeql-action action to v3.28.0 ([#112](https://github.com/anolilab/workflows/issues/112)) ([07c4a01](https://github.com/anolilab/workflows/commit/07c4a0150ffc815ff497e774be7e6d91e51beaf2))
+* **deps:** update pnpm to v9.15.1 ([#111](https://github.com/anolilab/workflows/issues/111)) ([64caeb5](https://github.com/anolilab/workflows/commit/64caeb5d5c419700418709faa24420702461b09c))
+* **deps:** update pnpm to v9.15.2 ([#113](https://github.com/anolilab/workflows/issues/113)) ([0278f2d](https://github.com/anolilab/workflows/commit/0278f2d6cbbef0bcaf9ea51311d9aa7d8551cfff))
+* **deps:** update pnpm to v9.15.3 ([#116](https://github.com/anolilab/workflows/issues/116)) ([68f9079](https://github.com/anolilab/workflows/commit/68f90798a25f8ac666659b4148fde27fdda0120f))
+* **deps:** update step-security/harden-runner action to v2.10.3 ([#117](https://github.com/anolilab/workflows/issues/117)) ([ec9e056](https://github.com/anolilab/workflows/commit/ec9e056fd87e29f72205ab73b2126347b7887af3))
+
 ## [3.0.0](https://github.com/anolilab/workflows/compare/v2.6.5...v3.0.0) (2024-12-15)
 
 ### ⚠ BREAKING CHANGES
