@@ -78,17 +78,11 @@ runs:
           if: "inputs.use-affected == 'false'"
           shell: "bash"
           run: |
-              IFS=',' read -r -a exclude_array <<< "${{ inputs.exclude-projects }}"
+              IFS=$'\n' read -r -d '' -a exclude_array < <(pnpm nx show projects --exclude=${{ inputs.exclude-affected-projects }} && printf '\0')
 
-              for dir in packages/*; do
-                  dir_name=$(basename "${dir}")
-
-                  if [[ " ${exclude_array[@]} " =~ " ${dir_name} " ]]; then
-                      continue
-                  fi
-
-                  echo "Runing codecov in ${dir_name} folder"
-                  ./codecov --codecov-yml-path codecov.yml --verbose upload-process --fail-on-error --dir "${dir}" -t "${CODECOV_TOKEN}" -F "${dir_name}" -n "${dir_name}"-${{ github.run_id }}
+              for project in "${exclude_array[@]}"; do
+                  echo "Runing codecov in ${project} folder"
+                  ./codecov --codecov-yml-path codecov.yml --verbose upload-process --fail-on-error --dir "packages/${project}" -t "${CODECOV_TOKEN}" -F "${project}" -n "${project}-${{ github.run_id }}"
               done
           env:
               CODECOV_TOKEN: "${{ inputs.codecov-token }}"
