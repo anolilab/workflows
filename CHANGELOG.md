@@ -1,3 +1,9 @@
+## [3.0.5](https://github.com/anolilab/workflows/compare/v3.0.4...v3.0.5) (2025-01-15)
+
+### Bug Fixes
+
+* changed exclude-affected-projects variable to exclude-projects ([26b837d](https://github.com/anolilab/workflows/commit/26b837d46e04870573098b786836545200796f07))
+
 ## [3.0.4](https://github.com/anolilab/workflows/compare/v3.0.3...v3.0.4) (2025-01-15)
 
 ### Bug Fixes
