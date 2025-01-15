@@ -1,3 +1,9 @@
+## [3.0.4](https://github.com/anolilab/workflows/compare/v3.0.3...v3.0.4) (2025-01-15)
+
+### Bug Fixes
+
+* fixed codecov upload on use-affected false ([ead4c1a](https://github.com/anolilab/workflows/commit/ead4c1acd2b54c9284a2d42c68a3d937b334abfc))
+
 ## [3.0.3](https://github.com/anolilab/workflows/compare/v3.0.2...v3.0.3) (2025-01-14)
 
 ### Bug Fixes
