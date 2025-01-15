@@ -78,7 +78,7 @@ runs:
           if: "inputs.use-affected == 'false'"
           shell: "bash"
           run: |
-              IFS=$'\n' read -r -d '' -a exclude_array < <(pnpm nx show projects --exclude=${{ inputs.exclude-affected-projects }} && printf '\0')
+              IFS=$'\n' read -r -d '' -a exclude_array < <(pnpm nx show projects --exclude=${{ inputs.exclude-projects }} && printf '\0')
 
               # Remove the first two elements of the array, this include infos about the command call
               unset 'exclude_array[0]'
