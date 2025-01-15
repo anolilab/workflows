@@ -63,7 +63,7 @@ runs:
           run: |
               IFS=$'\n' read -r -d '' -a affected_projects < <(pnpm nx show projects --affected --files=${{ inputs.affected-files }} --exclude=${{ inputs.exclude-affected-projects }} && printf '\0')
 
-              # Remove the first two elements of the array
+              # Remove the first two elements of the array, this include infos about the command call
               unset 'affected_projects[0]'
               unset 'affected_projects[1]'
 
@@ -79,6 +79,10 @@ runs:
           shell: "bash"
           run: |
               IFS=$'\n' read -r -d '' -a exclude_array < <(pnpm nx show projects --exclude=${{ inputs.exclude-affected-projects }} && printf '\0')
+
+              # Remove the first two elements of the array, this include infos about the command call
+              unset 'exclude_array[0]'
+              unset 'exclude_array[1]'
 
               for project in "${exclude_array[@]}"; do
                   echo "Runing codecov in ${project} folder"
