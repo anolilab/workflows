@@ -21,6 +21,10 @@ inputs:
     exclude-projects:
         description: "The projects to exclude when full upload should happen"
         required: false
+    projectsFolder:
+        description: "The folder where the projects are located"
+        required: false
+        default: "packages"
 
 runs:
     using: "composite"
@@ -61,7 +65,7 @@ runs:
           if: "inputs.use-affected == 'true'"
           shell: "bash"
           run: |
-              IFS=$'\n' read -r -d '' -a affected_projects < <(pnpm nx show projects --affected --files=${{ inputs.affected-files }} --exclude=${{ inputs.exclude-affected-projects }} && printf '\0')
+              IFS=$'\n' read -r -d '' -a affected_projects < <(pnpm nx show projects --affected --projects "${{ inputs.projectsFolder }}/*" --files=${{ inputs.affected-files }} --exclude=${{ inputs.exclude-affected-projects }} && printf '\0')
 
               # Remove the first two elements of the array, this include infos about the command call
               unset 'affected_projects[0]'
@@ -69,7 +73,7 @@ runs:
 
               for project in "${affected_projects[@]}"; do
                 echo "Runing codecov in ${project} folder"
-                ./codecov --codecov-yml-path codecov.yml --verbose upload-process --fail-on-error --dir "packages/${project}" -t "${CODECOV_TOKEN}" -F "${project}" -n "${project}-${{ github.run_id }}"
+                ./codecov --codecov-yml-path codecov.yml --verbose upload-process --fail-on-error --dir "${{ inputs.projectsFolder }}/${project}" -t "${CODECOV_TOKEN}" -F "${project}" -n "${project}-${{ github.run_id }}"
               done
           env:
               CODECOV_TOKEN: "${{ inputs.codecov-token }}"
@@ -78,7 +82,7 @@ runs:
           if: "inputs.use-affected == 'false'"
           shell: "bash"
           run: |
-              IFS=$'\n' read -r -d '' -a exclude_array < <(pnpm nx show projects --exclude=${{ inputs.exclude-projects }} && printf '\0')
+              IFS=$'\n' read -r -d '' -a exclude_array < <(pnpm nx show projects --projects "${{ inputs.projectsFolder }}/*" --exclude=${{ inputs.exclude-projects }} && printf '\0')
 
               # Remove the first two elements of the array, this include infos about the command call
               unset 'exclude_array[0]'
@@ -86,7 +90,7 @@ runs:
 
               for project in "${exclude_array[@]}"; do
                   echo "Runing codecov in ${project} folder"
-                  ./codecov --codecov-yml-path codecov.yml --verbose upload-process --fail-on-error --dir "packages/${project}" -t "${CODECOV_TOKEN}" -F "${project}" -n "${project}-${{ github.run_id }}"
+                  ./codecov --codecov-yml-path codecov.yml --verbose upload-process --fail-on-error --dir "${{ inputs.projectsFolder }}/${project}" -t "${CODECOV_TOKEN}" -F "${project}" -n "${project}-${{ github.run_id }}"
               done
           env:
               CODECOV_TOKEN: "${{ inputs.codecov-token }}"
