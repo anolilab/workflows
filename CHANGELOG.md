@@ -1,3 +1,9 @@
+## [3.0.6](https://github.com/anolilab/workflows/compare/v3.0.5...v3.0.6) (2025-01-15)
+
+### Bug Fixes
+
+* added projectsFolder config to fixing the location of the projects ([f2cd88b](https://github.com/anolilab/workflows/commit/f2cd88b14b7e0500e30a1818bf79923c5a00752c))
+
 ## [3.0.5](https://github.com/anolilab/workflows/compare/v3.0.4...v3.0.5) (2025-01-15)
 
 ### Bug Fixes
