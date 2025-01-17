@@ -23,8 +23,8 @@ importers:
         specifier: ^5.0.14
         version: 5.0.14(prettier@3.4.2)
       '@anolilab/semantic-release-preset':
-        specifier: ^9.0.4
-        version: 9.0.4(@semantic-release/npm@12.0.1(semantic-release@24.2.1(typescript@5.5.3)))(semantic-release@24.2.1(typescript@5.5.3))
+        specifier: ^10.0.0
+        version: 10.0.0(@semantic-release/npm@12.0.1(semantic-release@24.2.1(typescript@5.5.3)))(semantic-release@24.2.1(typescript@5.5.3))
       '@commitlint/cli':
         specifier: ^19.6.1
         version: 19.6.1(@types/node@20.14.10)(typescript@5.5.3)
@@ -113,12 +113,16 @@ packages:
     peerDependencies:
       prettier: 2.x || 3.x
 
-  '@anolilab/semantic-release-preset@9.0.4':
-    resolution: {integrity: sha512-S0qfmPP09Vml7WAONjKMbwXx/K50CnNsBTuoNTeIdzcaxM8uAQu/zq9LiQDqd+rX725/54pxQ4Oefwcw5HilZg==}
+  '@anolilab/semantic-release-clean-package-json@1.0.0':
+    resolution: {integrity: sha512-ZTcCEt21uaXu8HwR+K0tjSz3w9W7PK8dc6JEDeiTRv51TG6WTx+h8GKYDMwCN1sFO5tvlKPDwQL3WlrabJnJpQ==}
+    engines: {node: '>=18.0.0 <=23.x'}
+
+  '@anolilab/semantic-release-preset@10.0.0':
+    resolution: {integrity: sha512-sdKkvZ56XzIMggmCUc29NqsoQHBK/nlDI0TEOeHAfq94bNI8KkQ7kVerNUCMj/0fJYdOKKbFDCw2r1U4ryJ4Tw==}
     engines: {node: ^18.17 || >=20.6.1}
     os: [darwin, linux, win32]
     peerDependencies:
-      '@anolilab/semantic-release-pnpm': 1.1.7
+      '@anolilab/semantic-release-pnpm': 1.1.8
       '@semantic-release/npm': ^12.0.1
       semantic-release: ^24.0.0
       semantic-release-yarn: ^3.0.2
@@ -514,6 +518,16 @@ packages:
 
   '@types/semver@7.5.8':
     resolution: {integrity: sha512-I8EUhyrgfLrcTkzV3TSsGyl1tSuPrEDzr0yd5m90UgNxQkyDXULk3b6MlQqTCpZpNtWe1K0hzclnZkTcLBe2UQ==}
+
+  '@visulima/fs@2.3.7':
+    resolution: {integrity: sha512-aMR0qjlfh9Le49ZAi0V/xyipqDztHrWLEpeL0YmlHrPG/H2bDExxAkaskOr5NgZzKVA/n6iF36IqlJKcp8pIWA==}
+    engines: {node: '>=18.* <=23.*'}
+    os: [darwin, linux, win32]
+
+  '@visulima/path@1.3.3':
+    resolution: {integrity: sha512-fZtkhILqLAJXmMAaT5ifodd6MZ7vy77o4/cAeXyhD7vbbyjQXyntNbjEb46TpnbGr/nysc1maNPOXg78DYw7Hw==}
+    engines: {node: '>=18.* <=23.*'}
+    os: [darwin, linux, win32]
 
   JSONStream@1.3.5:
     resolution: {integrity: sha512-E+iruNOY8VV9s4JEbe1aNEm6MiszPRr/UfcHMz0TQh1BXSxHK+ASV1R6W4HpjBhSeS+54PIsAMCBmwD06LLsqQ==}
@@ -2510,6 +2524,11 @@ packages:
     engines: {node: '>= 14'}
     hasBin: true
 
+  yaml@2.7.0:
+    resolution: {integrity: sha512-+hSoy/QHluxmC9kCIJyL/uyFmLmc+e5CFR5Wa+bpIhIj85LVb9ZH2nVnqrHoSvKogwODv0ClqZkmiSSaIH5LTA==}
+    engines: {node: '>= 14'}
+    hasBin: true
+
   yargs-parser@20.2.9:
     resolution: {integrity: sha512-y11nGElTIV+CT3Zv9t7VKl+Q3hTQoT9a1Qzezhhl6Rp21gJ/IVTW7Z3y9EWXhuUBC2Shnf+DX0antecpAwSP8w==}
     engines: {node: '>=10'}
@@ -2574,8 +2593,15 @@ snapshots:
       '@anolilab/package-json-utils': 3.0.9
       prettier: 3.4.2
 
-  '@anolilab/semantic-release-preset@9.0.4(@semantic-release/npm@12.0.1(semantic-release@24.2.1(typescript@5.5.3)))(semantic-release@24.2.1(typescript@5.5.3))':
+  '@anolilab/semantic-release-clean-package-json@1.0.0':
     dependencies:
+      '@semantic-release/error': 4.0.0
+      '@visulima/fs': 2.3.7
+      '@visulima/path': 1.3.3
+
+  '@anolilab/semantic-release-preset@10.0.0(@semantic-release/npm@12.0.1(semantic-release@24.2.1(typescript@5.5.3)))(semantic-release@24.2.1(typescript@5.5.3))':
+    dependencies:
+      '@anolilab/semantic-release-clean-package-json': 1.0.0
       '@semantic-release/changelog': 6.0.3(semantic-release@24.2.1(typescript@5.5.3))
       '@semantic-release/commit-analyzer': 13.0.1(semantic-release@24.2.1(typescript@5.5.3))
       '@semantic-release/exec': 6.0.3(semantic-release@24.2.1(typescript@5.5.3))
@@ -3195,6 +3221,13 @@ snapshots:
   '@types/normalize-package-data@2.4.4': {}
 
   '@types/semver@7.5.8': {}
+
+  '@visulima/fs@2.3.7':
+    dependencies:
+      '@visulima/path': 1.3.3
+      yaml: 2.7.0
+
+  '@visulima/path@1.3.3': {}
 
   JSONStream@1.3.5:
     dependencies:
@@ -5081,6 +5114,8 @@ snapshots:
   yallist@4.0.0: {}
 
   yaml@2.6.1: {}
+
+  yaml@2.7.0: {}
 
   yargs-parser@20.2.9: {}
 
