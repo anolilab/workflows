@@ -9,10 +9,21 @@ on: # yamllint disable-line rule:truthy
             issue-welcome:
                 description: "Message to show to a contributor opening their first issue."
                 required: false
+                default: >
+                    It looks like this is your first issue. Welcome! 👋
+                    One of the project maintainers will be with you as soon as possible. We
+                    appreciate your patience. To safeguard the health of the project, please
+                    take a moment to read our [code of conduct](../blob/main/.github/CODE_OF_CONDUCT.md).
                 type: "string"
             pr-welcome:
                 description: "Message to show to a contributor opening their first pull request."
                 required: false
+                default: >
+                    It looks like this is your first pull request. 🎉
+                    Thank you for your contribution! One of the project maintainers will triage
+                    and assign the pull request for review. We appreciate your patience. To
+                    safeguard the health of the project, please take a moment to read our
+                    [code of conduct](../blob/main/.github/CODE_OF_CONDUCT.md).
                 type: "string"
             pr-merged:
                 description: "Message to show to a contributor after first merged pull request."
