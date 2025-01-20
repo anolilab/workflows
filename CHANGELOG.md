@@ -1,3 +1,14 @@
+## [3.0.7](https://github.com/anolilab/workflows/compare/v3.0.6...v3.0.7) (2025-01-20)
+
+### Bug Fixes
+
+* added default messages to allo-allo variables ([59d0cdd](https://github.com/anolilab/workflows/commit/59d0cdd2ec93771cb735a9491dbf19380f312a8e))
+
+### Miscellaneous Chores
+
+* **deps:** update dependency @anolilab/semantic-release-preset to v10 ([#121](https://github.com/anolilab/workflows/issues/121)) ([04d4672](https://github.com/anolilab/workflows/commit/04d46723a200061c0c9e475b0cb314dffef47e96))
+* **deps:** update pnpm to v9.15.4 ([#122](https://github.com/anolilab/workflows/issues/122)) ([035a547](https://github.com/anolilab/workflows/commit/035a547c231155e87f198eb206c9ff834ade7faa))
+
 ## [3.0.6](https://github.com/anolilab/workflows/compare/v3.0.5...v3.0.6) (2025-01-15)
 
 ### Bug Fixes
