@@ -1,3 +1,9 @@
+## [3.0.8](https://github.com/anolilab/workflows/compare/v3.0.7...v3.0.8) (2025-01-22)
+
+### Bug Fixes
+
+* fixed allo-allo script of "Comment on the Merged Pull Request" ([c394f3b](https://github.com/anolilab/workflows/commit/c394f3be662bad5b1a5a54f2954f9c25f114f145))
+
 ## [3.0.7](https://github.com/anolilab/workflows/compare/v3.0.6...v3.0.7) (2025-01-20)
 
 ### Bug Fixes
