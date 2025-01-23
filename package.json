@@ -12,7 +12,7 @@
         "@anolilab/commitlint-config": "^5.0.3",
         "@anolilab/lint-staged-config": "^2.1.7",
         "@anolilab/prettier-config": "^5.0.14",
-        "@anolilab/semantic-release-preset": "^10.0.0",
+        "@anolilab/semantic-release-preset": "^10.0.2",
         "@commitlint/cli": "^19.6.1",
         "@commitlint/config-conventional": "^19.6.0",
         "@secretlint/secretlint-rule-preset-recommend": "^9.0.0",
