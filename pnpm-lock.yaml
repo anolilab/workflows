@@ -6,8 +6,8 @@ settings:
 
 overrides:
   '@commitlint/config-conventional': ^19.6.0
+  cross-spawn@>=7.0.0 <7.0.5: '>=7.0.6'
   micromatch@<4.0.8: '>=4.0.8'
-  cross-spawn@>=7.0.0 <7.0.5: '>=7.0.5'
 
 importers:
 
@@ -18,7 +18,7 @@ importers:
         version: 5.0.3(@commitlint/cli@19.6.1(@types/node@20.14.10)(typescript@5.5.3))(@types/node@20.14.10)(typescript@5.5.3)
       '@anolilab/lint-staged-config':
         specifier: ^2.1.7
-        version: 2.1.7(husky@9.1.7)(lint-staged@15.4.2)(prettier@3.4.2)(secretlint@9.0.0)
+        version: 2.1.7(husky@9.1.7)(lint-staged@15.4.3)(prettier@3.4.2)(secretlint@9.0.0)
       '@anolilab/prettier-config':
         specifier: ^5.0.14
         version: 5.0.14(prettier@3.4.2)
@@ -53,8 +53,8 @@ importers:
         specifier: ^4.1.0
         version: 4.1.0
       lint-staged:
-        specifier: ^15.4.2
-        version: 15.4.2
+        specifier: ^15.4.3
+        version: 15.4.3
       prettier:
         specifier: ^3.4.2
         version: 3.4.2
@@ -1484,8 +1484,8 @@ packages:
     resolution: {integrity: sha512-wM1+Z03eypVAVUCE7QdSqpVIvelbOakn1M0bPDoA4SGWPx3sNDVUiMo3L6To6WWGClB7VyXnhQ4Sn7gxiJbE6A==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
 
-  lint-staged@15.4.2:
-    resolution: {integrity: sha512-gCqzB/Li281uZJgReNci+oXXqUEdrFAQAzTE/LwoxxiEuP41vozNe4BATS+4ehdqkWn+Z6bGc3EDcBja3npBVw==}
+  lint-staged@15.4.3:
+    resolution: {integrity: sha512-FoH1vOeouNh1pw+90S+cnuoFwRfUD9ijY2GKy5h7HS3OR7JVir2N2xrsa0+Twc1B7cW72L+88geG5cW4wIhn7g==}
     engines: {node: '>=18.12.0'}
     hasBin: true
 
@@ -2567,12 +2567,12 @@ snapshots:
       - '@types/node'
       - typescript
 
-  '@anolilab/lint-staged-config@2.1.7(husky@9.1.7)(lint-staged@15.4.2)(prettier@3.4.2)(secretlint@9.0.0)':
+  '@anolilab/lint-staged-config@2.1.7(husky@9.1.7)(lint-staged@15.4.3)(prettier@3.4.2)(secretlint@9.0.0)':
     dependencies:
       '@anolilab/package-json-utils': 3.0.9
       find-up: 5.0.0
       husky: 9.1.7
-      lint-staged: 15.4.2
+      lint-staged: 15.4.3
       shell-quote: 1.8.1
     optionalDependencies:
       prettier: 3.4.2
@@ -2998,7 +2998,7 @@ snapshots:
       '@textlint/module-interop': 14.2.1
       '@textlint/types': 14.2.1
       chalk: 4.1.2
-      debug: 4.3.7
+      debug: 4.4.0
       pluralize: 8.0.0
       strip-ansi: 6.0.1
       table: 6.8.2
@@ -3015,7 +3015,7 @@ snapshots:
       '@secretlint/profiler': 9.0.0
       '@secretlint/source-creator': 9.0.0
       '@secretlint/types': 9.0.0
-      debug: 4.3.7
+      debug: 4.4.0
       p-map: 4.0.0
     transitivePeerDependencies:
       - supports-color
@@ -4172,7 +4172,7 @@ snapshots:
 
   lines-and-columns@2.0.4: {}
 
-  lint-staged@15.4.2:
+  lint-staged@15.4.3:
     dependencies:
       chalk: 5.4.1
       commander: 13.1.0

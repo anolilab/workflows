@@ -22,7 +22,7 @@
         "cross-env": "^7.0.3",
         "husky": "^9.1.7",
         "is-ci": "^4.1.0",
-        "lint-staged": "^15.4.2",
+        "lint-staged": "^15.4.3",
         "prettier": "^3.4.2",
         "secretlint": "9.0.0",
         "semantic-release": "^24.2.1",
@@ -35,7 +35,7 @@
     "pnpm": {
         "overrides": {
             "@commitlint/config-conventional": "^19.6.0",
-            "cross-spawn@>=7.0.0 <7.0.5": ">=7.0.5",
+            "cross-spawn@>=7.0.0 <7.0.5": ">=7.0.6",
             "micromatch@<4.0.8": ">=4.0.8"
         }
     }
