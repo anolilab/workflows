@@ -46,7 +46,7 @@ jobs:
                   GIT_AUTHOR_NAME: "GitHub Actions Shell"
                   EMAIL: "github-actions[bot]@users.noreply.github.com"
 
-            - uses: "crazy-max/ghaction-github-labeler@b54af0c25861143e7c8813d7cbbf46d2c341680c" # v5.1.0
+            - uses: "crazy-max/ghaction-github-labeler@31674a3852a9074f2086abcf1c53839d466a47e7" # v5.2.0
               with:
                   github-token: "${{ secrets.GITHUB_TOKEN }}"
                   yaml-file: "${{ inputs.yaml-file }}"
