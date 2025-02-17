@@ -23,8 +23,8 @@ importers:
         specifier: ^5.0.14
         version: 5.0.14(prettier@3.4.2)
       '@anolilab/semantic-release-preset':
-        specifier: ^10.0.2
-        version: 10.0.2(@semantic-release/npm@12.0.1(semantic-release@24.2.2(typescript@5.5.3)))(semantic-release@24.2.2(typescript@5.5.3))
+        specifier: ^10.0.3
+        version: 10.0.3(@semantic-release/npm@12.0.1(semantic-release@24.2.2(typescript@5.5.3)))(semantic-release@24.2.2(typescript@5.5.3))(yaml@2.7.0)
       '@commitlint/cli':
         specifier: ^19.7.1
         version: 19.7.1(@types/node@20.14.10)(typescript@5.5.3)
@@ -113,18 +113,18 @@ packages:
     peerDependencies:
       prettier: 2.x || 3.x
 
-  '@anolilab/semantic-release-clean-package-json@2.0.0':
-    resolution: {integrity: sha512-GKvKrRUfZM27ELuS7i4aUWvq/qbr8QKGF9uU34qq0B+7yBoTJTdhkqo3a1476D2le1/kuxFc9yJg9vv7DBrv4w==}
+  '@anolilab/semantic-release-clean-package-json@2.0.1':
+    resolution: {integrity: sha512-dE0VxTC/vo+k/fHnwGJAhNQKHI/kvoKdnjQP4e+xDUYQh1jmk0gN68yh1V+pWDJeAPxvjwHBCDSOVwz/nZAlvw==}
     engines: {node: '>=18.0.0 <=23.x'}
 
-  '@anolilab/semantic-release-preset@10.0.2':
-    resolution: {integrity: sha512-BSu8HWAZMMfI0Gagj3jOocfLrPNGqtUN/u3n/dEdS3BaTkaFtt2SKA8uNJ7EEqabXqRKxA5ag2tuWpRNpSjg+A==}
+  '@anolilab/semantic-release-preset@10.0.3':
+    resolution: {integrity: sha512-W1BMVReWv1ymOGRj4CAEiG+Sgj+mkUjhsZZzpqMu8ry+o1q6+2DQ70bwqOICZ97nzskreZtAiPeXYvYtaDOLTg==}
     engines: {node: ^18.17 || >=20.6.1}
     os: [darwin, linux, win32]
     peerDependencies:
-      '@anolilab/semantic-release-pnpm': 1.1.9
+      '@anolilab/semantic-release-pnpm': 1.1.10
       '@semantic-release/npm': ^12.0.1
-      semantic-release: ^24.0.0
+      semantic-release: ^24.2.1
       semantic-release-yarn: ^3.0.2
     peerDependenciesMeta:
       '@anolilab/semantic-release-pnpm':
@@ -422,11 +422,11 @@ packages:
     resolution: {integrity: sha512-mgdxrHTLOjOddRVYIYDo0fR3/v61GNN1YGkfbrjuIKg/uMgCd+Qzo3UAXJ+woLQQpos4pl5Esuw5A7AoNlzjUQ==}
     engines: {node: '>=18'}
 
-  '@semantic-release/exec@6.0.3':
-    resolution: {integrity: sha512-bxAq8vLOw76aV89vxxICecEa8jfaWwYITw6X74zzlO0mc/Bgieqx9kBRz9z96pHectiTAtsCwsQcUyLYWnp3VQ==}
-    engines: {node: '>=14.17'}
+  '@semantic-release/exec@7.0.3':
+    resolution: {integrity: sha512-uNWwPNtWi3WTcTm3fWfFQEuj8otOvwoS5m9yo2jSVHuvqdZNsOWmuL0/FqcVyZnCI32fxyYV0G7PPb/TzCH6jw==}
+    engines: {node: '>=20.8.1'}
     peerDependencies:
-      semantic-release: '>=18.0.0'
+      semantic-release: '>=24.1.0'
 
   '@semantic-release/git@10.0.1':
     resolution: {integrity: sha512-eWrx5KguUcU2wUPaO6sfvZI0wPafUKAMNC18aXY4EnNcrZL86dEmpNVnC9uMpGZkmZJ9EfCVJBQx4pV4EMGT1w==}
@@ -491,14 +491,19 @@ packages:
   '@types/semver@7.5.8':
     resolution: {integrity: sha512-I8EUhyrgfLrcTkzV3TSsGyl1tSuPrEDzr0yd5m90UgNxQkyDXULk3b6MlQqTCpZpNtWe1K0hzclnZkTcLBe2UQ==}
 
-  '@visulima/fs@2.3.7':
-    resolution: {integrity: sha512-aMR0qjlfh9Le49ZAi0V/xyipqDztHrWLEpeL0YmlHrPG/H2bDExxAkaskOr5NgZzKVA/n6iF36IqlJKcp8pIWA==}
-    engines: {node: '>=18.* <=23.*'}
+  '@visulima/fs@3.1.0':
+    resolution: {integrity: sha512-KpM4yPvAtxmN/3XbdgWJwhOBvcRqJD+qGxzKpoSkZ6j/PM/0A2/yQVVLyOEGIMtstMca42io1DegISyq53Wn9w==}
+    engines: {node: '>=18.0.0 <=23.x'}
     os: [darwin, linux, win32]
+    peerDependencies:
+      yaml: ^2.7.0
+    peerDependenciesMeta:
+      yaml:
+        optional: true
 
-  '@visulima/path@1.3.3':
-    resolution: {integrity: sha512-fZtkhILqLAJXmMAaT5ifodd6MZ7vy77o4/cAeXyhD7vbbyjQXyntNbjEb46TpnbGr/nysc1maNPOXg78DYw7Hw==}
-    engines: {node: '>=18.* <=23.*'}
+  '@visulima/path@1.3.4':
+    resolution: {integrity: sha512-aSSHjSMFK2/+TBbo029LpwVhi4+inZ/Q8AUiuBKE5T4vsXqQn/zQdGl2JViHBSjUWo7gEj5I1yF/iY3FdIupew==}
+    engines: {node: '>=18.0.0 <=23.x'}
     os: [darwin, linux, win32]
 
   JSONStream@1.3.5:
@@ -2542,18 +2547,20 @@ snapshots:
       '@anolilab/package-json-utils': 3.0.9
       prettier: 3.4.2
 
-  '@anolilab/semantic-release-clean-package-json@2.0.0':
+  '@anolilab/semantic-release-clean-package-json@2.0.1(yaml@2.7.0)':
     dependencies:
       '@semantic-release/error': 4.0.0
-      '@visulima/fs': 2.3.7
-      '@visulima/path': 1.3.3
+      '@visulima/fs': 3.1.0(yaml@2.7.0)
+      '@visulima/path': 1.3.4
+    transitivePeerDependencies:
+      - yaml
 
-  '@anolilab/semantic-release-preset@10.0.2(@semantic-release/npm@12.0.1(semantic-release@24.2.2(typescript@5.5.3)))(semantic-release@24.2.2(typescript@5.5.3))':
+  '@anolilab/semantic-release-preset@10.0.3(@semantic-release/npm@12.0.1(semantic-release@24.2.2(typescript@5.5.3)))(semantic-release@24.2.2(typescript@5.5.3))(yaml@2.7.0)':
     dependencies:
-      '@anolilab/semantic-release-clean-package-json': 2.0.0
+      '@anolilab/semantic-release-clean-package-json': 2.0.1(yaml@2.7.0)
       '@semantic-release/changelog': 6.0.3(semantic-release@24.2.2(typescript@5.5.3))
       '@semantic-release/commit-analyzer': 13.0.1(semantic-release@24.2.2(typescript@5.5.3))
-      '@semantic-release/exec': 6.0.3(semantic-release@24.2.2(typescript@5.5.3))
+      '@semantic-release/exec': 7.0.3(semantic-release@24.2.2(typescript@5.5.3))
       '@semantic-release/git': 10.0.1(semantic-release@24.2.2(typescript@5.5.3))
       '@semantic-release/github': 11.0.1(semantic-release@24.2.2(typescript@5.5.3))
       '@semantic-release/release-notes-generator': 14.0.3(semantic-release@24.2.2(typescript@5.5.3))
@@ -2563,6 +2570,7 @@ snapshots:
       '@semantic-release/npm': 12.0.1(semantic-release@24.2.2(typescript@5.5.3))
     transitivePeerDependencies:
       - supports-color
+      - yaml
 
   '@azu/format-text@1.0.2': {}
 
@@ -2977,14 +2985,14 @@ snapshots:
 
   '@semantic-release/error@4.0.0': {}
 
-  '@semantic-release/exec@6.0.3(semantic-release@24.2.2(typescript@5.5.3))':
+  '@semantic-release/exec@7.0.3(semantic-release@24.2.2(typescript@5.5.3))':
     dependencies:
-      '@semantic-release/error': 3.0.0
+      '@semantic-release/error': 4.0.0
       aggregate-error: 3.1.0
       debug: 4.4.0
-      execa: 5.1.1
-      lodash: 4.17.21
-      parse-json: 5.2.0
+      execa: 9.3.0
+      lodash-es: 4.17.21
+      parse-json: 8.1.0
       semantic-release: 24.2.2(typescript@5.5.3)
     transitivePeerDependencies:
       - supports-color
@@ -3105,12 +3113,13 @@ snapshots:
 
   '@types/semver@7.5.8': {}
 
-  '@visulima/fs@2.3.7':
+  '@visulima/fs@3.1.0(yaml@2.7.0)':
     dependencies:
-      '@visulima/path': 1.3.3
+      '@visulima/path': 1.3.4
+    optionalDependencies:
       yaml: 2.7.0
 
-  '@visulima/path@1.3.3': {}
+  '@visulima/path@1.3.4': {}
 
   JSONStream@1.3.5:
     dependencies:
