@@ -15,7 +15,7 @@
         "@anolilab/semantic-release-preset": "^10.0.3",
         "@commitlint/cli": "^19.8.0",
         "@commitlint/config-conventional": "^19.8.0",
-        "@secretlint/secretlint-rule-preset-recommend": "^9.2.0",
+        "@secretlint/secretlint-rule-preset-recommend": "^9.2.1",
         "audit-ci": "^7.1.0",
         "commitizen": "^4.3.1",
         "conventional-changelog-conventionalcommits": "8.0.0",
@@ -24,7 +24,7 @@
         "is-ci": "^4.1.0",
         "lint-staged": "^15.5.0",
         "prettier": "^3.5.3",
-        "secretlint": "9.2.0",
+        "secretlint": "9.2.1",
         "semantic-release": "^24.2.3",
         "sort-package-json": "^2.15.1"
     },
