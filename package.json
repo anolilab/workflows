@@ -24,7 +24,7 @@
         "is-ci": "^4.1.0",
         "lint-staged": "^15.5.0",
         "prettier": "^3.5.3",
-        "secretlint": "9.2.1",
+        "secretlint": "9.3.0",
         "semantic-release": "^24.2.3",
         "sort-package-json": "^2.15.1"
     },
