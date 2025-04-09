@@ -18,7 +18,7 @@ importers:
         version: 5.0.3(@commitlint/cli@19.8.0(@types/node@20.14.10)(typescript@5.5.3))(@types/node@20.14.10)(typescript@5.5.3)
       '@anolilab/lint-staged-config':
         specifier: ^2.1.7
-        version: 2.1.7(husky@9.1.7)(lint-staged@15.5.0)(prettier@3.5.3)(secretlint@9.2.1)
+        version: 2.1.7(husky@9.1.7)(lint-staged@15.5.0)(prettier@3.5.3)(secretlint@9.3.0)
       '@anolilab/prettier-config':
         specifier: ^5.0.14
         version: 5.0.14(prettier@3.5.3)
@@ -59,8 +59,8 @@ importers:
         specifier: ^3.5.3
         version: 3.5.3
       secretlint:
-        specifier: 9.2.1
-        version: 9.2.1
+        specifier: 9.3.0
+        version: 9.3.0
       semantic-release:
         specifier: ^24.2.3
         version: 24.2.3(typescript@5.5.3)
@@ -2109,8 +2109,8 @@ packages:
   safer-buffer@2.1.2:
     resolution: {integrity: sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==}
 
-  secretlint@9.2.1:
-    resolution: {integrity: sha512-L/1BmxdGFCP4pMeba9yOB/pCnSAlwiqOrQTk8atfa18s2/TXYxW93fVdnoksqmBDc6TpVPKZlmpRlQY/wxcBZQ==}
+  secretlint@9.3.0:
+    resolution: {integrity: sha512-XEGNiCuUkXqYraH3pg+UftbHsqaO/JWbocdXxC7Z2DQavyUc8g2ESAKABiYGs3HAfypaGs36xXrd/qQevXnpRQ==}
     engines: {node: ^14.13.1 || >=16.0.0}
     hasBin: true
 
@@ -2560,7 +2560,7 @@ snapshots:
       - '@types/node'
       - typescript
 
-  '@anolilab/lint-staged-config@2.1.7(husky@9.1.7)(lint-staged@15.5.0)(prettier@3.5.3)(secretlint@9.2.1)':
+  '@anolilab/lint-staged-config@2.1.7(husky@9.1.7)(lint-staged@15.5.0)(prettier@3.5.3)(secretlint@9.3.0)':
     dependencies:
       '@anolilab/package-json-utils': 3.0.9
       find-up: 5.0.0
@@ -2569,7 +2569,7 @@ snapshots:
       shell-quote: 1.8.1
     optionalDependencies:
       prettier: 3.5.3
-      secretlint: 9.2.1
+      secretlint: 9.3.0
 
   '@anolilab/package-json-utils@3.0.9':
     dependencies:
@@ -4680,7 +4680,7 @@ snapshots:
 
   safer-buffer@2.1.2: {}
 
-  secretlint@9.2.1:
+  secretlint@9.3.0:
     dependencies:
       '@secretlint/config-creator': 9.3.0
       '@secretlint/formatter': 9.3.0
