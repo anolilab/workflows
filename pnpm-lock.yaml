@@ -32,7 +32,7 @@ importers:
         specifier: ^19.8.0
         version: 19.8.0
       '@secretlint/secretlint-rule-preset-recommend':
-        specifier: ^9.2.1
+        specifier: ^9.3.0
         version: 9.3.0
       audit-ci:
         specifier: ^7.1.0
