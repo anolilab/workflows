@@ -35,7 +35,7 @@ jobs:
         runs-on: "ubuntu-latest"
         steps:
             - name: "Harden Runner"
-              uses: "step-security/harden-runner@4d991eb9b905ef189e4c376166672c3f2f230481" # v2.11.0
+              uses: "step-security/harden-runner@c6295a65d1254861815972266d5933fd6e532bdf" # v2.11.1
               with:
                   egress-policy: "audit"
 
@@ -46,7 +46,7 @@ jobs:
                   GIT_AUTHOR_NAME: "GitHub Actions Shell"
                   EMAIL: "github-actions[bot]@users.noreply.github.com"
 
-            - uses: "crazy-max/ghaction-github-labeler@31674a3852a9074f2086abcf1c53839d466a47e7" # v5.2.0
+            - uses: "crazy-max/ghaction-github-labeler@24d110aa46a59976b8a7f35518cb7f14f434c916" # v5.3.0
               with:
                   github-token: "${{ secrets.GITHUB_TOKEN }}"
                   yaml-file: "${{ inputs.yaml-file }}"
