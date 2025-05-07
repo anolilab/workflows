@@ -1,3 +1,17 @@
+## [3.0.9](https://github.com/anolilab/workflows/compare/v3.0.8...v3.0.9) (2025-05-07)
+
+### Bug Fixes
+
+* removed pr count on more then 25 merged prs ([f79b962](https://github.com/anolilab/workflows/commit/f79b9627536401e1fc3561d7886bba470014f335))
+
+### Miscellaneous Chores
+
+* **deps:** update dependencies and node version ([9680cd3](https://github.com/anolilab/workflows/commit/9680cd30d68d18efd86fceb7d9eb40604b21e864))
+* **deps:** update dependency @anolilab/semantic-release-preset to ^10.0.2 ([#123](https://github.com/anolilab/workflows/issues/123)) ([e9fa4f5](https://github.com/anolilab/workflows/commit/e9fa4f590088bc350515e589f321c2621e496c09))
+* **deps:** update marocchino/sticky-pull-request-comment action to v2.9.1 ([#124](https://github.com/anolilab/workflows/issues/124)) ([574b66e](https://github.com/anolilab/workflows/commit/574b66eb2ccde81f2ea898cebd58ccde652c6f78))
+* **deps:** update minor updates ([#125](https://github.com/anolilab/workflows/issues/125)) ([4618f93](https://github.com/anolilab/workflows/commit/4618f93752f8f8002024b10c9b846f14a4205099))
+* **deps:** update package dependencies in package.json and pnpm-lock.yaml ([f2f686a](https://github.com/anolilab/workflows/commit/f2f686a9c123fe0b6517bb56309e2a9d3d6f33d1))
+
 ## [3.0.8](https://github.com/anolilab/workflows/compare/v3.0.7...v3.0.8) (2025-01-22)
 
 ### Bug Fixes
