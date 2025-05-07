@@ -12,31 +12,36 @@
         "@anolilab/commitlint-config": "^5.0.3",
         "@anolilab/lint-staged-config": "^2.1.7",
         "@anolilab/prettier-config": "^5.0.14",
-        "@anolilab/semantic-release-preset": "^10.0.3",
+        "@anolilab/semantic-release-preset": "^10.0.4",
         "@commitlint/cli": "^19.8.0",
         "@commitlint/config-conventional": "^19.8.0",
-        "@secretlint/secretlint-rule-preset-recommend": "^9.3.1",
+        "@secretlint/secretlint-rule-preset-recommend": "^9.3.2",
         "audit-ci": "^7.1.0",
         "commitizen": "^4.3.1",
         "conventional-changelog-conventionalcommits": "8.0.0",
         "cross-env": "^7.0.3",
         "husky": "^9.1.7",
         "is-ci": "^4.1.0",
-        "lint-staged": "^15.5.1",
+        "lint-staged": "^15.5.2",
         "prettier": "^3.5.3",
-        "secretlint": "9.3.1",
+        "secretlint": "9.3.2",
         "semantic-release": "^24.2.3",
-        "sort-package-json": "^2.15.1"
+        "sort-package-json": "^3.2.0"
     },
-    "packageManager": "pnpm@9.15.9",
+    "packageManager": "pnpm@10.10.0",
     "engines": {
-        "node": ">=18.* <=21.*"
+        "node": ">=18.* <=24.*"
     },
     "pnpm": {
         "overrides": {
             "@commitlint/config-conventional": "^19.8.0",
-            "cross-spawn@>=7.0.0 <7.0.5": ">=7.0.6",
+            "cross-spawn@>=7.0.0 <7.0.5": ">=7.0.5",
             "micromatch@<4.0.8": ">=4.0.8"
-        }
+        },
+        "onlyBuiltDependencies": [
+            "@anolilab/commitlint-config",
+            "@anolilab/lint-staged-config",
+            "@anolilab/prettier-config"
+        ]
     }
 }

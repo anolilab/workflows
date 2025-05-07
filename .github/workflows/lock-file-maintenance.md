@@ -51,7 +51,7 @@ jobs:
               id: "setup"
               uses: "anolilab/workflows/step/setup@main"
               with:
-                  node-version: "18.x"
+                  node-version: "23.x"
                   cache-prefix: "lock-file"
                   install-packages: "false"
 
