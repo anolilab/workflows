@@ -156,8 +156,8 @@ jobs:
                                      `We'd be thrilled to have you take on a mentorship role for newer contributors. Interested? 🧑‍🏫\n\n` +
                                      `@${mention} and everyone here are in awe of your contributions. You're an open source hero! 🦸‍♀️🦸‍♂️`;
                             default:
-                              if (count > 10) {
-                                return `${emoji} **Incredible, @${author}!** You've merged your ${count}th PR! 🎯🎊\n\n` +
+                              if (count > 25) {
+                                return `${emoji} **Incredible, @${author}!** 🎯🎊\n\n` +
                                        `Your ongoing commitment to ${repo} is truly remarkable. You're a driving force in our community! 🚀\n` +
                                        `Your contributions are helping to shape the future of this project. What exciting features or improvements do you envision next? 🔮\n\n` +
                                        `@${mention} and the entire team are grateful for your dedication. You're an inspiration to us all! 💫`;
