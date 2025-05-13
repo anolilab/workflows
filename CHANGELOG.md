@@ -1,3 +1,13 @@
+## [3.0.10](https://github.com/anolilab/workflows/compare/v3.0.9...v3.0.10) (2025-05-13)
+
+### Bug Fixes
+
+* **deps:** update octokit monorepo ([#165](https://github.com/anolilab/workflows/issues/165)) ([c8be740](https://github.com/anolilab/workflows/commit/c8be74088ac3c0e05b8a4a559c1338a8040cca7e))
+
+### Miscellaneous Chores
+
+* **deps:** update dependency @octokit/plugin-paginate-rest@&gt;&[#x3d](https://github.com/anolilab/workflows/issues/x3d);9.3.0-beta.1 &lt;11.4.1 to v12 ([#164](https://github.com/anolilab/workflows/issues/164)) ([c257784](https://github.com/anolilab/workflows/commit/c257784e5ceb76e6e795339d068d96fc76e74722)), closes [#x3](https://github.com/anolilab/workflows/issues/x3)
+
 ## [3.0.9](https://github.com/anolilab/workflows/compare/v3.0.8...v3.0.9) (2025-05-07)
 
 ### Bug Fixes
