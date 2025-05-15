@@ -1,3 +1,9 @@
+## [3.0.11](https://github.com/anolilab/workflows/compare/v3.0.10...v3.0.11) (2025-05-15)
+
+### Bug Fixes
+
+* **deps:** update commitlint monorepo to ^19.8.1 ([#166](https://github.com/anolilab/workflows/issues/166)) ([afbe6c2](https://github.com/anolilab/workflows/commit/afbe6c233b5e5901c6031fb754b8f86823737097))
+
 ## [3.0.10](https://github.com/anolilab/workflows/compare/v3.0.9...v3.0.10) (2025-05-13)
 
 ### Bug Fixes
