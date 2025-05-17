@@ -1,3 +1,15 @@
+## [4.0.0](https://github.com/anolilab/workflows/compare/v3.0.11...v4.0.0) (2025-05-17)
+
+### ⚠ BREAKING CHANGES
+
+* **deps:** updated dependencies to major versions
+
+Co-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>
+
+### Miscellaneous Chores
+
+* **deps:** update dependency lint-staged to v16 ([#167](https://github.com/anolilab/workflows/issues/167)) ([750a952](https://github.com/anolilab/workflows/commit/750a95261a1a20c24b893d3001416acc3f252392))
+
 ## [3.0.11](https://github.com/anolilab/workflows/compare/v3.0.10...v3.0.11) (2025-05-15)
 
 ### Bug Fixes
