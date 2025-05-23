@@ -1,3 +1,9 @@
+## [4.0.1](https://github.com/anolilab/workflows/compare/v4.0.0...v4.0.1) (2025-05-23)
+
+### Bug Fixes
+
+* **deps:** update dependency semantic-release to ^24.2.4 ([#168](https://github.com/anolilab/workflows/issues/168)) ([6a45b0a](https://github.com/anolilab/workflows/commit/6a45b0a2b69d23c1c456f5121d9677d6bb3ccba5))
+
 ## [4.0.0](https://github.com/anolilab/workflows/compare/v3.0.11...v4.0.0) (2025-05-17)
 
 ### ⚠ BREAKING CHANGES
