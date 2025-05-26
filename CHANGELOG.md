@@ -1,3 +1,15 @@
+## [4.0.3](https://github.com/anolilab/workflows/compare/v4.0.2...v4.0.3) (2025-05-26)
+
+### Bug Fixes
+
+* **deps:** update github-actions ([#170](https://github.com/anolilab/workflows/issues/170)) ([ebede9e](https://github.com/anolilab/workflows/commit/ebede9eae4f39eca0b789b1fa75a28740cf721fa))
+* **deps:** update pnpm to v10.11.0 ([#171](https://github.com/anolilab/workflows/issues/171)) ([a6ddf58](https://github.com/anolilab/workflows/commit/a6ddf581b03cb52e36fbbc5d46fe476b26f62cae))
+
+### Miscellaneous Chores
+
+* **deps:** update dependency @octokit/request@&gt;&[#x3d](https://github.com/anolilab/workflows/issues/x3d);9.0.0-beta.1 &lt;9.2.1 to v10 ([#175](https://github.com/anolilab/workflows/issues/175)) ([b3dc203](https://github.com/anolilab/workflows/commit/b3dc2034b83eac3cf38f1ec5f26e5b9cc5359bec)), closes [#x3](https://github.com/anolilab/workflows/issues/x3)
+* **deps:** update dependency conventional-changelog-conventionalcommits to v9 ([#176](https://github.com/anolilab/workflows/issues/176)) ([75983bd](https://github.com/anolilab/workflows/commit/75983bdbcaeb673e2ece4ddc6e3accc91e5def0a))
+
 ## [4.0.2](https://github.com/anolilab/workflows/compare/v4.0.1...v4.0.2) (2025-05-26)
 
 ### Bug Fixes
