@@ -1,3 +1,9 @@
+## [4.0.2](https://github.com/anolilab/workflows/compare/v4.0.1...v4.0.2) (2025-05-26)
+
+### Bug Fixes
+
+* **deps:** update patch updates ([#169](https://github.com/anolilab/workflows/issues/169)) ([927b4c3](https://github.com/anolilab/workflows/commit/927b4c31d4e22e449cb621915bbdba9fbd2835dd))
+
 ## [4.0.1](https://github.com/anolilab/workflows/compare/v4.0.0...v4.0.1) (2025-05-23)
 
 ### Bug Fixes
