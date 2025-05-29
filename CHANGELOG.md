@@ -1,3 +1,15 @@
+## [5.0.0](https://github.com/anolilab/workflows/compare/v4.0.4...v5.0.0) (2025-05-29)
+
+### ⚠ BREAKING CHANGES
+
+* **deps:** updated dependencies to major versions
+
+Co-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>
+
+### Miscellaneous Chores
+
+* **deps:** update dependency @anolilab/commitlint-config to v6 ([#179](https://github.com/anolilab/workflows/issues/179)) ([6413b96](https://github.com/anolilab/workflows/commit/6413b962148b41293cd988129c786c490ef09628))
+
 ## [4.0.4](https://github.com/anolilab/workflows/compare/v4.0.3...v4.0.4) (2025-05-29)
 
 ### Bug Fixes
