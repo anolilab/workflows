@@ -1,3 +1,23 @@
+## [6.0.0](https://github.com/anolilab/workflows/compare/v5.0.0...v6.0.0) (2025-05-29)
+
+### ⚠ BREAKING CHANGES
+
+* **deps:** updated dependencies to major versions
+
+Co-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>
+* **deps:** updated dependencies to major versions
+
+Co-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>
+* **deps:** updated dependencies to major versions
+
+Co-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>
+
+### Miscellaneous Chores
+
+* **deps:** update dependency @anolilab/lint-staged-config to v3 ([#180](https://github.com/anolilab/workflows/issues/180)) ([13834bd](https://github.com/anolilab/workflows/commit/13834bd60965dc32104ffdd56e4544d6494717fc))
+* **deps:** update dependency @octokit/endpoint@&gt;&[#x3d](https://github.com/anolilab/workflows/issues/x3d);10.0.0 &lt;10.1.3 to v11 ([#172](https://github.com/anolilab/workflows/issues/172)) ([d0cd386](https://github.com/anolilab/workflows/commit/d0cd3860b39d9042a06f821756c46155a6279dcc)), closes [#x3](https://github.com/anolilab/workflows/issues/x3)
+* **deps:** update dependency @octokit/plugin-paginate-rest@&gt;&[#x3d](https://github.com/anolilab/workflows/issues/x3d);9.3.0-beta.1 &lt;11.4.1 to v13 ([#173](https://github.com/anolilab/workflows/issues/173)) ([7db919a](https://github.com/anolilab/workflows/commit/7db919a252d517ce5d48381f868bcea0e8d61c80)), closes [#x3](https://github.com/anolilab/workflows/issues/x3)
+
 ## [5.0.0](https://github.com/anolilab/workflows/compare/v4.0.4...v5.0.0) (2025-05-29)
 
 ### ⚠ BREAKING CHANGES
