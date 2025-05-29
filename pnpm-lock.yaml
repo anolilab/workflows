@@ -18,8 +18,8 @@ importers:
   .:
     devDependencies:
       '@anolilab/commitlint-config':
-        specifier: ^5.0.3
-        version: 5.0.3(@commitlint/cli@19.8.1(@types/node@20.14.10)(typescript@5.5.3))(@types/node@20.14.10)(typescript@5.5.3)
+        specifier: ^6.0.0
+        version: 6.0.0(@commitlint/cli@19.8.1(@types/node@20.14.10)(typescript@5.5.3))(@types/node@20.14.10)(typescript@5.5.3)
       '@anolilab/lint-staged-config':
         specifier: ^2.1.7
         version: 2.1.7(husky@9.1.7)(lint-staged@16.0.0)(prettier@3.5.3)(secretlint@9.3.2)
@@ -74,11 +74,12 @@ importers:
 
 packages:
 
-  '@anolilab/commitlint-config@5.0.3':
-    resolution: {integrity: sha512-nNlDmf8BtAuTkMo2uGgnhadmkJa7S7oUefPd+WLql5qLXq+SQ+HvsufLO4UXvEFXLs6FbbMk6Hgfg9nHhYfU7Q==}
-    engines: {node: '>=18.* <=21.*'}
+  '@anolilab/commitlint-config@6.0.0':
+    resolution: {integrity: sha512-SBlgi3pmzxOTmYcaHVOGV4J37Dw0tjOf4sQzksglXLuumFpwM9K8acr7U8aKKCXOeygMZFWEoaPEmLxJMYhxug==}
+    engines: {node: '>=20.18.* <=24.*'}
+    hasBin: true
     peerDependencies:
-      '@commitlint/cli': ^17.6.5 || ^18.0.0
+      '@commitlint/cli': ^17.6.5 || ^18.x || ^19.x
 
   '@anolilab/lint-staged-config@2.1.7':
     resolution: {integrity: sha512-BC2Vrz4PsUu1yi6pVIuvwSyu+3W7BkvyvqP/8yCX2CZALzHhFbPC6St2G3OObgepOpS/7LfETgZ/F5v6hDNlVA==}
@@ -169,144 +170,64 @@ packages:
     resolution: {integrity: sha512-/AZHJL6F6B/G959CsMAzrPKKZjeEiAVifRyEwXxcT6qtqbPwGw+iQxmNS+Bu+i09OCtdNRW6pNpBvgPrtMr9EQ==}
     engines: {node: '>=v18'}
 
-  '@commitlint/config-validator@18.6.1':
-    resolution: {integrity: sha512-05uiToBVfPhepcQWE1ZQBR/Io3+tb3gEotZjnI4tTzzPk16NffN6YABgwFQCLmzZefbDcmwWqJWc2XT47q7Znw==}
-    engines: {node: '>=v18'}
-
-  '@commitlint/config-validator@19.8.0':
-    resolution: {integrity: sha512-+r5ZvD/0hQC3w5VOHJhGcCooiAVdynFlCe2d6I9dU+PvXdV3O+fU4vipVg+6hyLbQUuCH82mz3HnT/cBQTYYuA==}
-    engines: {node: '>=v18'}
-
   '@commitlint/config-validator@19.8.1':
     resolution: {integrity: sha512-0jvJ4u+eqGPBIzzSdqKNX1rvdbSU1lPNYlfQQRIFnBgLy26BtC0cFnr7c/AyuzExMxWsMOte6MkTi9I3SQ3iGQ==}
     engines: {node: '>=v18'}
 
-  '@commitlint/core@18.6.1':
-    resolution: {integrity: sha512-r/vU5WmD7QpehgD6TT4tsX4KgfQHYHmwEywBEBdrKiUHvGtfJNAb+UzY8mEys44RZB/D8BWrlZNFuP9xIF5OVw==}
-    engines: {node: '>=v18'}
-
-  '@commitlint/ensure@18.6.1':
-    resolution: {integrity: sha512-BPm6+SspyxQ7ZTsZwXc7TRQL5kh5YWt3euKmEIBZnocMFkJevqs3fbLRb8+8I/cfbVcAo4mxRlpTPfz8zX7SnQ==}
+  '@commitlint/core@19.8.1':
+    resolution: {integrity: sha512-YiRUToRbDf0Wwd08fGjtHH2hVYbvXGJ1A2N1ZY6gpWv289bKRop26NjGONpaMzadSqPGAiuVmogyMo9Gxi87nw==}
     engines: {node: '>=v18'}
 
   '@commitlint/ensure@19.8.1':
     resolution: {integrity: sha512-mXDnlJdvDzSObafjYrOSvZBwkD01cqB4gbnnFuVyNpGUM5ijwU/r/6uqUmBXAAOKRfyEjpkGVZxaDsCVnHAgyw==}
     engines: {node: '>=v18'}
 
-  '@commitlint/execute-rule@18.6.1':
-    resolution: {integrity: sha512-7s37a+iWyJiGUeMFF6qBlyZciUkF8odSAnHijbD36YDctLhGKoYltdvuJ/AFfRm6cBLRtRk9cCVPdsEFtt/2rg==}
-    engines: {node: '>=v18'}
-
-  '@commitlint/execute-rule@19.8.0':
-    resolution: {integrity: sha512-fuLeI+EZ9x2v/+TXKAjplBJWI9CNrHnyi5nvUQGQt4WRkww/d95oVRsc9ajpt4xFrFmqMZkd/xBQHZDvALIY7A==}
-    engines: {node: '>=v18'}
-
   '@commitlint/execute-rule@19.8.1':
     resolution: {integrity: sha512-YfJyIqIKWI64Mgvn/sE7FXvVMQER/Cd+s3hZke6cI1xgNT/f6ZAz5heND0QtffH+KbcqAwXDEE1/5niYayYaQA==}
-    engines: {node: '>=v18'}
-
-  '@commitlint/format@18.6.1':
-    resolution: {integrity: sha512-K8mNcfU/JEFCharj2xVjxGSF+My+FbUHoqR+4GqPGrHNqXOGNio47ziiR4HQUPKtiNs05o8/WyLBoIpMVOP7wg==}
     engines: {node: '>=v18'}
 
   '@commitlint/format@19.8.1':
     resolution: {integrity: sha512-kSJj34Rp10ItP+Eh9oCItiuN/HwGQMXBnIRk69jdOwEW9llW9FlyqcWYbHPSGofmjsqeoxa38UaEA5tsbm2JWw==}
     engines: {node: '>=v18'}
 
-  '@commitlint/is-ignored@18.6.1':
-    resolution: {integrity: sha512-MOfJjkEJj/wOaPBw5jFjTtfnx72RGwqYIROABudOtJKW7isVjFe9j0t8xhceA02QebtYf4P/zea4HIwnXg8rvA==}
-    engines: {node: '>=v18'}
-
   '@commitlint/is-ignored@19.8.1':
     resolution: {integrity: sha512-AceOhEhekBUQ5dzrVhDDsbMaY5LqtN8s1mqSnT2Kz1ERvVZkNihrs3Sfk1Je/rxRNbXYFzKZSHaPsEJJDJV8dg==}
-    engines: {node: '>=v18'}
-
-  '@commitlint/lint@18.6.1':
-    resolution: {integrity: sha512-8WwIFo3jAuU+h1PkYe5SfnIOzp+TtBHpFr4S8oJWhu44IWKuVx6GOPux3+9H1iHOan/rGBaiacicZkMZuluhfQ==}
     engines: {node: '>=v18'}
 
   '@commitlint/lint@19.8.1':
     resolution: {integrity: sha512-52PFbsl+1EvMuokZXLRlOsdcLHf10isTPlWwoY1FQIidTsTvjKXVXYb7AvtpWkDzRO2ZsqIgPK7bI98x8LRUEw==}
     engines: {node: '>=v18'}
 
-  '@commitlint/load@18.6.1':
-    resolution: {integrity: sha512-p26x8734tSXUHoAw0ERIiHyW4RaI4Bj99D8YgUlVV9SedLf8hlWAfyIFhHRIhfPngLlCe0QYOdRKYFt8gy56TA==}
-    engines: {node: '>=v18'}
-
-  '@commitlint/load@19.8.0':
-    resolution: {integrity: sha512-4rvmm3ff81Sfb+mcWT5WKlyOa+Hd33WSbirTVUer0wjS1Hv/Hzr07Uv1ULIV9DkimZKNyOwXn593c+h8lsDQPQ==}
-    engines: {node: '>=v18'}
-
   '@commitlint/load@19.8.1':
     resolution: {integrity: sha512-9V99EKG3u7z+FEoe4ikgq7YGRCSukAcvmKQuTtUyiYPnOd9a2/H9Ak1J9nJA1HChRQp9OA/sIKPugGS+FK/k1A==}
-    engines: {node: '>=v18'}
-
-  '@commitlint/message@18.6.1':
-    resolution: {integrity: sha512-VKC10UTMLcpVjMIaHHsY1KwhuTQtdIKPkIdVEwWV+YuzKkzhlI3aNy6oo1eAN6b/D2LTtZkJe2enHmX0corYRw==}
     engines: {node: '>=v18'}
 
   '@commitlint/message@19.8.1':
     resolution: {integrity: sha512-+PMLQvjRXiU+Ae0Wc+p99EoGEutzSXFVwQfa3jRNUZLNW5odZAyseb92OSBTKCu+9gGZiJASt76Cj3dLTtcTdg==}
     engines: {node: '>=v18'}
 
-  '@commitlint/parse@18.6.1':
-    resolution: {integrity: sha512-eS/3GREtvVJqGZrwAGRwR9Gdno3YcZ6Xvuaa+vUF8j++wsmxrA2En3n0ccfVO2qVOLJC41ni7jSZhQiJpMPGOQ==}
-    engines: {node: '>=v18'}
-
   '@commitlint/parse@19.8.1':
     resolution: {integrity: sha512-mmAHYcMBmAgJDKWdkjIGq50X4yB0pSGpxyOODwYmoexxxiUCy5JJT99t1+PEMK7KtsCtzuWYIAXYAiKR+k+/Jw==}
-    engines: {node: '>=v18'}
-
-  '@commitlint/read@18.6.1':
-    resolution: {integrity: sha512-ia6ODaQFzXrVul07ffSgbZGFajpe8xhnDeLIprLeyfz3ivQU1dIoHp7yz0QIorZ6yuf4nlzg4ZUkluDrGN/J/w==}
     engines: {node: '>=v18'}
 
   '@commitlint/read@19.8.1':
     resolution: {integrity: sha512-03Jbjb1MqluaVXKHKRuGhcKWtSgh3Jizqy2lJCRbRrnWpcM06MYm8th59Xcns8EqBYvo0Xqb+2DoZFlga97uXQ==}
     engines: {node: '>=v18'}
 
-  '@commitlint/resolve-extends@18.6.1':
-    resolution: {integrity: sha512-ifRAQtHwK+Gj3Bxj/5chhc4L2LIc3s30lpsyW67yyjsETR6ctHAHRu1FSpt0KqahK5xESqoJ92v6XxoDRtjwEQ==}
-    engines: {node: '>=v18'}
-
-  '@commitlint/resolve-extends@19.8.0':
-    resolution: {integrity: sha512-CLanRQwuG2LPfFVvrkTrBR/L/DMy3+ETsgBqW1OvRxmzp/bbVJW0Xw23LnnExgYcsaFtos967lul1CsbsnJlzQ==}
-    engines: {node: '>=v18'}
-
   '@commitlint/resolve-extends@19.8.1':
     resolution: {integrity: sha512-GM0mAhFk49I+T/5UCYns5ayGStkTt4XFFrjjf0L4S26xoMTSkdCf9ZRO8en1kuopC4isDFuEm7ZOm/WRVeElVg==}
-    engines: {node: '>=v18'}
-
-  '@commitlint/rules@18.6.1':
-    resolution: {integrity: sha512-kguM6HxZDtz60v/zQYOe0voAtTdGybWXefA1iidjWYmyUUspO1zBPQEmJZ05/plIAqCVyNUTAiRPWIBKLCrGew==}
     engines: {node: '>=v18'}
 
   '@commitlint/rules@19.8.1':
     resolution: {integrity: sha512-Hnlhd9DyvGiGwjfjfToMi1dsnw1EXKGJNLTcsuGORHz6SS9swRgkBsou33MQ2n51/boIDrbsg4tIBbRpEWK2kw==}
     engines: {node: '>=v18'}
 
-  '@commitlint/to-lines@18.6.1':
-    resolution: {integrity: sha512-Gl+orGBxYSNphx1+83GYeNy5N0dQsHBQ9PJMriaLQDB51UQHCVLBT/HBdOx5VaYksivSf5Os55TLePbRLlW50Q==}
-    engines: {node: '>=v18'}
-
   '@commitlint/to-lines@19.8.1':
     resolution: {integrity: sha512-98Mm5inzbWTKuZQr2aW4SReY6WUukdWXuZhrqf1QdKPZBCCsXuG87c+iP0bwtD6DBnmVVQjgp4whoHRVixyPBg==}
     engines: {node: '>=v18'}
 
-  '@commitlint/top-level@18.6.1':
-    resolution: {integrity: sha512-HyiHQZUTf0+r0goTCDs/bbVv/LiiQ7AVtz6KIar+8ZrseB9+YJAIo8HQ2IC2QT1y3N1lbW6OqVEsTHjbT6hGSw==}
-    engines: {node: '>=v18'}
-
   '@commitlint/top-level@19.8.1':
     resolution: {integrity: sha512-Ph8IN1IOHPSDhURCSXBz44+CIu+60duFwRsg6HqaISFHQHbmBtxVw4ZrFNIYUzEP7WwrNPxa2/5qJ//NK1FGcw==}
-    engines: {node: '>=v18'}
-
-  '@commitlint/types@18.6.1':
-    resolution: {integrity: sha512-gwRLBLra/Dozj2OywopeuHj2ac26gjGkz2cZ+86cTJOdtWfiRRr4+e77ZDAGc6MDWxaWheI+mAV5TLWWRwqrFg==}
-    engines: {node: '>=v18'}
-
-  '@commitlint/types@19.8.0':
-    resolution: {integrity: sha512-LRjP623jPyf3Poyfb0ohMj8I3ORyBDOwXAgxxVPbSD0unJuW2mJWeiRfaQinjtccMqC5Wy1HOMfa4btKjbNxbg==}
     engines: {node: '>=v18'}
 
   '@commitlint/types@19.8.1':
@@ -516,9 +437,6 @@ packages:
   '@types/conventional-commits-parser@5.0.0':
     resolution: {integrity: sha512-loB369iXNmAZglwWATL+WRe+CRMmmBPtpolYzIebFaX4YA3x+BEfLqhUAV9WanycKI3TG1IMr5bMJDajDKLlUQ==}
 
-  '@types/minimist@1.2.5':
-    resolution: {integrity: sha512-hov8bUuiLiyFPGyFPE1lwWhmzYbirOXQNNo40+y3zow8aFVTeyn3VWL0VFFfdNddA8S4Vf0Tc062rzyNr7Paag==}
-
   '@types/node@20.14.10':
     resolution: {integrity: sha512-MdiXf+nDuMvY0gJKxyfZ7/6UFsETO7mGKF54MVD/ekJS6HdFtpZFBgrh6Pseu64XTb2MLyFPlbW6hj8HYRQNOQ==}
 
@@ -609,10 +527,6 @@ packages:
   array-ify@1.0.0:
     resolution: {integrity: sha512-c5AMf34bKdvPhQ7tBGhqkgKNUzMr4WUs+WDtC2ZUGOUncbxKMTvqxYctiseW3+L4bA8ec+GcZ6/A/FW4m8ukng==}
 
-  arrify@1.0.1:
-    resolution: {integrity: sha512-3CYzex9M9FGQjCGMGyi6/31c8GJbgb0qGyrx5HWxPd0aCwh4cB2YjMb2Xf9UuoogrMrlO9cTqnB5rI5GHZTcUA==}
-    engines: {node: '>=0.10.0'}
-
   astral-regex@2.0.0:
     resolution: {integrity: sha512-Z7tMw1ytTXt5jqMcOP+OQteU1VuNK9Y02uuJtKQ1Sv69jXQKKg5cibLwGJow8yzZP+eAc18EmLGPal0bp36rvQ==}
     engines: {node: '>=8'}
@@ -664,14 +578,6 @@ packages:
 
   callsites@3.1.0:
     resolution: {integrity: sha512-P8BjAsXvZS+VIDUI11hHCQEv74YT67YUi5JJFNWIqL235sBmjX4+qx9Muvls5ivyNENctx46xQLQ3aTuE7ssaQ==}
-    engines: {node: '>=6'}
-
-  camelcase-keys@6.2.2:
-    resolution: {integrity: sha512-YrwaA0vEKazPBkn0ipTiMpSajYDSe+KjQfrjhcBMxJt/znbvlHd8Pw/Vamaz5EB4Wfhs3SUR3Z9mwRu/P3s3Yg==}
-    engines: {node: '>=8'}
-
-  camelcase@5.3.1:
-    resolution: {integrity: sha512-L28STB170nwWS63UjtlEOE3dldQApaJXZkOI1uMFfzf3rRuPegHaHesyee+YxQ+W6SvRDQV6UrdOdRiR153wJg==}
     engines: {node: '>=6'}
 
   chalk@2.4.2:
@@ -828,14 +734,6 @@ packages:
   core-util-is@1.0.3:
     resolution: {integrity: sha512-ZQBvi1DcpJ4GDqanjucZ2Hj3wEO5pZDS89BWbkcrvdxksJorwUDDZamX9ldFkp9aw2lmBDLgkObEA4DWNJ9FYQ==}
 
-  cosmiconfig-typescript-loader@5.0.0:
-    resolution: {integrity: sha512-+8cK7jRAReYkMwMiG+bxhcNKiHJDM6bR9FD/nGBXOWdMLuYawjF5cGrtLilJ+LGd3ZjCXnJjR5DkfWPoIVlqJA==}
-    engines: {node: '>=v16'}
-    peerDependencies:
-      '@types/node': '*'
-      cosmiconfig: '>=8.2'
-      typescript: '>=4'
-
   cosmiconfig-typescript-loader@6.1.0:
     resolution: {integrity: sha512-tJ1w35ZRUiM5FeTzT7DtYWAFFv37ZLqSRkGi2oeCK1gPhvaWjkAtfXvLmvE1pRfxxp9aQo6ba/Pvg1dKj05D4g==}
     engines: {node: '>=v18'}
@@ -843,15 +741,6 @@ packages:
       '@types/node': '*'
       cosmiconfig: '>=9'
       typescript: '>=5'
-
-  cosmiconfig@8.3.6:
-    resolution: {integrity: sha512-kcZ6+W5QzcJ3P1Mt+83OUv/oHFqZHIx8DuxG6eZ5RGMERoLqp4BuGjhHLYGK+Kf5XVkQvqBSmAy/nGWN3qDgEA==}
-    engines: {node: '>=14'}
-    peerDependencies:
-      typescript: '>=4.9.5'
-    peerDependenciesMeta:
-      typescript:
-        optional: true
 
   cosmiconfig@9.0.0:
     resolution: {integrity: sha512-itvL5h8RETACmOTFc4UfIyB2RfEHi71Ax6E/PivVxq9NseKbOWpeyHEOIbmAw1rs8Ak0VursQNww7lf7YtUwzg==}
@@ -879,10 +768,6 @@ packages:
     resolution: {integrity: sha512-U466fIzU5U22eES5lTNiNbZ+d8dfcHcssH4o7QsdWaCcRs/feIPCxKYSWkYBNs5mny7MvEfwpTLWjvbm94hecw==}
     engines: {node: '>= 10'}
 
-  dargs@7.0.0:
-    resolution: {integrity: sha512-2iy1EkLdlBzQGvbweYRFxmFath8+K7+AKB0TlhHWkNuH+TmovaMH/Wp7V7R4u7f4SnX3OgLsU9t1NI9ioDnUpg==}
-    engines: {node: '>=8'}
-
   dargs@8.1.0:
     resolution: {integrity: sha512-wAV9QHOsNbwnWdNW2FYvE1P56wtgSbM+3SZcdGiWQILwVjACCXDCI3Ai8QlCjMDB8YK5zySiXZYBiwGmNY3lnw==}
     engines: {node: '>=12'}
@@ -895,14 +780,6 @@ packages:
     peerDependenciesMeta:
       supports-color:
         optional: true
-
-  decamelize-keys@1.1.1:
-    resolution: {integrity: sha512-WiPxgEirIV0/eIOMcnFBA3/IJZAZqKnwAwWyvvdi4lsr1WCN22nhdf/3db3DoZcUjTV2SqfzIwNyp6y2xs3nmg==}
-    engines: {node: '>=0.10.0'}
-
-  decamelize@1.2.0:
-    resolution: {integrity: sha512-z2S+W9X73hAUUki+N+9Za2lBlun89zigOyGrsax+KUQ6wKW4ZoWpEYBkGhQjwAjjDCkWxhY0VKEhk8wzY7F5cA==}
-    engines: {node: '>=0.10.0'}
 
   dedent@0.7.0:
     resolution: {integrity: sha512-Q6fKUPqnAHAyhiUgFU7BUzLiv0kd8saH9al7tnu5Q/okj6dnupxyTgFIBjVzJATdfIAm9NAsvXNzjaKa+bxVyA==}
@@ -1146,11 +1023,6 @@ packages:
   git-log-parser@1.2.1:
     resolution: {integrity: sha512-PI+sPDvHXNPl5WNOErAK05s3j0lgwUzMN6o8cyQrDaKfT3qd7TmNJKeXX+SknI5I0QhG5fVPAEwSY4tRGDtYoQ==}
 
-  git-raw-commits@2.0.11:
-    resolution: {integrity: sha512-VnctFhw+xfj8Va1xtfEqCUD2XDrbAPSJx+hSrE5K7fGdjZruW7XV+QOrN7LF/RJyvspRiD2I0asWsxFp0ya26A==}
-    engines: {node: '>=10'}
-    hasBin: true
-
   git-raw-commits@4.0.0:
     resolution: {integrity: sha512-ICsMM1Wk8xSGMowkOmPrzo2Fgmfo4bMHLNX6ytHjajRJUqvHOw/TFapQ+QG75c3X/tTDDhOSRPGC52dDbNM8FQ==}
     engines: {node: '>=16'}
@@ -1167,10 +1039,6 @@ packages:
   global-directory@4.0.1:
     resolution: {integrity: sha512-wHTUcDUoZ1H5/0iVqEudYW4/kAlN5cZ3j/bXn0Dpbizl9iaUVeWSHqiOjsgk6OW2bkLclbBjzewBz6weQ1zA2Q==}
     engines: {node: '>=18'}
-
-  global-dirs@0.1.1:
-    resolution: {integrity: sha512-NknMLn7F2J7aflwFOlGdNIuCDpN3VGoSoB+aap3KABFWbHVn1TCgFC+np23J8W2BiZbjfEw3BFBycSMv1AFblg==}
-    engines: {node: '>=4'}
 
   global-modules@1.0.0:
     resolution: {integrity: sha512-sKzpEkf11GpOFuw0Zzjzmt4B4UZwjOcG757PPvrfhxcLFbq0wpsgpOqxpxtxFiCG4DtG93M6XRVbF2oGdev7bg==}
@@ -1194,10 +1062,6 @@ packages:
     resolution: {integrity: sha512-vafaFqs8MZkRrSX7sFVUdo3ap/eNiLnb4IakshzvP56X5Nr1iGKAIqdX6tMlm6HcNRIkr6AxO5jFEoJzzpT8aQ==}
     engines: {node: '>=0.4.7'}
     hasBin: true
-
-  hard-rejection@2.1.0:
-    resolution: {integrity: sha512-VIZB+ibDhx7ObhAe7OVtoEbuP4h/MuOTHJ+J8h/eBXotJYl0fBgR72xDFCKgIh22OJZIOVNxBMWuhAr10r8HdA==}
-    engines: {node: '>=6'}
 
   has-flag@3.0.0:
     resolution: {integrity: sha512-sKJf1+ceQBr4SMkvQnBDNDtf4TXpVhVGateu0t918bl30FnbE2m4vNLX+VWe/dpjlb+HugGYzW7uQXH98HPEYw==}
@@ -1224,10 +1088,6 @@ packages:
 
   hosted-git-info@2.8.9:
     resolution: {integrity: sha512-mxIDAb9Lsm6DoOJ7xH+5+X4y1LU/4Hi50L9C5sIswK3JzULS4bwk1FvjdBgvYR4bzT4tuUQiC15FE2f5HbLvYw==}
-
-  hosted-git-info@4.1.0:
-    resolution: {integrity: sha512-kyCuEOWjJqZuDbRHzL8V93NzQhwIB71oFWSyzVo+KPZI+pnQPPxucdkrOZvkLRnrf5URsQM+IJ09Dw29cRALIA==}
-    engines: {node: '>=10'}
 
   hosted-git-info@7.0.2:
     resolution: {integrity: sha512-puUZAUKT5m8Zzvs72XWy3HtvVbTWljRE66cP60bxJzAqf2DgICo7lYTY2IHUmLnNpjYvw5bvmoHvPc0QO2a62w==}
@@ -1361,10 +1221,6 @@ packages:
     resolution: {integrity: sha512-drqDG3cbczxxEJRoOXcOjtdp1J/lyp1mNn0xaznRs8+muBhgQcrnbspox5X5fOw0HnMnbfDzvnEMEtqDEJEo8w==}
     engines: {node: '>=8'}
 
-  is-plain-obj@1.1.0:
-    resolution: {integrity: sha512-yvkRyxmFKEOQ4pNXCmJG5AEQNlXJS5LaONXo5/cLdTZdWvsZ1ioJEonLGAosKlMWE8lwUy/bJzMjcw8az73+Fg==}
-    engines: {node: '>=0.10.0'}
-
   is-plain-obj@4.1.0:
     resolution: {integrity: sha512-+Pgi+vMuUNkJyExiMBt5IlFoMyKnr5zhJ4Uspz58WOhBF5QoIZkFyNHIbBAtHwzVAgk5RtndVNsDRN61/mmDqg==}
     engines: {node: '>=12'}
@@ -1418,10 +1274,6 @@ packages:
     resolution: {integrity: sha512-qjdpeo2yKlYTH7nFdK0vbZWuTCesk4o63v5iVOlhMQPfuIZQfW/HI35SjfhA+4qpg36rnFSvUK5b1m+ckIblQQ==}
     engines: {node: '>= 0.6.0'}
 
-  jiti@1.21.6:
-    resolution: {integrity: sha512-2yTgeWTWzMWkHu6Jp9NKgePDaYHbntiwvYuuJLbbN9vl7DC9DvXKOB2BC3ZZ92D3cvV/aflH0osDfwpHepQ53w==}
-    hasBin: true
-
   jiti@2.4.1:
     resolution: {integrity: sha512-yPBThwecp1wS9DmoA4x4KR2h3QoslacnDR8ypuFM962kI4/456Iy1oHx2RAgh4jfZNdn0bctsdadceiBUgpU1g==}
     hasBin: true
@@ -1469,10 +1321,6 @@ packages:
     resolution: {integrity: sha512-aAi6oPhdt7BKyQn1SrIIGZBt0ukKuOUE1qV6kJ3GgioSOYzsRc8z9Hfr1BVmacA/jLe9nARfmgMGgn68BqIAgg==}
     engines: {node: '>=10'}
     hasBin: true
-
-  kind-of@6.0.3:
-    resolution: {integrity: sha512-dcS1ul+9tmeD95T+x28/ehLgd9mENa3LsvDTtzm3vyBEO7RPptvAD+t44WVXaUjTBRcrpFeFlC8WCruUR456hw==}
-    engines: {node: '>=0.10.0'}
 
   lilconfig@3.1.3:
     resolution: {integrity: sha512-/vlFKAoH5Cgt3Ie+JLhRbwOsCQePABiU3tJ1egGvyQ+33R/vcwM2Zl2QR/LzjsBeItPt3oSVXapn+m4nQDvpzw==}
@@ -1581,18 +1429,6 @@ packages:
     resolution: {integrity: sha512-bfJaPTuEiTYBu+ulDaeQ0F+uLmlfFkMgXj4cbwfuMSjgObGMzb55FMMbDvbRU0fAHZ4sLGkz2mKwcMg8Dvm8Ww==}
     engines: {node: '>=18'}
 
-  lru-cache@6.0.0:
-    resolution: {integrity: sha512-Jo6dJ04CmSjuznwJSS3pUeWmd/H0ffTlkXXgwZi+eq1UCmqQwCh+eLsYOYCwY991i2Fah4h1BEMCx4qThGbsiA==}
-    engines: {node: '>=10'}
-
-  map-obj@1.0.1:
-    resolution: {integrity: sha512-7N/q3lyZ+LVCp7PzuxrJr4KMbBE2hW7BT7YNia330OFxIf4d3r5zVpicP2650l7CPN6RM9zOJRl3NGpqSiw3Eg==}
-    engines: {node: '>=0.10.0'}
-
-  map-obj@4.3.0:
-    resolution: {integrity: sha512-hdN1wVrZbb29eBGiGjJbeP8JbKjq1urkHJ/LIP/NY48MZ1QVXUsQBV1G1zvYFHn1XE06cwjBsOI2K3Ulnj1YXQ==}
-    engines: {node: '>=8'}
-
   map-stream@0.0.7:
     resolution: {integrity: sha512-C0X0KQmGm3N2ftbTGBhSyuydQ+vV1LC3f3zPvT3RXHXNZrvfPZcoXp/N5DOa8vedX/rTMm2CjTtivFg2STJMRQ==}
 
@@ -1614,10 +1450,6 @@ packages:
   meow@13.2.0:
     resolution: {integrity: sha512-pxQJQzB6djGPXh08dacEloMFopsOqGVRKFPYvPOt9XDZ1HasbgDZA74CJGreSU4G3Ak7EFJGoiH2auq+yXISgA==}
     engines: {node: '>=18'}
-
-  meow@8.1.2:
-    resolution: {integrity: sha512-r85E3NdZ+mpYk1C6RjPFEMSE+s1iZMuHtsHAqY0DT3jZczl0diWUZ8g6oU7h0M9cD2EL+PzaYghhCLzR0ZNn5Q==}
-    engines: {node: '>=10'}
 
   merge-stream@2.0.0:
     resolution: {integrity: sha512-abv/qOcuPfk3URPfDzmZU1LKmuw8kT+0nIHvKrKgFrwifol/doWcdA4ZqsWQ8ENrFKkd67Mfpo/LovbIUsbt3w==}
@@ -1650,16 +1482,8 @@ packages:
     resolution: {integrity: sha512-VP79XUPxV2CigYP3jWwAUFSku2aKqBH7uTAapFWCBqutsbmDo96KY5o8uh6U+/YSIn5OxJnXp73beVkpqMIGhA==}
     engines: {node: '>=18'}
 
-  min-indent@1.0.1:
-    resolution: {integrity: sha512-I9jwMn07Sy/IwOj3zVkVik2JTvgpaykDZEigL6Rx6N9LbMywwUSMtxET+7lVoDLLd3O3IXwJwvuuns8UB/HeAg==}
-    engines: {node: '>=4'}
-
   minimatch@3.1.2:
     resolution: {integrity: sha512-J7p63hRiAjw1NDEww1W7i37+ByIrOWO5XQQAzZ3VOcL0PNybwpfmV/N05zFAzwQ9USyEcX6t3UO+K5aqBQOIHw==}
-
-  minimist-options@4.1.0:
-    resolution: {integrity: sha512-Q4r8ghd80yhO/0j1O3B2BjweX3fiHg9cdOwjJd2J76Q135c+NDxGCqdYKQ1SKBuFfgWbAUzBfvYjPUEeNgqN1A==}
-    engines: {node: '>= 6'}
 
   minimist@1.2.7:
     resolution: {integrity: sha512-bzfL1YUZsP41gmu/qjrEk0Q6i2ix/cVeAhbCbqH9u3zYutS1cLg00qhrD0M2MVdCcx4Sc0UpP2eBWo9rotpq6g==}
@@ -1692,10 +1516,6 @@ packages:
 
   normalize-package-data@2.5.0:
     resolution: {integrity: sha512-/5CMN3T0R4XTj4DcGaexo+roZSdSFW/0AOOTROrjxzCG1wrWXEsGbRKevjlIL+ZDE4sZlJr5ED4YW0yqmkK+eA==}
-
-  normalize-package-data@3.0.3:
-    resolution: {integrity: sha512-p2W1sgqij3zMMyRC067Dg16bfzVH+w7hyegmpIvZ4JNjqtGOVAIvLmjBx3yP7YTe9vKJgkoNOPjwQGogDoMXFA==}
-    engines: {node: '>=10'}
 
   normalize-package-data@6.0.2:
     resolution: {integrity: sha512-V6gygoYb/5EmNI+MEGrWkC+e6+Rr7mTmfHrxDbLzxQogBkgzo76rkok0Am6thgSF7Mv2nLOajAJj5vDJZEFn7g==}
@@ -2006,10 +1826,6 @@ packages:
   queue-microtask@1.2.3:
     resolution: {integrity: sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==}
 
-  quick-lru@4.0.1:
-    resolution: {integrity: sha512-ARhCpm70fzdcvNQfPoy49IaanKkTlRWF2JMzqhcJbhSFRZv7nPTvZJdcY7301IPmvW+/p0RgIWnQDLJxifsQ7g==}
-    engines: {node: '>=8'}
-
   rc-config-loader@4.1.3:
     resolution: {integrity: sha512-kD7FqML7l800i6pS6pvLyIE2ncbk9Du8Q0gp/4hMPhJU6ZxApkoLcGD8ZeqgiAlfwZ6BlETq6qqe+12DUL207w==}
 
@@ -2048,10 +1864,6 @@ packages:
     resolution: {integrity: sha512-7KA6+N9IGat52d83dvxnApAWN+MtVb1MiVuMR/cf1O4kYsJG+g/Aav0AHcHKsb6StinayfPLne0+fMX2sOzAKg==}
     engines: {node: '>=6'}
 
-  redent@3.0.0:
-    resolution: {integrity: sha512-6tDA8g98We0zd0GvVeMT9arEOnTw9qM03L9cJXaCjrip1OO764RDBLBfrB4cwzNGDj5OA5ioymC9GkizgWJDUg==}
-    engines: {node: '>=8'}
-
   registry-auth-token@5.0.2:
     resolution: {integrity: sha512-o/3ikDxtXaA59BmZuZrJZDJv8NMDGSj+6j6XaeBmHw8eY1i1qd9+6H+LjVvQXx3HN6aRCGa1cUdJ9RaJZUugnQ==}
     engines: {node: '>=14'}
@@ -2074,10 +1886,6 @@ packages:
 
   resolve-from@5.0.0:
     resolution: {integrity: sha512-qYg9KP24dD5qka9J47d0aVky0N+b4fTU89LN9iDnjB5waksiC49rvMB0PrUJQGoTmH50XPiqOvAjDfaijGxYZw==}
-    engines: {node: '>=8'}
-
-  resolve-global@1.0.0:
-    resolution: {integrity: sha512-zFa12V4OLtT5XUX/Q4VLvTfBf+Ok0SPc1FNGM/z9ctUdiU618qwKpWnd0CHs3+RqROfyEg/DhuHbMWYqcgljEw==}
     engines: {node: '>=8'}
 
   resolve@1.22.8:
@@ -2138,11 +1946,6 @@ packages:
 
   semver@5.7.2:
     resolution: {integrity: sha512-cBznnQ9KjJqU67B52RMC65CMarK2600WFnbkcaiwWq3xy/5haFJlshgnpjovMVJ+Hff49d8GEn0b87C5pDQ10g==}
-    hasBin: true
-
-  semver@7.6.0:
-    resolution: {integrity: sha512-EnwXhrlwXMk9gKu5/flx5sv/an57AkRplG3hTK68W7FRDN+k+OWBj65M7719OkA82XLBxrcX0KSHj+X5COhOVg==}
-    engines: {node: '>=10'}
     hasBin: true
 
   semver@7.7.1:
@@ -2221,9 +2024,6 @@ packages:
   split2@1.0.0:
     resolution: {integrity: sha512-NKywug4u4pX/AZBB1FCPzZ6/7O+Xhz1qMVbzTvvKvikjO99oPN87SkK08mEY9P63/5lWjK+wgOOgApnTg5r6qg==}
 
-  split2@3.2.2:
-    resolution: {integrity: sha512-9NThjpgZnifTkJpzTZ7Eue85S49QwpNhZTq6GRJwObb6jnLFNGB7Qm73V5HewTROPyxD0C29xqmaI68bQtV+hg==}
-
   split2@4.2.0:
     resolution: {integrity: sha512-UcjcJOWknrNkF6PLX83qcHM6KHgVKNkV62Y8a5uYDVv9ydGQVwAHMKqHdJje1VTWpljG0WYpCDhrCdAOYH4TWg==}
     engines: {node: '>= 10.x'}
@@ -2285,10 +2085,6 @@ packages:
   strip-final-newline@4.0.0:
     resolution: {integrity: sha512-aulFJcD6YK8V1G7iRB5tigAP4TsHBZZrOV8pjV++zdUwmeV8uzbY7yn6h9MswN62adStNZFuCIx4haBnRuMDaw==}
     engines: {node: '>=18'}
-
-  strip-indent@3.0.0:
-    resolution: {integrity: sha512-laJTa3Jb+VQpaC6DseHhF7dXVqHTfJPCRDaEbid/drOhgitgYku/letMUqOXFoWV0zIIUbjpdH2t+tYj4bQMRQ==}
-    engines: {node: '>=8'}
 
   strip-json-comments@2.0.1:
     resolution: {integrity: sha512-4gB8na07fecVVkOI6Rs4e7T6NOTki5EmL7TUduTs6bu3EdnSycntVJ4re8kgZA+wx9IueI2Y11bfbgwtzuE0KQ==}
@@ -2391,16 +2187,8 @@ packages:
     resolution: {integrity: sha512-aXJDbk6SnumuaZSANd21XAo15ucCDE38H4fkqiGsc3MhCK+wOlZvLP9cB/TvpHT0mOyWgC4Z8EwRlzqYSUzdsA==}
     engines: {node: '>= 0.4'}
 
-  trim-newlines@3.0.1:
-    resolution: {integrity: sha512-c1PTsA3tYrIsLGkJkzHF+w9F2EyxfXGo4UyJc4pFL++FMjnq0HJS69T3M7d//gKrFKwy429bouPescbjecU+Zw==}
-    engines: {node: '>=8'}
-
   tslib@2.6.3:
     resolution: {integrity: sha512-xNvxJEOUiWPGhUuUdQgAJPKOOJfGnIyKySOc09XkKsgdUV/3E2zvwZYdejjmRgPCgcym1juLH3226yA7sEFJKQ==}
-
-  type-fest@0.18.1:
-    resolution: {integrity: sha512-OIAYXk8+ISY+qTOwkHtKqzAuxchoMiD9Udx+FSGQDuiRR+PJKJHc2NJAXlbhkGwTt/4/nKZxELY1w3ReWOL8mw==}
-    engines: {node: '>=10'}
 
   type-fest@0.21.3:
     resolution: {integrity: sha512-t0rzBq87m3fVcduHDUFhKmyyX+9eo6WQjZvf51Ea/M0Q7+T374Jp1aUiyUl0GKxp8M/OETVHSDvmkyPgvX+X2w==}
@@ -2514,9 +2302,6 @@ packages:
     resolution: {integrity: sha512-0pfFzegeDWJHJIAmTLRP2DwHjdF5s7jo9tuztdQxAhINCdvS+3nGINqPd00AphqJR/0LhANUS6/+7SCb98YOfA==}
     engines: {node: '>=10'}
 
-  yallist@4.0.0:
-    resolution: {integrity: sha512-3wdGidZyq5PB084XLES5TpOSRA3wjXAlIWMhum2kRcv/41Sn2emQ0dycQW4uZXLejwKvg6EsvbdlVL+FYEct7A==}
-
   yaml@2.8.0:
     resolution: {integrity: sha512-4lLa/EcQCB0cJkyts+FpIRx5G/llPxfP6VQU5KByHEhLxY3IJCH0f0Hy1MHI8sClTvsIb8qwRJ6R/ZdlDJ/leQ==}
     engines: {node: '>= 14.6'}
@@ -2552,14 +2337,13 @@ packages:
 
 snapshots:
 
-  '@anolilab/commitlint-config@5.0.3(@commitlint/cli@19.8.1(@types/node@20.14.10)(typescript@5.5.3))(@types/node@20.14.10)(typescript@5.5.3)':
+  '@anolilab/commitlint-config@6.0.0(@commitlint/cli@19.8.1(@types/node@20.14.10)(typescript@5.5.3))(@types/node@20.14.10)(typescript@5.5.3)':
     dependencies:
-      '@anolilab/package-json-utils': 3.0.9
       '@commitlint/cli': 19.8.1(@types/node@20.14.10)(typescript@5.5.3)
       '@commitlint/config-conventional': 19.8.1
-      '@commitlint/core': 18.6.1(@types/node@20.14.10)(typescript@5.5.3)
+      '@commitlint/core': 19.8.1(@types/node@20.14.10)(typescript@5.5.3)
       commitizen: 4.3.1(@types/node@20.14.10)(typescript@5.5.3)
-      conventional-changelog-conventionalcommits: 7.0.2
+      conventional-changelog-conventionalcommits: 9.0.0
       cz-conventional-changelog: 3.3.0(@types/node@20.14.10)(typescript@5.5.3)
     transitivePeerDependencies:
       - '@types/node'
@@ -2652,40 +2436,20 @@ snapshots:
       '@commitlint/types': 19.8.1
       conventional-changelog-conventionalcommits: 7.0.2
 
-  '@commitlint/config-validator@18.6.1':
-    dependencies:
-      '@commitlint/types': 18.6.1
-      ajv: 8.17.1
-
-  '@commitlint/config-validator@19.8.0':
-    dependencies:
-      '@commitlint/types': 19.8.0
-      ajv: 8.17.1
-    optional: true
-
   '@commitlint/config-validator@19.8.1':
     dependencies:
       '@commitlint/types': 19.8.1
       ajv: 8.17.1
 
-  '@commitlint/core@18.6.1(@types/node@20.14.10)(typescript@5.5.3)':
+  '@commitlint/core@19.8.1(@types/node@20.14.10)(typescript@5.5.3)':
     dependencies:
-      '@commitlint/format': 18.6.1
-      '@commitlint/lint': 18.6.1
-      '@commitlint/load': 18.6.1(@types/node@20.14.10)(typescript@5.5.3)
-      '@commitlint/read': 18.6.1
+      '@commitlint/format': 19.8.1
+      '@commitlint/lint': 19.8.1
+      '@commitlint/load': 19.8.1(@types/node@20.14.10)(typescript@5.5.3)
+      '@commitlint/read': 19.8.1
     transitivePeerDependencies:
       - '@types/node'
       - typescript
-
-  '@commitlint/ensure@18.6.1':
-    dependencies:
-      '@commitlint/types': 18.6.1
-      lodash.camelcase: 4.3.0
-      lodash.kebabcase: 4.1.1
-      lodash.snakecase: 4.1.1
-      lodash.startcase: 4.4.0
-      lodash.upperfirst: 4.3.1
 
   '@commitlint/ensure@19.8.1':
     dependencies:
@@ -2696,39 +2460,17 @@ snapshots:
       lodash.startcase: 4.4.0
       lodash.upperfirst: 4.3.1
 
-  '@commitlint/execute-rule@18.6.1': {}
-
-  '@commitlint/execute-rule@19.8.0':
-    optional: true
-
   '@commitlint/execute-rule@19.8.1': {}
-
-  '@commitlint/format@18.6.1':
-    dependencies:
-      '@commitlint/types': 18.6.1
-      chalk: 4.1.2
 
   '@commitlint/format@19.8.1':
     dependencies:
       '@commitlint/types': 19.8.1
       chalk: 5.4.1
 
-  '@commitlint/is-ignored@18.6.1':
-    dependencies:
-      '@commitlint/types': 18.6.1
-      semver: 7.6.0
-
   '@commitlint/is-ignored@19.8.1':
     dependencies:
       '@commitlint/types': 19.8.1
       semver: 7.7.1
-
-  '@commitlint/lint@18.6.1':
-    dependencies:
-      '@commitlint/is-ignored': 18.6.1
-      '@commitlint/parse': 18.6.1
-      '@commitlint/rules': 18.6.1
-      '@commitlint/types': 18.6.1
 
   '@commitlint/lint@19.8.1':
     dependencies:
@@ -2736,40 +2478,6 @@ snapshots:
       '@commitlint/parse': 19.8.1
       '@commitlint/rules': 19.8.1
       '@commitlint/types': 19.8.1
-
-  '@commitlint/load@18.6.1(@types/node@20.14.10)(typescript@5.5.3)':
-    dependencies:
-      '@commitlint/config-validator': 18.6.1
-      '@commitlint/execute-rule': 18.6.1
-      '@commitlint/resolve-extends': 18.6.1
-      '@commitlint/types': 18.6.1
-      chalk: 4.1.2
-      cosmiconfig: 8.3.6(typescript@5.5.3)
-      cosmiconfig-typescript-loader: 5.0.0(@types/node@20.14.10)(cosmiconfig@8.3.6(typescript@5.5.3))(typescript@5.5.3)
-      lodash.isplainobject: 4.0.6
-      lodash.merge: 4.6.2
-      lodash.uniq: 4.5.0
-      resolve-from: 5.0.0
-    transitivePeerDependencies:
-      - '@types/node'
-      - typescript
-
-  '@commitlint/load@19.8.0(@types/node@20.14.10)(typescript@5.5.3)':
-    dependencies:
-      '@commitlint/config-validator': 19.8.0
-      '@commitlint/execute-rule': 19.8.0
-      '@commitlint/resolve-extends': 19.8.0
-      '@commitlint/types': 19.8.0
-      chalk: 5.4.1
-      cosmiconfig: 9.0.0(typescript@5.5.3)
-      cosmiconfig-typescript-loader: 6.1.0(@types/node@20.14.10)(cosmiconfig@9.0.0(typescript@5.5.3))(typescript@5.5.3)
-      lodash.isplainobject: 4.0.6
-      lodash.merge: 4.6.2
-      lodash.uniq: 4.5.0
-    transitivePeerDependencies:
-      - '@types/node'
-      - typescript
-    optional: true
 
   '@commitlint/load@19.8.1(@types/node@20.14.10)(typescript@5.5.3)':
     dependencies:
@@ -2787,28 +2495,13 @@ snapshots:
       - '@types/node'
       - typescript
 
-  '@commitlint/message@18.6.1': {}
-
   '@commitlint/message@19.8.1': {}
-
-  '@commitlint/parse@18.6.1':
-    dependencies:
-      '@commitlint/types': 18.6.1
-      conventional-changelog-angular: 7.0.0
-      conventional-commits-parser: 5.0.0
 
   '@commitlint/parse@19.8.1':
     dependencies:
       '@commitlint/types': 19.8.1
       conventional-changelog-angular: 7.0.0
       conventional-commits-parser: 5.0.0
-
-  '@commitlint/read@18.6.1':
-    dependencies:
-      '@commitlint/top-level': 18.6.1
-      '@commitlint/types': 18.6.1
-      git-raw-commits: 2.0.11
-      minimist: 1.2.8
 
   '@commitlint/read@19.8.1':
     dependencies:
@@ -2817,25 +2510,6 @@ snapshots:
       git-raw-commits: 4.0.0
       minimist: 1.2.8
       tinyexec: 1.0.1
-
-  '@commitlint/resolve-extends@18.6.1':
-    dependencies:
-      '@commitlint/config-validator': 18.6.1
-      '@commitlint/types': 18.6.1
-      import-fresh: 3.3.0
-      lodash.mergewith: 4.6.2
-      resolve-from: 5.0.0
-      resolve-global: 1.0.0
-
-  '@commitlint/resolve-extends@19.8.0':
-    dependencies:
-      '@commitlint/config-validator': 19.8.0
-      '@commitlint/types': 19.8.0
-      global-directory: 4.0.1
-      import-meta-resolve: 4.1.0
-      lodash.mergewith: 4.6.2
-      resolve-from: 5.0.0
-    optional: true
 
   '@commitlint/resolve-extends@19.8.1':
     dependencies:
@@ -2846,14 +2520,6 @@ snapshots:
       lodash.mergewith: 4.6.2
       resolve-from: 5.0.0
 
-  '@commitlint/rules@18.6.1':
-    dependencies:
-      '@commitlint/ensure': 18.6.1
-      '@commitlint/message': 18.6.1
-      '@commitlint/to-lines': 18.6.1
-      '@commitlint/types': 18.6.1
-      execa: 5.1.1
-
   '@commitlint/rules@19.8.1':
     dependencies:
       '@commitlint/ensure': 19.8.1
@@ -2861,27 +2527,11 @@ snapshots:
       '@commitlint/to-lines': 19.8.1
       '@commitlint/types': 19.8.1
 
-  '@commitlint/to-lines@18.6.1': {}
-
   '@commitlint/to-lines@19.8.1': {}
-
-  '@commitlint/top-level@18.6.1':
-    dependencies:
-      find-up: 5.0.0
 
   '@commitlint/top-level@19.8.1':
     dependencies:
       find-up: 7.0.0
-
-  '@commitlint/types@18.6.1':
-    dependencies:
-      chalk: 4.1.2
-
-  '@commitlint/types@19.8.0':
-    dependencies:
-      '@types/conventional-commits-parser': 5.0.0
-      chalk: 5.4.1
-    optional: true
 
   '@commitlint/types@19.8.1':
     dependencies:
@@ -3195,8 +2845,6 @@ snapshots:
     dependencies:
       '@types/node': 20.14.10
 
-  '@types/minimist@1.2.5': {}
-
   '@types/node@20.14.10':
     dependencies:
       undici-types: 5.26.5
@@ -3277,8 +2925,6 @@ snapshots:
 
   array-ify@1.0.0: {}
 
-  arrify@1.0.1: {}
-
   astral-regex@2.0.0: {}
 
   at-least-node@1.0.0: {}
@@ -3330,14 +2976,6 @@ snapshots:
   cachedir@2.3.0: {}
 
   callsites@3.1.0: {}
-
-  camelcase-keys@6.2.2:
-    dependencies:
-      camelcase: 5.3.1
-      map-obj: 4.3.0
-      quick-lru: 4.0.1
-
-  camelcase@5.3.1: {}
 
   chalk@2.4.2:
     dependencies:
@@ -3505,27 +3143,11 @@ snapshots:
 
   core-util-is@1.0.3: {}
 
-  cosmiconfig-typescript-loader@5.0.0(@types/node@20.14.10)(cosmiconfig@8.3.6(typescript@5.5.3))(typescript@5.5.3):
-    dependencies:
-      '@types/node': 20.14.10
-      cosmiconfig: 8.3.6(typescript@5.5.3)
-      jiti: 1.21.6
-      typescript: 5.5.3
-
   cosmiconfig-typescript-loader@6.1.0(@types/node@20.14.10)(cosmiconfig@9.0.0(typescript@5.5.3))(typescript@5.5.3):
     dependencies:
       '@types/node': 20.14.10
       cosmiconfig: 9.0.0(typescript@5.5.3)
       jiti: 2.4.1
-      typescript: 5.5.3
-
-  cosmiconfig@8.3.6(typescript@5.5.3):
-    dependencies:
-      import-fresh: 3.3.0
-      js-yaml: 4.1.0
-      parse-json: 5.2.0
-      path-type: 4.0.0
-    optionalDependencies:
       typescript: 5.5.3
 
   cosmiconfig@9.0.0(typescript@5.5.3):
@@ -3560,25 +3182,16 @@ snapshots:
       longest: 2.0.1
       word-wrap: 1.2.5
     optionalDependencies:
-      '@commitlint/load': 19.8.0(@types/node@20.14.10)(typescript@5.5.3)
+      '@commitlint/load': 19.8.1(@types/node@20.14.10)(typescript@5.5.3)
     transitivePeerDependencies:
       - '@types/node'
       - typescript
-
-  dargs@7.0.0: {}
 
   dargs@8.1.0: {}
 
   debug@4.4.0:
     dependencies:
       ms: 2.1.3
-
-  decamelize-keys@1.1.1:
-    dependencies:
-      decamelize: 1.2.0
-      map-obj: 1.0.1
-
-  decamelize@1.2.0: {}
 
   dedent@0.7.0: {}
 
@@ -3833,14 +3446,6 @@ snapshots:
       through2: 2.0.5
       traverse: 0.6.8
 
-  git-raw-commits@2.0.11:
-    dependencies:
-      dargs: 7.0.0
-      lodash: 4.17.21
-      meow: 8.1.2
-      split2: 3.2.2
-      through2: 4.0.2
-
   git-raw-commits@4.0.0:
     dependencies:
       dargs: 8.1.0
@@ -3863,10 +3468,6 @@ snapshots:
   global-directory@4.0.1:
     dependencies:
       ini: 4.1.1
-
-  global-dirs@0.1.1:
-    dependencies:
-      ini: 1.3.8
 
   global-modules@1.0.0:
     dependencies:
@@ -3904,8 +3505,6 @@ snapshots:
     optionalDependencies:
       uglify-js: 3.18.0
 
-  hard-rejection@2.1.0: {}
-
   has-flag@3.0.0: {}
 
   has-flag@4.0.0: {}
@@ -3923,10 +3522,6 @@ snapshots:
   hook-std@3.0.0: {}
 
   hosted-git-info@2.8.9: {}
-
-  hosted-git-info@4.1.0:
-    dependencies:
-      lru-cache: 6.0.0
 
   hosted-git-info@7.0.2:
     dependencies:
@@ -4050,8 +3645,6 @@ snapshots:
 
   is-obj@2.0.0: {}
 
-  is-plain-obj@1.1.0: {}
-
   is-plain-obj@4.1.0: {}
 
   is-stream@2.0.1: {}
@@ -4091,8 +3684,6 @@ snapshots:
 
   java-properties@1.0.2: {}
 
-  jiti@1.21.6: {}
-
   jiti@2.4.1: {}
 
   jju@1.4.0: {}
@@ -4130,8 +3721,6 @@ snapshots:
     dependencies:
       jsonparse: 1.3.1
       through2: 4.0.2
-
-  kind-of@6.0.3: {}
 
   lilconfig@3.1.3: {}
 
@@ -4238,14 +3827,6 @@ snapshots:
 
   lru-cache@10.4.0: {}
 
-  lru-cache@6.0.0:
-    dependencies:
-      yallist: 4.0.0
-
-  map-obj@1.0.1: {}
-
-  map-obj@4.3.0: {}
-
   map-stream@0.0.7: {}
 
   marked-terminal@7.3.0(marked@15.0.12):
@@ -4264,20 +3845,6 @@ snapshots:
   meow@12.1.1: {}
 
   meow@13.2.0: {}
-
-  meow@8.1.2:
-    dependencies:
-      '@types/minimist': 1.2.5
-      camelcase-keys: 6.2.2
-      decamelize-keys: 1.1.1
-      hard-rejection: 2.1.0
-      minimist-options: 4.1.0
-      normalize-package-data: 3.0.3
-      read-pkg-up: 7.0.1
-      redent: 3.0.0
-      trim-newlines: 3.0.1
-      type-fest: 0.18.1
-      yargs-parser: 20.2.9
 
   merge-stream@2.0.0: {}
 
@@ -4298,17 +3865,9 @@ snapshots:
 
   mimic-function@5.0.1: {}
 
-  min-indent@1.0.1: {}
-
   minimatch@3.1.2:
     dependencies:
       brace-expansion: 1.1.11
-
-  minimist-options@4.1.0:
-    dependencies:
-      arrify: 1.0.1
-      is-plain-obj: 1.1.0
-      kind-of: 6.0.3
 
   minimist@1.2.7: {}
 
@@ -4342,13 +3901,6 @@ snapshots:
       hosted-git-info: 2.8.9
       resolve: 1.22.8
       semver: 5.7.2
-      validate-npm-package-license: 3.0.4
-
-  normalize-package-data@3.0.3:
-    dependencies:
-      hosted-git-info: 4.1.0
-      is-core-module: 2.14.0
-      semver: 7.7.1
       validate-npm-package-license: 3.0.4
 
   normalize-package-data@6.0.2:
@@ -4550,8 +4102,6 @@ snapshots:
 
   queue-microtask@1.2.3: {}
 
-  quick-lru@4.0.1: {}
-
   rc-config-loader@4.1.3:
     dependencies:
       debug: 4.4.0
@@ -4620,11 +4170,6 @@ snapshots:
 
   readline-transform@1.0.0: {}
 
-  redent@3.0.0:
-    dependencies:
-      indent-string: 4.0.0
-      strip-indent: 3.0.0
-
   registry-auth-token@5.0.2:
     dependencies:
       '@pnpm/npm-conf': 2.2.2
@@ -4641,10 +4186,6 @@ snapshots:
   resolve-from@4.0.0: {}
 
   resolve-from@5.0.0: {}
-
-  resolve-global@1.0.0:
-    dependencies:
-      global-dirs: 0.1.1
 
   resolve@1.22.8:
     dependencies:
@@ -4737,10 +4278,6 @@ snapshots:
 
   semver@5.7.2: {}
 
-  semver@7.6.0:
-    dependencies:
-      lru-cache: 6.0.0
-
   semver@7.7.1: {}
 
   shebang-command@2.0.0:
@@ -4817,10 +4354,6 @@ snapshots:
     dependencies:
       through2: 2.0.5
 
-  split2@3.2.2:
-    dependencies:
-      readable-stream: 3.6.2
-
   split2@4.2.0: {}
 
   split@1.0.1:
@@ -4878,10 +4411,6 @@ snapshots:
   strip-final-newline@3.0.0: {}
 
   strip-final-newline@4.0.0: {}
-
-  strip-indent@3.0.0:
-    dependencies:
-      min-indent: 1.0.1
 
   strip-json-comments@2.0.1: {}
 
@@ -4984,11 +4513,7 @@ snapshots:
 
   traverse@0.6.8: {}
 
-  trim-newlines@3.0.1: {}
-
   tslib@2.6.3: {}
-
-  type-fest@0.18.1: {}
 
   type-fest@0.21.3: {}
 
@@ -5067,8 +4592,6 @@ snapshots:
   xtend@4.0.2: {}
 
   y18n@5.0.8: {}
-
-  yallist@4.0.0: {}
 
   yaml@2.8.0: {}
 
