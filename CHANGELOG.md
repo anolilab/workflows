@@ -1,3 +1,13 @@
+## [6.1.0](https://github.com/anolilab/workflows/compare/v6.0.1...v6.1.0) (2025-05-31)
+
+### Features
+
+* add workflows for cache cleanup and lock file maintenance ([8244ca8](https://github.com/anolilab/workflows/commit/8244ca878ac59b7f40e28fec9091a281311b0a76))
+
+### Miscellaneous Chores
+
+* **deps:** update @anolilab/lint-staged-config and @anolilab/prettier-config to latest versions ([a7ea4de](https://github.com/anolilab/workflows/commit/a7ea4de4467466a64f1da9fb1152e08a91f90d1f))
+
 ## [6.0.1](https://github.com/anolilab/workflows/compare/v6.0.0...v6.0.1) (2025-05-30)
 
 ### Bug Fixes
