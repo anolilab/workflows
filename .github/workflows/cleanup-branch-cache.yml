@@ -1,0 +1,58 @@
+# From https://github.com/actions/cache/blob/main/tips-and-workarounds.md#force-deletion-of-caches-overriding-default-cache-eviction-policy
+name: "Cleanup caches by a branch"
+
+on: # yamllint disable-line rule:truthy
+    pull_request:
+        types:
+            - "closed"
+    workflow_dispatch: # yamllint disable-line rule:empty-values
+    workflow_call:
+        inputs:
+            target-repo:
+                description: "The repo to run this action on. This is to prevent actions from running on forks unless intended."
+                required: true
+                type: "string"
+jobs:
+    cleanup:
+        if: "github.repository == inputs.target-repo"
+        runs-on: "ubuntu-latest"
+        permissions:
+            # `actions:write` permission is required to delete caches
+            #   See also: https://docs.github.com/en/rest/actions/cache?apiVersion=2022-11-28#delete-a-github-actions-cache-for-a-repository-using-a-cache-id
+            actions: "write"
+            contents: "read"
+        steps:
+            - name: "Harden Runner"
+              uses: "step-security/harden-runner@0634a2670c59f64b4a01f0f96f84700a4088b9f0" # v2.12.0
+              with:
+                  egress-policy: "audit"
+
+            - name: "Git checkout"
+              uses: "actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683" # v4.2.2
+              env:
+                  GIT_COMMITTER_NAME: "GitHub Actions Shell"
+                  GIT_AUTHOR_NAME: "GitHub Actions Shell"
+                  EMAIL: "github-actions[bot]@users.noreply.github.com"
+
+            - name: "Cleanup"
+              run: |
+                  gh extension install actions/gh-actions-cache
+
+                  REPO=${{ github.repository }}
+                  BRANCH="refs/pull/${{ github.event.pull_request.number }}/merge"
+
+                  echo "Fetching list of cache key"
+                  cacheKeysForPR=$(gh actions-cache list -R $REPO -B $BRANCH | cut -f 1 )
+
+                  ## Setting this to not fail the workflow while deleting cache keys.
+                  set +e
+                  echo "Deleting caches..."
+                  for cacheKey in $cacheKeysForPR
+                  do
+                      gh actions-cache delete $cacheKey -R $REPO -B $BRANCH --confirm
+                  done
+                  echo "Done"
+              env:
+                  GH_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+                  REPO: "${{ github.repository }}"
+                  BRANCH: "refs/pull/${{ github.event.pull_request.number }}/merge"

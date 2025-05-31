@@ -31,16 +31,23 @@ configure the following:
 
 ### Steps
 
-- [Node Setup Environment and Resources](./steps/node-setup-environment-and-resources.yml) - sets up the Node.js environment with pnpm, pnpm cache, nx (optional), nx cache (optional) and allocates resources
-- [Codecov](./steps/codecov.yml) - uploads coverage reports to Codecov
+- [Node Setup Environment and Resources](./step/setup/action.yml) - sets up the Node.js environment with pnpm, pnpm cache, nx (optional), nx cache (optional) and allocates resources
+- [Codecov](./step/codecov/action.yml) - uploads coverage reports to Codecov
 
 ### Workflows
 
 - [allo-allo](./.github/workflows/allo-allo.yml) ([docs](./.github/workflows/allo-allo.md)) - a welcome bot for new contributors
 - [cleanup-branch-cache](./.github/workflows/cleanup-branch-cache.yml) ([docs](./.github/workflows/cleanup-branch-cache.md)) - automatically cleans all cache key if a branch is closed.
+- [codeql](./.github/workflows/codeql.yml) - Analyzes code for security vulnerabilities
+- [dependency-review](./.github/workflows/dependency-review.yml) - Reviews dependencies for security vulnerabilities
+- [greetings](./.github/workflows/greetings.yml) - Greets new contributors
+- [lint](./.github/workflows/lint.yml) - Lints code using ESLint and Prettier
 - [lock-closed](./.github/workflows/lock-closed.yml) ([docs](./.github/workflows/lock-closed.md)) - locks issues and PRs that have been closed for more than a year
-- [lock-file-maintenance](./.github/workflows/lock-file-maintenance.yml) ([docs](./.github/workflows/lock-file-maintenance.md)) - This action will check if the pull request title follows the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) specification.
-- [semantic-pull-request](./.github/workflows/semantic-pull-request.yml) ([docs](./.github/workflows/semantic-pull-request.md)) - validates if the PR title has a defined semantic title
+- [pnpm-lock-file-maintenance](./.github/workflows/pnpm-lock-file-maintenance.yml) ([docs](./.github/workflows/pnpm-lock-file-maintenance.md)) - validates if the PR title has a defined semantic title
+- [require-allow-edits](./.github/workflows/require-allow-edits.yml) - Requires 'allow edits' from maintainers on PRs from forks
+- [scorecards](./.github/workflows/scorecards.yml) - Generates a security scorecard for the repository
+- [semantic-pull-request](./.github/workflows/semantic-pull-request.yml) ([docs](./.github/workflows/semantic-pull-request.md)) - This action will check if the pull request title follows the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) specification.
+- [semantic-release](./.github/workflows/semantic-release.yml) - Automates version management and package publishing
 - [set-default-labels](./.github/workflows/set-default-labels.yml) ([docs](./.github/workflows/set-default-labels.md)) - sets default labels on issues and PRs
 - [stale-issues](./.github/workflows/stale-issues.yml) ([docs](./.github/workflows/stale-issues.md)) - closes stale issues
 

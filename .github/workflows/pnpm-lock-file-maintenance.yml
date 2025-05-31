@@ -1,25 +1,20 @@
-# lock-file-maintenance
+# Note: this is a shared pipeline used by other repositories.
+# Docs: https://docs.github.com/en/actions/using-workflows/reusing-workflows
 
-This action is used to maintain lock files in a repository. It will ensure that lock files are up-to-date with their corresponding manifest files.
-
-> For protected branches, the action will need to be able to commit and push to the repository.
->
-> By creating a new [Personal Access Token (PAT)](https://github.com/settings/tokens/new), storing the token as a secret in your repository and then passing the new token to the Action step.
-
-## Usage
-
-In the repository that will call this action, you will need to create a workflow file. You can name the file `workflows/lock-file-maintenance.yml` and add the following content:
-
-```yml
 name: "Lock File Maintenance"
 
 on: # yamllint disable-line rule:truthy
-    schedule:
-        - cron: "0 */3 * * *" # At minute 0 past every 3rd hour.
-    pull_request:
-        branches:
-            - "dependabot/**"
-    workflow_dispatch: # yamllint disable-line rule:empty-values
+    workflow_call:
+        inputs:
+            target-repo:
+                description: "The repo to run this action on. This is to prevent actions from running on forks unless intended."
+                required: true
+                type: "string"
+
+            node-version:
+                description: "The node version to use for the job."
+                required: true
+                type: "string"
 
 permissions:
     contents: "read" # for checkout
@@ -27,7 +22,7 @@ permissions:
 jobs:
     lock-file:
         name: "Lock File Maintenance"
-        if: "github.repository == visulima/visulima"
+        if: "github.repository == inputs.target-repo"
         runs-on: "ubuntu-latest"
         permissions:
             contents: "write"
@@ -51,13 +46,13 @@ jobs:
               id: "setup"
               uses: "anolilab/workflows/step/setup@main"
               with:
-                  node-version: "23.x"
-                  cache-prefix: "lock-file"
+                  node-version: "${{ inputs.node-version }}"
+                  cache-prefix: "lock-file-update"
                   install-packages: "false"
 
             - name: "Update lock file"
               if: "success()"
-              run: "pnpm install --lockfile-only"
+              run: "pnpm install --lockfile-only && pnpm dedupe"
 
             - name: "Commit lock file"
               if: "success()"
@@ -68,4 +63,3 @@ jobs:
                   commit_user_name: "github-actions-shell"
                   commit_user_email: "github-actions[bot]@users.noreply.github.com"
                   commit_author: "github-actions-shell <github-actions[bot]@users.noreply.github.com>"
-```
