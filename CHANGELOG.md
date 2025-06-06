@@ -1,3 +1,14 @@
+## [6.1.2](https://github.com/anolilab/workflows/compare/v6.1.1...v6.1.2) (2025-06-06)
+
+### Bug Fixes
+
+* **deps:** update github/codeql-action action to v3.28.19 ([#183](https://github.com/anolilab/workflows/issues/183)) ([679df3d](https://github.com/anolilab/workflows/commit/679df3d48225a09d74c5a0cab5e7ddd7be0a2324))
+* **deps:** update secretlint monorepo to ^9.3.4 ([#184](https://github.com/anolilab/workflows/issues/184)) ([2352e6a](https://github.com/anolilab/workflows/commit/2352e6a04376ca7649f4f7f45c9c09555ab7c412))
+
+### Miscellaneous Chores
+
+* **deps:** update dependency @octokit/request-error@&gt;&[#x3d](https://github.com/anolilab/workflows/issues/x3d);6.0.0 &lt;6.1.7 to v7 ([#174](https://github.com/anolilab/workflows/issues/174)) ([8bfad30](https://github.com/anolilab/workflows/commit/8bfad304fd4dddb94101b3e6d5f5b77851ebdb81)), closes [#x3](https://github.com/anolilab/workflows/issues/x3)
+
 ## [6.1.1](https://github.com/anolilab/workflows/compare/v6.1.0...v6.1.1) (2025-06-05)
 
 ### Bug Fixes
