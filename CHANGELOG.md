@@ -1,3 +1,9 @@
+## [6.1.3](https://github.com/anolilab/workflows/compare/v6.1.2...v6.1.3) (2025-06-11)
+
+### Bug Fixes
+
+* **deps:** update patch updates ([#185](https://github.com/anolilab/workflows/issues/185)) ([be75c2e](https://github.com/anolilab/workflows/commit/be75c2e88b9975acb0f11333cc2a89ce4b0d8eac))
+
 ## [6.1.2](https://github.com/anolilab/workflows/compare/v6.1.1...v6.1.2) (2025-06-06)
 
 ### Bug Fixes
