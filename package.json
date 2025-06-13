@@ -28,7 +28,7 @@
         "semantic-release": "^24.2.5",
         "sort-package-json": "^3.2.1"
     },
-    "packageManager": "pnpm@10.11.1",
+    "packageManager": "pnpm@10.12.1",
     "engines": {
         "node": ">=18.* <=24.*"
     },
