@@ -1,3 +1,18 @@
+## [6.1.4](https://github.com/anolilab/workflows/compare/v6.1.3...v6.1.4) (2025-06-20)
+
+### Bug Fixes
+
+* **deps:** update github-actions ([#188](https://github.com/anolilab/workflows/issues/188)) ([c8998fb](https://github.com/anolilab/workflows/commit/c8998fb310e8c6dda3aa52fda83227a20374e0d3))
+* **deps:** update pnpm to v10.12.1 ([#186](https://github.com/anolilab/workflows/issues/186)) ([cd68e6d](https://github.com/anolilab/workflows/commit/cd68e6d233a17f110a99bbc43c96c9cdd48689b8))
+
+### Miscellaneous Chores
+
+* **deps:** update dependencies in package.json and pnpm-lock.yaml ([d7aaad3](https://github.com/anolilab/workflows/commit/d7aaad337fff32d8fedefb858726499d8db840d5))
+
+### Continuous Integration
+
+* **deps:** update stefanzweifel/git-auto-commit-action action to v6 ([#189](https://github.com/anolilab/workflows/issues/189)) ([122416e](https://github.com/anolilab/workflows/commit/122416e94830c72b960c9fca69dcad1370c8a849))
+
 ## [6.1.3](https://github.com/anolilab/workflows/compare/v6.1.2...v6.1.3) (2025-06-11)
 
 ### Bug Fixes
