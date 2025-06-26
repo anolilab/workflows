@@ -1,3 +1,10 @@
+## [6.1.5](https://github.com/anolilab/workflows/compare/v6.1.4...v6.1.5) (2025-06-26)
+
+### Bug Fixes
+
+* **deps:** update dependency @octokit/request@&gt;&[#x3d](https://github.com/anolilab/workflows/issues/x3d);9.0.0-beta.1 &lt;9.2.1 to >=10.0.3 ([#193](https://github.com/anolilab/workflows/issues/193)) ([cd26117](https://github.com/anolilab/workflows/commit/cd261178970b39fe6b72ea420975d0302c7bb2de)), closes [#x3](https://github.com/anolilab/workflows/issues/x3)
+* **deps:** update marocchino/sticky-pull-request-comment action to v2.9.3 ([#194](https://github.com/anolilab/workflows/issues/194)) ([380b744](https://github.com/anolilab/workflows/commit/380b7443e3bc6252e2723a780194cf4c04db7f92))
+
 ## [6.1.4](https://github.com/anolilab/workflows/compare/v6.1.3...v6.1.4) (2025-06-20)
 
 ### Bug Fixes
