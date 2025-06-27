@@ -1,3 +1,9 @@
+## [6.1.6](https://github.com/anolilab/workflows/compare/v6.1.5...v6.1.6) (2025-06-27)
+
+### Bug Fixes
+
+* **deps:** update dependency @octokit/plugin-paginate-rest@&gt;&[#x3d](https://github.com/anolilab/workflows/issues/x3d);9.3.0-beta.1 &lt;11.4.1 to >=13.1.0 ([#195](https://github.com/anolilab/workflows/issues/195)) ([7e9c35c](https://github.com/anolilab/workflows/commit/7e9c35cfa72e646764159f0f0d34451c0c5a580d)), closes [#x3](https://github.com/anolilab/workflows/issues/x3)
+
 ## [6.1.5](https://github.com/anolilab/workflows/compare/v6.1.4...v6.1.5) (2025-06-26)
 
 ### Bug Fixes
