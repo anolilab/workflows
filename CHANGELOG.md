@@ -1,3 +1,9 @@
+## [6.1.7](https://github.com/anolilab/workflows/compare/v6.1.6...v6.1.7) (2025-06-30)
+
+### Bug Fixes
+
+* **deps:** update secretlint monorepo to ^10.1.1 ([#196](https://github.com/anolilab/workflows/issues/196)) ([6bfbe76](https://github.com/anolilab/workflows/commit/6bfbe762b0b0f0d96189c5bcfdb6cf3d3de103c8))
+
 ## [6.1.6](https://github.com/anolilab/workflows/compare/v6.1.5...v6.1.6) (2025-06-27)
 
 ### Bug Fixes
