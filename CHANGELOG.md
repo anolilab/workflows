@@ -1,3 +1,15 @@
+## [6.1.8](https://github.com/anolilab/workflows/compare/v6.1.7...v6.1.8) (2025-07-03)
+
+### Bug Fixes
+
+* **deps:** update dependency @octokit/plugin-paginate-rest@&gt;&[#x3d](https://github.com/anolilab/workflows/issues/x3d);9.3.0-beta.1 &lt;11.4.1 to >=13.1.1 ([#197](https://github.com/anolilab/workflows/issues/197)) ([f8a788b](https://github.com/anolilab/workflows/commit/f8a788b43b93a8d7e0c4ff9812f335402659ea0c)), closes [#x3](https://github.com/anolilab/workflows/issues/x3)
+* **deps:** update dependency prettier to ^3.6.2 ([#199](https://github.com/anolilab/workflows/issues/199)) ([a41cfc7](https://github.com/anolilab/workflows/commit/a41cfc714d622f614b7ffd352caa0b1c9c873ff2))
+* **deps:** update dependency sort-package-json to ^3.3.1 ([#200](https://github.com/anolilab/workflows/issues/200)) ([2a505ca](https://github.com/anolilab/workflows/commit/2a505ca0d4040526eeba5eceeb856cd0dcdaf46a))
+
+### Miscellaneous Chores
+
+* **deps:** update dependency brace-expansion@&gt;&[#x3d](https://github.com/anolilab/workflows/issues/x3d);1.0.0 &lt;&[#x3d](https://github.com/anolilab/workflows/issues/x3d);1.1.11 to v4 ([#192](https://github.com/anolilab/workflows/issues/192)) ([8f21cd6](https://github.com/anolilab/workflows/commit/8f21cd67b7f53c9feaafecbf8b7b781cb127fe2b)), closes [#x3](https://github.com/anolilab/workflows/issues/x3) [#x3](https://github.com/anolilab/workflows/issues/x3)
+
 ## [6.1.7](https://github.com/anolilab/workflows/compare/v6.1.6...v6.1.7) (2025-06-30)
 
 ### Bug Fixes
