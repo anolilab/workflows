@@ -23,7 +23,7 @@
         "husky": "^9.1.7",
         "is-ci": "^4.1.0",
         "lint-staged": "^16.1.2",
-        "prettier": "^3.5.3",
+        "prettier": "^3.6.2",
         "secretlint": "10.1.1",
         "semantic-release": "^24.2.5",
         "sort-package-json": "^3.3.1"
