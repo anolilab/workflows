@@ -1,3 +1,9 @@
+## [6.1.10](https://github.com/anolilab/workflows/compare/v6.1.9...v6.1.10) (2025-07-10)
+
+### Bug Fixes
+
+* **deps:** update dependency semantic-release to ^24.2.6 ([#201](https://github.com/anolilab/workflows/issues/201)) ([0d90163](https://github.com/anolilab/workflows/commit/0d90163df26b8c48eba84436942b18e4ad37f545))
+
 ## [6.1.9](https://github.com/anolilab/workflows/compare/v6.1.8...v6.1.9) (2025-07-04)
 
 ### Bug Fixes
