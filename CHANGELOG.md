@@ -1,3 +1,9 @@
+## [6.1.11](https://github.com/anolilab/workflows/compare/v6.1.10...v6.1.11) (2025-07-11)
+
+### Bug Fixes
+
+* **deps:** update github-actions ([#202](https://github.com/anolilab/workflows/issues/202)) ([4f1b477](https://github.com/anolilab/workflows/commit/4f1b477c2a1160203fd32ac0dc09b74ac64b33c5))
+
 ## [6.1.10](https://github.com/anolilab/workflows/compare/v6.1.9...v6.1.10) (2025-07-10)
 
 ### Bug Fixes
