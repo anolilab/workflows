@@ -20,7 +20,7 @@ jobs:
               with:
                   egress-policy: "audit"
 
-            - uses: "actions/first-interaction@34f15e814fe48ac9312ccf29db4e74fa767cbab7" # v1.3.0
+            - uses: "actions/first-interaction@2d4393e6bc0e2efb2e48fba7e06819c3bf61ffc9" # v2.0.0
               with:
                   repo-token: "${{ secrets.GITHUB_TOKEN }}"
                   issue-message: "Awesome! Thank you for taking the time to create your first issue! Please review the [guidelines](https://visulima.com/docs/contributing)"
