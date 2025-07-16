@@ -26,9 +26,9 @@
         "prettier": "^3.6.2",
         "secretlint": "10.2.0",
         "semantic-release": "^24.2.6",
-        "sort-package-json": "^3.3.1"
+        "sort-package-json": "^3.4.0"
     },
-    "packageManager": "pnpm@10.12.4",
+    "packageManager": "pnpm@10.13.1",
     "engines": {
         "node": ">=18.* <=24.*"
     },
