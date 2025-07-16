@@ -1,3 +1,13 @@
+## [6.1.14](https://github.com/anolilab/workflows/compare/v6.1.13...v6.1.14) (2025-07-16)
+
+### Bug Fixes
+
+* **deps:** update dependency semantic-release to ^24.2.7 ([#206](https://github.com/anolilab/workflows/issues/206)) ([a67885b](https://github.com/anolilab/workflows/commit/a67885baa49d5644d2065b3a95ae44fb9ef5e7f8))
+
+### Continuous Integration
+
+* **deps:** update actions/first-interaction action to v2 ([#209](https://github.com/anolilab/workflows/issues/209)) ([1c5c4e6](https://github.com/anolilab/workflows/commit/1c5c4e6ef43bd381e52e85a36557908a8ae89505))
+
 ## [6.1.13](https://github.com/anolilab/workflows/compare/v6.1.12...v6.1.13) (2025-07-16)
 
 ### Bug Fixes
