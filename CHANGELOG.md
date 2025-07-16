@@ -1,3 +1,10 @@
+## [6.1.13](https://github.com/anolilab/workflows/compare/v6.1.12...v6.1.13) (2025-07-16)
+
+### Bug Fixes
+
+* **deps:** update dependency conventional-changelog-conventionalcommits to v9.1.0 ([#204](https://github.com/anolilab/workflows/issues/204)) ([4465159](https://github.com/anolilab/workflows/commit/4465159168bfdbc5996f27fee40cc875f03141e9))
+* **deps:** update minor updates ([#205](https://github.com/anolilab/workflows/issues/205)) ([9d7126e](https://github.com/anolilab/workflows/commit/9d7126ea63fb623baf2c0179c612b2416ff174cf))
+
 ## [6.1.12](https://github.com/anolilab/workflows/compare/v6.1.11...v6.1.12) (2025-07-15)
 
 ### Bug Fixes
