@@ -1,3 +1,10 @@
+## [6.1.15](https://github.com/anolilab/workflows/compare/v6.1.14...v6.1.15) (2025-07-17)
+
+### Bug Fixes
+
+* **deps:** update secretlint monorepo to ^10.2.1 ([#207](https://github.com/anolilab/workflows/issues/207)) ([36d2b03](https://github.com/anolilab/workflows/commit/36d2b0340ea5481c2a9fc73bd2ac86bbd86d2009))
+* **deps:** update step-security/harden-runner action to v2.13.0 ([#208](https://github.com/anolilab/workflows/issues/208)) ([a622353](https://github.com/anolilab/workflows/commit/a622353e79da281839596584580e645bfd8184ad))
+
 ## [6.1.14](https://github.com/anolilab/workflows/compare/v6.1.13...v6.1.14) (2025-07-16)
 
 ### Bug Fixes
