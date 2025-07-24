@@ -1,3 +1,9 @@
+## [6.1.16](https://github.com/anolilab/workflows/compare/v6.1.15...v6.1.16) (2025-07-24)
+
+### Bug Fixes
+
+* **deps:** update marocchino/sticky-pull-request-comment action to v2.9.4 ([#210](https://github.com/anolilab/workflows/issues/210)) ([9cfa7b4](https://github.com/anolilab/workflows/commit/9cfa7b4f1df294827e959f24d659b6222d7f2de1))
+
 ## [6.1.15](https://github.com/anolilab/workflows/compare/v6.1.14...v6.1.15) (2025-07-17)
 
 ### Bug Fixes
