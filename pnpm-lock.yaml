@@ -19,17 +19,17 @@ importers:
   .:
     devDependencies:
       '@anolilab/commitlint-config':
-        specifier: ^6.0.1
-        version: 6.0.1(@commitlint/cli@19.8.1(@types/node@20.14.10)(typescript@5.5.3))(@types/node@20.14.10)(typescript@5.5.3)
+        specifier: ^6.0.2
+        version: 6.0.2(@commitlint/cli@19.8.1(@types/node@20.14.10)(typescript@5.5.3))(@types/node@20.14.10)(typescript@5.5.3)
       '@anolilab/lint-staged-config':
-        specifier: ^3.0.17
-        version: 3.0.17(@types/node@20.14.10)(husky@9.1.7)(lint-staged@16.1.2)(prettier@3.6.2)(secretlint@10.2.1)(yaml@2.8.0)
+        specifier: ^3.0.25
+        version: 3.0.26(@types/node@20.14.10)(husky@9.1.7)(lint-staged@16.1.2)(prettier@3.6.2)(secretlint@10.2.1)(yaml@2.8.0)
       '@anolilab/prettier-config':
-        specifier: ^6.0.1
-        version: 6.0.1(prettier@3.6.2)
+        specifier: ^6.0.3
+        version: 6.0.3(prettier@3.6.2)
       '@anolilab/semantic-release-preset':
-        specifier: ^11.0.0
-        version: 11.0.0(@semantic-release/npm@12.0.2(semantic-release@24.2.7(typescript@5.5.3)))(semantic-release@24.2.7(typescript@5.5.3))(yaml@2.8.0)
+        specifier: ^11.0.2
+        version: 11.0.2(@semantic-release/npm@12.0.2(semantic-release@24.2.7(typescript@5.5.3)))(semantic-release@24.2.7(typescript@5.5.3))(yaml@2.8.0)
       '@commitlint/cli':
         specifier: ^19.8.1
         version: 19.8.1(@types/node@20.14.10)(typescript@5.5.3)
@@ -75,15 +75,15 @@ importers:
 
 packages:
 
-  '@anolilab/commitlint-config@6.0.1':
-    resolution: {integrity: sha512-ddnni+uEwI/OX/Y0x/UjN4zj7tKaN9Y+erpjL+nbQRXmQpchta1t8o4No79PETmTGb1t7PUvEzEKIZri4RVoaA==}
+  '@anolilab/commitlint-config@6.0.2':
+    resolution: {integrity: sha512-SrfRzY9s50SptR05R+QLrj4hPriX2vEazsPPdQ7NM9pDHDo3FILnkx/AQXl6dk5mEsjz/xcEwqHLHKqyk9SfJA==}
     engines: {node: '>=20.18.* <=24.*'}
     hasBin: true
     peerDependencies:
       '@commitlint/cli': ^17.6.5 || ^18.x || ^19.x
 
-  '@anolilab/lint-staged-config@3.0.17':
-    resolution: {integrity: sha512-nt59OWI5PFMEpzhcRiT25eYRcQgXK5SsYPA9V2ZE/glEPtjbqt3iXfwXUFf06KexMen9ahZnuZo2Kc/A2c+2gg==}
+  '@anolilab/lint-staged-config@3.0.26':
+    resolution: {integrity: sha512-DkDbuWNkicdrO7guKLnHxFYVsIv4Se4+ZhonSlh7KVbs4ZZ60sDq2sizZbDSUz1SEr/7LFHlyBM9mZmW3ulkbw==}
     engines: {node: '>=20.18.* <=24.*'}
     hasBin: true
     peerDependencies:
@@ -92,8 +92,8 @@ packages:
       jest: ^27.x || ^28.x
       lint-staged: ^13.x || ^14.x|| ^15.x || ^16.x
       nano-staged: ^0.8
-      prettier: ^3.0.3
-      secretlint: ^7.x || ^8.x
+      prettier: ^3.6.2
+      secretlint: ^7.x || ^8.x || ^10.0.0
       stylelint: ^15.x || ^16.x
       vitest: ^1.x || ^2.x || ^3.x
     peerDependenciesMeta:
@@ -114,23 +114,23 @@ packages:
       vitest:
         optional: true
 
-  '@anolilab/prettier-config@6.0.1':
-    resolution: {integrity: sha512-dsuhOa2PhoAu6TwvW62j0E8LEOKP2uqtGuXkCwGRTzqHmKN+4/2jqNKq4KLbnGGeqGlDw4pHf9qry6UBtAjJ2A==}
+  '@anolilab/prettier-config@6.0.3':
+    resolution: {integrity: sha512-FKb5CzfgPVT56/xd6p+wMZXqovDbMZMToiqO2pLVfC8zYHJ+IXItCowd3y/Yho5/gZJE21IycDMJRQbOMuYIWQ==}
     engines: {node: '>=20.18.* <=24.*'}
     hasBin: true
     peerDependencies:
-      prettier: 3.0.3
+      prettier: 3.6.2
 
-  '@anolilab/semantic-release-clean-package-json@3.0.0':
-    resolution: {integrity: sha512-Zhyx4zMt/OJtJmA4lChA0+jICl4bxDn9m05hGaS/s88v52Q8z6d6RmgaAA2TnIqC5PdO9SWYf9CnQsYViU8dFQ==}
+  '@anolilab/semantic-release-clean-package-json@3.0.2':
+    resolution: {integrity: sha512-BffuRvhE6xC8ts831ZM8XsJkEhdWV/W7kjuQIxehdztjgaJee1dc2k/MnBFT2fPSHHoLVbHHrG16Zp6a6rm31w==}
     engines: {node: '>=20.8.1'}
 
-  '@anolilab/semantic-release-preset@11.0.0':
-    resolution: {integrity: sha512-tKz9mNuGWAGiVQHSIMZe0yKZG/0Mv7T0v3b73/rQvmiB/Y2mDZx9DKpevdTs/E9SEcjOfANup0C2kpuNFgeLQA==}
+  '@anolilab/semantic-release-preset@11.0.2':
+    resolution: {integrity: sha512-uXcA0jK5inZfIa65lCPHceI3OxqazIqwSvc2X3cXGB1/UdNaK+CPl5mLJ2jnN4K43db2RIzOdwP+QsXum7KR3g==}
     engines: {node: '>=20.8.1'}
     os: [darwin, linux, win32]
     peerDependencies:
-      '@anolilab/semantic-release-pnpm': 2.0.0
+      '@anolilab/semantic-release-pnpm': 2.0.2
       '@semantic-release/npm': ^12.0.1
       semantic-release: ^24.2.3
       semantic-release-yarn: ^3.0.2
@@ -296,9 +296,6 @@ packages:
     resolution: {integrity: sha512-j1nQNU1ZxNFx2ZtKmL4sMrs4egy5h65OMDmSbVyuCzjOcwsHq6EaYjOTGXPQxgfiN8dJ4CriYHk6zF050WEULg==}
     engines: {node: '>= 20'}
 
-  '@octokit/openapi-types@25.0.0':
-    resolution: {integrity: sha512-FZvktFu7HfOIJf2BScLKIEYjDsw6RKc7rBJCdvCTfKsVnx2GEB/Nbzjr29DUdb7vQhlzS/j8qDzdditP0OC6aw==}
-
   '@octokit/openapi-types@25.1.0':
     resolution: {integrity: sha512-idsIggNXUKkk0+BExUn1dQ92sfysJrje03Q0bv0e+KPLrvyqZF8MnBpFz8UNfYDwB3Ie7Z0TByjWfzxt7vseaA==}
 
@@ -327,9 +324,6 @@ packages:
   '@octokit/request@10.0.2':
     resolution: {integrity: sha512-iYj4SJG/2bbhh+iIpFmG5u49DtJ4lipQ+aPakjL9OKpsGY93wM8w06gvFbEQxcMsZcCvk5th5KkIm2m8o14aWA==}
     engines: {node: '>= 20'}
-
-  '@octokit/types@14.0.0':
-    resolution: {integrity: sha512-VVmZP0lEhbo2O1pdq63gZFiGCKkm8PPp8AUOijlwPO6hojEVjspA0MWKP7E4hbvGxzFKNqKr6p0IYtOH/Wf/zA==}
 
   '@octokit/types@14.1.0':
     resolution: {integrity: sha512-1y6DgTy8Jomcpu33N+p5w58l6xyt55Ar2I91RPiIA0xCJBXyUAhXCcmZaDWSANiha7R9a6qJJ2CRomGPZ6f46g==}
@@ -476,16 +470,6 @@ packages:
   '@types/semver@7.5.8':
     resolution: {integrity: sha512-I8EUhyrgfLrcTkzV3TSsGyl1tSuPrEDzr0yd5m90UgNxQkyDXULk3b6MlQqTCpZpNtWe1K0hzclnZkTcLBe2UQ==}
 
-  '@visulima/fs@3.1.3':
-    resolution: {integrity: sha512-AA1DZIAwtg5v4nT5ABJnrgq/YWPiqndeaTG/qePE1h7Tr+ZwOlsrqZ6CGzwjgHsbblNG05US4beNaqmzdC6whQ==}
-    engines: {node: '>=18.0.0 <=23.x'}
-    os: [darwin, linux, win32]
-    peerDependencies:
-      yaml: ^2.7.0
-    peerDependenciesMeta:
-      yaml:
-        optional: true
-
   '@visulima/fs@3.1.5':
     resolution: {integrity: sha512-0m2iVLB/rxwmmuyuC7yTikzV45osj38Lrp+WYKWq8kdtdxDnd0NXDL+MHB4qv1wp+wmy+iOiaXQcd98aZuc1XQ==}
     engines: {node: '>=18.0.0 <=23.x'}
@@ -498,11 +482,6 @@ packages:
 
   '@visulima/package@3.5.8':
     resolution: {integrity: sha512-QFSyx8CmoWXfCDeaGSgvskmpZ7cS61+yGhXF8g1v1UdOv6DFNY2dtbb6Q4xSYqZjqJ7P8ANNHkZMxTn4Pg6aDg==}
-    engines: {node: '>=18.0.0 <=23.x'}
-    os: [darwin, linux, win32]
-
-  '@visulima/path@1.3.6':
-    resolution: {integrity: sha512-qQAtyUNQU/weg7oVY0BYBZzQOY2p9+kgAshXNWJHf6zCoJkx6YS3gTPbhG495QuEqXXuH5POEIWDwhrNbEtQww==}
     engines: {node: '>=18.0.0 <=23.x'}
     os: [darwin, linux, win32]
 
@@ -1679,10 +1658,6 @@ packages:
     resolution: {integrity: sha512-wPrq66Llhl7/4AGC6I+cqxT07LhXvWL08LNXz1fENOw0Ap4sRZZ/gZpTTJ5jpurzzzfS2W/Ge9BY3LgLjCShcw==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
 
-  p-map@7.0.2:
-    resolution: {integrity: sha512-z4cYYMMdKHzw4O5UkWJImbZynVIo0lSGTXc7bzB1e/rrDqkgGUNysK/o4bTr+0+xKvvLoTyGqYC4Fgljy9qe1Q==}
-    engines: {node: '>=18'}
-
   p-map@7.0.3:
     resolution: {integrity: sha512-VkndIv2fIB99swvQoA65bm+fsmt6UNdGeIB0oxBs+WhAhdh08QA04JXpI7rbB9r08/nkbysKoya9rtDERYOYMA==}
     engines: {node: '>=18'}
@@ -1927,8 +1902,8 @@ packages:
     resolution: {integrity: sha512-7++dFhtcx3353uBaq8DDR4NuxBetBzC7ZQOhmTQInHEd6bSrXdiEyzCvG07Z44UYdLShWUyXt5M/yhz8ekcb1A==}
     engines: {node: '>=8'}
 
-  shell-quote@1.8.2:
-    resolution: {integrity: sha512-AzqKpGKjrj7EM6rKVQEPpB288oCfnrEIuyoT9cyF4nmGa7V8Zk6f7RRqYisX8X9m+Q7bd632aZW4ky7EhbQztA==}
+  shell-quote@1.8.3:
+    resolution: {integrity: sha512-ObmnIF4hXNg1BqhnHmgbDETF8dLPCggZWBjkQfhZpbszZnYur5DUljTcCHii5LC3J5E0yeO/1LIMyH+UvHQgyw==}
     engines: {node: '>= 0.4'}
 
   signal-exit@3.0.7:
@@ -2293,24 +2268,24 @@ packages:
 
 snapshots:
 
-  '@anolilab/commitlint-config@6.0.1(@commitlint/cli@19.8.1(@types/node@20.14.10)(typescript@5.5.3))(@types/node@20.14.10)(typescript@5.5.3)':
+  '@anolilab/commitlint-config@6.0.2(@commitlint/cli@19.8.1(@types/node@20.14.10)(typescript@5.5.3))(@types/node@20.14.10)(typescript@5.5.3)':
     dependencies:
       '@commitlint/cli': 19.8.1(@types/node@20.14.10)(typescript@5.5.3)
       '@commitlint/config-conventional': 19.8.1
       '@commitlint/core': 19.8.1(@types/node@20.14.10)(typescript@5.5.3)
       commitizen: 4.3.1(@types/node@20.14.10)(typescript@5.5.3)
-      conventional-changelog-conventionalcommits: 9.0.0
+      conventional-changelog-conventionalcommits: 9.1.0
       cz-conventional-changelog: 3.3.0(@types/node@20.14.10)(typescript@5.5.3)
     transitivePeerDependencies:
       - '@types/node'
       - typescript
 
-  '@anolilab/lint-staged-config@3.0.17(@types/node@20.14.10)(husky@9.1.7)(lint-staged@16.1.2)(prettier@3.6.2)(secretlint@10.2.1)(yaml@2.8.0)':
+  '@anolilab/lint-staged-config@3.0.26(@types/node@20.14.10)(husky@9.1.7)(lint-staged@16.1.2)(prettier@3.6.2)(secretlint@10.2.1)(yaml@2.8.0)':
     dependencies:
-      '@visulima/fs': 3.1.3(yaml@2.8.0)
+      '@visulima/fs': 3.1.5(yaml@2.8.0)
       '@visulima/package': 3.5.8(@types/node@20.14.10)(yaml@2.8.0)
       husky: 9.1.7
-      shell-quote: 1.8.2
+      shell-quote: 1.8.3
     optionalDependencies:
       lint-staged: 16.1.2
       prettier: 3.6.2
@@ -2319,11 +2294,11 @@ snapshots:
       - '@types/node'
       - yaml
 
-  '@anolilab/prettier-config@6.0.1(prettier@3.6.2)':
+  '@anolilab/prettier-config@6.0.3(prettier@3.6.2)':
     dependencies:
       prettier: 3.6.2
 
-  '@anolilab/semantic-release-clean-package-json@3.0.0(yaml@2.8.0)':
+  '@anolilab/semantic-release-clean-package-json@3.0.2(yaml@2.8.0)':
     dependencies:
       '@semantic-release/error': 4.0.0
       '@visulima/fs': 3.1.5(yaml@2.8.0)
@@ -2331,9 +2306,9 @@ snapshots:
     transitivePeerDependencies:
       - yaml
 
-  '@anolilab/semantic-release-preset@11.0.0(@semantic-release/npm@12.0.2(semantic-release@24.2.7(typescript@5.5.3)))(semantic-release@24.2.7(typescript@5.5.3))(yaml@2.8.0)':
+  '@anolilab/semantic-release-preset@11.0.2(@semantic-release/npm@12.0.2(semantic-release@24.2.7(typescript@5.5.3)))(semantic-release@24.2.7(typescript@5.5.3))(yaml@2.8.0)':
     dependencies:
-      '@anolilab/semantic-release-clean-package-json': 3.0.0(yaml@2.8.0)
+      '@anolilab/semantic-release-clean-package-json': 3.0.2(yaml@2.8.0)
       '@semantic-release/changelog': 6.0.3(semantic-release@24.2.7(typescript@5.5.3))
       '@semantic-release/commit-analyzer': 13.0.1(semantic-release@24.2.7(typescript@5.5.3))
       '@semantic-release/exec': 7.1.0(semantic-release@24.2.7(typescript@5.5.3))
@@ -2543,7 +2518,7 @@ snapshots:
 
   '@octokit/endpoint@11.0.0':
     dependencies:
-      '@octokit/types': 14.0.0
+      '@octokit/types': 14.1.0
       universal-user-agent: 7.0.2
 
   '@octokit/graphql@9.0.1':
@@ -2551,8 +2526,6 @@ snapshots:
       '@octokit/request': 10.0.2
       '@octokit/types': 14.1.0
       universal-user-agent: 7.0.2
-
-  '@octokit/openapi-types@25.0.0': {}
 
   '@octokit/openapi-types@25.1.0': {}
 
@@ -2576,19 +2549,15 @@ snapshots:
 
   '@octokit/request-error@7.0.0':
     dependencies:
-      '@octokit/types': 14.0.0
+      '@octokit/types': 14.1.0
 
   '@octokit/request@10.0.2':
     dependencies:
       '@octokit/endpoint': 11.0.0
       '@octokit/request-error': 7.0.0
-      '@octokit/types': 14.0.0
+      '@octokit/types': 14.1.0
       fast-content-type-parse: 3.0.0
       universal-user-agent: 7.0.2
-
-  '@octokit/types@14.0.0':
-    dependencies:
-      '@octokit/openapi-types': 25.0.0
 
   '@octokit/types@14.1.0':
     dependencies:
@@ -2828,12 +2797,6 @@ snapshots:
 
   '@types/semver@7.5.8': {}
 
-  '@visulima/fs@3.1.3(yaml@2.8.0)':
-    dependencies:
-      '@visulima/path': 1.3.6
-    optionalDependencies:
-      yaml: 2.8.0
-
   '@visulima/fs@3.1.5(yaml@2.8.0)':
     dependencies:
       '@visulima/path': 1.4.0
@@ -2849,8 +2812,6 @@ snapshots:
     transitivePeerDependencies:
       - '@types/node'
       - yaml
-
-  '@visulima/path@1.3.6': {}
 
   '@visulima/path@1.4.0': {}
 
@@ -3919,7 +3880,7 @@ snapshots:
 
   p-filter@4.1.0:
     dependencies:
-      p-map: 7.0.2
+      p-map: 7.0.3
 
   p-is-promise@3.0.0: {}
 
@@ -3938,8 +3899,6 @@ snapshots:
   p-locate@6.0.0:
     dependencies:
       p-limit: 4.0.0
-
-  p-map@7.0.2: {}
 
   p-map@7.0.3: {}
 
@@ -4188,7 +4147,7 @@ snapshots:
 
   shebang-regex@3.0.0: {}
 
-  shell-quote@1.8.2: {}
+  shell-quote@1.8.3: {}
 
   signal-exit@3.0.7: {}
 
