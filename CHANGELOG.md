@@ -1,3 +1,9 @@
+## [6.1.18](https://github.com/anolilab/workflows/compare/v6.1.17...v6.1.18) (2025-07-31)
+
+### Bug Fixes
+
+* **deps:** update dependency @anolilab/lint-staged-config to ^3.0.26 ([#212](https://github.com/anolilab/workflows/issues/212)) ([3d0a0f5](https://github.com/anolilab/workflows/commit/3d0a0f585b6f72ff7a0faa60fa32545df19e6f17))
+
 ## [6.1.17](https://github.com/anolilab/workflows/compare/v6.1.16...v6.1.17) (2025-07-25)
 
 ### Bug Fixes
