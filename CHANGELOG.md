@@ -1,3 +1,9 @@
+## [6.1.19](https://github.com/anolilab/workflows/compare/v6.1.18...v6.1.19) (2025-08-01)
+
+### Bug Fixes
+
+* **deps:** update github/codeql-action action to v3.29.4 ([#213](https://github.com/anolilab/workflows/issues/213)) ([c5adf5a](https://github.com/anolilab/workflows/commit/c5adf5a86118aa07f5cc6932db141cdf67af34b8))
+
 ## [6.1.18](https://github.com/anolilab/workflows/compare/v6.1.17...v6.1.18) (2025-07-31)
 
 ### Bug Fixes
