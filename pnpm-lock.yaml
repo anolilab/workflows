@@ -28,8 +28,8 @@ importers:
         specifier: ^6.0.3
         version: 6.0.3(prettier@3.6.2)
       '@anolilab/semantic-release-preset':
-        specifier: ^11.0.2
-        version: 11.0.2(@semantic-release/npm@12.0.2(semantic-release@24.2.7(typescript@5.5.3)))(semantic-release@24.2.7(typescript@5.5.3))(yaml@2.8.0)
+        specifier: ^11.0.3
+        version: 11.0.3(@semantic-release/npm@12.0.2(semantic-release@24.2.7(typescript@5.5.3)))(semantic-release@24.2.7(typescript@5.5.3))(yaml@2.8.0)
       '@commitlint/cli':
         specifier: ^19.8.1
         version: 19.8.1(@types/node@20.14.10)(typescript@5.5.3)
@@ -121,16 +121,16 @@ packages:
     peerDependencies:
       prettier: 3.6.2
 
-  '@anolilab/semantic-release-clean-package-json@3.0.2':
-    resolution: {integrity: sha512-BffuRvhE6xC8ts831ZM8XsJkEhdWV/W7kjuQIxehdztjgaJee1dc2k/MnBFT2fPSHHoLVbHHrG16Zp6a6rm31w==}
+  '@anolilab/semantic-release-clean-package-json@3.0.3':
+    resolution: {integrity: sha512-4Yzf1YK6/ATebTv99Hwzzle9pxGD/hkJGyM1FlhBpsBSnawR8757ZG3YEp/YmayVcP2S6wPn8fi7hQX2c1KT9A==}
     engines: {node: '>=20.8.1'}
 
-  '@anolilab/semantic-release-preset@11.0.2':
-    resolution: {integrity: sha512-uXcA0jK5inZfIa65lCPHceI3OxqazIqwSvc2X3cXGB1/UdNaK+CPl5mLJ2jnN4K43db2RIzOdwP+QsXum7KR3g==}
+  '@anolilab/semantic-release-preset@11.0.3':
+    resolution: {integrity: sha512-Y0gRPo68klIMwjtDeUJuDE5t+IDrIf52n1+JiAn5r2xzhZrAUzbThXj/Ilsn33LOfKWRlq8Lyg5jkrBoSUyzUg==}
     engines: {node: '>=20.8.1'}
     os: [darwin, linux, win32]
     peerDependencies:
-      '@anolilab/semantic-release-pnpm': 2.0.2
+      '@anolilab/semantic-release-pnpm': 2.0.3
       '@semantic-release/npm': ^12.0.1
       semantic-release: ^24.2.3
       semantic-release-yarn: ^3.0.2
@@ -727,10 +727,6 @@ packages:
   conventional-changelog-conventionalcommits@7.0.2:
     resolution: {integrity: sha512-NKXYmMR/Hr1DevQegFB4MwfM5Vv0m4UIxKZTTYuD98lpTknaZlSRrDOG4X7wIXpGkfsYxZTghUN+Qq+T0YQI7w==}
     engines: {node: '>=16'}
-
-  conventional-changelog-conventionalcommits@9.0.0:
-    resolution: {integrity: sha512-5e48V0+DsWvQBEnnbBFhYQwYDzFPXVrakGPP1uSxekDkr5d7YWrmaWsgJpKFR0SkXmxK6qQr9O42uuLb9wpKxA==}
-    engines: {node: '>=18'}
 
   conventional-changelog-conventionalcommits@9.1.0:
     resolution: {integrity: sha512-MnbEysR8wWa8dAEvbj5xcBgJKQlX/m0lhS8DsyAAWDHdfs2faDJxTgzRYlRYpXSe7UiKrIIlB4TrBKU9q9DgkA==}
@@ -2301,7 +2297,7 @@ snapshots:
     dependencies:
       prettier: 3.6.2
 
-  '@anolilab/semantic-release-clean-package-json@3.0.2(yaml@2.8.0)':
+  '@anolilab/semantic-release-clean-package-json@3.0.3(yaml@2.8.0)':
     dependencies:
       '@semantic-release/error': 4.0.0
       '@visulima/fs': 3.1.5(yaml@2.8.0)
@@ -2309,16 +2305,16 @@ snapshots:
     transitivePeerDependencies:
       - yaml
 
-  '@anolilab/semantic-release-preset@11.0.2(@semantic-release/npm@12.0.2(semantic-release@24.2.7(typescript@5.5.3)))(semantic-release@24.2.7(typescript@5.5.3))(yaml@2.8.0)':
+  '@anolilab/semantic-release-preset@11.0.3(@semantic-release/npm@12.0.2(semantic-release@24.2.7(typescript@5.5.3)))(semantic-release@24.2.7(typescript@5.5.3))(yaml@2.8.0)':
     dependencies:
-      '@anolilab/semantic-release-clean-package-json': 3.0.2(yaml@2.8.0)
+      '@anolilab/semantic-release-clean-package-json': 3.0.3(yaml@2.8.0)
       '@semantic-release/changelog': 6.0.3(semantic-release@24.2.7(typescript@5.5.3))
       '@semantic-release/commit-analyzer': 13.0.1(semantic-release@24.2.7(typescript@5.5.3))
       '@semantic-release/exec': 7.1.0(semantic-release@24.2.7(typescript@5.5.3))
       '@semantic-release/git': 10.0.1(semantic-release@24.2.7(typescript@5.5.3))
       '@semantic-release/github': 11.0.3(semantic-release@24.2.7(typescript@5.5.3))
       '@semantic-release/release-notes-generator': 14.0.3(semantic-release@24.2.7(typescript@5.5.3))
-      conventional-changelog-conventionalcommits: 9.0.0
+      conventional-changelog-conventionalcommits: 9.1.0
       semantic-release: 24.2.7(typescript@5.5.3)
     optionalDependencies:
       '@semantic-release/npm': 12.0.2(semantic-release@24.2.7(typescript@5.5.3))
@@ -3063,10 +3059,6 @@ snapshots:
       compare-func: 2.0.0
 
   conventional-changelog-conventionalcommits@7.0.2:
-    dependencies:
-      compare-func: 2.0.0
-
-  conventional-changelog-conventionalcommits@9.0.0:
     dependencies:
       compare-func: 2.0.0
 
