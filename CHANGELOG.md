@@ -1,3 +1,15 @@
+## [6.1.20](https://github.com/anolilab/workflows/compare/v6.1.19...v6.1.20) (2025-08-05)
+
+### Bug Fixes
+
+* **deps:** update dependency @anolilab/semantic-release-preset to ^11.0.3 ([#215](https://github.com/anolilab/workflows/issues/215)) ([dc24daa](https://github.com/anolilab/workflows/commit/dc24daa54bb6db47a6495dc08bdc797e8cc99b0f))
+* **deps:** update github/codeql-action action to v3.29.5 ([#216](https://github.com/anolilab/workflows/issues/216)) ([2bd6d6e](https://github.com/anolilab/workflows/commit/2bd6d6e835896d354a25ca38dace4d4b875102da))
+* **deps:** update pnpm to v10.14.0 ([#217](https://github.com/anolilab/workflows/issues/217)) ([143979e](https://github.com/anolilab/workflows/commit/143979ea3a6c2de89a429018a522072122dc8c2e))
+
+### Miscellaneous Chores
+
+* **deps:** update dependency cross-env to v10 ([#214](https://github.com/anolilab/workflows/issues/214)) ([3a8652e](https://github.com/anolilab/workflows/commit/3a8652edc39be106c1f52423df82cdf96b0bb86d))
+
 ## [6.1.19](https://github.com/anolilab/workflows/compare/v6.1.18...v6.1.19) (2025-08-01)
 
 ### Bug Fixes
