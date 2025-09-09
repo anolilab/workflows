@@ -19,14 +19,14 @@ importers:
   .:
     devDependencies:
       '@anolilab/commitlint-config':
-        specifier: ^6.0.2
-        version: 6.0.2(@commitlint/cli@19.8.1(@types/node@20.14.10)(typescript@5.5.3))(@types/node@20.14.10)(typescript@5.5.3)
-      '@anolilab/lint-staged-config':
-        specifier: ^3.0.27
-        version: 3.0.27(@types/node@20.14.10)(husky@9.1.7)(lint-staged@16.1.5)(prettier@3.6.2)(secretlint@11.2.0)(yaml@2.8.1)
-      '@anolilab/prettier-config':
         specifier: ^6.0.3
-        version: 6.0.3(prettier@3.6.2)
+        version: 6.0.3(@commitlint/cli@19.8.1(@types/node@20.14.10)(typescript@5.5.3))(@types/node@20.14.10)(typescript@5.5.3)
+      '@anolilab/lint-staged-config':
+        specifier: ^3.0.29
+        version: 3.0.29(@types/node@20.14.10)(husky@9.1.7)(lint-staged@16.1.6)(prettier@3.6.2)(secretlint@11.2.0)(yaml@2.8.1)
+      '@anolilab/prettier-config':
+        specifier: ^6.0.4
+        version: 6.0.4(prettier@3.6.2)
       '@anolilab/semantic-release-preset':
         specifier: ^11.0.3
         version: 11.0.3(@semantic-release/npm@12.0.2(semantic-release@24.2.7(typescript@5.5.3)))(semantic-release@24.2.7(typescript@5.5.3))(yaml@2.8.1)
@@ -58,8 +58,8 @@ importers:
         specifier: ^4.1.0
         version: 4.1.0
       lint-staged:
-        specifier: ^16.1.5
-        version: 16.1.5
+        specifier: ^16.1.6
+        version: 16.1.6
       prettier:
         specifier: ^3.6.2
         version: 3.6.2
@@ -75,15 +75,15 @@ importers:
 
 packages:
 
-  '@anolilab/commitlint-config@6.0.2':
-    resolution: {integrity: sha512-SrfRzY9s50SptR05R+QLrj4hPriX2vEazsPPdQ7NM9pDHDo3FILnkx/AQXl6dk5mEsjz/xcEwqHLHKqyk9SfJA==}
+  '@anolilab/commitlint-config@6.0.3':
+    resolution: {integrity: sha512-v+oyoUQqk3iCFqzjTe+oDj2s0+uPgTLvPnub06Obs53qXMdkbCsk0TBOzwzSql7LL+19CurHICuxlzQNGDLezQ==}
     engines: {node: '>=20.18.* <=24.*'}
     hasBin: true
     peerDependencies:
       '@commitlint/cli': ^17.6.5 || ^18.x || ^19.x
 
-  '@anolilab/lint-staged-config@3.0.27':
-    resolution: {integrity: sha512-oUztrcU3Lns0Xy2aQ91bi24taLoXgkVUcIxBfpcYAVuZ99BVKXUrwBfXWV55Rp+b8sqbycc62fZRTjpb2lZLNg==}
+  '@anolilab/lint-staged-config@3.0.29':
+    resolution: {integrity: sha512-XPhnV+LG2/FRBXvXaz64k3IhAEIKuD8t3AAG4ndeNWrHzF5ietXxTEqiZ1pSEHr/sY7bAcUnYQVHGWMmhq3sjg==}
     engines: {node: '>=20.18.* <=24.*'}
     hasBin: true
     peerDependencies:
@@ -114,8 +114,8 @@ packages:
       vitest:
         optional: true
 
-  '@anolilab/prettier-config@6.0.3':
-    resolution: {integrity: sha512-FKb5CzfgPVT56/xd6p+wMZXqovDbMZMToiqO2pLVfC8zYHJ+IXItCowd3y/Yho5/gZJE21IycDMJRQbOMuYIWQ==}
+  '@anolilab/prettier-config@6.0.4':
+    resolution: {integrity: sha512-w8LMU0l+sml4X/B71XPOq5JfA7DmXPimT2uw+RadH0j26ciu+v+Uj8QE7s7xIr/b+Tg+XppJbgmxs8JtUnH4Sw==}
     engines: {node: '>=20.18.* <=24.*'}
     hasBin: true
     peerDependencies:
@@ -617,14 +617,6 @@ packages:
   chalk@4.1.2:
     resolution: {integrity: sha512-oKnbhFyRIXpUuez8iBMmyEa4nbj4IOQyuhc/wy9kY7/WVPcwIO9VA668Pu8RkO7+0G76SLROeyw9CpQ061i4mA==}
     engines: {node: '>=10'}
-
-  chalk@5.4.1:
-    resolution: {integrity: sha512-zgVZuo2WcZgfUEmsn6eO3kINexW8RAE4maiQ8QNs8CtpPCSyMiYsULR3HQYkm3w8FIA3SberyMJMSldGsW+U3w==}
-    engines: {node: ^12.17.0 || ^14.13 || >=16.0.0}
-
-  chalk@5.5.0:
-    resolution: {integrity: sha512-1tm8DTaJhPBG3bIkVeZt1iZM9GfSX2lzOeDVZH9R9ffRHpmHvxZ/QhgQH/aDTkswQVt+YHdXAdS/In/30OjCbg==}
-    engines: {node: ^12.17.0 || ^14.13 || >=16.0.0}
 
   chalk@5.6.0:
     resolution: {integrity: sha512-46QrSQFyVSEyYAgQ22hQ+zDa60YHA4fBstHmtSApj1Y5vKtG27fWowW03jCk5KcbXEWPZUIR894aARCA/G1kfQ==}
@@ -1339,13 +1331,13 @@ packages:
   lines-and-columns@1.2.4:
     resolution: {integrity: sha512-7ylylesZQ/PV29jhEDl3Ufjo6ZX7gCqJr5F7PKrqc93v7fzSymt1BpwEU8nAUXs8qzzvqhbjhK5QZg6Mt/HkBg==}
 
-  lint-staged@16.1.5:
-    resolution: {integrity: sha512-uAeQQwByI6dfV7wpt/gVqg+jAPaSp8WwOA8kKC/dv1qw14oGpnpAisY65ibGHUGDUv0rYaZ8CAJZ/1U8hUvC2A==}
+  lint-staged@16.1.6:
+    resolution: {integrity: sha512-U4kuulU3CKIytlkLlaHcGgKscNfJPNTiDF2avIUGFCv7K95/DCYQ7Ra62ydeRWmgQGg9zJYw2dzdbztwJlqrow==}
     engines: {node: '>=20.17'}
     hasBin: true
 
-  listr2@9.0.1:
-    resolution: {integrity: sha512-SL0JY3DaxylDuo/MecFeiC+7pedM0zia33zl0vcjgwcq1q1FWWF1To9EIauPbl8GbMCU0R2e0uJ8bZunhYKD2g==}
+  listr2@9.0.3:
+    resolution: {integrity: sha512-0aeh5HHHgmq1KRdMMDHfhMWQmIT/m7nRDTlxlFqni2Sp0had9baqsjJRvDGdlvgd6NmPE0nPloOipiQJGFtTHQ==}
     engines: {node: '>=20.0.0'}
 
   load-json-file@4.0.0:
@@ -2275,7 +2267,7 @@ packages:
 
 snapshots:
 
-  '@anolilab/commitlint-config@6.0.2(@commitlint/cli@19.8.1(@types/node@20.14.10)(typescript@5.5.3))(@types/node@20.14.10)(typescript@5.5.3)':
+  '@anolilab/commitlint-config@6.0.3(@commitlint/cli@19.8.1(@types/node@20.14.10)(typescript@5.5.3))(@types/node@20.14.10)(typescript@5.5.3)':
     dependencies:
       '@commitlint/cli': 19.8.1(@types/node@20.14.10)(typescript@5.5.3)
       '@commitlint/config-conventional': 19.8.1
@@ -2287,21 +2279,21 @@ snapshots:
       - '@types/node'
       - typescript
 
-  '@anolilab/lint-staged-config@3.0.27(@types/node@20.14.10)(husky@9.1.7)(lint-staged@16.1.5)(prettier@3.6.2)(secretlint@11.2.0)(yaml@2.8.1)':
+  '@anolilab/lint-staged-config@3.0.29(@types/node@20.14.10)(husky@9.1.7)(lint-staged@16.1.6)(prettier@3.6.2)(secretlint@11.2.0)(yaml@2.8.1)':
     dependencies:
       '@visulima/fs': 3.1.5(yaml@2.8.1)
       '@visulima/package': 3.5.8(@types/node@20.14.10)(yaml@2.8.1)
       husky: 9.1.7
       shell-quote: 1.8.3
     optionalDependencies:
-      lint-staged: 16.1.5
+      lint-staged: 16.1.6
       prettier: 3.6.2
       secretlint: 11.2.0
     transitivePeerDependencies:
       - '@types/node'
       - yaml
 
-  '@anolilab/prettier-config@6.0.3(prettier@3.6.2)':
+  '@anolilab/prettier-config@6.0.4(prettier@3.6.2)':
     dependencies:
       prettier: 3.6.2
 
@@ -2400,7 +2392,7 @@ snapshots:
   '@commitlint/format@19.8.1':
     dependencies:
       '@commitlint/types': 19.8.1
-      chalk: 5.4.1
+      chalk: 5.6.0
 
   '@commitlint/is-ignored@19.8.1':
     dependencies:
@@ -2420,7 +2412,7 @@ snapshots:
       '@commitlint/execute-rule': 19.8.1
       '@commitlint/resolve-extends': 19.8.1
       '@commitlint/types': 19.8.1
-      chalk: 5.4.1
+      chalk: 5.6.0
       cosmiconfig: 9.0.0(typescript@5.5.3)
       cosmiconfig-typescript-loader: 6.1.0(@types/node@20.14.10)(cosmiconfig@9.0.0(typescript@5.5.3))(typescript@5.5.3)
       lodash.isplainobject: 4.0.6
@@ -2471,7 +2463,7 @@ snapshots:
   '@commitlint/types@19.8.1':
     dependencies:
       '@types/conventional-commits-parser': 5.0.0
-      chalk: 5.4.1
+      chalk: 5.6.0
 
   '@epic-web/invariant@1.0.0': {}
 
@@ -2949,10 +2941,6 @@ snapshots:
     dependencies:
       ansi-styles: 4.3.0
       supports-color: 7.2.0
-
-  chalk@5.4.1: {}
-
-  chalk@5.5.0: {}
 
   chalk@5.6.0: {}
 
@@ -3668,13 +3656,13 @@ snapshots:
 
   lines-and-columns@1.2.4: {}
 
-  lint-staged@16.1.5:
+  lint-staged@16.1.6:
     dependencies:
-      chalk: 5.5.0
+      chalk: 5.6.0
       commander: 14.0.0
       debug: 4.4.1
       lilconfig: 3.1.3
-      listr2: 9.0.1
+      listr2: 9.0.3
       micromatch: 4.0.8
       nano-spawn: 1.0.2
       pidtree: 0.6.0
@@ -3683,7 +3671,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  listr2@9.0.1:
+  listr2@9.0.3:
     dependencies:
       cli-truncate: 4.0.0
       colorette: 2.0.20
@@ -3765,7 +3753,7 @@ snapshots:
     dependencies:
       ansi-escapes: 7.0.0
       ansi-regex: 6.1.0
-      chalk: 5.4.1
+      chalk: 5.6.0
       cli-highlight: 2.1.11
       cli-table3: 0.6.5
       marked: 15.0.12
