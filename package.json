@@ -19,7 +19,7 @@
         "audit-ci": "^7.1.0",
         "commitizen": "^4.3.1",
         "conventional-changelog-conventionalcommits": "9.1.0",
-        "cross-env": "^10.0.0",
+        "cross-env": "^10.1.0",
         "husky": "^9.1.7",
         "is-ci": "^4.1.0",
         "lint-staged": "^16.2.3",
@@ -28,7 +28,7 @@
         "semantic-release": "^24.2.9",
         "sort-package-json": "^3.4.0"
     },
-    "packageManager": "pnpm@10.17.1",
+    "packageManager": "pnpm@10.18.2",
     "engines": {
         "node": ">=18.* <=24.*"
     },
