@@ -1,3 +1,59 @@
+## [7.0.0](https://github.com/anolilab/workflows/compare/v6.1.20...v7.0.0) (2025-10-15)
+
+### ⚠ BREAKING CHANGES
+
+* **deps:** updated dependencies to major versions
+
+Co-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>
+* **deps:** updated dependencies to major versions
+
+Co-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>
+
+### Bug Fixes
+
+* **deps:** update actions/dependency-review-action action to v4.7.3 ([#228](https://github.com/anolilab/workflows/issues/228)) ([ac7cc62](https://github.com/anolilab/workflows/commit/ac7cc62ac73441948b1723cbba67d87321f66c23))
+* **deps:** update dependencies and package versions ([4f53a11](https://github.com/anolilab/workflows/commit/4f53a116943f61a86edcff8e4afc26e895a4d22c))
+* **deps:** update dependency @anolilab/lint-staged-config to ^3.0.31 ([#235](https://github.com/anolilab/workflows/issues/235)) ([0a72ae8](https://github.com/anolilab/workflows/commit/0a72ae8edf94eea78e6c7185176b68a4a6035413))
+* **deps:** update dependency @commitlint/cli to ^20.1.0 ([#249](https://github.com/anolilab/workflows/issues/249)) ([eff4e82](https://github.com/anolilab/workflows/commit/eff4e8276f38bcbe3189440a40a23a86d03cb595))
+* **deps:** update dependency @octokit/plugin-paginate-rest@&gt;&[#x3d](https://github.com/anolilab/workflows/issues/x3d);9.3.0-beta.1 &lt;11.4.1 to >=13.2.0 ([#250](https://github.com/anolilab/workflows/issues/250)) ([74e53be](https://github.com/anolilab/workflows/commit/74e53beed1efdb4608c092f1903e54801d1c3ce7)), closes [#x3](https://github.com/anolilab/workflows/issues/x3)
+* **deps:** update dependency lint-staged to ^16.2.1 ([#244](https://github.com/anolilab/workflows/issues/244)) ([3bc7dbd](https://github.com/anolilab/workflows/commit/3bc7dbdad9bcea90bfae7ab4ef955b171c3900e5))
+* **deps:** update dependency lint-staged to ^16.2.3 ([#245](https://github.com/anolilab/workflows/issues/245)) ([f3203d8](https://github.com/anolilab/workflows/commit/f3203d8020fba46af7b3b51483ae7a4bc2637f3d))
+* **deps:** update dependency semantic-release to ^24.2.8 ([#236](https://github.com/anolilab/workflows/issues/236)) ([1f1e2da](https://github.com/anolilab/workflows/commit/1f1e2dabec772336d31016668767c64603b6af8e))
+* **deps:** update dependency semantic-release to ^24.2.9 ([#241](https://github.com/anolilab/workflows/issues/241)) ([5791c54](https://github.com/anolilab/workflows/commit/5791c5435a81e926b481f4ebde665d5120d93530))
+* **deps:** update github-actions ([#219](https://github.com/anolilab/workflows/issues/219)) ([46d4228](https://github.com/anolilab/workflows/commit/46d42284ad17335d418cfeabe8d2c55c00d29210))
+* **deps:** update github-actions ([#226](https://github.com/anolilab/workflows/issues/226)) ([72803c3](https://github.com/anolilab/workflows/commit/72803c3c2215465ba752c0e55a877e0411773bc7))
+* **deps:** update github-actions ([#237](https://github.com/anolilab/workflows/issues/237)) ([3424e11](https://github.com/anolilab/workflows/commit/3424e1117024627e05140f866b201273b6aca99b))
+* **deps:** update github-actions ([#246](https://github.com/anolilab/workflows/issues/246)) ([4a92e82](https://github.com/anolilab/workflows/commit/4a92e8274ff778dffcc63247960092bd1b1f21a6))
+* **deps:** update github-actions ([#251](https://github.com/anolilab/workflows/issues/251)) ([ead085f](https://github.com/anolilab/workflows/commit/ead085f0784607588c8fc146ebb0e40be4ea9a2f))
+* **deps:** update github/codeql-action action to v3.29.9 ([#222](https://github.com/anolilab/workflows/issues/222)) ([44157db](https://github.com/anolilab/workflows/commit/44157db9865640afc1abd20b5f5ad43c44cd3ed4))
+* **deps:** update github/codeql-action action to v3.30.1 ([#232](https://github.com/anolilab/workflows/issues/232)) ([966d524](https://github.com/anolilab/workflows/commit/966d5248d31c31610eda62e588aac0457ba2154a))
+* **deps:** update minor updates ([#252](https://github.com/anolilab/workflows/issues/252)) ([21fedb7](https://github.com/anolilab/workflows/commit/21fedb72505dd9b385e6810110c8ae49712b745c))
+* **deps:** update octokit monorepo ([#247](https://github.com/anolilab/workflows/issues/247)) ([420a038](https://github.com/anolilab/workflows/commit/420a0385e489fd05346bd3b632d243d034d421d2))
+* **deps:** update patch updates ([#220](https://github.com/anolilab/workflows/issues/220)) ([dd7e278](https://github.com/anolilab/workflows/commit/dd7e2780889e9791ee81e641dece311a57896935))
+* **deps:** update patch updates ([#230](https://github.com/anolilab/workflows/issues/230)) ([6160b88](https://github.com/anolilab/workflows/commit/6160b88bfdd106261dbf5761dec6ec5e8c1aa63f))
+* **deps:** update patch updates ([#242](https://github.com/anolilab/workflows/issues/242)) ([d74746c](https://github.com/anolilab/workflows/commit/d74746c9f1c87a134a713cc36ae9e20d27402baf))
+* **deps:** update patch updates ([#248](https://github.com/anolilab/workflows/issues/248)) ([9ece307](https://github.com/anolilab/workflows/commit/9ece307038eaa21763e2a7d0868dc6934d6b6bdf))
+* **deps:** update pnpm to v10.15.0 ([#227](https://github.com/anolilab/workflows/issues/227)) ([1aafb72](https://github.com/anolilab/workflows/commit/1aafb7228f62ac90d343f6346a79cb7b93607737))
+* **deps:** update pnpm to v10.17.0 ([#240](https://github.com/anolilab/workflows/issues/240)) ([70e6c2c](https://github.com/anolilab/workflows/commit/70e6c2c4b521f47a5d75abf2ef8922f02a77380a))
+* **deps:** update secretlint monorepo to ^10.2.2 ([#218](https://github.com/anolilab/workflows/issues/218)) ([08d6806](https://github.com/anolilab/workflows/commit/08d680638552198c0756eb774066cfdc089fcb72))
+* **deps:** update secretlint monorepo to ^11.2.0 ([#229](https://github.com/anolilab/workflows/issues/229)) ([80d1974](https://github.com/anolilab/workflows/commit/80d1974f90100307d1041f2d6017cbb8d20e5213))
+* **deps:** update secretlint monorepo to ^11.2.3 ([#231](https://github.com/anolilab/workflows/issues/231)) ([b5cad60](https://github.com/anolilab/workflows/commit/b5cad60cf922d58fb64e866548d6a137f92af33b))
+* **deps:** update secretlint monorepo to ^11.2.4 ([#238](https://github.com/anolilab/workflows/issues/238)) ([5c41f72](https://github.com/anolilab/workflows/commit/5c41f72a41a8a8f9b30cbddab0847f76f821bfb1))
+
+### Miscellaneous Chores
+
+* **deps:** update commitlint monorepo to v20 ([#243](https://github.com/anolilab/workflows/issues/243)) ([b5fd46a](https://github.com/anolilab/workflows/commit/b5fd46a74f797652cf987d9294774e0ac82eddf6))
+* **deps:** update secretlint monorepo to v11 ([#221](https://github.com/anolilab/workflows/issues/221)) ([67e3da0](https://github.com/anolilab/workflows/commit/67e3da0d0b67a273e2ccb205e35fb5d815101978))
+
+### Continuous Integration
+
+* **deps:** update actions/checkout action to v5 ([#223](https://github.com/anolilab/workflows/issues/223)) ([3335476](https://github.com/anolilab/workflows/commit/3335476dff0e7a921bae6326e8c8b283d0738de5))
+* **deps:** update actions/first-interaction action to v3 ([#224](https://github.com/anolilab/workflows/issues/224)) ([c73ef2d](https://github.com/anolilab/workflows/commit/c73ef2d469afb44e008e6859abc7a11b65907d52))
+* **deps:** update actions/github-script action to v8 ([#233](https://github.com/anolilab/workflows/issues/233)) ([90626e6](https://github.com/anolilab/workflows/commit/90626e651a5459e8058adfb28b317ab586f745eb))
+* **deps:** update actions/setup-node action to v5 ([#234](https://github.com/anolilab/workflows/issues/234)) ([df71eb2](https://github.com/anolilab/workflows/commit/df71eb283ce0ff1af4141686cce159545bbca4a5))
+* **deps:** update actions/stale action to v10 ([#239](https://github.com/anolilab/workflows/issues/239)) ([d181735](https://github.com/anolilab/workflows/commit/d18173580280f4214c410dcaa4a098e304e92368))
+* **deps:** update amannn/action-semantic-pull-request action to v6 ([#225](https://github.com/anolilab/workflows/issues/225)) ([9a3c1c9](https://github.com/anolilab/workflows/commit/9a3c1c9c84710fb283bd7428fdf8000504446ae3))
+
 ## [6.1.20](https://github.com/anolilab/workflows/compare/v6.1.19...v6.1.20) (2025-08-05)
 
 ### Bug Fixes
