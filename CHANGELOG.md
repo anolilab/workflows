@@ -1,3 +1,14 @@
+## [7.0.1](https://github.com/anolilab/workflows/compare/v7.0.0...v7.0.1) (2025-10-17)
+
+### Bug Fixes
+
+* **deps:** update actions/dependency-review-action action to v4.8.1 ([#254](https://github.com/anolilab/workflows/issues/254)) ([8801b6f](https://github.com/anolilab/workflows/commit/8801b6f8117916bd5fab970cead49e95d5ddecd0))
+* **deps:** update dependency tmp@&lt;&[#x3d](https://github.com/anolilab/workflows/issues/x3d);0.2.3 to >=0.2.5 ([#253](https://github.com/anolilab/workflows/issues/253)) ([8b0a846](https://github.com/anolilab/workflows/commit/8b0a8466f30f4e797335604f0231065feea2278a)), closes [#x3](https://github.com/anolilab/workflows/issues/x3)
+
+### Continuous Integration
+
+* **deps:** update github/codeql-action action to v4 ([#255](https://github.com/anolilab/workflows/issues/255)) ([5931df2](https://github.com/anolilab/workflows/commit/5931df293a9c3e6c5fab325eeca3eddd5946cb94))
+
 ## [7.0.0](https://github.com/anolilab/workflows/compare/v6.1.20...v7.0.0) (2025-10-15)
 
 ### ⚠ BREAKING CHANGES
