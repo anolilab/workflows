@@ -23,8 +23,8 @@ importers:
         specifier: ^6.0.6
         version: 6.0.6(@commitlint/cli@20.1.0(@types/node@20.14.10)(typescript@5.5.3))(@types/node@20.14.10)(typescript@5.5.3)
       '@anolilab/lint-staged-config':
-        specifier: ^3.0.36
-        version: 3.0.36(@types/node@20.14.10)(husky@9.1.7)(lint-staged@16.2.4)(prettier@3.6.2)(secretlint@11.2.5)(yaml@2.8.1)
+        specifier: ^3.0.37
+        version: 3.0.37(@types/node@20.14.10)(husky@9.1.7)(lint-staged@16.2.5)(prettier@3.6.2)(secretlint@11.2.5)(yaml@2.8.1)
       '@anolilab/prettier-config':
         specifier: ^6.0.7
         version: 6.0.7(prettier@3.6.2)
@@ -59,8 +59,8 @@ importers:
         specifier: ^4.1.0
         version: 4.1.0
       lint-staged:
-        specifier: ^16.2.4
-        version: 16.2.4
+        specifier: ^16.2.5
+        version: 16.2.5
       prettier:
         specifier: ^3.6.2
         version: 3.6.2
@@ -68,7 +68,7 @@ importers:
         specifier: 11.2.5
         version: 11.2.5
       semantic-release:
-        specifier: ^25.0.0
+        specifier: ^25.0.1
         version: 25.0.1(typescript@5.5.3)
       sort-package-json:
         specifier: ^3.4.0
@@ -95,14 +95,14 @@ packages:
     peerDependencies:
       '@commitlint/cli': ^17.6.5 || ^18.x || ^19.x
 
-  '@anolilab/lint-staged-config@3.0.36':
-    resolution: {integrity: sha512-QOSPQ0N7rU2OHZOb64eCYnm+JCudwPCk3keaCjI2f+QueuHCTcbcMmteKM8R8HUvHuk/xmSK5TbSXGUCYGKUYQ==}
+  '@anolilab/lint-staged-config@3.0.37':
+    resolution: {integrity: sha512-E578y7Xck7iMEtYqBWnS4MiMpaSz6sspDhMo3RmwU3Jtoi1mGMj8hwPRosJrzTElKEYhNzvQR+lij9iZMfOd6A==}
     engines: {node: '>=20.18.* <=24.*'}
     hasBin: true
     peerDependencies:
       eslint: ^9.36.0
       husky: ^8.x || ^9.x
-      jest: ^27.x || ^28.x
+      jest: ^27.x || ^28.x || ^29.0.0
       lint-staged: ^13.x || ^14.x|| ^15.x || ^16.x
       nano-staged: ^0.8
       prettier: ^3.6.2
@@ -901,10 +901,6 @@ packages:
   emojilib@2.4.0:
     resolution: {integrity: sha512-5U0rVMU5Y2n2+ykNLQqMoqklN9ICBT/KsvC1Gz6vqHbz2AXXGkG+Pm5rMWk/8Vjrr/mY9985Hi8DYzn1F09Nyw==}
 
-  env-ci@11.0.0:
-    resolution: {integrity: sha512-apikxMgkipkgTvMdRT9MNqWx5VLOci79F4VBd7Op/7OPjjoanjdAvn6fglMCCEf/1bAh8eOiuEVCUs4V3qP3nQ==}
-    engines: {node: ^18.17 || >=20.6.1}
-
   env-ci@11.2.0:
     resolution: {integrity: sha512-D5kWfzkmaOQDioPmiviWAVtKmpPT4/iJmMVQxWxMPJTFyTkdc5JQUfc5iXEeWxcOdsYTKSAiA/Age4NUOqKsRA==}
     engines: {node: ^18.17 || >=20.6.1}
@@ -1368,8 +1364,8 @@ packages:
   lines-and-columns@1.2.4:
     resolution: {integrity: sha512-7ylylesZQ/PV29jhEDl3Ufjo6ZX7gCqJr5F7PKrqc93v7fzSymt1BpwEU8nAUXs8qzzvqhbjhK5QZg6Mt/HkBg==}
 
-  lint-staged@16.2.4:
-    resolution: {integrity: sha512-Pkyr/wd90oAyXk98i/2KwfkIhoYQUMtss769FIT9hFM5ogYZwrk+GRE46yKXSg2ZGhcJ1p38Gf5gmI5Ohjg2yg==}
+  lint-staged@16.2.5:
+    resolution: {integrity: sha512-o36wH3OX0jRWqDw5dOa8a8x6GXTKaLM+LvhRaucZxez0IxA+KNDUCiyjBfNgsMNmchwSX6urLSL7wShcUqAang==}
     engines: {node: '>=20.17'}
     hasBin: true
 
@@ -2431,7 +2427,7 @@ snapshots:
       - '@types/node'
       - typescript
 
-  '@anolilab/lint-staged-config@3.0.36(@types/node@20.14.10)(husky@9.1.7)(lint-staged@16.2.4)(prettier@3.6.2)(secretlint@11.2.5)(yaml@2.8.1)':
+  '@anolilab/lint-staged-config@3.0.37(@types/node@20.14.10)(husky@9.1.7)(lint-staged@16.2.5)(prettier@3.6.2)(secretlint@11.2.5)(yaml@2.8.1)':
     dependencies:
       '@visulima/fs': 3.1.9(yaml@2.8.1)
       '@visulima/package': 4.0.2(@types/node@20.14.10)
@@ -2439,7 +2435,7 @@ snapshots:
       shell-quote: 1.8.3
       type-fest: 5.1.0
     optionalDependencies:
-      lint-staged: 16.2.4
+      lint-staged: 16.2.5
       prettier: 3.6.2
       secretlint: 11.2.5
     transitivePeerDependencies:
@@ -3395,11 +3391,6 @@ snapshots:
 
   emojilib@2.4.0: {}
 
-  env-ci@11.0.0:
-    dependencies:
-      execa: 8.0.1
-      java-properties: 1.0.2
-
   env-ci@11.2.0:
     dependencies:
       execa: 8.0.1
@@ -3868,7 +3859,7 @@ snapshots:
 
   lines-and-columns@1.2.4: {}
 
-  lint-staged@16.2.4:
+  lint-staged@16.2.5:
     dependencies:
       commander: 14.0.1
       listr2: 9.0.4
@@ -4319,7 +4310,7 @@ snapshots:
       aggregate-error: 5.0.0
       cosmiconfig: 9.0.0(typescript@5.5.3)
       debug: 4.4.3
-      env-ci: 11.0.0
+      env-ci: 11.2.0
       execa: 9.3.0
       figures: 6.1.0
       find-versions: 6.0.0
