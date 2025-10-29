@@ -22,7 +22,7 @@
         "cross-env": "^10.1.0",
         "husky": "^9.1.7",
         "is-ci": "^4.1.0",
-        "lint-staged": "^16.2.5",
+        "lint-staged": "^16.2.6",
         "prettier": "^3.6.2",
         "secretlint": "11.2.5",
         "semantic-release": "^25.0.1",
