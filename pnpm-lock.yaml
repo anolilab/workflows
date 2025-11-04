@@ -29,8 +29,8 @@ importers:
         specifier: ^6.0.7
         version: 6.0.7(prettier@3.6.2)
       '@anolilab/semantic-release-preset':
-        specifier: ^11.0.4
-        version: 11.0.4(@semantic-release/npm@12.0.2(semantic-release@25.0.1(typescript@5.5.3)))(semantic-release@25.0.1(typescript@5.5.3))(yaml@2.8.1)
+        specifier: ^11.0.5
+        version: 11.0.5(@semantic-release/npm@13.1.1(semantic-release@25.0.1(typescript@5.5.3)))(semantic-release@25.0.1(typescript@5.5.3))(yaml@2.8.1)
       '@commitlint/cli':
         specifier: ^20.1.0
         version: 20.1.0(@types/node@20.14.10)(typescript@5.5.3)
@@ -134,17 +134,17 @@ packages:
     peerDependencies:
       prettier: ^3.6.2
 
-  '@anolilab/semantic-release-clean-package-json@3.0.4':
-    resolution: {integrity: sha512-O8nJAXTpIR0Mx7mq86TPDeV+xvH29DYyh4gYHSVsT+FaFSDwCC5hFZ1ZSDk8jvPDJ4YGZYb5ing9UPL4WRHDcA==}
+  '@anolilab/semantic-release-clean-package-json@3.0.5':
+    resolution: {integrity: sha512-5kD1HWxF1m7fJiXnZ0Q/zhNGeMiGVSZzOMm6UrT7bsEXemjlnoIzX8REbp7KJDTIABf3dmsi2zwN5KF8DoYVmw==}
     engines: {node: '>=20.8.1'}
 
-  '@anolilab/semantic-release-preset@11.0.4':
-    resolution: {integrity: sha512-22J5ydQRxEBavZ4E7ipxqeynZmM4h9MFE8aSDYqvy36SP8R2wxWphMEHZlxqXNcmJRSc1/AcJI5SlsOOYTEKKQ==}
+  '@anolilab/semantic-release-preset@11.0.5':
+    resolution: {integrity: sha512-fIC1pfBSxR8VRPzZ/dlfhBZ1JXXh8ePKWvFuS+DhYHdSkQClqrmH0IQj9AtVL2wdUgtFoOFdqvc8OXKOgc6FnQ==}
     engines: {node: '>=20.8.1'}
     os: [darwin, linux, win32]
     peerDependencies:
-      '@anolilab/semantic-release-pnpm': 2.0.4
-      '@semantic-release/npm': ^12.0.2
+      '@anolilab/semantic-release-pnpm': 2.0.5
+      '@semantic-release/npm': ^13.1.1
       semantic-release: ^24.2.9
       semantic-release-yarn: ^3.0.2
     peerDependenciesMeta:
@@ -326,8 +326,17 @@ packages:
   '@octokit/openapi-types@25.1.0':
     resolution: {integrity: sha512-idsIggNXUKkk0+BExUn1dQ92sfysJrje03Q0bv0e+KPLrvyqZF8MnBpFz8UNfYDwB3Ie7Z0TByjWfzxt7vseaA==}
 
+  '@octokit/openapi-types@27.0.0':
+    resolution: {integrity: sha512-whrdktVs1h6gtR+09+QsNk2+FO+49j6ga1c55YZudfEG+oKJVvJLQi3zkOm5JjiUXAagWK2tI2kTGKJ2Ys7MGA==}
+
   '@octokit/plugin-paginate-rest@13.0.1':
     resolution: {integrity: sha512-m1KvHlueScy4mQJWvFDCxFBTIdXS0K1SgFGLmqHyX90mZdCIv6gWBbKRhatxRjhGlONuTK/hztYdaqrTXcFZdQ==}
+    engines: {node: '>= 20'}
+    peerDependencies:
+      '@octokit/core': '>=6'
+
+  '@octokit/plugin-paginate-rest@14.0.0':
+    resolution: {integrity: sha512-fNVRE7ufJiAA3XUrha2omTA39M6IXIc6GIZLvlbsm8QOQCYvpq/LkMNGyFlB1d8hTDzsAXa3OKtybdMAYsV/fw==}
     engines: {node: '>= 20'}
     peerDependencies:
       '@octokit/core': '>=6'
@@ -354,6 +363,9 @@ packages:
 
   '@octokit/types@14.1.0':
     resolution: {integrity: sha512-1y6DgTy8Jomcpu33N+p5w58l6xyt55Ar2I91RPiIA0xCJBXyUAhXCcmZaDWSANiha7R9a6qJJ2CRomGPZ6f46g==}
+
+  '@octokit/types@16.0.0':
+    resolution: {integrity: sha512-sKq+9r1Mm4efXW1FCk7hFSeJo4QKreL/tTbR0rz/qx/r1Oa2VV83LTA/H/MuCOX7uCIJmQVRKBcbmWoySjAnSg==}
 
   '@pnpm/config.env-replace@1.1.0':
     resolution: {integrity: sha512-htyl8TWnKL7K/ESFa1oW2UB5lVDxuF5DpM7tBi6Hu2LNL3mWkIzNLG6N4zoCUP1lCKNxWy/3iu8mS8MvToGd6w==}
@@ -440,23 +452,17 @@ packages:
     peerDependencies:
       semantic-release: '>=18.0.0'
 
-  '@semantic-release/github@11.0.6':
-    resolution: {integrity: sha512-ctDzdSMrT3H+pwKBPdyCPty6Y47X8dSrjd3aPZ5KKIKKWTwZBE9De8GtsH3TyAlw3Uyo2stegMx6rJMXKpJwJA==}
-    engines: {node: '>=20.8.1'}
-    peerDependencies:
-      semantic-release: '>=24.1.0'
-
   '@semantic-release/github@12.0.0':
     resolution: {integrity: sha512-louWFjzZ+1dogfJTY8IuJuBcBUOTliYhBUYNcomnTfj0i959wtRQbr1POgdCoTHK7ut4N/0LNlYTH8SvSJM3hg==}
     engines: {node: ^22.14.0 || >= 24.10.0}
     peerDependencies:
       semantic-release: '>=24.1.0'
 
-  '@semantic-release/npm@12.0.2':
-    resolution: {integrity: sha512-+M9/Lb35IgnlUO6OSJ40Ie+hUsZLuph2fqXC/qrKn0fMvUU/jiCjpoL6zEm69vzcmaZJ8yNKtMBEKHWN49WBbQ==}
-    engines: {node: '>=20.8.1'}
+  '@semantic-release/github@12.0.1':
+    resolution: {integrity: sha512-BSC7Ko6aRPnH8ttVBpd3gC98LTiyPdmrmX4qHilLw5EZqVrXrXwcKp/JKUC5hgm0XpJACR3nPjgbfOjTJ75PIA==}
+    engines: {node: ^22.14.0 || >= 24.10.0}
     peerDependencies:
-      semantic-release: '>=20.1.0'
+      semantic-release: '>=24.1.0'
 
   '@semantic-release/npm@13.1.1':
     resolution: {integrity: sha512-c4tlp3STYaTYORmMcLjiTaI8SLoxJ0Uf7IXkem8EyihuOM624wnaGuH4OuY2HHcsHDerNAQNzZ8VO6d4PMHSzA==}
@@ -519,6 +525,16 @@ packages:
       yaml:
         optional: true
 
+  '@visulima/fs@4.0.2':
+    resolution: {integrity: sha512-kKOHGP96FwxdgnVQwY3qdy1qoPWX8iKF5U5ZSWy/0UnVC+a1Ydf4Qz5gEcZRVclF3zMwMTM7Dh9kU3XZyHsX1g==}
+    engines: {node: '>=20.19 <=25.x'}
+    os: [darwin, linux, win32]
+    peerDependencies:
+      yaml: ^2.7.1
+    peerDependenciesMeta:
+      yaml:
+        optional: true
+
   '@visulima/package@4.0.2':
     resolution: {integrity: sha512-BLeO94f9GbGZ7Jkb/pb6Aur/7+MCkgCjFS46DkHjfO1Dlf634eJXDSHW5MmykJtImKH1NV2LYn6EZp22A05TWg==}
     engines: {node: '>=20.19 <=24.*'}
@@ -527,6 +543,11 @@ packages:
   '@visulima/path@1.4.0':
     resolution: {integrity: sha512-lhtA4woh4KsXWyn3BJ/qYE/HSt+agsHeSGb7j3UeHpRyf3R4ErObR25snvt+Rc4Xlqb1T68U38wjqZ2YpmUGNw==}
     engines: {node: '>=18.0.0 <=23.x'}
+    os: [darwin, linux, win32]
+
+  '@visulima/path@2.0.1':
+    resolution: {integrity: sha512-IRBzE7Vf55R2BBxebxjcgUrC2owbuLYs7afhMYymFfS9DNJ5esoABlhu+nQxcn3a0NeVXHNOeL+j52eV7k4jmA==}
+    engines: {node: '>=20.19 <=25.x'}
     os: [darwin, linux, win32]
 
   JSONStream@1.3.5:
@@ -1565,80 +1586,6 @@ packages:
     resolution: {integrity: sha512-ppwTtiJZq0O/ai0z7yfudtBpWIoxM8yE6nHi1X47eFR2EWORqfbu6CnPlNsjeN683eT0qG6H/Pyf9fCcvjnnnQ==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
 
-  npm@10.9.3:
-    resolution: {integrity: sha512-6Eh1u5Q+kIVXeA8e7l2c/HpnFFcwrkt37xDMujD5be1gloWa9p6j3Fsv3mByXXmqJHy+2cElRMML8opNT7xIJQ==}
-    engines: {node: ^18.17.0 || >=20.5.0}
-    hasBin: true
-    bundledDependencies:
-      - '@isaacs/string-locale-compare'
-      - '@npmcli/arborist'
-      - '@npmcli/config'
-      - '@npmcli/fs'
-      - '@npmcli/map-workspaces'
-      - '@npmcli/package-json'
-      - '@npmcli/promise-spawn'
-      - '@npmcli/redact'
-      - '@npmcli/run-script'
-      - '@sigstore/tuf'
-      - abbrev
-      - archy
-      - cacache
-      - chalk
-      - ci-info
-      - cli-columns
-      - fastest-levenshtein
-      - fs-minipass
-      - glob
-      - graceful-fs
-      - hosted-git-info
-      - ini
-      - init-package-json
-      - is-cidr
-      - json-parse-even-better-errors
-      - libnpmaccess
-      - libnpmdiff
-      - libnpmexec
-      - libnpmfund
-      - libnpmhook
-      - libnpmorg
-      - libnpmpack
-      - libnpmpublish
-      - libnpmsearch
-      - libnpmteam
-      - libnpmversion
-      - make-fetch-happen
-      - minimatch
-      - minipass
-      - minipass-pipeline
-      - ms
-      - node-gyp
-      - nopt
-      - normalize-package-data
-      - npm-audit-report
-      - npm-install-checks
-      - npm-package-arg
-      - npm-pick-manifest
-      - npm-profile
-      - npm-registry-fetch
-      - npm-user-validate
-      - p-map
-      - pacote
-      - parse-conflict-json
-      - proc-log
-      - qrcode-terminal
-      - read
-      - semver
-      - spdx-expression-parse
-      - ssri
-      - supports-color
-      - tar
-      - text-table
-      - tiny-relative-date
-      - treeverse
-      - validate-npm-package-name
-      - which
-      - write-file-atomic
-
   npm@11.6.2:
     resolution: {integrity: sha512-7iKzNfy8lWYs3zq4oFPa8EXZz5xt9gQNKJZau3B1ErLBb6bF7sBJ00x09485DOvRT2l5Gerbl3VlZNT57MxJVA==}
     engines: {node: ^20.17.0 || >=22.9.0}
@@ -2446,27 +2393,27 @@ snapshots:
     dependencies:
       prettier: 3.6.2
 
-  '@anolilab/semantic-release-clean-package-json@3.0.4(yaml@2.8.1)':
+  '@anolilab/semantic-release-clean-package-json@3.0.5(yaml@2.8.1)':
     dependencies:
       '@semantic-release/error': 4.0.0
-      '@visulima/fs': 3.1.9(yaml@2.8.1)
-      '@visulima/path': 1.4.0
+      '@visulima/fs': 4.0.2(yaml@2.8.1)
+      '@visulima/path': 2.0.1
     transitivePeerDependencies:
       - yaml
 
-  '@anolilab/semantic-release-preset@11.0.4(@semantic-release/npm@12.0.2(semantic-release@25.0.1(typescript@5.5.3)))(semantic-release@25.0.1(typescript@5.5.3))(yaml@2.8.1)':
+  '@anolilab/semantic-release-preset@11.0.5(@semantic-release/npm@13.1.1(semantic-release@25.0.1(typescript@5.5.3)))(semantic-release@25.0.1(typescript@5.5.3))(yaml@2.8.1)':
     dependencies:
-      '@anolilab/semantic-release-clean-package-json': 3.0.4(yaml@2.8.1)
+      '@anolilab/semantic-release-clean-package-json': 3.0.5(yaml@2.8.1)
       '@semantic-release/changelog': 6.0.3(semantic-release@25.0.1(typescript@5.5.3))
       '@semantic-release/commit-analyzer': 13.0.1(semantic-release@25.0.1(typescript@5.5.3))
       '@semantic-release/exec': 7.1.0(semantic-release@25.0.1(typescript@5.5.3))
       '@semantic-release/git': 10.0.1(semantic-release@25.0.1(typescript@5.5.3))
-      '@semantic-release/github': 11.0.6(semantic-release@25.0.1(typescript@5.5.3))
+      '@semantic-release/github': 12.0.1(semantic-release@25.0.1(typescript@5.5.3))
       '@semantic-release/release-notes-generator': 14.1.0(semantic-release@25.0.1(typescript@5.5.3))
       conventional-changelog-conventionalcommits: 9.1.0
       semantic-release: 25.0.1(typescript@5.5.3)
     optionalDependencies:
-      '@semantic-release/npm': 12.0.2(semantic-release@25.0.1(typescript@5.5.3))
+      '@semantic-release/npm': 13.1.1(semantic-release@25.0.1(typescript@5.5.3))
     transitivePeerDependencies:
       - supports-color
       - yaml
@@ -2688,10 +2635,17 @@ snapshots:
 
   '@octokit/openapi-types@25.1.0': {}
 
+  '@octokit/openapi-types@27.0.0': {}
+
   '@octokit/plugin-paginate-rest@13.0.1(@octokit/core@7.0.2)':
     dependencies:
       '@octokit/core': 7.0.2
       '@octokit/types': 14.1.0
+
+  '@octokit/plugin-paginate-rest@14.0.0(@octokit/core@7.0.2)':
+    dependencies:
+      '@octokit/core': 7.0.2
+      '@octokit/types': 16.0.0
 
   '@octokit/plugin-retry@8.0.1(@octokit/core@7.0.2)':
     dependencies:
@@ -2721,6 +2675,10 @@ snapshots:
   '@octokit/types@14.1.0':
     dependencies:
       '@octokit/openapi-types': 25.1.0
+
+  '@octokit/types@16.0.0':
+    dependencies:
+      '@octokit/openapi-types': 27.0.0
 
   '@pnpm/config.env-replace@1.1.0': {}
 
@@ -2854,28 +2812,6 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@semantic-release/github@11.0.6(semantic-release@25.0.1(typescript@5.5.3))':
-    dependencies:
-      '@octokit/core': 7.0.2
-      '@octokit/plugin-paginate-rest': 13.0.1(@octokit/core@7.0.2)
-      '@octokit/plugin-retry': 8.0.1(@octokit/core@7.0.2)
-      '@octokit/plugin-throttling': 11.0.1(@octokit/core@7.0.2)
-      '@semantic-release/error': 4.0.0
-      aggregate-error: 5.0.0
-      debug: 4.4.3
-      dir-glob: 3.0.1
-      http-proxy-agent: 7.0.2
-      https-proxy-agent: 7.0.5
-      issue-parser: 7.0.1
-      lodash-es: 4.17.21
-      mime: 4.0.4
-      p-filter: 4.1.0
-      semantic-release: 25.0.1(typescript@5.5.3)
-      tinyglobby: 0.2.15
-      url-join: 5.0.0
-    transitivePeerDependencies:
-      - supports-color
-
   '@semantic-release/github@12.0.0(semantic-release@25.0.1(typescript@5.5.3))':
     dependencies:
       '@octokit/core': 7.0.2
@@ -2898,23 +2834,27 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@semantic-release/npm@12.0.2(semantic-release@25.0.1(typescript@5.5.3))':
+  '@semantic-release/github@12.0.1(semantic-release@25.0.1(typescript@5.5.3))':
     dependencies:
+      '@octokit/core': 7.0.2
+      '@octokit/plugin-paginate-rest': 14.0.0(@octokit/core@7.0.2)
+      '@octokit/plugin-retry': 8.0.1(@octokit/core@7.0.2)
+      '@octokit/plugin-throttling': 11.0.1(@octokit/core@7.0.2)
       '@semantic-release/error': 4.0.0
       aggregate-error: 5.0.0
-      execa: 9.3.0
-      fs-extra: 11.2.0
+      debug: 4.4.3
+      dir-glob: 3.0.1
+      http-proxy-agent: 7.0.2
+      https-proxy-agent: 7.0.5
+      issue-parser: 7.0.1
       lodash-es: 4.17.21
-      nerf-dart: 1.0.0
-      normalize-url: 8.0.1
-      npm: 10.9.3
-      rc: 1.2.8
-      read-pkg: 9.0.1
-      registry-auth-token: 5.0.2
+      mime: 4.0.4
+      p-filter: 4.1.0
       semantic-release: 25.0.1(typescript@5.5.3)
-      semver: 7.7.1
-      tempy: 3.1.0
-    optional: true
+      tinyglobby: 0.2.15
+      url-join: 5.0.0
+    transitivePeerDependencies:
+      - supports-color
 
   '@semantic-release/npm@13.1.1(semantic-release@25.0.1(typescript@5.5.3))':
     dependencies:
@@ -3004,6 +2944,13 @@ snapshots:
     optionalDependencies:
       yaml: 2.8.1
 
+  '@visulima/fs@4.0.2(yaml@2.8.1)':
+    dependencies:
+      '@visulima/path': 2.0.1
+      type-fest: 5.1.0
+    optionalDependencies:
+      yaml: 2.8.1
+
   '@visulima/package@4.0.2(@types/node@20.14.10)':
     dependencies:
       '@antfu/install-pkg': 1.1.0
@@ -3016,6 +2963,8 @@ snapshots:
       - '@types/node'
 
   '@visulima/path@1.4.0': {}
+
+  '@visulima/path@2.0.1': {}
 
   JSONStream@1.3.5:
     dependencies:
@@ -4039,9 +3988,6 @@ snapshots:
   npm-run-path@5.3.0:
     dependencies:
       path-key: 4.0.0
-
-  npm@10.9.3:
-    optional: true
 
   npm@11.6.2: {}
 
