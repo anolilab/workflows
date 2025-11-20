@@ -1,3 +1,37 @@
+## [8.0.0](https://github.com/anolilab/workflows/compare/v7.0.1...v8.0.0) (2025-11-20)
+
+### ⚠ BREAKING CHANGES
+
+* **deps:** updated dependencies to major versions
+
+Co-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>
+
+### Bug Fixes
+
+* **deps:** update dependencies and package manager version ([18ab213](https://github.com/anolilab/workflows/commit/18ab213e4d6b1ea17b6934cedaaabc50bdd895f0))
+* **deps:** update dependency @anolilab/semantic-release-preset to ^11.0.5 ([#265](https://github.com/anolilab/workflows/issues/265)) ([6ca006d](https://github.com/anolilab/workflows/commit/6ca006dfd2e7a6383d315b76f685b144376f7e1d))
+* **deps:** update dependency @octokit/plugin-paginate-rest@&gt;&[#x3d](https://github.com/anolilab/workflows/issues/x3d);9.3.0-beta.1 &lt;11.4.1 to >=13.2.1 ([#260](https://github.com/anolilab/workflows/issues/260)) ([e27b702](https://github.com/anolilab/workflows/commit/e27b702cf86e03fc2e0d83e2f2bfa3d3f0ccbdc6)), closes [#x3](https://github.com/anolilab/workflows/issues/x3)
+* **deps:** update dependency lint-staged to ^16.2.6 ([#261](https://github.com/anolilab/workflows/issues/261)) ([13393d9](https://github.com/anolilab/workflows/commit/13393d9499850264db521668c8cf570a12b63b1d))
+* **deps:** update dependency semantic-release to ^25.0.2 ([#269](https://github.com/anolilab/workflows/issues/269)) ([43f3c0e](https://github.com/anolilab/workflows/commit/43f3c0e6cad1cc944c07f746d790879f869df985))
+* **deps:** update github-actions ([#267](https://github.com/anolilab/workflows/issues/267)) ([fffa634](https://github.com/anolilab/workflows/commit/fffa634f9dc5fb6ccb71308317f98f08f83fb64e))
+* **deps:** update github-actions ([#271](https://github.com/anolilab/workflows/issues/271)) ([d2b37c2](https://github.com/anolilab/workflows/commit/d2b37c2541deca81136fa56e3c423428cadc2ade))
+* **deps:** update github/codeql-action action to v4.30.9 ([#259](https://github.com/anolilab/workflows/issues/259)) ([62467a2](https://github.com/anolilab/workflows/commit/62467a22f4dc4cfe1df467ffa5c762d8e6394a88))
+* **deps:** update octokit monorepo ([#266](https://github.com/anolilab/workflows/issues/266)) ([d335bf9](https://github.com/anolilab/workflows/commit/d335bf9cec1718b41cd1f843f7dceb16ef8f270c))
+* **deps:** update pnpm to v10.20.0 ([#268](https://github.com/anolilab/workflows/issues/268)) ([a0bda58](https://github.com/anolilab/workflows/commit/a0bda5805503d6fa40b7987d5bc2997ba62c6e20))
+
+### Miscellaneous Chores
+
+* **deps:** update dependencies to latest versions ([dcfd456](https://github.com/anolilab/workflows/commit/dcfd4569e00574f31dc25cb283d1ccf7ba25e82f))
+* **deps:** update dependency @octokit/plugin-paginate-rest@&gt;&[#x3d](https://github.com/anolilab/workflows/issues/x3d);9.3.0-beta.1 &lt;11.4.1 to v14 ([#262](https://github.com/anolilab/workflows/issues/262)) ([ec366fd](https://github.com/anolilab/workflows/commit/ec366fd1c878584948fdf5c7e540321a51ccc142)), closes [#x3](https://github.com/anolilab/workflows/issues/x3)
+* **deps:** update dependency semantic-release to v25 ([#256](https://github.com/anolilab/workflows/issues/256)) ([27aa271](https://github.com/anolilab/workflows/commit/27aa271afbcebac409d6ecb85c5fa12442d9c457))
+* update Node.js version in workflows ([ce1ba0e](https://github.com/anolilab/workflows/commit/ce1ba0e0f234b2d34c611421fa6e42b07d56c04c))
+
+### Continuous Integration
+
+* **deps:** update actions/setup-node action to v6 ([#257](https://github.com/anolilab/workflows/issues/257)) ([e038454](https://github.com/anolilab/workflows/commit/e0384543bdb021c6b82b84d39fa81e0de56eee79))
+* **deps:** update actions/upload-artifact action to v5 ([#264](https://github.com/anolilab/workflows/issues/264)) ([643c0cf](https://github.com/anolilab/workflows/commit/643c0cfcd0660fb2650235659d32754664315a2d))
+* **deps:** update stefanzweifel/git-auto-commit-action action to v7 ([#258](https://github.com/anolilab/workflows/issues/258)) ([5a35118](https://github.com/anolilab/workflows/commit/5a3511866c825d4108eda00fa3d02bc4d8df7681))
+
 ## [7.0.1](https://github.com/anolilab/workflows/compare/v7.0.0...v7.0.1) (2025-10-17)
 
 ### Bug Fixes
