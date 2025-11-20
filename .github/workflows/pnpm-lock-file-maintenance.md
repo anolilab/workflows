@@ -29,5 +29,5 @@ jobs:
         uses: "anolilab/workflows/.github/workflows/pnpm-lock-file-maintenance.yml@main"
         with:
             target-repo: "anolilab/workflows"
-            node-version: "18.x"
+            node-version: "22.x"
 ```

@@ -25,7 +25,7 @@ inputs:
     node-version:
         description: "The node.js version to use"
         required: false
-        default: "18"
+        default: "22"
     upgrade-npm-version:
         description: "The npm version to use"
         required: false

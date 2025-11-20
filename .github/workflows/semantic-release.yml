@@ -57,7 +57,7 @@ jobs:
               id: "setup"
               uses: "./step/setup"
               with:
-                  node-version: "23.x"
+                  node-version: "24.x"
                   cache-prefix: "semantic-release"
 
             - name: "Semantic Release"
