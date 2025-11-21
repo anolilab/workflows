@@ -1,3 +1,9 @@
+## [8.0.1](https://github.com/anolilab/workflows/compare/v8.0.0...v8.0.1) (2025-11-21)
+
+### Bug Fixes
+
+* **deps:** update dependency @octokit/request@&gt;&[#x3d](https://github.com/anolilab/workflows/issues/x3d);9.0.0-beta.1 &lt;9.2.1 to >=10.0.7 ([#270](https://github.com/anolilab/workflows/issues/270)) ([48d619b](https://github.com/anolilab/workflows/commit/48d619bc105a5bae2b868640cd35f9e87a4ae001)), closes [#x3](https://github.com/anolilab/workflows/issues/x3)
+
 ## [8.0.0](https://github.com/anolilab/workflows/compare/v7.0.1...v8.0.0) (2025-11-20)
 
 ### ⚠ BREAKING CHANGES
