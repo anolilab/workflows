@@ -1,3 +1,18 @@
+## [8.0.3](https://github.com/anolilab/workflows/compare/v8.0.2...v8.0.3) (2025-11-27)
+
+### Bug Fixes
+
+* **deps:** update github/codeql-action action to v4.31.5 ([#275](https://github.com/anolilab/workflows/issues/275)) ([e54ea38](https://github.com/anolilab/workflows/commit/e54ea3815919672935f6eb3c90b972f67e3278a7))
+
+### Miscellaneous Chores
+
+* **deps:** update dependency js-yaml@&lt;3.14.2 to v4 ([#274](https://github.com/anolilab/workflows/issues/274)) ([06d351c](https://github.com/anolilab/workflows/commit/06d351c9e60c58e351911631da9c15725bc60533))
+* **deps:** update node.js to v24 ([#263](https://github.com/anolilab/workflows/issues/263)) ([31f667a](https://github.com/anolilab/workflows/commit/31f667a6048c73b664684b67b398f0e6978feb60))
+
+### Continuous Integration
+
+* **deps:** update actions/checkout action to v6 ([#276](https://github.com/anolilab/workflows/issues/276)) ([34058ae](https://github.com/anolilab/workflows/commit/34058ae921e54c0e7097db8064c9f86a292eaa1c))
+
 ## [8.0.2](https://github.com/anolilab/workflows/compare/v8.0.1...v8.0.2) (2025-11-24)
 
 ### Bug Fixes
