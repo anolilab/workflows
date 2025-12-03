@@ -1,3 +1,10 @@
+## [8.0.4](https://github.com/anolilab/workflows/compare/v8.0.3...v8.0.4) (2025-12-03)
+
+### Bug Fixes
+
+* **deps:** update dependency @anolilab/semantic-release-preset to ^12.0.1 ([#277](https://github.com/anolilab/workflows/issues/277)) ([6a94c51](https://github.com/anolilab/workflows/commit/6a94c51cb701c280ea4b5b2dfa7c731c5f901f94))
+* **deps:** update minor updates ([#278](https://github.com/anolilab/workflows/issues/278)) ([0806bb8](https://github.com/anolilab/workflows/commit/0806bb8c7108d5dd070d71e391fb8a56a6760cf1))
+
 ## [8.0.3](https://github.com/anolilab/workflows/compare/v8.0.2...v8.0.3) (2025-11-27)
 
 ### Bug Fixes
