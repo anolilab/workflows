@@ -23,7 +23,7 @@ importers:
     devDependencies:
       '@anolilab/commitlint-config':
         specifier: ^6.0.7
-        version: 6.0.7(@commitlint/cli@20.1.0(@types/node@24.10.1)(typescript@5.5.3))(@types/node@24.10.1)(typescript@5.5.3)
+        version: 6.0.7(@commitlint/cli@20.2.0(@types/node@24.10.1)(typescript@5.9.3))(@types/node@24.10.1)(typescript@5.9.3)
       '@anolilab/lint-staged-config':
         specifier: ^3.0.39
         version: 3.0.39(@types/node@24.10.1)(husky@9.1.7)(lint-staged@16.2.7)(prettier@3.7.4)(secretlint@11.2.5)(yaml@2.8.2)
@@ -32,13 +32,13 @@ importers:
         version: 6.0.8(prettier@3.7.4)
       '@anolilab/semantic-release-preset':
         specifier: ^12.0.1
-        version: 12.0.1(@semantic-release/npm@13.1.2(semantic-release@25.0.2(typescript@5.5.3)))(semantic-release@25.0.2(typescript@5.5.3))(yaml@2.8.2)
+        version: 12.1.2(@semantic-release/npm@13.1.2(semantic-release@25.0.2(typescript@5.9.3)))(semantic-release@25.0.2(typescript@5.9.3))(yaml@2.8.2)
       '@commitlint/cli':
         specifier: ^20.1.0
-        version: 20.1.0(@types/node@24.10.1)(typescript@5.5.3)
+        version: 20.2.0(@types/node@24.10.1)(typescript@5.9.3)
       '@commitlint/config-conventional':
         specifier: ^20.0.0
-        version: 20.0.0
+        version: 20.2.0
       '@secretlint/secretlint-rule-preset-recommend':
         specifier: ^11.2.5
         version: 11.2.5
@@ -47,7 +47,7 @@ importers:
         version: 7.1.0
       commitizen:
         specifier: ^4.3.1
-        version: 4.3.1(@types/node@24.10.1)(typescript@5.5.3)
+        version: 4.3.1(@types/node@24.10.1)(typescript@5.9.3)
       conventional-changelog-conventionalcommits:
         specifier: 9.1.0
         version: 9.1.0
@@ -71,7 +71,7 @@ importers:
         version: 11.2.5
       semantic-release:
         specifier: ^25.0.2
-        version: 25.0.2(typescript@5.5.3)
+        version: 25.0.2(typescript@5.9.3)
       sort-package-json:
         specifier: ^3.5.0
         version: 3.5.0
@@ -136,16 +136,16 @@ packages:
     peerDependencies:
       prettier: ^3.6.2
 
-  '@anolilab/semantic-release-clean-package-json@4.1.0':
-    resolution: {integrity: sha512-KumzZ3zben/6U7WLZGBVdz/ZcBKD+1x9iAmP/uH6AyQXra7RS553Oqx5bOVekKGMpmHfxl49b//YZ3g5I9oRNw==}
+  '@anolilab/semantic-release-clean-package-json@4.2.2':
+    resolution: {integrity: sha512-Qe/5XFzMn0OAJENzaTt2JXyQr/p7TBZHNya0ZEJLIHOyKX80yGdBTzJBeRCXL4VgIeNPGRTcfqYGqsSQ+TqR8A==}
     engines: {node: ^22.14.0 || >=24.10.0}
 
-  '@anolilab/semantic-release-preset@12.0.1':
-    resolution: {integrity: sha512-Psia1q7sqI2F7L8BFtHjEcIEUbqh5aHm17p60S7Do+ObVYvxtACubLVWMmiboF8dNlUTeLACQsY5Rgvj6ipkKw==}
+  '@anolilab/semantic-release-preset@12.1.2':
+    resolution: {integrity: sha512-c8dFHJatd2RW8MApoApn4B7N7hA0p55nZqy+ehZp0+nCeWYTEbfLO2EXJPIej/WaWUohOdU+m2/8x+FugYLlpQ==}
     engines: {node: ^22.14.0 || >=24.10.0}
     os: [darwin, linux, win32]
     peerDependencies:
-      '@anolilab/semantic-release-pnpm': 3.1.0
+      '@anolilab/semantic-release-pnpm': 3.2.2
       '@semantic-release/npm': ^13.1.2
       semantic-release: ^25.0.2
       semantic-release-yarn: ^3.0.2
@@ -178,65 +178,65 @@ packages:
     resolution: {integrity: sha512-ooWCrlZP11i8GImSjTHYHLkvFDP48nS4+204nGb1RiX/WXYHmJA2III9/e2DWVabCESdW7hBAEzHRqUn9OUVvQ==}
     engines: {node: '>=0.1.90'}
 
-  '@commitlint/cli@20.1.0':
-    resolution: {integrity: sha512-pW5ujjrOovhq5RcYv5xCpb4GkZxkO2+GtOdBW2/qrr0Ll9tl3PX0aBBobGQl3mdZUbOBgwAexEQLeH6uxL0VYg==}
+  '@commitlint/cli@20.2.0':
+    resolution: {integrity: sha512-l37HkrPZ2DZy26rKiTUvdq/LZtlMcxz+PeLv9dzK9NzoFGuJdOQyYU7IEkEQj0pO++uYue89wzOpZ0hcTtoqUA==}
     engines: {node: '>=v18'}
     hasBin: true
 
-  '@commitlint/config-conventional@20.0.0':
-    resolution: {integrity: sha512-q7JroPIkDBtyOkVe9Bca0p7kAUYxZMxkrBArCfuD3yN4KjRAenP9PmYwnn7rsw8Q+hHq1QB2BRmBh0/Z19ZoJw==}
+  '@commitlint/config-conventional@20.2.0':
+    resolution: {integrity: sha512-MsRac+yNIbTB4Q/psstKK4/ciVzACHicSwz+04Sxve+4DW+PiJeTjU0JnS4m/oOnulrXYN+yBPlKaBSGemRfgQ==}
     engines: {node: '>=v18'}
 
-  '@commitlint/config-validator@20.0.0':
-    resolution: {integrity: sha512-BeyLMaRIJDdroJuYM2EGhDMGwVBMZna9UiIqV9hxj+J551Ctc6yoGuGSmghOy/qPhBSuhA6oMtbEiTmxECafsg==}
+  '@commitlint/config-validator@20.2.0':
+    resolution: {integrity: sha512-SQCBGsL9MFk8utWNSthdxd9iOD1pIVZSHxGBwYIGfd67RTjxqzFOSAYeQVXOu3IxRC3YrTOH37ThnTLjUlyF2w==}
     engines: {node: '>=v18'}
 
-  '@commitlint/core@20.1.0':
-    resolution: {integrity: sha512-ZRKjxjIhq+ulUZZCL4nTgcHJ8zQj7jYHDoCsf5OnLPqY5gy8l7MgsOZ0RQtwwwZ3zO4HCqF/wWRV5EaN6ei5LA==}
+  '@commitlint/core@20.2.0':
+    resolution: {integrity: sha512-wc1nUU3vyxby9BcUApwfTr5qfsVrDEQp9dKFn8cURk1HCYMPlP55QWeZqHflQsthk//Csm3rw9uvZ6mvtNrUVg==}
     engines: {node: '>=v18'}
 
-  '@commitlint/ensure@20.0.0':
-    resolution: {integrity: sha512-WBV47Fffvabe68n+13HJNFBqiMH5U1Ryls4W3ieGwPC0C7kJqp3OVQQzG2GXqOALmzrgAB+7GXmyy8N9ct8/Fg==}
+  '@commitlint/ensure@20.2.0':
+    resolution: {integrity: sha512-+8TgIGv89rOWyt3eC6lcR1H7hqChAKkpawytlq9P1i/HYugFRVqgoKJ8dhd89fMnlrQTLjA5E97/4sF09QwdoA==}
     engines: {node: '>=v18'}
 
   '@commitlint/execute-rule@20.0.0':
     resolution: {integrity: sha512-xyCoOShoPuPL44gVa+5EdZsBVao/pNzpQhkzq3RdtlFdKZtjWcLlUFQHSWBuhk5utKYykeJPSz2i8ABHQA+ZZw==}
     engines: {node: '>=v18'}
 
-  '@commitlint/format@20.0.0':
-    resolution: {integrity: sha512-zrZQXUcSDmQ4eGGrd+gFESiX0Rw+WFJk7nW4VFOmxub4mAATNKBQ4vNw5FgMCVehLUKG2OT2LjOqD0Hk8HvcRg==}
+  '@commitlint/format@20.2.0':
+    resolution: {integrity: sha512-PhNoLNhxpfIBlW/i90uZ3yG3hwSSYx7n4d9Yc+2FAorAHS0D9btYRK4ZZXX+Gm3W5tDtu911ow/eWRfcRVgNWg==}
     engines: {node: '>=v18'}
 
-  '@commitlint/is-ignored@20.0.0':
-    resolution: {integrity: sha512-ayPLicsqqGAphYIQwh9LdAYOVAQ9Oe5QCgTNTj+BfxZb9b/JW222V5taPoIBzYnAP0z9EfUtljgBk+0BN4T4Cw==}
+  '@commitlint/is-ignored@20.2.0':
+    resolution: {integrity: sha512-Lz0OGeZCo/QHUDLx5LmZc0EocwanneYJUM8z0bfWexArk62HKMLfLIodwXuKTO5y0s6ddXaTexrYHs7v96EOmw==}
     engines: {node: '>=v18'}
 
-  '@commitlint/lint@20.0.0':
-    resolution: {integrity: sha512-kWrX8SfWk4+4nCexfLaQT3f3EcNjJwJBsSZ5rMBw6JCd6OzXufFHgel2Curos4LKIxwec9WSvs2YUD87rXlxNQ==}
+  '@commitlint/lint@20.2.0':
+    resolution: {integrity: sha512-cQEEB+jlmyQbyiji/kmh8pUJSDeUmPiWq23kFV0EtW3eM+uAaMLMuoTMajbrtWYWQpPzOMDjYltQ8jxHeHgITg==}
     engines: {node: '>=v18'}
 
-  '@commitlint/load@20.1.0':
-    resolution: {integrity: sha512-qo9ER0XiAimATQR5QhvvzePfeDfApi/AFlC1G+YN+ZAY8/Ua6IRrDrxRvQAr+YXUKAxUsTDSp9KXeXLBPsNRWg==}
+  '@commitlint/load@20.2.0':
+    resolution: {integrity: sha512-iAK2GaBM8sPFTSwtagI67HrLKHIUxQc2BgpgNc/UMNme6LfmtHpIxQoN1TbP+X1iz58jq32HL1GbrFTCzcMi6g==}
     engines: {node: '>=v18'}
 
   '@commitlint/message@20.0.0':
     resolution: {integrity: sha512-gLX4YmKnZqSwkmSB9OckQUrI5VyXEYiv3J5JKZRxIp8jOQsWjZgHSG/OgEfMQBK9ibdclEdAyIPYggwXoFGXjQ==}
     engines: {node: '>=v18'}
 
-  '@commitlint/parse@20.0.0':
-    resolution: {integrity: sha512-j/PHCDX2bGM5xGcWObOvpOc54cXjn9g6xScXzAeOLwTsScaL4Y+qd0pFC6HBwTtrH92NvJQc+2Lx9HFkVi48cg==}
+  '@commitlint/parse@20.2.0':
+    resolution: {integrity: sha512-LXStagGU1ivh07X7sM+hnEr4BvzFYn1iBJ6DRg2QsIN8lBfSzyvkUcVCDwok9Ia4PWiEgei5HQjju6xfJ1YaSQ==}
     engines: {node: '>=v18'}
 
-  '@commitlint/read@20.0.0':
-    resolution: {integrity: sha512-Ti7Y7aEgxsM1nkwA4ZIJczkTFRX/+USMjNrL9NXwWQHqNqrBX2iMi+zfuzZXqfZ327WXBjdkRaytJ+z5vNqTOA==}
+  '@commitlint/read@20.2.0':
+    resolution: {integrity: sha512-+SjF9mxm5JCbe+8grOpXCXMMRzAnE0WWijhhtasdrpJoAFJYd5UgRTj/oCq5W3HJTwbvTOsijEJ0SUGImECD7Q==}
     engines: {node: '>=v18'}
 
-  '@commitlint/resolve-extends@20.1.0':
-    resolution: {integrity: sha512-cxKXQrqHjZT3o+XPdqDCwOWVFQiae++uwd9dUBC7f2MdV58ons3uUvASdW7m55eat5sRiQ6xUHyMWMRm6atZWw==}
+  '@commitlint/resolve-extends@20.2.0':
+    resolution: {integrity: sha512-KVoLDi9BEuqeq+G0wRABn4azLRiCC22/YHR2aCquwx6bzCHAIN8hMt3Nuf1VFxq/c8ai6s8qBxE8+ZD4HeFTlQ==}
     engines: {node: '>=v18'}
 
-  '@commitlint/rules@20.0.0':
-    resolution: {integrity: sha512-gvg2k10I/RfvHn5I5sxvVZKM1fl72Sqrv2YY/BnM7lMHcYqO0E2jnRWoYguvBfEcZ39t+rbATlciggVe77E4zA==}
+  '@commitlint/rules@20.2.0':
+    resolution: {integrity: sha512-27rHGpeAjnYl/A+qUUiYDa7Yn1WIjof/dFJjYW4gA1Ug+LUGa1P0AexzGZ5NBxTbAlmDgaxSZkLLxtLVqtg8PQ==}
     engines: {node: '>=v18'}
 
   '@commitlint/to-lines@20.0.0':
@@ -247,8 +247,8 @@ packages:
     resolution: {integrity: sha512-drXaPSP2EcopukrUXvUXmsQMu3Ey/FuJDc/5oiW4heoCfoE5BdLQyuc7veGeE3aoQaTVqZnh4D5WTWe2vefYKg==}
     engines: {node: '>=v18'}
 
-  '@commitlint/types@20.0.0':
-    resolution: {integrity: sha512-bVUNBqG6aznYcYjTjnc3+Cat/iBgbgpflxbIBTnsHTX0YVpnmINPEkSRWymT2Q8aSH3Y7aKnEbunilkYe8TybA==}
+  '@commitlint/types@20.2.0':
+    resolution: {integrity: sha512-KTy0OqRDLR5y/zZMnizyx09z/rPlPC/zKhYgH8o/q6PuAjoQAKlRfY4zzv0M64yybQ//6//4H1n14pxaLZfUnA==}
     engines: {node: '>=v18'}
 
   '@epic-web/invariant@1.0.0':
@@ -468,20 +468,20 @@ packages:
     resolution: {integrity: sha512-tlqY9xq5ukxTUZBmoOp+m61cqwQD5pHJtFY3Mn8CA8ps6yghLH/Hw8UPdqg4OLmFW3IFlcXnQNmo/dh8HzXYIQ==}
     engines: {node: '>=18'}
 
-  '@textlint/ast-node-types@15.4.1':
-    resolution: {integrity: sha512-XifMpBMdo0E1Fuh85YdcYAgy+okNg9WKBzIPIO4JUDnSWUVFihnogrM4cjDapeHkgzSgulwR8oJVJ17eyxI1bA==}
+  '@textlint/ast-node-types@15.5.0':
+    resolution: {integrity: sha512-K0LEuuTo4rza8yDrlYkRdXLao8Iz/QBMsQdIxRrOOrLYb4HAtZaypZ78c+J6rDA1UlGxadZVLmkkiv4KV5fMKQ==}
 
-  '@textlint/linter-formatter@15.4.1':
-    resolution: {integrity: sha512-kAV7Sup3vwvqxKvBbf9lx/JaPHkRybQp/LLvA73U1AorPZE6XyfBAFG24BbMiCs4OX1ax4g7kXRuFPgMLWRf+g==}
+  '@textlint/linter-formatter@15.5.0':
+    resolution: {integrity: sha512-DPTm2+VXKID41qKQWagg/4JynM6hEEpvbq0PlGsEoC4Xm7IqXIxFym3mSf5+ued0cuiIV1hR9kgXjqGdP035tw==}
 
-  '@textlint/module-interop@15.4.1':
-    resolution: {integrity: sha512-jHtM2E5CR68P3z/+FGrEU5pml2fQVzEo2sez9FEjrVHSPCrHtqHcPaKfsYbQJjc9C48ObwaWrCzRNaL3KedNCQ==}
+  '@textlint/module-interop@15.5.0':
+    resolution: {integrity: sha512-rqfouEhBEgZlR9umswWXXRBcmmSM28Trpr9b0duzgehKYVc7wSQCuQMagr6YBJa2NRMfRNinupusbJXMg0ij2A==}
 
-  '@textlint/resolver@15.4.1':
-    resolution: {integrity: sha512-uVssyG3XXXKNY+O7NOajGvQZTyOuhPviwlq7Xek6ZT9K1eDQtA8074cPkAQoLMYhi/TUyOE5P5kpz42UF8Lmdw==}
+  '@textlint/resolver@15.5.0':
+    resolution: {integrity: sha512-kK5nFbg5N3kVoZExQI/dnYjCInmTltvXDnuCRrBxHI01i6kO/o8R7Lc2aFkAZ6/NUZuRPalkyDdwZJke4/R2wg==}
 
-  '@textlint/types@15.4.1':
-    resolution: {integrity: sha512-WByVZ3zblbvuI+voWQplUP7seSTKXI9z6TMVXEB3dY3JFrZCIXWKNfLbETX5lZV7fYkCMaDtILO1l6s11wdbQA==}
+  '@textlint/types@15.5.0':
+    resolution: {integrity: sha512-EjAPbuA+3NyQ9WyFP7iUlddi35F3mGrf4tb4cZM0nWywbtEJ3+XAYqL+5RsF0qFeSguxGir09NdZOWrG9wVOUQ==}
 
   '@types/conventional-commits-parser@5.0.2':
     resolution: {integrity: sha512-BgT2szDXnVypgpNxOK8aL5SGjUdaQbC++WZNjF1Qge3Og2+zhHj+RWhmehLhYyvQwqAmvezruVfOf8+3m74W+g==}
@@ -2190,12 +2190,12 @@ packages:
     resolution: {integrity: sha512-TeTSQ6H5YHvpqVwBRcnLDCBnDOHWYu7IvGbHT6N8AOymcr9PJGjc1GTtiWZTYg0NCgYwvnYWEkVChQAr9bjfwA==}
     engines: {node: '>=16'}
 
-  type-fest@5.3.0:
-    resolution: {integrity: sha512-d9CwU93nN0IA1QL+GSNDdwLAu1Ew5ZjTwupvedwg3WdfoH6pIDvYQ2hV0Uc2nKBLPq7NB5apCx57MLS5qlmO5g==}
+  type-fest@5.3.1:
+    resolution: {integrity: sha512-VCn+LMHbd4t6sF3wfU/+HKT63C9OoyrSIf4b+vtWHpt2U7/4InZG467YDNMFMR70DdHjAdpPWmw2lzRdg0Xqqg==}
     engines: {node: '>=20'}
 
-  typescript@5.5.3:
-    resolution: {integrity: sha512-/hreyEujaB0w76zKo6717l3L0o/qEUtRgdvUBvlkhoWeOVMjMuHNHk0BRBzikzuGDqNmPQbg5ifMEqsHLiIUcQ==}
+  typescript@5.9.3:
+    resolution: {integrity: sha512-jl1vZzPDinLr9eUt3J/t7V6FgNEw9QjvBPdysz9KfQDD41fQrC2Y4vKQdiaUpFT4bXlb1RHhLpp8wtm6M5TgSw==}
     engines: {node: '>=14.17'}
     hasBin: true
 
@@ -2356,14 +2356,14 @@ snapshots:
 
   '@actions/io@1.1.3': {}
 
-  '@anolilab/commitlint-config@6.0.7(@commitlint/cli@20.1.0(@types/node@24.10.1)(typescript@5.5.3))(@types/node@24.10.1)(typescript@5.5.3)':
+  '@anolilab/commitlint-config@6.0.7(@commitlint/cli@20.2.0(@types/node@24.10.1)(typescript@5.9.3))(@types/node@24.10.1)(typescript@5.9.3)':
     dependencies:
-      '@commitlint/cli': 20.1.0(@types/node@24.10.1)(typescript@5.5.3)
-      '@commitlint/config-conventional': 20.0.0
-      '@commitlint/core': 20.1.0(@types/node@24.10.1)(typescript@5.5.3)
-      commitizen: 4.3.1(@types/node@24.10.1)(typescript@5.5.3)
+      '@commitlint/cli': 20.2.0(@types/node@24.10.1)(typescript@5.9.3)
+      '@commitlint/config-conventional': 20.2.0
+      '@commitlint/core': 20.2.0(@types/node@24.10.1)(typescript@5.9.3)
+      commitizen: 4.3.1(@types/node@24.10.1)(typescript@5.9.3)
       conventional-changelog-conventionalcommits: 9.1.0
-      cz-conventional-changelog: 3.3.0(@types/node@24.10.1)(typescript@5.5.3)
+      cz-conventional-changelog: 3.3.0(@types/node@24.10.1)(typescript@5.9.3)
     transitivePeerDependencies:
       - '@types/node'
       - typescript
@@ -2374,7 +2374,7 @@ snapshots:
       '@visulima/package': 4.1.7(@types/node@24.10.1)
       husky: 9.1.7
       shell-quote: 1.8.3
-      type-fest: 5.3.0
+      type-fest: 5.3.1
     optionalDependencies:
       lint-staged: 16.2.7
       prettier: 3.7.4
@@ -2387,28 +2387,28 @@ snapshots:
     dependencies:
       prettier: 3.7.4
 
-  '@anolilab/semantic-release-clean-package-json@4.1.0(yaml@2.8.2)':
+  '@anolilab/semantic-release-clean-package-json@4.2.2(yaml@2.8.2)':
     dependencies:
       '@semantic-release/error': 4.0.0
       '@visulima/fs': 4.1.0(yaml@2.8.2)
       '@visulima/path': 2.0.5
-      type-fest: 5.3.0
+      type-fest: 5.3.1
     transitivePeerDependencies:
       - yaml
 
-  '@anolilab/semantic-release-preset@12.0.1(@semantic-release/npm@13.1.2(semantic-release@25.0.2(typescript@5.5.3)))(semantic-release@25.0.2(typescript@5.5.3))(yaml@2.8.2)':
+  '@anolilab/semantic-release-preset@12.1.2(@semantic-release/npm@13.1.2(semantic-release@25.0.2(typescript@5.9.3)))(semantic-release@25.0.2(typescript@5.9.3))(yaml@2.8.2)':
     dependencies:
-      '@anolilab/semantic-release-clean-package-json': 4.1.0(yaml@2.8.2)
-      '@semantic-release/changelog': 6.0.3(semantic-release@25.0.2(typescript@5.5.3))
-      '@semantic-release/commit-analyzer': 13.0.1(semantic-release@25.0.2(typescript@5.5.3))
-      '@semantic-release/exec': 7.1.0(semantic-release@25.0.2(typescript@5.5.3))
-      '@semantic-release/git': 10.0.1(semantic-release@25.0.2(typescript@5.5.3))
-      '@semantic-release/github': 12.0.2(semantic-release@25.0.2(typescript@5.5.3))
-      '@semantic-release/release-notes-generator': 14.1.0(semantic-release@25.0.2(typescript@5.5.3))
+      '@anolilab/semantic-release-clean-package-json': 4.2.2(yaml@2.8.2)
+      '@semantic-release/changelog': 6.0.3(semantic-release@25.0.2(typescript@5.9.3))
+      '@semantic-release/commit-analyzer': 13.0.1(semantic-release@25.0.2(typescript@5.9.3))
+      '@semantic-release/exec': 7.1.0(semantic-release@25.0.2(typescript@5.9.3))
+      '@semantic-release/git': 10.0.1(semantic-release@25.0.2(typescript@5.9.3))
+      '@semantic-release/github': 12.0.2(semantic-release@25.0.2(typescript@5.9.3))
+      '@semantic-release/release-notes-generator': 14.1.0(semantic-release@25.0.2(typescript@5.9.3))
       conventional-changelog-conventionalcommits: 9.1.0
-      semantic-release: 25.0.2(typescript@5.5.3)
+      semantic-release: 25.0.2(typescript@5.9.3)
     optionalDependencies:
-      '@semantic-release/npm': 13.1.2(semantic-release@25.0.2(typescript@5.5.3))
+      '@semantic-release/npm': 13.1.2(semantic-release@25.0.2(typescript@5.9.3))
     transitivePeerDependencies:
       - supports-color
       - yaml
@@ -2435,42 +2435,42 @@ snapshots:
   '@colors/colors@1.5.0':
     optional: true
 
-  '@commitlint/cli@20.1.0(@types/node@24.10.1)(typescript@5.5.3)':
+  '@commitlint/cli@20.2.0(@types/node@24.10.1)(typescript@5.9.3)':
     dependencies:
-      '@commitlint/format': 20.0.0
-      '@commitlint/lint': 20.0.0
-      '@commitlint/load': 20.1.0(@types/node@24.10.1)(typescript@5.5.3)
-      '@commitlint/read': 20.0.0
-      '@commitlint/types': 20.0.0
+      '@commitlint/format': 20.2.0
+      '@commitlint/lint': 20.2.0
+      '@commitlint/load': 20.2.0(@types/node@24.10.1)(typescript@5.9.3)
+      '@commitlint/read': 20.2.0
+      '@commitlint/types': 20.2.0
       tinyexec: 1.0.2
       yargs: 17.7.2
     transitivePeerDependencies:
       - '@types/node'
       - typescript
 
-  '@commitlint/config-conventional@20.0.0':
+  '@commitlint/config-conventional@20.2.0':
     dependencies:
-      '@commitlint/types': 20.0.0
+      '@commitlint/types': 20.2.0
       conventional-changelog-conventionalcommits: 7.0.2
 
-  '@commitlint/config-validator@20.0.0':
+  '@commitlint/config-validator@20.2.0':
     dependencies:
-      '@commitlint/types': 20.0.0
+      '@commitlint/types': 20.2.0
       ajv: 8.17.1
 
-  '@commitlint/core@20.1.0(@types/node@24.10.1)(typescript@5.5.3)':
+  '@commitlint/core@20.2.0(@types/node@24.10.1)(typescript@5.9.3)':
     dependencies:
-      '@commitlint/format': 20.0.0
-      '@commitlint/lint': 20.0.0
-      '@commitlint/load': 20.1.0(@types/node@24.10.1)(typescript@5.5.3)
-      '@commitlint/read': 20.0.0
+      '@commitlint/format': 20.2.0
+      '@commitlint/lint': 20.2.0
+      '@commitlint/load': 20.2.0(@types/node@24.10.1)(typescript@5.9.3)
+      '@commitlint/read': 20.2.0
     transitivePeerDependencies:
       - '@types/node'
       - typescript
 
-  '@commitlint/ensure@20.0.0':
+  '@commitlint/ensure@20.2.0':
     dependencies:
-      '@commitlint/types': 20.0.0
+      '@commitlint/types': 20.2.0
       lodash.camelcase: 4.3.0
       lodash.kebabcase: 4.1.1
       lodash.snakecase: 4.1.1
@@ -2479,32 +2479,32 @@ snapshots:
 
   '@commitlint/execute-rule@20.0.0': {}
 
-  '@commitlint/format@20.0.0':
+  '@commitlint/format@20.2.0':
     dependencies:
-      '@commitlint/types': 20.0.0
+      '@commitlint/types': 20.2.0
       chalk: 5.6.2
 
-  '@commitlint/is-ignored@20.0.0':
+  '@commitlint/is-ignored@20.2.0':
     dependencies:
-      '@commitlint/types': 20.0.0
+      '@commitlint/types': 20.2.0
       semver: 7.7.3
 
-  '@commitlint/lint@20.0.0':
+  '@commitlint/lint@20.2.0':
     dependencies:
-      '@commitlint/is-ignored': 20.0.0
-      '@commitlint/parse': 20.0.0
-      '@commitlint/rules': 20.0.0
-      '@commitlint/types': 20.0.0
+      '@commitlint/is-ignored': 20.2.0
+      '@commitlint/parse': 20.2.0
+      '@commitlint/rules': 20.2.0
+      '@commitlint/types': 20.2.0
 
-  '@commitlint/load@20.1.0(@types/node@24.10.1)(typescript@5.5.3)':
+  '@commitlint/load@20.2.0(@types/node@24.10.1)(typescript@5.9.3)':
     dependencies:
-      '@commitlint/config-validator': 20.0.0
+      '@commitlint/config-validator': 20.2.0
       '@commitlint/execute-rule': 20.0.0
-      '@commitlint/resolve-extends': 20.1.0
-      '@commitlint/types': 20.0.0
+      '@commitlint/resolve-extends': 20.2.0
+      '@commitlint/types': 20.2.0
       chalk: 5.6.2
-      cosmiconfig: 9.0.0(typescript@5.5.3)
-      cosmiconfig-typescript-loader: 6.2.0(@types/node@24.10.1)(cosmiconfig@9.0.0(typescript@5.5.3))(typescript@5.5.3)
+      cosmiconfig: 9.0.0(typescript@5.9.3)
+      cosmiconfig-typescript-loader: 6.2.0(@types/node@24.10.1)(cosmiconfig@9.0.0(typescript@5.9.3))(typescript@5.9.3)
       lodash.isplainobject: 4.0.6
       lodash.merge: 4.6.2
       lodash.uniq: 4.5.0
@@ -2514,35 +2514,35 @@ snapshots:
 
   '@commitlint/message@20.0.0': {}
 
-  '@commitlint/parse@20.0.0':
+  '@commitlint/parse@20.2.0':
     dependencies:
-      '@commitlint/types': 20.0.0
+      '@commitlint/types': 20.2.0
       conventional-changelog-angular: 7.0.0
       conventional-commits-parser: 5.0.0
 
-  '@commitlint/read@20.0.0':
+  '@commitlint/read@20.2.0':
     dependencies:
       '@commitlint/top-level': 20.0.0
-      '@commitlint/types': 20.0.0
+      '@commitlint/types': 20.2.0
       git-raw-commits: 4.0.0
       minimist: 1.2.8
       tinyexec: 1.0.2
 
-  '@commitlint/resolve-extends@20.1.0':
+  '@commitlint/resolve-extends@20.2.0':
     dependencies:
-      '@commitlint/config-validator': 20.0.0
-      '@commitlint/types': 20.0.0
+      '@commitlint/config-validator': 20.2.0
+      '@commitlint/types': 20.2.0
       global-directory: 4.0.1
       import-meta-resolve: 4.2.0
       lodash.mergewith: 4.6.2
       resolve-from: 5.0.0
 
-  '@commitlint/rules@20.0.0':
+  '@commitlint/rules@20.2.0':
     dependencies:
-      '@commitlint/ensure': 20.0.0
+      '@commitlint/ensure': 20.2.0
       '@commitlint/message': 20.0.0
       '@commitlint/to-lines': 20.0.0
-      '@commitlint/types': 20.0.0
+      '@commitlint/types': 20.2.0
 
   '@commitlint/to-lines@20.0.0': {}
 
@@ -2550,7 +2550,7 @@ snapshots:
     dependencies:
       find-up: 7.0.0
 
-  '@commitlint/types@20.0.0':
+  '@commitlint/types@20.2.0':
     dependencies:
       '@types/conventional-commits-parser': 5.0.2
       chalk: 5.6.2
@@ -2700,9 +2700,9 @@ snapshots:
     dependencies:
       '@secretlint/resolver': 11.2.5
       '@secretlint/types': 11.2.5
-      '@textlint/linter-formatter': 15.4.1
-      '@textlint/module-interop': 15.4.1
-      '@textlint/types': 15.4.1
+      '@textlint/linter-formatter': 15.5.0
+      '@textlint/module-interop': 15.5.0
+      '@textlint/types': 15.5.0
       chalk: 5.6.2
       debug: 4.4.3
       pluralize: 8.0.0
@@ -2738,15 +2738,15 @@ snapshots:
 
   '@secretlint/types@11.2.5': {}
 
-  '@semantic-release/changelog@6.0.3(semantic-release@25.0.2(typescript@5.5.3))':
+  '@semantic-release/changelog@6.0.3(semantic-release@25.0.2(typescript@5.9.3))':
     dependencies:
       '@semantic-release/error': 3.0.0
       aggregate-error: 3.1.0
       fs-extra: 11.3.2
       lodash: 4.17.21
-      semantic-release: 25.0.2(typescript@5.5.3)
+      semantic-release: 25.0.2(typescript@5.9.3)
 
-  '@semantic-release/commit-analyzer@13.0.1(semantic-release@25.0.2(typescript@5.5.3))':
+  '@semantic-release/commit-analyzer@13.0.1(semantic-release@25.0.2(typescript@5.9.3))':
     dependencies:
       conventional-changelog-angular: 8.1.0
       conventional-changelog-writer: 8.2.0
@@ -2756,7 +2756,7 @@ snapshots:
       import-from-esm: 2.0.0
       lodash-es: 4.17.21
       micromatch: 4.0.8
-      semantic-release: 25.0.2(typescript@5.5.3)
+      semantic-release: 25.0.2(typescript@5.9.3)
     transitivePeerDependencies:
       - supports-color
 
@@ -2764,7 +2764,7 @@ snapshots:
 
   '@semantic-release/error@4.0.0': {}
 
-  '@semantic-release/exec@7.1.0(semantic-release@25.0.2(typescript@5.5.3))':
+  '@semantic-release/exec@7.1.0(semantic-release@25.0.2(typescript@5.9.3))':
     dependencies:
       '@semantic-release/error': 4.0.0
       aggregate-error: 3.1.0
@@ -2772,11 +2772,11 @@ snapshots:
       execa: 9.6.1
       lodash-es: 4.17.21
       parse-json: 8.3.0
-      semantic-release: 25.0.2(typescript@5.5.3)
+      semantic-release: 25.0.2(typescript@5.9.3)
     transitivePeerDependencies:
       - supports-color
 
-  '@semantic-release/git@10.0.1(semantic-release@25.0.2(typescript@5.5.3))':
+  '@semantic-release/git@10.0.1(semantic-release@25.0.2(typescript@5.9.3))':
     dependencies:
       '@semantic-release/error': 3.0.0
       aggregate-error: 3.1.0
@@ -2786,11 +2786,11 @@ snapshots:
       lodash: 4.17.21
       micromatch: 4.0.8
       p-reduce: 2.1.0
-      semantic-release: 25.0.2(typescript@5.5.3)
+      semantic-release: 25.0.2(typescript@5.9.3)
     transitivePeerDependencies:
       - supports-color
 
-  '@semantic-release/github@12.0.2(semantic-release@25.0.2(typescript@5.5.3))':
+  '@semantic-release/github@12.0.2(semantic-release@25.0.2(typescript@5.9.3))':
     dependencies:
       '@octokit/core': 7.0.6
       '@octokit/plugin-paginate-rest': 14.0.0(@octokit/core@7.0.6)
@@ -2806,14 +2806,14 @@ snapshots:
       lodash-es: 4.17.21
       mime: 4.1.0
       p-filter: 4.1.0
-      semantic-release: 25.0.2(typescript@5.5.3)
+      semantic-release: 25.0.2(typescript@5.9.3)
       tinyglobby: 0.2.15
       undici: 7.16.0
       url-join: 5.0.0
     transitivePeerDependencies:
       - supports-color
 
-  '@semantic-release/npm@13.1.2(semantic-release@25.0.2(typescript@5.5.3))':
+  '@semantic-release/npm@13.1.2(semantic-release@25.0.2(typescript@5.9.3))':
     dependencies:
       '@actions/core': 1.11.1
       '@semantic-release/error': 4.0.0
@@ -2828,11 +2828,11 @@ snapshots:
       rc: 1.2.8
       read-pkg: 10.0.0
       registry-auth-token: 5.1.0
-      semantic-release: 25.0.2(typescript@5.5.3)
+      semantic-release: 25.0.2(typescript@5.9.3)
       semver: 7.7.3
       tempy: 3.1.0
 
-  '@semantic-release/release-notes-generator@14.1.0(semantic-release@25.0.2(typescript@5.5.3))':
+  '@semantic-release/release-notes-generator@14.1.0(semantic-release@25.0.2(typescript@5.9.3))':
     dependencies:
       conventional-changelog-angular: 8.1.0
       conventional-changelog-writer: 8.2.0
@@ -2844,7 +2844,7 @@ snapshots:
       into-stream: 7.0.0
       lodash-es: 4.17.21
       read-package-up: 11.0.0
-      semantic-release: 25.0.2(typescript@5.5.3)
+      semantic-release: 25.0.2(typescript@5.9.3)
     transitivePeerDependencies:
       - supports-color
 
@@ -2854,15 +2854,15 @@ snapshots:
 
   '@sindresorhus/merge-streams@4.0.0': {}
 
-  '@textlint/ast-node-types@15.4.1': {}
+  '@textlint/ast-node-types@15.5.0': {}
 
-  '@textlint/linter-formatter@15.4.1':
+  '@textlint/linter-formatter@15.5.0':
     dependencies:
       '@azu/format-text': 1.0.2
       '@azu/style-format': 1.0.1
-      '@textlint/module-interop': 15.4.1
-      '@textlint/resolver': 15.4.1
-      '@textlint/types': 15.4.1
+      '@textlint/module-interop': 15.5.0
+      '@textlint/resolver': 15.5.0
+      '@textlint/types': 15.5.0
       chalk: 4.1.2
       debug: 4.4.3
       js-yaml: 4.1.1
@@ -2875,13 +2875,13 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@textlint/module-interop@15.4.1': {}
+  '@textlint/module-interop@15.5.0': {}
 
-  '@textlint/resolver@15.4.1': {}
+  '@textlint/resolver@15.5.0': {}
 
-  '@textlint/types@15.4.1':
+  '@textlint/types@15.5.0':
     dependencies:
-      '@textlint/ast-node-types': 15.4.1
+      '@textlint/ast-node-types': 15.5.0
 
   '@types/conventional-commits-parser@5.0.2':
     dependencies:
@@ -2902,7 +2902,7 @@ snapshots:
   '@visulima/fs@4.1.0(yaml@2.8.2)':
     dependencies:
       '@visulima/path': 2.0.5
-      type-fest: 5.3.0
+      type-fest: 5.3.1
     optionalDependencies:
       yaml: 2.8.2
 
@@ -3124,10 +3124,10 @@ snapshots:
 
   commander@14.0.2: {}
 
-  commitizen@4.3.1(@types/node@24.10.1)(typescript@5.5.3):
+  commitizen@4.3.1(@types/node@24.10.1)(typescript@5.9.3):
     dependencies:
       cachedir: 2.3.0
-      cz-conventional-changelog: 3.3.0(@types/node@24.10.1)(typescript@5.5.3)
+      cz-conventional-changelog: 3.3.0(@types/node@24.10.1)(typescript@5.9.3)
       dedent: 0.7.0
       detect-indent: 6.1.0
       find-node-modules: 2.1.3
@@ -3196,21 +3196,21 @@ snapshots:
 
   core-util-is@1.0.3: {}
 
-  cosmiconfig-typescript-loader@6.2.0(@types/node@24.10.1)(cosmiconfig@9.0.0(typescript@5.5.3))(typescript@5.5.3):
+  cosmiconfig-typescript-loader@6.2.0(@types/node@24.10.1)(cosmiconfig@9.0.0(typescript@5.9.3))(typescript@5.9.3):
     dependencies:
       '@types/node': 24.10.1
-      cosmiconfig: 9.0.0(typescript@5.5.3)
+      cosmiconfig: 9.0.0(typescript@5.9.3)
       jiti: 2.6.1
-      typescript: 5.5.3
+      typescript: 5.9.3
 
-  cosmiconfig@9.0.0(typescript@5.5.3):
+  cosmiconfig@9.0.0(typescript@5.9.3):
     dependencies:
       env-paths: 2.2.1
       import-fresh: 3.3.1
       js-yaml: 4.1.1
       parse-json: 5.2.0
     optionalDependencies:
-      typescript: 5.5.3
+      typescript: 5.9.3
 
   cross-env@10.1.0:
     dependencies:
@@ -3227,16 +3227,16 @@ snapshots:
     dependencies:
       type-fest: 1.4.0
 
-  cz-conventional-changelog@3.3.0(@types/node@24.10.1)(typescript@5.5.3):
+  cz-conventional-changelog@3.3.0(@types/node@24.10.1)(typescript@5.9.3):
     dependencies:
       chalk: 2.4.2
-      commitizen: 4.3.1(@types/node@24.10.1)(typescript@5.5.3)
+      commitizen: 4.3.1(@types/node@24.10.1)(typescript@5.9.3)
       conventional-commit-types: 3.0.0
       lodash.map: 4.6.0
       longest: 2.0.1
       word-wrap: 1.2.5
     optionalDependencies:
-      '@commitlint/load': 20.1.0(@types/node@24.10.1)(typescript@5.5.3)
+      '@commitlint/load': 20.2.0(@types/node@24.10.1)(typescript@5.9.3)
     transitivePeerDependencies:
       - '@types/node'
       - typescript
@@ -4121,14 +4121,14 @@ snapshots:
     dependencies:
       find-up-simple: 1.0.1
       read-pkg: 10.0.0
-      type-fest: 5.3.0
+      type-fest: 5.3.1
 
   read-pkg@10.0.0:
     dependencies:
       '@types/normalize-package-data': 2.4.4
       normalize-package-data: 8.0.0
       parse-json: 8.3.0
-      type-fest: 5.3.0
+      type-fest: 5.3.1
       unicorn-magic: 0.3.0
 
   read-pkg@9.0.1:
@@ -4217,15 +4217,15 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  semantic-release@25.0.2(typescript@5.5.3):
+  semantic-release@25.0.2(typescript@5.9.3):
     dependencies:
-      '@semantic-release/commit-analyzer': 13.0.1(semantic-release@25.0.2(typescript@5.5.3))
+      '@semantic-release/commit-analyzer': 13.0.1(semantic-release@25.0.2(typescript@5.9.3))
       '@semantic-release/error': 4.0.0
-      '@semantic-release/github': 12.0.2(semantic-release@25.0.2(typescript@5.5.3))
-      '@semantic-release/npm': 13.1.2(semantic-release@25.0.2(typescript@5.5.3))
-      '@semantic-release/release-notes-generator': 14.1.0(semantic-release@25.0.2(typescript@5.5.3))
+      '@semantic-release/github': 12.0.2(semantic-release@25.0.2(typescript@5.9.3))
+      '@semantic-release/npm': 13.1.2(semantic-release@25.0.2(typescript@5.9.3))
+      '@semantic-release/release-notes-generator': 14.1.0(semantic-release@25.0.2(typescript@5.9.3))
       aggregate-error: 5.0.0
-      cosmiconfig: 9.0.0(typescript@5.5.3)
+      cosmiconfig: 9.0.0(typescript@5.9.3)
       debug: 4.4.3
       env-ci: 11.2.0
       execa: 9.6.1
@@ -4499,11 +4499,11 @@ snapshots:
 
   type-fest@4.41.0: {}
 
-  type-fest@5.3.0:
+  type-fest@5.3.1:
     dependencies:
       tagged-tag: 1.0.0
 
-  typescript@5.5.3: {}
+  typescript@5.9.3: {}
 
   uglify-js@3.19.3:
     optional: true
