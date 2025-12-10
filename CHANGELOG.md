@@ -1,3 +1,14 @@
+## [8.0.5](https://github.com/anolilab/workflows/compare/v8.0.4...v8.0.5) (2025-12-10)
+
+### Bug Fixes
+
+* **deps:** update github-actions ([#280](https://github.com/anolilab/workflows/issues/280)) ([60bc1c9](https://github.com/anolilab/workflows/commit/60bc1c985d57cc364f3f0ae1ce05553e1cda9307))
+
+### Miscellaneous Chores
+
+* remove NPM_TOKEN from semantic-release workflow environment variables ([4e72243](https://github.com/anolilab/workflows/commit/4e722432b09fc0234f56f9c68f74095e769a10b3))
+* update Node.js version in .nvmrc and package.json, upgrade Prettier to 3.7.4, and adjust npm version in action.yml ([e7ab714](https://github.com/anolilab/workflows/commit/e7ab714d6b1afe0aba0615e4c193e04fd2674652))
+
 ## [8.0.4](https://github.com/anolilab/workflows/compare/v8.0.3...v8.0.4) (2025-12-03)
 
 ### Bug Fixes
