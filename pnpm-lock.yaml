@@ -31,8 +31,8 @@ importers:
         specifier: ^6.0.8
         version: 6.0.8(prettier@3.7.4)
       '@anolilab/semantic-release-preset':
-        specifier: ^12.0.1
-        version: 12.0.1(@semantic-release/npm@13.1.2(semantic-release@25.0.2(typescript@5.5.3)))(semantic-release@25.0.2(typescript@5.5.3))(yaml@2.8.2)
+        specifier: ^12.1.2
+        version: 12.1.2(@semantic-release/npm@13.1.2(semantic-release@25.0.2(typescript@5.5.3)))(semantic-release@25.0.2(typescript@5.5.3))(yaml@2.8.2)
       '@commitlint/cli':
         specifier: ^20.1.0
         version: 20.1.0(@types/node@24.10.1)(typescript@5.5.3)
@@ -136,16 +136,16 @@ packages:
     peerDependencies:
       prettier: ^3.6.2
 
-  '@anolilab/semantic-release-clean-package-json@4.1.0':
-    resolution: {integrity: sha512-KumzZ3zben/6U7WLZGBVdz/ZcBKD+1x9iAmP/uH6AyQXra7RS553Oqx5bOVekKGMpmHfxl49b//YZ3g5I9oRNw==}
+  '@anolilab/semantic-release-clean-package-json@4.2.2':
+    resolution: {integrity: sha512-Qe/5XFzMn0OAJENzaTt2JXyQr/p7TBZHNya0ZEJLIHOyKX80yGdBTzJBeRCXL4VgIeNPGRTcfqYGqsSQ+TqR8A==}
     engines: {node: ^22.14.0 || >=24.10.0}
 
-  '@anolilab/semantic-release-preset@12.0.1':
-    resolution: {integrity: sha512-Psia1q7sqI2F7L8BFtHjEcIEUbqh5aHm17p60S7Do+ObVYvxtACubLVWMmiboF8dNlUTeLACQsY5Rgvj6ipkKw==}
+  '@anolilab/semantic-release-preset@12.1.2':
+    resolution: {integrity: sha512-c8dFHJatd2RW8MApoApn4B7N7hA0p55nZqy+ehZp0+nCeWYTEbfLO2EXJPIej/WaWUohOdU+m2/8x+FugYLlpQ==}
     engines: {node: ^22.14.0 || >=24.10.0}
     os: [darwin, linux, win32]
     peerDependencies:
-      '@anolilab/semantic-release-pnpm': 3.1.0
+      '@anolilab/semantic-release-pnpm': 3.2.2
       '@semantic-release/npm': ^13.1.2
       semantic-release: ^25.0.2
       semantic-release-yarn: ^3.0.2
@@ -2387,7 +2387,7 @@ snapshots:
     dependencies:
       prettier: 3.7.4
 
-  '@anolilab/semantic-release-clean-package-json@4.1.0(yaml@2.8.2)':
+  '@anolilab/semantic-release-clean-package-json@4.2.2(yaml@2.8.2)':
     dependencies:
       '@semantic-release/error': 4.0.0
       '@visulima/fs': 4.1.0(yaml@2.8.2)
@@ -2396,9 +2396,9 @@ snapshots:
     transitivePeerDependencies:
       - yaml
 
-  '@anolilab/semantic-release-preset@12.0.1(@semantic-release/npm@13.1.2(semantic-release@25.0.2(typescript@5.5.3)))(semantic-release@25.0.2(typescript@5.5.3))(yaml@2.8.2)':
+  '@anolilab/semantic-release-preset@12.1.2(@semantic-release/npm@13.1.2(semantic-release@25.0.2(typescript@5.5.3)))(semantic-release@25.0.2(typescript@5.5.3))(yaml@2.8.2)':
     dependencies:
-      '@anolilab/semantic-release-clean-package-json': 4.1.0(yaml@2.8.2)
+      '@anolilab/semantic-release-clean-package-json': 4.2.2(yaml@2.8.2)
       '@semantic-release/changelog': 6.0.3(semantic-release@25.0.2(typescript@5.5.3))
       '@semantic-release/commit-analyzer': 13.0.1(semantic-release@25.0.2(typescript@5.5.3))
       '@semantic-release/exec': 7.1.0(semantic-release@25.0.2(typescript@5.5.3))
