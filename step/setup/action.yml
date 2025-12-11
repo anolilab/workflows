@@ -88,6 +88,11 @@ runs:
           uses: "actions/setup-node@395ad3262231945c25e8478fd5baf05154b1d79f" # v6.1.0
           with:
               node-version: "${{ inputs.node-version }}"
+        
+        - name: "Clear NODE_AUTH_TOKEN for OIDC"
+          # actions/setup-node sets a placeholder NODE_AUTH_TOKEN that blocks OIDC
+          # See: https://github.com/actions/setup-node/issues/1440
+          run: "echo \"NODE_AUTH_TOKEN=\" >> $GITHUB_ENV"
 
         # @see: npm install -g npm@latest is necessary to make provenance available. More info: https://docs.npmjs.com/generating-provenance-statements
         - name: "Upgrade npm to ${{ inputs.npm-version }} version"
@@ -96,10 +101,15 @@ runs:
           run: "npm install --global npm@${{ inputs.npm-version }}"
           env:
               SKIP_CHECK: "true"
+        
+        - name: "Configure npm registry"
+          run: "npm config set registry https://registry.npmjs.org/"
 
-        - name: "Check npm version"
+        - name: "Verify npm configuration"
           shell: "bash"
-          run: "npm -v"
+          run: run: |
+            echo "npm version: $(npm --version)"
+            echo "NODE_AUTH_TOKEN is set: $([[ -n \"$NODE_AUTH_TOKEN\" ]] && echo 'yes' || echo 'no')"
           env:
               SKIP_CHECK: "true"
 
