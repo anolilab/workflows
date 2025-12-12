@@ -1,3 +1,9 @@
+## [8.0.8](https://github.com/anolilab/workflows/compare/v8.0.7...v8.0.8) (2025-12-12)
+
+### Bug Fixes
+
+* **deps:** update commitlint monorepo to ^20.2.0 ([#281](https://github.com/anolilab/workflows/issues/281)) ([c9e7788](https://github.com/anolilab/workflows/commit/c9e77889bcb5eeb851bfbecaed145fa9793196a0))
+
 ## [8.0.7](https://github.com/anolilab/workflows/compare/v8.0.6...v8.0.7) (2025-12-12)
 
 ### Bug Fixes
