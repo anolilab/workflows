@@ -1,3 +1,11 @@
+## [8.0.7](https://github.com/anolilab/workflows/compare/v8.0.6...v8.0.7) (2025-12-12)
+
+### Bug Fixes
+
+* **setup:** enhance action.yml with NODE_AUTH_TOKEN clearing and npm configuration ([5e7cea5](https://github.com/anolilab/workflows/commit/5e7cea55831b1d0abe552f0051d7d59d4ba53ac2))
+* **setup:** refine action.yml with improved npm configuration and shell usage ([a61ef81](https://github.com/anolilab/workflows/commit/a61ef8100fe9a9f89302d36998916b140f736fcf))
+* **setup:** specify shell for NODE_AUTH_TOKEN clearing step in action.yml ([df2fa21](https://github.com/anolilab/workflows/commit/df2fa2194ee5695c97ec3f8ef05e98175996a3e8))
+
 ## [8.0.6](https://github.com/anolilab/workflows/compare/v8.0.5...v8.0.6) (2025-12-10)
 
 ### Bug Fixes
