@@ -90,6 +90,7 @@ runs:
               node-version: "${{ inputs.node-version }}"
 
         - name: "Clear NODE_AUTH_TOKEN for OIDC"
+          shell: "bash"
           # actions/setup-node sets a placeholder NODE_AUTH_TOKEN that blocks OIDC
           # See: https://github.com/actions/setup-node/issues/1440
           run: "echo \"NODE_AUTH_TOKEN=\" >> $GITHUB_ENV"
