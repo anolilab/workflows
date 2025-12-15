@@ -1,3 +1,9 @@
+## [8.0.9](https://github.com/anolilab/workflows/compare/v8.0.8...v8.0.9) (2025-12-15)
+
+### Bug Fixes
+
+* **deps:** update pnpm to v10.25.0 ([#283](https://github.com/anolilab/workflows/issues/283)) ([21d1f89](https://github.com/anolilab/workflows/commit/21d1f899e4c9bfc7b2150c9cedeeec150f9748bb))
+
 ## [8.0.8](https://github.com/anolilab/workflows/compare/v8.0.7...v8.0.8) (2025-12-12)
 
 ### Bug Fixes
