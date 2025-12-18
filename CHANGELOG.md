@@ -1,3 +1,13 @@
+## [9.0.1](https://github.com/anolilab/workflows/compare/v9.0.0...v9.0.1) (2025-12-18)
+
+### Bug Fixes
+
+* **deps:** update github-actions ([#286](https://github.com/anolilab/workflows/issues/286)) ([3fde4da](https://github.com/anolilab/workflows/commit/3fde4da8711b4b3dcd27f9f172b7e5992536b044))
+
+### Continuous Integration
+
+* **deps:** update actions/cache action to v5 ([#287](https://github.com/anolilab/workflows/issues/287)) ([27a225a](https://github.com/anolilab/workflows/commit/27a225af6bba35275c978890b3a433eada4572cd))
+
 ## [9.0.0](https://github.com/anolilab/workflows/compare/v8.0.9...v9.0.0) (2025-12-16)
 
 ### ⚠ BREAKING CHANGES
