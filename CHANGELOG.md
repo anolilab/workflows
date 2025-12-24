@@ -1,3 +1,11 @@
+## [9.0.3](https://github.com/anolilab/workflows/compare/v9.0.2...v9.0.3) (2025-12-24)
+
+### Bug Fixes
+
+* **deps:** update github-actions ([#290](https://github.com/anolilab/workflows/issues/290)) ([6b17ce3](https://github.com/anolilab/workflows/commit/6b17ce35babf40567f2010b7b3e338510a9b6628))
+* **deps:** update patch updates ([#291](https://github.com/anolilab/workflows/issues/291)) ([b55aee1](https://github.com/anolilab/workflows/commit/b55aee138a1cd835a5f29447ce502f0741965b79))
+* **deps:** update pnpm to v10.26.1 ([#292](https://github.com/anolilab/workflows/issues/292)) ([a4c1c0a](https://github.com/anolilab/workflows/commit/a4c1c0a5d45ccec7f34bdf6d8cd714c11ddef7a4))
+
 ## [9.0.2](https://github.com/anolilab/workflows/compare/v9.0.1...v9.0.2) (2025-12-22)
 
 ### Bug Fixes
