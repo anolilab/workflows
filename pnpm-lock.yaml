@@ -22,8 +22,8 @@ importers:
   .:
     devDependencies:
       '@anolilab/commitlint-config':
-        specifier: ^7.0.0
-        version: 7.0.0(@commitlint/cli@20.2.0(@types/node@24.10.1)(typescript@5.5.3))(@types/node@24.10.1)(typescript@5.5.3)
+        specifier: ^8.0.0
+        version: 8.0.0(@commitlint/cli@20.2.0(@types/node@24.10.1)(typescript@5.5.3))(@types/node@24.10.1)(typescript@5.5.3)
       '@anolilab/lint-staged-config':
         specifier: ^4.0.0
         version: 4.0.0(@types/node@24.10.1)(husky@9.1.7)(lint-staged@16.2.7)(prettier@3.7.4)(secretlint@11.2.5)(yaml@2.8.2)
@@ -90,8 +90,8 @@ packages:
   '@actions/io@1.1.3':
     resolution: {integrity: sha512-wi9JjgKLYS7U/z8PPbco+PvTb/nRWjeoFlJ1Qer83k/3C5PHQi28hiVdeE2kHXmIL99mQFawx8qt/JPjZilJ8Q==}
 
-  '@anolilab/commitlint-config@7.0.0':
-    resolution: {integrity: sha512-5OL17AU9NhN8p5l1+XU6HcBBSxI0mhyF7zdLZOkGLJxFOHNxTivN6cYZGINh9bZ5XHbleI5MwDGqw92jifXH/A==}
+  '@anolilab/commitlint-config@8.0.0':
+    resolution: {integrity: sha512-CONP3xbFvfl1YNQdbGHKQ1TYN/Qd51iYa9Lkqe9Sm7dURK5lVac2lzphrnTsZCtUlWY+BrH+SBAY8+7JeWXrhQ==}
     engines: {node: '>=20.18.* <=25.*'}
     hasBin: true
     peerDependencies:
@@ -2345,7 +2345,7 @@ snapshots:
 
   '@actions/io@1.1.3': {}
 
-  '@anolilab/commitlint-config@7.0.0(@commitlint/cli@20.2.0(@types/node@24.10.1)(typescript@5.5.3))(@types/node@24.10.1)(typescript@5.5.3)':
+  '@anolilab/commitlint-config@8.0.0(@commitlint/cli@20.2.0(@types/node@24.10.1)(typescript@5.5.3))(@types/node@24.10.1)(typescript@5.5.3)':
     dependencies:
       '@commitlint/cli': 20.2.0(@types/node@24.10.1)(typescript@5.5.3)
       '@commitlint/config-conventional': 20.2.0
