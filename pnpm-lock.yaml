@@ -25,8 +25,8 @@ importers:
         specifier: ^7.0.0
         version: 7.0.0(@commitlint/cli@20.2.0(@types/node@24.10.1)(typescript@5.5.3))(@types/node@24.10.1)(typescript@5.5.3)
       '@anolilab/lint-staged-config':
-        specifier: ^3.1.1
-        version: 3.1.1(@types/node@24.10.1)(husky@9.1.7)(lint-staged@16.2.7)(prettier@3.7.4)(secretlint@11.2.5)(yaml@2.8.2)
+        specifier: ^4.0.0
+        version: 4.0.0(@types/node@24.10.1)(husky@9.1.7)(lint-staged@16.2.7)(prettier@3.7.4)(secretlint@11.2.5)(yaml@2.8.2)
       '@anolilab/prettier-config':
         specifier: ^7.0.0
         version: 7.0.0(prettier@3.7.4)
@@ -97,8 +97,8 @@ packages:
     peerDependencies:
       '@commitlint/cli': ^17.6.5 || ^18.x || ^19.x || ^20.0.0
 
-  '@anolilab/lint-staged-config@3.1.1':
-    resolution: {integrity: sha512-n/xBTf8p4iNWla8IcRcHaZo1EJahXjA0x0M+lz/ln79zrV08q6beKJJJyQNtP+BSvlfvlqHJ7vlXcwIvDCaOOw==}
+  '@anolilab/lint-staged-config@4.0.0':
+    resolution: {integrity: sha512-5AOoE70BxlECe8MsVUWbpdBAvj/ay0mhcJ52/kyUy+00u4DdzHXKuoibLAhaiLYJwjFMd4at/eLUslRGDrWP9w==}
     engines: {node: '>=20.18.* <=25.*'}
     hasBin: true
     peerDependencies:
@@ -492,16 +492,6 @@ packages:
   '@types/normalize-package-data@2.4.4':
     resolution: {integrity: sha512-37i+OaWTh9qeK4LSHPsyRC7NahnGotNuZvjLSgcPzblpHB3rrCJxAOgI5gCdKm7coonsaX1Of0ILiTcnZjbfxA==}
 
-  '@visulima/fs@4.0.5':
-    resolution: {integrity: sha512-6JquGA30lfYx3kWIyHZ86HMVw2KIkLf8Mz9PmVMGgkQS6d3rrgAqqZc1Tf7m/cgNt3TEmBGW5yp58mSKmP6CQg==}
-    engines: {node: '>=20.19 <=25.x'}
-    os: [darwin, linux, win32]
-    peerDependencies:
-      yaml: ^2.7.1
-    peerDependenciesMeta:
-      yaml:
-        optional: true
-
   '@visulima/fs@4.1.0':
     resolution: {integrity: sha512-9bb7oupbXXXc++m8Ypj+VUBF+P1j/Y3gadoT2HQHPHqDMrpMt8pcZyXjofitw/DaYSB3EeQOvGqHdgvsY646sw==}
     engines: {node: '>=20.19 <=25.x'}
@@ -514,11 +504,6 @@ packages:
 
   '@visulima/package@4.1.7':
     resolution: {integrity: sha512-xGzw2GFlHBleNgLYip6ZULKMZZAZrLGE5RJ2shKj4MUcAsv7IQzafyGa3m2PRw6HJSYeEpboobPVxf8SbCfm+w==}
-    engines: {node: '>=20.19 <=25.x'}
-    os: [darwin, linux, win32]
-
-  '@visulima/path@2.0.4':
-    resolution: {integrity: sha512-zReNsd29FsFAESO7o0BZPJaC9z5cMhQeRdCzgY+hc9pma6VPGyQzEprNQbQNNxDnpM82ct1hjdOHwMujgXKK8Q==}
     engines: {node: '>=20.19 <=25.x'}
     os: [darwin, linux, win32]
 
@@ -2372,9 +2357,9 @@ snapshots:
       - '@types/node'
       - typescript
 
-  '@anolilab/lint-staged-config@3.1.1(@types/node@24.10.1)(husky@9.1.7)(lint-staged@16.2.7)(prettier@3.7.4)(secretlint@11.2.5)(yaml@2.8.2)':
+  '@anolilab/lint-staged-config@4.0.0(@types/node@24.10.1)(husky@9.1.7)(lint-staged@16.2.7)(prettier@3.7.4)(secretlint@11.2.5)(yaml@2.8.2)':
     dependencies:
-      '@visulima/fs': 4.0.5(yaml@2.8.2)
+      '@visulima/fs': 4.1.0(yaml@2.8.2)
       '@visulima/package': 4.1.7(@types/node@24.10.1)
       husky: 9.1.7
       shell-quote: 1.8.3
@@ -2897,12 +2882,6 @@ snapshots:
 
   '@types/normalize-package-data@2.4.4': {}
 
-  '@visulima/fs@4.0.5(yaml@2.8.2)':
-    dependencies:
-      '@visulima/path': 2.0.4
-    optionalDependencies:
-      yaml: 2.8.2
-
   '@visulima/fs@4.1.0(yaml@2.8.2)':
     dependencies:
       '@visulima/path': 2.0.5
@@ -2921,8 +2900,6 @@ snapshots:
       yaml: 2.8.2
     transitivePeerDependencies:
       - '@types/node'
-
-  '@visulima/path@2.0.4': {}
 
   '@visulima/path@2.0.5': {}
 
