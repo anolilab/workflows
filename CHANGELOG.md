@@ -1,3 +1,15 @@
+## [10.0.0](https://github.com/anolilab/workflows/compare/v9.0.3...v10.0.0) (2025-12-26)
+
+### ⚠ BREAKING CHANGES
+
+* **deps:** updated dependencies to major versions
+
+Co-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>
+
+### Miscellaneous Chores
+
+* **deps:** update dependency @anolilab/lint-staged-config to v4 ([#294](https://github.com/anolilab/workflows/issues/294)) ([57e50ef](https://github.com/anolilab/workflows/commit/57e50efa84cf6185918167c49cca5e3252ab579d))
+
 ## [9.0.3](https://github.com/anolilab/workflows/compare/v9.0.2...v9.0.3) (2025-12-24)
 
 ### Bug Fixes
