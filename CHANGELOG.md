@@ -1,3 +1,19 @@
+## [11.0.0](https://github.com/anolilab/workflows/compare/v10.0.0...v11.0.0) (2025-12-27)
+
+### ⚠ BREAKING CHANGES
+
+* **deps:** updated dependencies to major versions
+
+Co-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>
+* **deps:** updated dependencies to major versions
+
+Co-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>
+
+### Miscellaneous Chores
+
+* **deps:** update dependency @anolilab/commitlint-config to v8 ([#293](https://github.com/anolilab/workflows/issues/293)) ([ef29caf](https://github.com/anolilab/workflows/commit/ef29caffb222a2f2fb74d3f16879ad7bcadf5476))
+* **deps:** update dependency @anolilab/prettier-config to v8 ([#295](https://github.com/anolilab/workflows/issues/295)) ([91968c0](https://github.com/anolilab/workflows/commit/91968c0610f8ddcd6fee2c8478c24d1e23cce259))
+
 ## [10.0.0](https://github.com/anolilab/workflows/compare/v9.0.3...v10.0.0) (2025-12-26)
 
 ### ⚠ BREAKING CHANGES
