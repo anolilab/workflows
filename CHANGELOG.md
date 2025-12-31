@@ -1,3 +1,9 @@
+## [11.0.1](https://github.com/anolilab/workflows/compare/v11.0.0...v11.0.1) (2025-12-31)
+
+### Bug Fixes
+
+* **deps:** update pnpm to v10.26.2 ([#296](https://github.com/anolilab/workflows/issues/296)) ([3fb1984](https://github.com/anolilab/workflows/commit/3fb1984beb86dc4730d60ea6c2c705312880cf65))
+
 ## [11.0.0](https://github.com/anolilab/workflows/compare/v10.0.0...v11.0.0) (2025-12-27)
 
 ### ⚠ BREAKING CHANGES
