@@ -1,3 +1,13 @@
+## [11.0.3](https://github.com/anolilab/workflows/compare/v11.0.2...v11.0.3) (2026-01-08)
+
+### Bug Fixes
+
+* **deps:** update pnpm to v10.27.0 ([#298](https://github.com/anolilab/workflows/issues/298)) ([2a68232](https://github.com/anolilab/workflows/commit/2a68232daf360b2956b4743542abe7c1b35544e7))
+
+### Miscellaneous Chores
+
+* **deps:** update node.js to v24 ([#279](https://github.com/anolilab/workflows/issues/279)) ([2825f70](https://github.com/anolilab/workflows/commit/2825f70bc529e86d5c029891b0815eb57b4f0769))
+
 ## [11.0.2](https://github.com/anolilab/workflows/compare/v11.0.1...v11.0.2) (2026-01-08)
 
 ### Bug Fixes
