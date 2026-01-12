@@ -1,3 +1,9 @@
+## [11.0.4](https://github.com/anolilab/workflows/compare/v11.0.3...v11.0.4) (2026-01-12)
+
+### Bug Fixes
+
+* **deps:** update patch updates ([#299](https://github.com/anolilab/workflows/issues/299)) ([2bb6087](https://github.com/anolilab/workflows/commit/2bb6087cbf22966b9131bdf6515f9f5a696fd951))
+
 ## [11.0.3](https://github.com/anolilab/workflows/compare/v11.0.2...v11.0.3) (2026-01-08)
 
 ### Bug Fixes
