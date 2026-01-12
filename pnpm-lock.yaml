@@ -25,11 +25,11 @@ importers:
         specifier: ^8.0.0
         version: 8.0.0(@commitlint/cli@20.3.0(@types/node@24.10.1)(typescript@5.5.3))(@types/node@24.10.1)(typescript@5.5.3)
       '@anolilab/lint-staged-config':
-        specifier: ^4.0.0
-        version: 4.0.0(@types/node@24.10.1)(husky@9.1.7)(lint-staged@16.2.7)(prettier@3.7.4)(secretlint@11.2.5)(yaml@2.8.2)
+        specifier: ^4.0.1
+        version: 4.0.1(@types/node@24.10.1)(husky@9.1.7)(lint-staged@16.2.7)(prettier@3.7.4)(secretlint@11.2.5)(yaml@2.8.2)
       '@anolilab/prettier-config':
-        specifier: ^8.0.0
-        version: 8.0.0(prettier@3.7.4)
+        specifier: ^8.0.1
+        version: 8.0.1(prettier@3.7.4)
       '@anolilab/semantic-release-preset':
         specifier: ^12.1.2
         version: 12.1.2(@semantic-release/npm@13.1.2(semantic-release@25.0.2(typescript@5.5.3)))(semantic-release@25.0.2(typescript@5.5.3))(yaml@2.8.2)
@@ -97,8 +97,8 @@ packages:
     peerDependencies:
       '@commitlint/cli': ^17.6.5 || ^18.x || ^19.x || ^20.0.0
 
-  '@anolilab/lint-staged-config@4.0.0':
-    resolution: {integrity: sha512-5AOoE70BxlECe8MsVUWbpdBAvj/ay0mhcJ52/kyUy+00u4DdzHXKuoibLAhaiLYJwjFMd4at/eLUslRGDrWP9w==}
+  '@anolilab/lint-staged-config@4.0.1':
+    resolution: {integrity: sha512-kBE+OQwxEZRdlZoZhgobDmwyPJ6jd8uxlY0rsnGIsayxDeLFOl9HorKarLu38g3vgi3cWsHR57fe+nmYG7UhNg==}
     engines: {node: '>=20.18.* <=25.*'}
     hasBin: true
     peerDependencies:
@@ -129,8 +129,8 @@ packages:
       vitest:
         optional: true
 
-  '@anolilab/prettier-config@8.0.0':
-    resolution: {integrity: sha512-sJQqU19N5HeSBGQFmWx2xxE+K4LmcxdYRRarobCgs9X+hVnMaxDVhU8TqjH/7BEZa+mXYLVHBaNUzSnPKadhLg==}
+  '@anolilab/prettier-config@8.0.1':
+    resolution: {integrity: sha512-8qKucTTaXLgcuFRuS1CQHbHNfE75lYAf3TvVO47ibr9nGXuijxAZn1ANWbpFUIoxX+vXFf1qDvwQJDQ4fE9FKQ==}
     engines: {node: '>=20.18.* <=25.*'}
     hasBin: true
     peerDependencies:
@@ -2187,10 +2187,6 @@ packages:
     resolution: {integrity: sha512-TeTSQ6H5YHvpqVwBRcnLDCBnDOHWYu7IvGbHT6N8AOymcr9PJGjc1GTtiWZTYg0NCgYwvnYWEkVChQAr9bjfwA==}
     engines: {node: '>=16'}
 
-  type-fest@5.3.0:
-    resolution: {integrity: sha512-d9CwU93nN0IA1QL+GSNDdwLAu1Ew5ZjTwupvedwg3WdfoH6pIDvYQ2hV0Uc2nKBLPq7NB5apCx57MLS5qlmO5g==}
-    engines: {node: '>=20'}
-
   type-fest@5.3.1:
     resolution: {integrity: sha512-VCn+LMHbd4t6sF3wfU/+HKT63C9OoyrSIf4b+vtWHpt2U7/4InZG467YDNMFMR70DdHjAdpPWmw2lzRdg0Xqqg==}
     engines: {node: '>=20'}
@@ -2369,7 +2365,7 @@ snapshots:
       - '@types/node'
       - typescript
 
-  '@anolilab/lint-staged-config@4.0.0(@types/node@24.10.1)(husky@9.1.7)(lint-staged@16.2.7)(prettier@3.7.4)(secretlint@11.2.5)(yaml@2.8.2)':
+  '@anolilab/lint-staged-config@4.0.1(@types/node@24.10.1)(husky@9.1.7)(lint-staged@16.2.7)(prettier@3.7.4)(secretlint@11.2.5)(yaml@2.8.2)':
     dependencies:
       '@visulima/fs': 4.1.0(yaml@2.8.2)
       '@visulima/package': 4.1.7(@types/node@24.10.1)
@@ -2384,7 +2380,7 @@ snapshots:
       - '@types/node'
       - yaml
 
-  '@anolilab/prettier-config@8.0.0(prettier@3.7.4)':
+  '@anolilab/prettier-config@8.0.1(prettier@3.7.4)':
     dependencies:
       prettier: 3.7.4
 
@@ -2393,7 +2389,7 @@ snapshots:
       '@semantic-release/error': 4.0.0
       '@visulima/fs': 4.1.0(yaml@2.8.2)
       '@visulima/path': 2.0.5
-      type-fest: 5.3.0
+      type-fest: 5.3.1
     transitivePeerDependencies:
       - yaml
 
@@ -4521,10 +4517,6 @@ snapshots:
   type-fest@2.19.0: {}
 
   type-fest@4.41.0: {}
-
-  type-fest@5.3.0:
-    dependencies:
-      tagged-tag: 1.0.0
 
   type-fest@5.3.1:
     dependencies:
