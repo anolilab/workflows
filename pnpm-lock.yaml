@@ -26,10 +26,10 @@ importers:
         version: 8.1.0(@commitlint/cli@20.3.1(@types/node@24.10.1)(typescript@5.5.3))(@types/node@24.10.1)(typescript@5.5.3)
       '@anolilab/lint-staged-config':
         specifier: ^4.0.1
-        version: 4.0.1(@types/node@24.10.1)(husky@9.1.7)(lint-staged@16.2.7)(prettier@3.7.4)(secretlint@11.3.0)(yaml@2.8.2)
+        version: 4.0.1(@types/node@24.10.1)(husky@9.1.7)(lint-staged@16.2.7)(prettier@3.8.0)(secretlint@11.3.0)(yaml@2.8.2)
       '@anolilab/prettier-config':
         specifier: ^8.0.1
-        version: 8.0.1(prettier@3.7.4)
+        version: 8.0.1(prettier@3.8.0)
       '@anolilab/semantic-release-preset':
         specifier: ^12.1.2
         version: 12.1.2(@semantic-release/npm@13.1.2(semantic-release@25.0.2(typescript@5.5.3)))(semantic-release@25.0.2(typescript@5.5.3))(yaml@2.8.2)
@@ -64,8 +64,8 @@ importers:
         specifier: ^16.2.7
         version: 16.2.7
       prettier:
-        specifier: ^3.7.4
-        version: 3.7.4
+        specifier: ^3.8.0
+        version: 3.8.0
       secretlint:
         specifier: 11.3.0
         version: 11.3.0
@@ -1832,8 +1832,8 @@ packages:
     resolution: {integrity: sha512-Nc3IT5yHzflTfbjgqWcCPpo7DaKy4FnpB0l/zCAW0Tc7jxAiuqSxHasntB3D7887LSrA93kDJ9IXovxJYxyLCA==}
     engines: {node: '>=4'}
 
-  prettier@3.7.4:
-    resolution: {integrity: sha512-v6UNi1+3hSlVvv8fSaoUbggEM5VErKmmpGA7Pl3HF8V6uKY7rvClBOJlH6yNwQtfTueNkGVpOv/mtWL9L4bgRA==}
+  prettier@3.8.0:
+    resolution: {integrity: sha512-yEPsovQfpxYfgWNhCfECjG5AQaO+K3dp6XERmOepyPDVqcJm+bjyCVO3pmU+nAPe0N5dDvekfGezt/EIiRe1TA==}
     engines: {node: '>=14'}
     hasBin: true
 
@@ -2397,7 +2397,7 @@ snapshots:
       - '@types/node'
       - typescript
 
-  '@anolilab/lint-staged-config@4.0.1(@types/node@24.10.1)(husky@9.1.7)(lint-staged@16.2.7)(prettier@3.7.4)(secretlint@11.3.0)(yaml@2.8.2)':
+  '@anolilab/lint-staged-config@4.0.1(@types/node@24.10.1)(husky@9.1.7)(lint-staged@16.2.7)(prettier@3.8.0)(secretlint@11.3.0)(yaml@2.8.2)':
     dependencies:
       '@visulima/fs': 4.1.0(yaml@2.8.2)
       '@visulima/package': 4.1.7(@types/node@24.10.1)
@@ -2406,15 +2406,15 @@ snapshots:
       type-fest: 5.3.1
     optionalDependencies:
       lint-staged: 16.2.7
-      prettier: 3.7.4
+      prettier: 3.8.0
       secretlint: 11.3.0
     transitivePeerDependencies:
       - '@types/node'
       - yaml
 
-  '@anolilab/prettier-config@8.0.1(prettier@3.7.4)':
+  '@anolilab/prettier-config@8.0.1(prettier@3.8.0)':
     dependencies:
-      prettier: 3.7.4
+      prettier: 3.8.0
 
   '@anolilab/semantic-release-clean-package-json@4.2.2(yaml@2.8.2)':
     dependencies:
@@ -4186,7 +4186,7 @@ snapshots:
 
   pluralize@8.0.0: {}
 
-  prettier@3.7.4: {}
+  prettier@3.8.0: {}
 
   pretty-ms@9.3.0:
     dependencies:
