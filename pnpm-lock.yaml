@@ -25,8 +25,8 @@ importers:
         specifier: ^8.1.0
         version: 8.1.0(@commitlint/cli@20.3.1(@types/node@24.10.1)(typescript@5.5.3))(@types/node@24.10.1)(typescript@5.5.3)
       '@anolilab/lint-staged-config':
-        specifier: ^4.0.1
-        version: 4.0.1(@types/node@24.10.1)(husky@9.1.7)(lint-staged@16.2.7)(prettier@3.8.1)(secretlint@11.3.0)(yaml@2.8.2)
+        specifier: ^5.0.0
+        version: 5.0.0(@types/node@24.10.1)(husky@9.1.7)(lint-staged@16.2.7)(prettier@3.8.1)(secretlint@11.3.0)(yaml@2.8.2)
       '@anolilab/prettier-config':
         specifier: ^8.0.1
         version: 8.0.1(prettier@3.8.1)
@@ -97,8 +97,8 @@ packages:
     peerDependencies:
       '@commitlint/cli': ^17.6.5 || ^18.x || ^19.x || ^20.0.0
 
-  '@anolilab/lint-staged-config@4.0.1':
-    resolution: {integrity: sha512-kBE+OQwxEZRdlZoZhgobDmwyPJ6jd8uxlY0rsnGIsayxDeLFOl9HorKarLu38g3vgi3cWsHR57fe+nmYG7UhNg==}
+  '@anolilab/lint-staged-config@5.0.0':
+    resolution: {integrity: sha512-E6M21sfd7hC6A+/dVizRHvl6+svMDEeL/yE1RT3iEH2w5AriC8O48Q3uZtp4EwyHe212Sw6tsFOJinMzUZI5YQ==}
     engines: {node: '>=20.18.* <=25.*'}
     hasBin: true
     peerDependencies:
@@ -2397,7 +2397,7 @@ snapshots:
       - '@types/node'
       - typescript
 
-  '@anolilab/lint-staged-config@4.0.1(@types/node@24.10.1)(husky@9.1.7)(lint-staged@16.2.7)(prettier@3.8.1)(secretlint@11.3.0)(yaml@2.8.2)':
+  '@anolilab/lint-staged-config@5.0.0(@types/node@24.10.1)(husky@9.1.7)(lint-staged@16.2.7)(prettier@3.8.1)(secretlint@11.3.0)(yaml@2.8.2)':
     dependencies:
       '@visulima/fs': 4.1.0(yaml@2.8.2)
       '@visulima/package': 4.1.7(@types/node@24.10.1)
