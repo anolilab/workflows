@@ -28,8 +28,8 @@ importers:
         specifier: ^4.0.1
         version: 4.0.1(@types/node@24.10.1)(husky@9.1.7)(lint-staged@16.2.7)(prettier@3.8.1)(secretlint@11.3.0)(yaml@2.8.2)
       '@anolilab/prettier-config':
-        specifier: ^8.0.1
-        version: 8.0.1(prettier@3.8.1)
+        specifier: ^9.0.0
+        version: 9.0.0(prettier@3.8.1)
       '@anolilab/semantic-release-preset':
         specifier: ^12.1.2
         version: 12.1.2(@semantic-release/npm@13.1.2(semantic-release@25.0.2(typescript@5.5.3)))(semantic-release@25.0.2(typescript@5.5.3))(yaml@2.8.2)
@@ -129,8 +129,8 @@ packages:
       vitest:
         optional: true
 
-  '@anolilab/prettier-config@8.0.1':
-    resolution: {integrity: sha512-8qKucTTaXLgcuFRuS1CQHbHNfE75lYAf3TvVO47ibr9nGXuijxAZn1ANWbpFUIoxX+vXFf1qDvwQJDQ4fE9FKQ==}
+  '@anolilab/prettier-config@9.0.0':
+    resolution: {integrity: sha512-KXpP22+vC7eHBIKsqwCBK+1puA4nexnVNr9qFHnfsJlqk2CZ2hfxLU/1u3e3eZca70E8j7eItT3m5SkLxXzYYg==}
     engines: {node: '>=20.18.* <=25.*'}
     hasBin: true
     peerDependencies:
@@ -2412,7 +2412,7 @@ snapshots:
       - '@types/node'
       - yaml
 
-  '@anolilab/prettier-config@8.0.1(prettier@3.8.1)':
+  '@anolilab/prettier-config@9.0.0(prettier@3.8.1)':
     dependencies:
       prettier: 3.8.1
 
