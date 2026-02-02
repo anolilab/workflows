@@ -1,3 +1,23 @@
+## [11.1.0](https://github.com/anolilab/workflows/compare/v11.0.5...v11.1.0) (2026-02-02)
+
+### Features
+
+* **workflow:** add pnpm audit --fix support to lock file maintenance ([274e1e2](https://github.com/anolilab/workflows/commit/274e1e25d33cf8ced42c1479455c80bd976864b5))
+
+### Bug Fixes
+
+* **deps:** update commitlint monorepo to ^20.3.1 ([#305](https://github.com/anolilab/workflows/issues/305)) ([2b7a384](https://github.com/anolilab/workflows/commit/2b7a3840427872aed26e6c4ebe9595673a7a1ec9))
+* **deps:** update dependency prettier to ^3.8.0 ([#307](https://github.com/anolilab/workflows/issues/307)) ([9af9695](https://github.com/anolilab/workflows/commit/9af96955a0a19962a3376813b657e8a90d4a7306))
+* **deps:** update dependency prettier to ^3.8.1 ([#310](https://github.com/anolilab/workflows/issues/310)) ([98ed17c](https://github.com/anolilab/workflows/commit/98ed17c24b17391b32a5dcd172d0705324d42c5c))
+* **deps:** update github-actions ([#308](https://github.com/anolilab/workflows/issues/308)) ([e561731](https://github.com/anolilab/workflows/commit/e561731c3bf77a4ce7ff5921362c015f01c6f689))
+* **deps:** update github-actions ([#311](https://github.com/anolilab/workflows/issues/311)) ([8242d2e](https://github.com/anolilab/workflows/commit/8242d2e3bc60ab8af59d6d4036805a61fd22b331))
+* **deps:** update pnpm to v10.28.1 ([#309](https://github.com/anolilab/workflows/issues/309)) ([379ee94](https://github.com/anolilab/workflows/commit/379ee945068b1db0463037ccddb39df512e0d322))
+* **deps:** update secretlint monorepo to ^11.3.0 ([#306](https://github.com/anolilab/workflows/issues/306)) ([1f3a26b](https://github.com/anolilab/workflows/commit/1f3a26b72348d4fb24cc6faac72f133355ed243c))
+
+### Miscellaneous Chores
+
+* **husky:** remove deprecated husky.sh import ([f453d36](https://github.com/anolilab/workflows/commit/f453d36c0770698396e1e38f11a076ebb06e7ef9))
+
 ## [11.0.5](https://github.com/anolilab/workflows/compare/v11.0.4...v11.0.5) (2026-01-13)
 
 ### Bug Fixes
