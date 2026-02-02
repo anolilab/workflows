@@ -16,6 +16,12 @@ on: # yamllint disable-line rule:truthy
                 required: true
                 type: "string"
 
+            run-audit-fix:
+                description: "Run pnpm audit --fix to automatically fix vulnerabilities."
+                required: false
+                type: "boolean"
+                default: true
+
 permissions:
     contents: "read" # for checkout
 
@@ -49,6 +55,12 @@ jobs:
                   node-version: "${{ inputs.node-version }}"
                   cache-prefix: "lock-file-update"
                   install-packages: "false"
+                  run-npm-audit: "false"
+                  run-signatures-audit: "false"
+
+            - name: "Run pnpm audit --fix"
+              if: "success() && inputs.run-audit-fix"
+              run: "pnpm audit --fix --ignore-registry-errors || true"
 
             - name: "Update lock file"
               if: "success()"
@@ -58,7 +70,7 @@ jobs:
               if: "success()"
               uses: "stefanzweifel/git-auto-commit-action@04702edda442b2e678b25b537cec683a1493fcb9" # v7.1.0
               with:
-                  file_pattern: "pnpm-lock.yaml"
+                  file_pattern: "pnpm-lock.yaml package.json **/package.json"
                   commit_message: "chore: updated lock file [ci skip]"
                   commit_user_name: "github-actions-shell"
                   commit_user_email: "github-actions[bot]@users.noreply.github.com"
