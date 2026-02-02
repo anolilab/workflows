@@ -1,3 +1,9 @@
+## [11.2.0](https://github.com/anolilab/workflows/compare/v11.1.0...v11.2.0) (2026-02-02)
+
+### Features
+
+* **workflow:** enhance pnpm lock file maintenance with custom GitHub token support ([264cf1a](https://github.com/anolilab/workflows/commit/264cf1add4d68ea387147ccd70c952488971a407))
+
 ## [11.1.0](https://github.com/anolilab/workflows/compare/v11.0.5...v11.1.0) (2026-02-02)
 
 ### Features
