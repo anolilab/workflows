@@ -16,7 +16,13 @@ Features:
 |-------|----------|---------|-------------|
 | `target-repo` | Yes | - | The repo to run this action on. This is to prevent actions from running on forks unless intended. |
 | `node-version` | Yes | - | The node version to use for the job. |
-| `run-audit-fix` | No | `false` | Run `pnpm audit --fix` to automatically fix vulnerabilities. |
+| `run-audit-fix` | No | `true` | Run `pnpm audit --fix` to automatically fix vulnerabilities. |
+
+## Secrets
+
+| Secret | Required | Default | Description |
+|--------|----------|---------|-------------|
+| `github-token` | No | `secrets.PAT \|\| secrets.GITHUB_TOKEN` | GitHub token for checkout with write permissions. |
 
 ## Usage
 
@@ -69,4 +75,30 @@ jobs:
             node-version: "22.x"
             run-audit-fix: true
         secrets: "inherit"
+```
+
+### With custom GitHub token
+
+```yml
+name: "Lock File Maintenance"
+
+on: # yamllint disable-line rule:truthy
+    schedule:
+        - cron: "0 */3 * * *" # At minute 0 past every 3rd hour.
+    pull_request:
+        branches:
+            - "dependabot/**"
+    workflow_dispatch: # yamllint disable-line rule:empty-values
+
+permissions:
+    contents: "read" # for checkout
+
+jobs:
+    lock-file:
+        uses: "anolilab/workflows/.github/workflows/pnpm-lock-file-maintenance.yml@main"
+        with:
+            target-repo: "anolilab/workflows"
+            node-version: "22.x"
+        secrets:
+            github-token: ${{ secrets.MY_CUSTOM_PAT }}
 ```
