@@ -35,8 +35,8 @@ importers:
         specifier: ^9.1.0
         version: 9.1.0(prettier@3.8.1)
       '@anolilab/semantic-release-preset':
-        specifier: ^13.1.0
-        version: 13.1.0(@semantic-release/npm@13.1.2(semantic-release@25.0.3(typescript@5.5.3)))(semantic-release@25.0.3(typescript@5.5.3))(yaml@2.8.2)
+        specifier: ^13.1.1
+        version: 13.1.1(semantic-release@25.0.3(typescript@5.5.3))(yaml@2.8.2)
       '@commitlint/cli':
         specifier: ^20.4.0
         version: 20.4.0(@types/node@24.10.1)(typescript@5.5.3)
@@ -140,18 +140,18 @@ packages:
     peerDependencies:
       prettier: 3.8.1
 
-  '@anolilab/semantic-release-clean-package-json@5.1.0':
-    resolution: {integrity: sha512-Hi0tk3nnfSlB9zrU6r9ThYUEc3NTZG5/l5OFYlUDEhXOXr9QalgXXb1jzlibgGtXHMKs0jU3OPwgTNQj2VqPZA==}
+  '@anolilab/semantic-release-clean-package-json@5.2.0':
+    resolution: {integrity: sha512-hiZhrPJnCou7/xB6nnYMTFaEVVQy9LmvB0Dt2XM5q7ZAqI7tgilTh/c9iqUR7NSmWQL1ynOEjX4Pa9LyoJca7w==}
     engines: {node: ^22.14.0 || >=24.10.0}
 
-  '@anolilab/semantic-release-preset@13.1.0':
-    resolution: {integrity: sha512-FkYOAMpGSVqT5I/lUBDHrnZrxVhTAtjSx3bHbJ/3Upb1eftUWNDLR/8batZFAokvdiVFr1AAE5TfXMoCt/entA==}
+  '@anolilab/semantic-release-preset@13.1.1':
+    resolution: {integrity: sha512-jQKFhPfAJS0uSHri08Q5cNZWIcQYRmSmP2Hc9cxh3fi3se8TDppPcpb/y4uFTZTv0zw6Uo0UvF4kS89rXO9kGQ==}
     engines: {node: ^22.14.0 || >=24.10.0}
     os: [darwin, linux, win32]
     peerDependencies:
-      '@anolilab/semantic-release-pnpm': 4.1.0
-      '@semantic-release/npm': ^13.1.2
-      semantic-release: ^25.0.2
+      '@anolilab/semantic-release-pnpm': 5.0.0
+      '@semantic-release/npm': 13.1.3
+      semantic-release: 25.0.3
       semantic-release-yarn: ^3.0.2
     peerDependenciesMeta:
       '@anolilab/semantic-release-pnpm':
@@ -440,6 +440,12 @@ packages:
 
   '@semantic-release/github@12.0.2':
     resolution: {integrity: sha512-qyqLS+aSGH1SfXIooBKjs7mvrv0deg8v+jemegfJg1kq6ji+GJV8CO08VJDEsvjp3O8XJmTTIAjjZbMzagzsdw==}
+    engines: {node: ^22.14.0 || >= 24.10.0}
+    peerDependencies:
+      semantic-release: '>=24.1.0'
+
+  '@semantic-release/github@12.0.3':
+    resolution: {integrity: sha512-pod3AVGVVVk2rUczMBL4+gfY7hP7A9YYOwjpxVFSusF+pDbFOYBzFRQcHjv1H3IntQyB/Noxzx8LUZ/iwAQQeQ==}
     engines: {node: ^22.14.0 || >= 24.10.0}
     peerDependencies:
       semantic-release: '>=24.1.0'
@@ -1043,7 +1049,7 @@ packages:
 
   glob@7.2.3:
     resolution: {integrity: sha512-nFR0zLpU2YCaRxwoCJvL6UvCH2JFyFVIvwTLsIf21AuHlMskA1hhTdk+LlYJtOlYt9v6dvszD2BGRqBL+iQK9Q==}
-    deprecated: Glob versions prior to v9 are no longer supported
+    deprecated: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
 
   global-directory@4.0.1:
     resolution: {integrity: sha512-wHTUcDUoZ1H5/0iVqEudYW4/kAlN5cZ3j/bXn0Dpbizl9iaUVeWSHqiOjsgk6OW2bkLclbBjzewBz6weQ1zA2Q==}
@@ -2108,6 +2114,10 @@ packages:
     resolution: {integrity: sha512-FLEenlVYf7Zcd34ISMLo3ZzRE1gRjY1nMDTp+bQRBiPsaKyIW8K3Zr99ioHDUgA9OGuGGJPyYpNcffGmBhJfGg==}
     engines: {node: '>=20'}
 
+  type-fest@5.4.3:
+    resolution: {integrity: sha512-AXSAQJu79WGc79/3e9/CR77I/KQgeY1AhNvcShIH4PTcGYyC4xv6H4R4AUOwkPS5799KlVDAu8zExeCrkGquiA==}
+    engines: {node: '>=20'}
+
   typescript@5.5.3:
     resolution: {integrity: sha512-/hreyEujaB0w76zKo6717l3L0o/qEUtRgdvUBvlkhoWeOVMjMuHNHk0BRBzikzuGDqNmPQbg5ifMEqsHLiIUcQ==}
     engines: {node: '>=14.17'}
@@ -2293,28 +2303,26 @@ snapshots:
     dependencies:
       prettier: 3.8.1
 
-  '@anolilab/semantic-release-clean-package-json@5.1.0(yaml@2.8.2)':
+  '@anolilab/semantic-release-clean-package-json@5.2.0(yaml@2.8.2)':
     dependencies:
       '@semantic-release/error': 4.0.0
       '@visulima/fs': 4.1.0(yaml@2.8.2)
       '@visulima/path': 2.0.5
-      type-fest: 5.4.2
+      type-fest: 5.4.3
     transitivePeerDependencies:
       - yaml
 
-  '@anolilab/semantic-release-preset@13.1.0(@semantic-release/npm@13.1.2(semantic-release@25.0.3(typescript@5.5.3)))(semantic-release@25.0.3(typescript@5.5.3))(yaml@2.8.2)':
+  '@anolilab/semantic-release-preset@13.1.1(semantic-release@25.0.3(typescript@5.5.3))(yaml@2.8.2)':
     dependencies:
-      '@anolilab/semantic-release-clean-package-json': 5.1.0(yaml@2.8.2)
+      '@anolilab/semantic-release-clean-package-json': 5.2.0(yaml@2.8.2)
       '@semantic-release/changelog': 6.0.3(semantic-release@25.0.3(typescript@5.5.3))
       '@semantic-release/commit-analyzer': 13.0.1(semantic-release@25.0.3(typescript@5.5.3))
       '@semantic-release/exec': 7.1.0(semantic-release@25.0.3(typescript@5.5.3))
       '@semantic-release/git': 10.0.1(semantic-release@25.0.3(typescript@5.5.3))
-      '@semantic-release/github': 12.0.2(semantic-release@25.0.3(typescript@5.5.3))
+      '@semantic-release/github': 12.0.3(semantic-release@25.0.3(typescript@5.5.3))
       '@semantic-release/release-notes-generator': 14.1.0(semantic-release@25.0.3(typescript@5.5.3))
       conventional-changelog-conventionalcommits: 9.1.0
       semantic-release: 25.0.3(typescript@5.5.3)
-    optionalDependencies:
-      '@semantic-release/npm': 13.1.2(semantic-release@25.0.3(typescript@5.5.3))
     transitivePeerDependencies:
       - supports-color
       - yaml
@@ -2690,6 +2698,29 @@ snapshots:
       - supports-color
 
   '@semantic-release/github@12.0.2(semantic-release@25.0.3(typescript@5.5.3))':
+    dependencies:
+      '@octokit/core': 7.0.6
+      '@octokit/plugin-paginate-rest': 14.0.0(@octokit/core@7.0.6)
+      '@octokit/plugin-retry': 8.0.3(@octokit/core@7.0.6)
+      '@octokit/plugin-throttling': 11.0.3(@octokit/core@7.0.6)
+      '@semantic-release/error': 4.0.0
+      aggregate-error: 5.0.0
+      debug: 4.4.3
+      dir-glob: 3.0.1
+      http-proxy-agent: 7.0.2
+      https-proxy-agent: 7.0.6
+      issue-parser: 7.0.1
+      lodash-es: 4.17.23
+      mime: 4.1.0
+      p-filter: 4.1.0
+      semantic-release: 25.0.3(typescript@5.5.3)
+      tinyglobby: 0.2.15
+      undici: 7.20.0
+      url-join: 5.0.0
+    transitivePeerDependencies:
+      - supports-color
+
+  '@semantic-release/github@12.0.3(semantic-release@25.0.3(typescript@5.5.3))':
     dependencies:
       '@octokit/core': 7.0.6
       '@octokit/plugin-paginate-rest': 14.0.0(@octokit/core@7.0.6)
@@ -4324,6 +4355,10 @@ snapshots:
   type-fest@4.41.0: {}
 
   type-fest@5.4.2:
+    dependencies:
+      tagged-tag: 1.0.0
+
+  type-fest@5.4.3:
     dependencies:
       tagged-tag: 1.0.0
 
