@@ -1,3 +1,20 @@
+## [11.2.1](https://github.com/anolilab/workflows/compare/v11.2.0...v11.2.1) (2026-02-20)
+
+### Bug Fixes
+
+* **deps:** update dependency @anolilab/semantic-release-preset to ^13.1.1 ([#316](https://github.com/anolilab/workflows/issues/316)) ([1791a75](https://github.com/anolilab/workflows/commit/1791a7583cdd220f318a655755803fea14bfc0e8))
+* **deps:** update dependency overrides and security patches ([f4e4a3a](https://github.com/anolilab/workflows/commit/f4e4a3aaa0aa05ec34078285564785c3bdfefd45))
+* **deps:** update dependency undici@&gt;&[#x3d](https://github.com/anolilab/workflows/issues/x3d);7.0.0 &lt;7.18.2 to >=7.19.2 ([#314](https://github.com/anolilab/workflows/issues/314)) ([5c1d014](https://github.com/anolilab/workflows/commit/5c1d01423550813f191bc68f7822b044e8016bd8))
+* **deps:** update github-actions ([#313](https://github.com/anolilab/workflows/issues/313)) ([c1edb4a](https://github.com/anolilab/workflows/commit/c1edb4a8ed1ce3ef7e210594774a23caf8ab0082))
+
+### Miscellaneous Chores
+
+* remove audit-ci in favor of pnpm audit ([2c52537](https://github.com/anolilab/workflows/commit/2c525372c069bb1d15f83e77f62e9253abb63dd1))
+
+### Continuous Integration
+
+* **deps:** update actions/checkout action to v6 ([#318](https://github.com/anolilab/workflows/issues/318)) ([62be646](https://github.com/anolilab/workflows/commit/62be64672ff4a62f20021f62e4c7b3ede5ce046c))
+
 ## [11.2.0](https://github.com/anolilab/workflows/compare/v11.1.0...v11.2.0) (2026-02-02)
 
 ### Features

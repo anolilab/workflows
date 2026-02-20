@@ -12,6 +12,9 @@ on: # yamllint disable-line rule:truthy
                 description: "The repo to run this action on. This is to prevent actions from running on forks unless intended."
                 required: true
                 type: "string"
+permissions:
+  contents: read
+
 jobs:
     cleanup:
         if: "github.repository == inputs.target-repo"
