@@ -1,3 +1,10 @@
+## [11.2.2](https://github.com/anolilab/workflows/compare/v11.2.1...v11.2.2) (2026-02-20)
+
+### Bug Fixes
+
+* **ci:** fix yamllint errors in pnpm-lock-file-maintenance workflow ([041ae39](https://github.com/anolilab/workflows/commit/041ae39d44c9c17c6bcf25870138c4170802c173))
+* **deps:** pin dependencies ([#326](https://github.com/anolilab/workflows/issues/326)) ([7a68ae5](https://github.com/anolilab/workflows/commit/7a68ae5c2ad13de52dfe66cc969759b0cbd798e9))
+
 ## [11.2.1](https://github.com/anolilab/workflows/compare/v11.2.0...v11.2.1) (2026-02-20)
 
 ### Bug Fixes
