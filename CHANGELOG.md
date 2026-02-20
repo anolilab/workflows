@@ -1,3 +1,10 @@
+## [11.2.3](https://github.com/anolilab/workflows/compare/v11.2.2...v11.2.3) (2026-02-20)
+
+### Bug Fixes
+
+* **ci:** fix remaining yamllint errors across workflow files ([fb7017c](https://github.com/anolilab/workflows/commit/fb7017c84d388a05423ee4cdb3c7692f6e45e7c5))
+* **deps:** update github-actions ([#327](https://github.com/anolilab/workflows/issues/327)) ([64d0246](https://github.com/anolilab/workflows/commit/64d0246b786409cc8f72e4e8bd3210078ce36016))
+
 ## [11.2.2](https://github.com/anolilab/workflows/compare/v11.2.1...v11.2.2) (2026-02-20)
 
 ### Bug Fixes
