@@ -2,12 +2,20 @@ name: pnpm-lock-file-maintenance
 on:
   schedule:
     - cron: '0 0 * * *'  # Runs every day at midnight UTC
+permissions:
+  contents: read
+
 jobs:
   pnpm-lock-file-maintenance:
     runs-on: ubuntu-latest
     steps:
+      - name: Harden the runner (Audit all outbound calls)
+        uses: step-security/harden-runner@5ef0c079ce82195b2a36a210272d6b661572d83e # v2.14.2
+        with:
+          egress-policy: audit
+
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@ee0669bd1cc54295c223e0bb666b733df41de1c5 # v2.7.0
       - name: Run pnpm lock file maintenance
         run: pnpm install && pnpm up --latest
         env:
