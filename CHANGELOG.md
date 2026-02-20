@@ -1,3 +1,9 @@
+## [11.2.4](https://github.com/anolilab/workflows/compare/v11.2.3...v11.2.4) (2026-02-20)
+
+### Bug Fixes
+
+* **ci:** fix actions/github-script version comment to include v prefix ([9a96992](https://github.com/anolilab/workflows/commit/9a969929c8dc5b6689a2a0e42df351400d648db5))
+
 ## [11.2.3](https://github.com/anolilab/workflows/compare/v11.2.2...v11.2.3) (2026-02-20)
 
 ### Bug Fixes
