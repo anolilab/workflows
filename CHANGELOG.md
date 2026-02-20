@@ -1,3 +1,13 @@
+## [11.2.5](https://github.com/anolilab/workflows/compare/v11.2.4...v11.2.5) (2026-02-20)
+
+### Bug Fixes
+
+* **deps:** update dependency minimatch@&lt;10.2.1 to >=10.2.2 ([#328](https://github.com/anolilab/workflows/issues/328)) ([9583bd3](https://github.com/anolilab/workflows/commit/9583bd30f0aa7ba55ea83754fb6d9635455c7338))
+
+### Miscellaneous Chores
+
+* disables rule for this line ([e44ea56](https://github.com/anolilab/workflows/commit/e44ea563c30305d0d46b5b2ba47b1e50219f17ff))
+
 ## [11.2.4](https://github.com/anolilab/workflows/compare/v11.2.3...v11.2.4) (2026-02-20)
 
 ### Bug Fixes
