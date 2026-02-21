@@ -1,25 +1,82 @@
-name: "pnpm-lock-file-maintenance"
+# Note: this is a shared pipeline used by other repositories.
+# Docs: https://docs.github.com/en/actions/using-workflows/reusing-workflows
+
+name: "Lock File Maintenance"
 
 on: # yamllint disable-line rule:truthy
-    schedule:
-        - cron: "0 0 * * *" # Runs every day at midnight UTC
+    workflow_call:
+        inputs:
+            target-repo:
+                description: "The repo to run this action on. This is to prevent actions from running on forks unless intended."
+                required: true
+                type: "string"
+
+            node-version:
+                description: "The node version to use for the job."
+                required: true
+                type: "string"
+
+            run-audit-fix:
+                description: "Run pnpm audit --fix to automatically fix vulnerabilities."
+                required: false
+                type: "boolean"
+                default: true
+
+        secrets:
+            github-token:
+                description: "GitHub token for checkout with write permissions."
+                required: false
 
 permissions:
-    contents: "read"
+    contents: "read" # for checkout
 
 jobs:
-    pnpm-lock-file-maintenance:
+    lock-file:
+        name: "Lock File Maintenance"
+        if: "github.repository == inputs.target-repo"
         runs-on: "ubuntu-latest"
+        permissions:
+            contents: "write"
+
         steps:
-            - name: "Harden the runner (Audit all outbound calls)"
-              uses: "step-security/harden-runner@5ef0c079ce82195b2a36a210272d6b661572d83e" # v2.14.2
+            - name: "Harden Runner"
+              uses: "step-security/harden-runner@e3f713f2d8f53843e71c69a996d56f51aa9adfb9" # v2.14.1
               with:
                   egress-policy: "audit"
 
-            - name: "Checkout"
-              uses: "actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd" # v6
-
-            - name: "Run pnpm lock file maintenance"
-              run: "pnpm install && pnpm up --latest"
+            - name: "Git checkout"
+              uses: "actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd" # v6.0.2
+              with:
+                  token: "${{ secrets.github-token || secrets.PAT || secrets.GITHUB_TOKEN }}"
               env:
-                  NODE_AUTH_TOKEN: "${{ secrets.github_token }}"
+                  GIT_COMMITTER_NAME: "GitHub Actions Shell"
+                  GIT_AUTHOR_NAME: "GitHub Actions Shell"
+                  EMAIL: "github-actions[bot]@users.noreply.github.com"
+
+            - name: "Setup resources and environment"
+              id: "setup"
+              uses: "anolilab/workflows/step/setup@main"
+              with:
+                  node-version: "${{ inputs.node-version }}"
+                  cache-prefix: "lock-file-update"
+                  install-packages: "false"
+                  run-npm-audit: "false"
+                  run-signatures-audit: "false"
+
+            - name: "Run pnpm audit --fix"
+              if: "success() && inputs.run-audit-fix"
+              run: "pnpm audit --fix --ignore-registry-errors || true"
+
+            - name: "Update lock file"
+              if: "success()"
+              run: "pnpm install --lockfile-only && pnpm dedupe"
+
+            - name: "Commit lock file"
+              if: "success()"
+              uses: "stefanzweifel/git-auto-commit-action@04702edda442b2e678b25b537cec683a1493fcb9" # v7.1.0
+              with:
+                  file_pattern: "pnpm-lock.yaml package.json **/package.json"
+                  commit_message: "chore: updated lock file [ci skip]"
+                  commit_user_name: "github-actions-shell"
+                  commit_user_email: "github-actions[bot]@users.noreply.github.com"
+                  commit_author: "github-actions-shell <github-actions[bot]@users.noreply.github.com>"
