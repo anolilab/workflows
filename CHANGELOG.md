@@ -1,3 +1,9 @@
+## [11.3.0](https://github.com/anolilab/workflows/compare/v11.2.5...v11.3.0) (2026-02-21)
+
+### Features
+
+* **ci:** refactor pnpm lock file maintenance workflow as reusable workflow ([de2cfb8](https://github.com/anolilab/workflows/commit/de2cfb8628466451870d4aee4a176bef6f57cecb))
+
 ## [11.2.5](https://github.com/anolilab/workflows/compare/v11.2.4...v11.2.5) (2026-02-20)
 
 ### Bug Fixes
