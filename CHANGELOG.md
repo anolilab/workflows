@@ -1,3 +1,10 @@
+## [11.3.1](https://github.com/anolilab/workflows/compare/v11.3.0...v11.3.1) (2026-02-24)
+
+### Bug Fixes
+
+* **deps:** update octokit monorepo ([#329](https://github.com/anolilab/workflows/issues/329)) ([7681331](https://github.com/anolilab/workflows/commit/7681331598a171372cbcc25914b6899491f29ca1))
+* **deps:** update step-security/harden-runner action to v2.14.2 ([#331](https://github.com/anolilab/workflows/issues/331)) ([ad83033](https://github.com/anolilab/workflows/commit/ad83033d397b5974b5360592c00b4de6f52338d8))
+
 ## [11.3.0](https://github.com/anolilab/workflows/compare/v11.2.5...v11.3.0) (2026-02-21)
 
 ### Features
