@@ -8,7 +8,7 @@
         "sort-package-json": "sort-package-json ./package.json"
     },
     "devDependencies": {
-        "@anolilab/commitlint-config": "^9.0.0",
+        "@anolilab/commitlint-config": "^9.1.0",
         "@anolilab/lint-staged-config": "^5.1.0",
         "@anolilab/prettier-config": "^9.1.1",
         "@anolilab/semantic-release-preset": "^13.1.1",
@@ -52,7 +52,7 @@
             "micromatch@<4.0.8": ">=4.0.8",
             "minimatch@<10.2.1": ">=10.2.2",
             "tmp@<=0.2.3": ">=0.2.5",
-            "undici@>=7.0.0 <7.18.2": ">=7.18.2",
+            "undici@>=7.0.0 <7.18.2": ">=7.22.0",
             "undici@<6.23.0": ">=6.23.0"
         }
     }
