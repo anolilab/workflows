@@ -10,7 +10,7 @@
     "devDependencies": {
         "@anolilab/commitlint-config": "^9.0.0",
         "@anolilab/lint-staged-config": "^5.1.0",
-        "@anolilab/prettier-config": "^9.1.0",
+        "@anolilab/prettier-config": "^9.1.1",
         "@anolilab/semantic-release-preset": "^13.1.1",
         "@commitlint/cli": "^20.4.2",
         "@commitlint/config-conventional": "^20.4.2",
@@ -26,7 +26,7 @@
         "semantic-release": "^25.0.3",
         "sort-package-json": "^3.6.1"
     },
-    "packageManager": "pnpm@10.30.1",
+    "packageManager": "pnpm@10.30.2",
     "engines": {
         "node": ">=22.13 <=25.*"
     },
