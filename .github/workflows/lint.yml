@@ -21,7 +21,7 @@ jobs:
         runs-on: "ubuntu-latest"
         steps:
             - name: "Harden Runner"
-              uses: "step-security/harden-runner@5ef0c079ce82195b2a36a210272d6b661572d83e" # v2.14.2
+              uses: "step-security/harden-runner@a90bcbc6539c36a85cdfeb73f7e2f433735f215b" # v2.15.0
               with:
                   egress-policy: "audit"
 
@@ -40,7 +40,7 @@ jobs:
         runs-on: "ubuntu-latest"
         steps:
             - name: "Harden Runner"
-              uses: "step-security/harden-runner@5ef0c079ce82195b2a36a210272d6b661572d83e" # v2.14.2
+              uses: "step-security/harden-runner@a90bcbc6539c36a85cdfeb73f7e2f433735f215b" # v2.15.0
               with:
                   egress-policy: "audit"
 
@@ -71,7 +71,7 @@ jobs:
             # If any jobs we depend on fail, we will fail since this is a required check
             # NOTE: A timeout is considered a failure
             - name: "Harden Runner"
-              uses: "step-security/harden-runner@5ef0c079ce82195b2a36a210272d6b661572d83e" # v2.14.2
+              uses: "step-security/harden-runner@a90bcbc6539c36a85cdfeb73f7e2f433735f215b" # v2.15.0
               with:
                   egress-policy: "audit"
 
