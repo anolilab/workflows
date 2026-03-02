@@ -31,8 +31,8 @@ importers:
         specifier: ^9.1.0
         version: 9.1.0(@commitlint/cli@20.4.2(@types/node@24.10.1)(typescript@5.5.3))(@types/node@24.10.1)(typescript@5.5.3)
       '@anolilab/lint-staged-config':
-        specifier: ^5.1.0
-        version: 5.1.0(@types/node@24.10.1)(husky@9.1.7)(lint-staged@16.2.7)(prettier@3.8.1)(secretlint@11.3.1)(yaml@2.8.2)
+        specifier: ^6.0.0
+        version: 6.0.1(@types/node@24.10.1)(husky@9.1.7)(lint-staged@16.2.7)(prettier@3.8.1)(secretlint@11.3.1)(yaml@2.8.2)
       '@anolilab/prettier-config':
         specifier: ^9.1.1
         version: 9.1.1(prettier@3.8.1)
@@ -100,20 +100,20 @@ packages:
     peerDependencies:
       '@commitlint/cli': ^17.6.5 || ^18.x || ^19.x || ^20.0.0
 
-  '@anolilab/lint-staged-config@5.1.0':
-    resolution: {integrity: sha512-WSltnhDPOkYYGHjPMU8R1uSpB+lmys2iFcxEv1s4I9u80Ae3XVVZ8/jLcbm1yW55K+g4V28h6k+V2VppXyYnxQ==}
+  '@anolilab/lint-staged-config@6.0.1':
+    resolution: {integrity: sha512-BLHb5BNViDF3V5PC3CIOMz43ek9n0lSMdpD4veQiidG87IPzYWjBqlyX7fNKat1hyokYfp6XGpZnx5uemNf15Q==}
     engines: {node: '>=20.18.* <=25.*'}
     hasBin: true
     peerDependencies:
-      eslint: ^9.39.2
-      husky: ^8.x || ^9.x
-      jest: ^27.x || ^28.x || ^29.0.0
-      lint-staged: ^13.x || ^14.x|| ^15.x || ^16.x
+      eslint: 9.39.3
+      husky: ^9.x
+      jest: ^29.0.0
+      lint-staged: ^16.x
       nano-staged: ^0.9.0
       prettier: 3.8.1
-      secretlint: ^7.x || ^8.x || ^10.0.0 || ^11.0.0
-      stylelint: ^15.x || ^16.x
-      vitest: ^1.x || ^2.x || ^3.x || ^4.0.0
+      secretlint: ^11.0.0
+      stylelint: ^16.x || ^17.x
+      vitest: ^3.x || ^4.x
     peerDependenciesMeta:
       eslint:
         optional: true
@@ -1016,6 +1016,7 @@ packages:
   git-raw-commits@4.0.0:
     resolution: {integrity: sha512-ICsMM1Wk8xSGMowkOmPrzo2Fgmfo4bMHLNX6ytHjajRJUqvHOw/TFapQ+QG75c3X/tTDDhOSRPGC52dDbNM8FQ==}
     engines: {node: '>=16'}
+    deprecated: This package is no longer maintained. For the JavaScript API, please use @conventional-changelog/git-client instead.
     hasBin: true
 
   glob-parent@5.1.2:
@@ -2067,12 +2068,12 @@ packages:
     resolution: {integrity: sha512-TeTSQ6H5YHvpqVwBRcnLDCBnDOHWYu7IvGbHT6N8AOymcr9PJGjc1GTtiWZTYg0NCgYwvnYWEkVChQAr9bjfwA==}
     engines: {node: '>=16'}
 
-  type-fest@5.4.2:
-    resolution: {integrity: sha512-FLEenlVYf7Zcd34ISMLo3ZzRE1gRjY1nMDTp+bQRBiPsaKyIW8K3Zr99ioHDUgA9OGuGGJPyYpNcffGmBhJfGg==}
-    engines: {node: '>=20'}
-
   type-fest@5.4.3:
     resolution: {integrity: sha512-AXSAQJu79WGc79/3e9/CR77I/KQgeY1AhNvcShIH4PTcGYyC4xv6H4R4AUOwkPS5799KlVDAu8zExeCrkGquiA==}
+    engines: {node: '>=20'}
+
+  type-fest@5.4.4:
+    resolution: {integrity: sha512-JnTrzGu+zPV3aXIUhnyWJj4z/wigMsdYajGLIYakqyOW1nPllzXEJee0QQbHj+CTIQtXGlAjuK0UY+2xTyjVAw==}
     engines: {node: '>=20'}
 
   typescript@5.5.3:
@@ -2245,13 +2246,13 @@ snapshots:
       - '@types/node'
       - typescript
 
-  '@anolilab/lint-staged-config@5.1.0(@types/node@24.10.1)(husky@9.1.7)(lint-staged@16.2.7)(prettier@3.8.1)(secretlint@11.3.1)(yaml@2.8.2)':
+  '@anolilab/lint-staged-config@6.0.1(@types/node@24.10.1)(husky@9.1.7)(lint-staged@16.2.7)(prettier@3.8.1)(secretlint@11.3.1)(yaml@2.8.2)':
     dependencies:
       '@visulima/fs': 4.1.0(yaml@2.8.2)
       '@visulima/package': 4.1.7(@types/node@24.10.1)
       husky: 9.1.7
       shell-quote: 1.8.3
-      type-fest: 5.4.2
+      type-fest: 5.4.4
     optionalDependencies:
       lint-staged: 16.2.7
       prettier: 3.8.1
@@ -2764,7 +2765,7 @@ snapshots:
   '@visulima/fs@4.1.0(yaml@2.8.2)':
     dependencies:
       '@visulima/path': 2.0.5
-      type-fest: 5.4.3
+      type-fest: 5.4.4
     optionalDependencies:
       yaml: 2.8.2
 
@@ -4246,11 +4247,11 @@ snapshots:
 
   type-fest@4.41.0: {}
 
-  type-fest@5.4.2:
+  type-fest@5.4.3:
     dependencies:
       tagged-tag: 1.0.0
 
-  type-fest@5.4.3:
+  type-fest@5.4.4:
     dependencies:
       tagged-tag: 1.0.0
 

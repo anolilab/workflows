@@ -9,7 +9,7 @@
     },
     "devDependencies": {
         "@anolilab/commitlint-config": "^9.1.0",
-        "@anolilab/lint-staged-config": "^5.1.0",
+        "@anolilab/lint-staged-config": "^6.0.0",
         "@anolilab/prettier-config": "^9.1.1",
         "@anolilab/semantic-release-preset": "^13.1.1",
         "@commitlint/cli": "^20.4.2",
