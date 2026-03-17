@@ -20,7 +20,7 @@ overrides:
   micromatch@<4.0.8: '>=4.0.8'
   minimatch@<10.2.1: '>=10.2.4'
   tmp@<=0.2.3: '>=0.2.5'
-  undici@>=7.0.0 <7.18.2: '>=7.22.0'
+  undici@>=7.0.0 <7.18.2: '>=7.24.2'
   undici@<6.23.0: '>=7.24.2'
 
 importers:
@@ -2088,10 +2088,6 @@ packages:
   undici-types@7.16.0:
     resolution: {integrity: sha512-Zz+aZWSj8LE6zoxD+xrjh4VfkIG8Ya6LvYkZqtUQGJPZjYl53ypCaUwWqo7eI0x66KBGeRo+mlBEkMSeSZ38Nw==}
 
-  undici@7.22.0:
-    resolution: {integrity: sha512-RqslV2Us5BrllB+JeiZnK4peryVTndy9Dnqq62S3yYRRTj0tFQCwEniUy2167skdGOy3vqRzEvl1Dm4sV2ReDg==}
-    engines: {node: '>=20.18.1'}
-
   undici@7.24.4:
     resolution: {integrity: sha512-BM/JzwwaRXxrLdElV2Uo6cTLEjhSb3WXboncJamZ15NgUURmvlXvxa6xkwIOILIjPNo9i8ku136ZvWV0Uly8+w==}
     engines: {node: '>=20.18.1'}
@@ -2680,7 +2676,7 @@ snapshots:
       p-filter: 4.1.0
       semantic-release: 25.0.3(typescript@5.5.3)
       tinyglobby: 0.2.15
-      undici: 7.22.0
+      undici: 7.24.4
       url-join: 5.0.0
     transitivePeerDependencies:
       - supports-color
@@ -4261,8 +4257,6 @@ snapshots:
     optional: true
 
   undici-types@7.16.0: {}
-
-  undici@7.22.0: {}
 
   undici@7.24.4: {}
 
