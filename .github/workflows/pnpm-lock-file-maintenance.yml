@@ -55,7 +55,7 @@ jobs:
 
             - name: "Setup resources and environment"
               id: "setup"
-              uses: "anolilab/workflows/step/setup@d81723efc91ad74e206083478384f35aa78650fa" # main
+              uses: "anolilab/workflows/step/setup@e71f5d1a726aa9504fa991eed992d37bcff43e7c" # main
               with:
                   node-version: "${{ inputs.node-version }}"
                   cache-prefix: "lock-file-update"
