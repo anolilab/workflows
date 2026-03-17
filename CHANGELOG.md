@@ -1,3 +1,30 @@
+## [11.3.2](https://github.com/anolilab/workflows/compare/v11.3.1...v11.3.2) (2026-03-17)
+
+### Bug Fixes
+
+* **deps:** update anolilab/workflows digest to 063d79a ([#345](https://github.com/anolilab/workflows/issues/345)) ([64ac232](https://github.com/anolilab/workflows/commit/64ac232c48511b9a70213bd30875e60cd54b17a1))
+* **deps:** update commitlint monorepo to ^20.4.4 (patch) ([#346](https://github.com/anolilab/workflows/issues/346)) ([61b2e64](https://github.com/anolilab/workflows/commit/61b2e64d6db68aee35448cefcead1c26a7213d95))
+* **deps:** update dependency conventional-changelog-conventionalcommits to v9.3.0 ([#340](https://github.com/anolilab/workflows/issues/340)) ([41ebeec](https://github.com/anolilab/workflows/commit/41ebeec3e92bbaa89d27e16aa39cc7d345262129))
+* **deps:** update github-actions ([#337](https://github.com/anolilab/workflows/issues/337)) ([8b41ff1](https://github.com/anolilab/workflows/commit/8b41ff12c4eae4f2444e42fa3f77f6a0b294d896))
+* **deps:** update github-actions ([#342](https://github.com/anolilab/workflows/issues/342)) ([249297b](https://github.com/anolilab/workflows/commit/249297b6380a7b485426275564a015f6c10f6293))
+* **deps:** update minor updates ([#321](https://github.com/anolilab/workflows/issues/321)) ([8df4ef1](https://github.com/anolilab/workflows/commit/8df4ef16b7fdec7ba28e8779eda69307d9a55a4e))
+* **deps:** update minor updates (minor) ([#339](https://github.com/anolilab/workflows/issues/339)) ([6e73117](https://github.com/anolilab/workflows/commit/6e731174595943830a00062df92d88368d7fb323))
+* **deps:** update minor updates (minor) ([#343](https://github.com/anolilab/workflows/issues/343)) ([063d79a](https://github.com/anolilab/workflows/commit/063d79ae0c186460a19a491649071043b6581fb8))
+* **deps:** update patch updates ([#335](https://github.com/anolilab/workflows/issues/335)) ([0f28eaf](https://github.com/anolilab/workflows/commit/0f28eaf249ec4acecbf8170479122f75acb84ff8))
+* **deps:** update patch updates (patch) ([#336](https://github.com/anolilab/workflows/issues/336)) ([03af722](https://github.com/anolilab/workflows/commit/03af7224949879639a91ea6352e3f92440b0cdb0))
+
+### Miscellaneous Chores
+
+* **deps:** update dependency @anolilab/lint-staged-config to v6 ([#332](https://github.com/anolilab/workflows/issues/332)) ([71d2bd1](https://github.com/anolilab/workflows/commit/71d2bd1dde052e1629f008c785fefc42b919ba41))
+* **deps:** update dependency brace-expansion@&gt;&[#x3d](https://github.com/anolilab/workflows/issues/x3d);1.0.0 &lt;&[#x3d](https://github.com/anolilab/workflows/issues/x3d);1.1.11 to v5 ([#333](https://github.com/anolilab/workflows/issues/333)) ([59c15dc](https://github.com/anolilab/workflows/commit/59c15dc6924bebc6a65a1638748cc6d89c3f4721))
+* **deps:** update dependency undici@&lt;6.23.0 to v7 ([#334](https://github.com/anolilab/workflows/issues/334)) ([e71f5d1](https://github.com/anolilab/workflows/commit/e71f5d1a726aa9504fa991eed992d37bcff43e7c))
+
+### Continuous Integration
+
+* **deps:** update actions/upload-artifact action to v7 ([#338](https://github.com/anolilab/workflows/issues/338)) ([d0923af](https://github.com/anolilab/workflows/commit/d0923af9877be20810accc5f3e7a40e87b092dd3))
+* **deps:** update crazy-max/ghaction-github-labeler action to v6 ([#341](https://github.com/anolilab/workflows/issues/341)) ([6824100](https://github.com/anolilab/workflows/commit/6824100b04b4c3ee26bdf7e91d8e7f3b1d613ab1))
+* **deps:** update marocchino/sticky-pull-request-comment action to v3 ([#344](https://github.com/anolilab/workflows/issues/344)) ([eddbaf2](https://github.com/anolilab/workflows/commit/eddbaf22f588e6051a66ae77524bebfe56c5a88e))
+
 ## [11.3.1](https://github.com/anolilab/workflows/compare/v11.3.0...v11.3.1) (2026-02-24)
 
 ### Bug Fixes
