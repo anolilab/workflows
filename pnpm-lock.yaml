@@ -18,7 +18,7 @@ overrides:
   lodash@>=4.0.0 <=4.17.22: '>=4.17.23'
   lodash-es@>=4.0.0 <=4.17.22: '>=4.17.23'
   micromatch@<4.0.8: '>=4.0.8'
-  minimatch@<10.2.1: '>=10.2.2'
+  minimatch@<10.2.1: '>=10.2.4'
   tmp@<=0.2.3: '>=0.2.5'
   undici@>=7.0.0 <7.18.2: '>=7.22.0'
   undici@<6.23.0: '>=6.23.0'
@@ -28,11 +28,11 @@ importers:
   .:
     devDependencies:
       '@anolilab/commitlint-config':
-        specifier: ^9.1.0
-        version: 9.1.0(@commitlint/cli@20.4.2(@types/node@24.10.1)(typescript@5.5.3))(@types/node@24.10.1)(typescript@5.5.3)
+        specifier: ^9.1.1
+        version: 9.1.1(@commitlint/cli@20.4.2(@types/node@24.10.1)(typescript@5.5.3))(@types/node@24.10.1)(typescript@5.5.3)
       '@anolilab/lint-staged-config':
         specifier: ^5.1.0
-        version: 5.1.0(@types/node@24.10.1)(husky@9.1.7)(lint-staged@16.3.3)(prettier@3.8.1)(secretlint@11.3.1)(yaml@2.8.2)
+        version: 5.1.0(@types/node@24.10.1)(husky@9.1.7)(lint-staged@16.4.0)(prettier@3.8.1)(secretlint@11.3.1)(yaml@2.8.2)
       '@anolilab/prettier-config':
         specifier: ^9.1.1
         version: 9.1.1(prettier@3.8.1)
@@ -64,8 +64,8 @@ importers:
         specifier: ^4.1.0
         version: 4.1.0
       lint-staged:
-        specifier: ^16.3.2
-        version: 16.3.3
+        specifier: ^16.3.4
+        version: 16.4.0
       prettier:
         specifier: ^3.8.1
         version: 3.8.1
@@ -93,8 +93,8 @@ packages:
   '@actions/io@1.1.3':
     resolution: {integrity: sha512-wi9JjgKLYS7U/z8PPbco+PvTb/nRWjeoFlJ1Qer83k/3C5PHQi28hiVdeE2kHXmIL99mQFawx8qt/JPjZilJ8Q==}
 
-  '@anolilab/commitlint-config@9.1.0':
-    resolution: {integrity: sha512-zZ1gmREb93scZXCVqDABuxaJv7n7pA6q7Pdw8xu2VRW+bn+xEnZ8J9QX6W9sF0HdKdvs0sNeD+pLRIvm32rrrA==}
+  '@anolilab/commitlint-config@9.1.1':
+    resolution: {integrity: sha512-q0BcKXPu9AHtC+kawgF6j5tujca7uXunb5Lm86bqhPt5pJboTOrlyq31bL5do0JshvOTzSDERU86ZnHfE0qHsQ==}
     engines: {node: '>=20.18.* <=25.*'}
     hasBin: true
     peerDependencies:
@@ -1281,8 +1281,8 @@ packages:
   lines-and-columns@1.2.4:
     resolution: {integrity: sha512-7ylylesZQ/PV29jhEDl3Ufjo6ZX7gCqJr5F7PKrqc93v7fzSymt1BpwEU8nAUXs8qzzvqhbjhK5QZg6Mt/HkBg==}
 
-  lint-staged@16.3.3:
-    resolution: {integrity: sha512-RLq2koZ5fGWrx7tcqx2tSTMQj4lRkfNJaebO/li/uunhCJbtZqwTuwPHpgIimAHHi/2nZIiGrkCHDCOeR1onxA==}
+  lint-staged@16.4.0:
+    resolution: {integrity: sha512-lBWt8hujh/Cjysw5GYVmZpFHXDCgZzhrOm8vbcUdobADZNOK/bRshr2kM3DfgrrtR1DQhfupW9gnIXOfiFi+bw==}
     engines: {node: '>=20.17'}
     hasBin: true
 
@@ -1416,8 +1416,8 @@ packages:
     resolution: {integrity: sha512-VP79XUPxV2CigYP3jWwAUFSku2aKqBH7uTAapFWCBqutsbmDo96KY5o8uh6U+/YSIn5OxJnXp73beVkpqMIGhA==}
     engines: {node: '>=18'}
 
-  minimatch@10.2.2:
-    resolution: {integrity: sha512-+G4CpNBxa5MprY+04MbgOw1v7So6n5JY166pFi9KfYwT78fxScCeSNQSNzp6dpPSW2rONOps6Ocam1wFhCgoVw==}
+  minimatch@10.2.4:
+    resolution: {integrity: sha512-oRjTw/97aTBN0RHbYCdtF1MQfvusSIBQM0IZEgzl6426+8jSC0nF1a/GmnVLpfB9yyr6g6FTqWqiZVbxrtaCIg==}
     engines: {node: 18 || 20 || >=22}
 
   minimist@1.2.7:
@@ -2024,6 +2024,10 @@ packages:
     resolution: {integrity: sha512-W/KYk+NFhkmsYpuHq5JykngiOCnxeVL8v8dFnqxSD8qEEdRfXk1SDM6JzNqcERbcGYj9tMrDQBYV9cjgnunFIg==}
     engines: {node: '>=18'}
 
+  tinyexec@1.0.4:
+    resolution: {integrity: sha512-u9r3uZC0bdpGOXtlxUIdwf9pkmvhqJdrVCH9fapQtgy/OeTTMZ1nqH7agtvEfmGui6e1XxjcdrlxvxJvc3sMqw==}
+    engines: {node: '>=18'}
+
   tinyglobby@0.2.15:
     resolution: {integrity: sha512-j2Zq4NyQYG5XMST4cbs02Ak8iJUdxRM0XI5QyxXuZOzKOINmWurp3smXu3y5wDcJrptwpSjgXHzIQxR0omXljQ==}
     engines: {node: '>=12.0.0'}
@@ -2229,7 +2233,7 @@ snapshots:
 
   '@actions/io@1.1.3': {}
 
-  '@anolilab/commitlint-config@9.1.0(@commitlint/cli@20.4.2(@types/node@24.10.1)(typescript@5.5.3))(@types/node@24.10.1)(typescript@5.5.3)':
+  '@anolilab/commitlint-config@9.1.1(@commitlint/cli@20.4.2(@types/node@24.10.1)(typescript@5.5.3))(@types/node@24.10.1)(typescript@5.5.3)':
     dependencies:
       '@commitlint/cli': 20.4.2(@types/node@24.10.1)(typescript@5.5.3)
       '@commitlint/config-conventional': 20.4.2
@@ -2241,7 +2245,7 @@ snapshots:
       - '@types/node'
       - typescript
 
-  '@anolilab/lint-staged-config@5.1.0(@types/node@24.10.1)(husky@9.1.7)(lint-staged@16.3.3)(prettier@3.8.1)(secretlint@11.3.1)(yaml@2.8.2)':
+  '@anolilab/lint-staged-config@5.1.0(@types/node@24.10.1)(husky@9.1.7)(lint-staged@16.4.0)(prettier@3.8.1)(secretlint@11.3.1)(yaml@2.8.2)':
     dependencies:
       '@visulima/fs': 4.1.0(yaml@2.8.2)
       '@visulima/package': 4.1.7(@types/node@24.10.1)
@@ -2249,7 +2253,7 @@ snapshots:
       shell-quote: 1.8.3
       type-fest: 5.4.2
     optionalDependencies:
-      lint-staged: 16.3.3
+      lint-staged: 16.4.0
       prettier: 3.8.1
       secretlint: 11.3.1
     transitivePeerDependencies:
@@ -3309,7 +3313,7 @@ snapshots:
       fs.realpath: 1.0.0
       inflight: 1.0.6
       inherits: 2.0.4
-      minimatch: 10.2.2
+      minimatch: 10.2.4
       once: 1.4.0
       path-is-absolute: 1.0.1
 
@@ -3541,13 +3545,13 @@ snapshots:
 
   lines-and-columns@1.2.4: {}
 
-  lint-staged@16.3.3:
+  lint-staged@16.4.0:
     dependencies:
       commander: 14.0.3
       listr2: 9.0.5
-      micromatch: 4.0.8
+      picomatch: 4.0.3
       string-argv: 0.3.2
-      tinyexec: 1.0.2
+      tinyexec: 1.0.4
       yaml: 2.8.2
 
   listr2@9.0.5:
@@ -3662,7 +3666,7 @@ snapshots:
 
   mimic-function@5.0.1: {}
 
-  minimatch@10.2.2:
+  minimatch@10.2.4:
     dependencies:
       brace-expansion: 5.0.2
 
@@ -4215,6 +4219,8 @@ snapshots:
       convert-hrtime: 5.0.0
 
   tinyexec@1.0.2: {}
+
+  tinyexec@1.0.4: {}
 
   tinyglobby@0.2.15:
     dependencies:
