@@ -1,3 +1,10 @@
+## [11.3.3](https://github.com/anolilab/workflows/compare/v11.3.2...v11.3.3) (2026-03-20)
+
+### Bug Fixes
+
+* **deps:** update dependency @commitlint/config-conventional to ^20.5.0 ([#349](https://github.com/anolilab/workflows/issues/349)) ([796f218](https://github.com/anolilab/workflows/commit/796f2189b1429e85c3e7ec64f6cfc98769e0a1e0))
+* **deps:** update patch updates ([#347](https://github.com/anolilab/workflows/issues/347)) ([e729cd0](https://github.com/anolilab/workflows/commit/e729cd0cd5b0eef2395a445b226b4528def45ed8))
+
 ## [11.3.2](https://github.com/anolilab/workflows/compare/v11.3.1...v11.3.2) (2026-03-17)
 
 ### Bug Fixes
