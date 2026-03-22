@@ -1,3 +1,10 @@
+## [11.3.4](https://github.com/anolilab/workflows/compare/v11.3.3...v11.3.4) (2026-03-22)
+
+### Bug Fixes
+
+* **deps:** update patch updates to >=7.24.5 ([#350](https://github.com/anolilab/workflows/issues/350)) ([15f8cf1](https://github.com/anolilab/workflows/commit/15f8cf1fa623ad38f7910ac637f2fae957cf6f37))
+* **deps:** update secretlint monorepo to ^11.4.0 ([#351](https://github.com/anolilab/workflows/issues/351)) ([f461018](https://github.com/anolilab/workflows/commit/f4610187d0df0c1fb747a555401b46737fc12a85))
+
 ## [11.3.3](https://github.com/anolilab/workflows/compare/v11.3.2...v11.3.3) (2026-03-20)
 
 ### Bug Fixes
