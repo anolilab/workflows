@@ -1,3 +1,9 @@
+## [11.3.5](https://github.com/anolilab/workflows/compare/v11.3.4...v11.3.5) (2026-03-23)
+
+### Bug Fixes
+
+* **deps:** update commitlint monorepo to ^20.5.0 (patch) ([#348](https://github.com/anolilab/workflows/issues/348)) ([9540d50](https://github.com/anolilab/workflows/commit/9540d505b6fa310fbba3abbc057c6fe945b0dc87))
+
 ## [11.3.4](https://github.com/anolilab/workflows/compare/v11.3.3...v11.3.4) (2026-03-22)
 
 ### Bug Fixes
