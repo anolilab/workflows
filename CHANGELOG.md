@@ -1,3 +1,13 @@
+## [11.3.6](https://github.com/anolilab/workflows/compare/v11.3.5...v11.3.6) (2026-03-24)
+
+### Bug Fixes
+
+* **deps:** update github-actions ([#352](https://github.com/anolilab/workflows/issues/352)) ([d6169a5](https://github.com/anolilab/workflows/commit/d6169a51c3df49043d71622843b8bf4e147df2be))
+
+### Continuous Integration
+
+* **deps:** update pnpm/action-setup action to v5 ([#353](https://github.com/anolilab/workflows/issues/353)) ([2a74f38](https://github.com/anolilab/workflows/commit/2a74f387b57f8f25ee33b3f8abed6a3ac696055c))
+
 ## [11.3.5](https://github.com/anolilab/workflows/compare/v11.3.4...v11.3.5) (2026-03-23)
 
 ### Bug Fixes
