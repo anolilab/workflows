@@ -31,8 +31,8 @@ importers:
         specifier: ^9.1.1
         version: 9.1.1(@commitlint/cli@20.5.0(@types/node@24.10.1)(conventional-commits-filter@5.0.0)(conventional-commits-parser@6.3.0)(typescript@5.5.3))(@types/node@24.10.1)(conventional-commits-filter@5.0.0)(conventional-commits-parser@6.3.0)(typescript@5.5.3)
       '@anolilab/lint-staged-config':
-        specifier: ^6.0.1
-        version: 6.0.1(@types/node@24.10.1)(husky@9.1.7)(lint-staged@16.4.0)(prettier@3.8.1)(secretlint@11.4.0)(yaml@2.8.2)
+        specifier: ^9.0.0
+        version: 9.0.0(@types/node@24.10.1)(husky@9.1.7)(lint-staged@16.4.0)(prettier@3.8.1)(secretlint@11.4.0)(yaml@2.8.2)
       '@anolilab/prettier-config':
         specifier: ^9.1.1
         version: 9.1.1(prettier@3.8.1)
@@ -100,12 +100,12 @@ packages:
     peerDependencies:
       '@commitlint/cli': ^17.6.5 || ^18.x || ^19.x || ^20.0.0
 
-  '@anolilab/lint-staged-config@6.0.1':
-    resolution: {integrity: sha512-BLHb5BNViDF3V5PC3CIOMz43ek9n0lSMdpD4veQiidG87IPzYWjBqlyX7fNKat1hyokYfp6XGpZnx5uemNf15Q==}
+  '@anolilab/lint-staged-config@9.0.0':
+    resolution: {integrity: sha512-oA9n/sVfZZk7QTJvDqFsgYZqvWLHQErodjW1Q6eQgRLbSvjq2Yig/At7eI74LsqvVTtTfWhLLJURKq3AZY0WZQ==}
     engines: {node: '>=20.18.* <=25.*'}
     hasBin: true
     peerDependencies:
-      eslint: 9.39.3
+      eslint: 10.1.0
       husky: ^9.x
       jest: ^29.0.0
       lint-staged: ^16.x
@@ -2100,6 +2100,10 @@ packages:
     resolution: {integrity: sha512-JnTrzGu+zPV3aXIUhnyWJj4z/wigMsdYajGLIYakqyOW1nPllzXEJee0QQbHj+CTIQtXGlAjuK0UY+2xTyjVAw==}
     engines: {node: '>=20'}
 
+  type-fest@5.5.0:
+    resolution: {integrity: sha512-PlBfpQwiUvGViBNX84Yxwjsdhd1TUlXr6zjX7eoirtCPIr08NAmxwa+fcYBTeRQxHo9YC9wwF3m9i700sHma8g==}
+    engines: {node: '>=20'}
+
   typescript@5.5.3:
     resolution: {integrity: sha512-/hreyEujaB0w76zKo6717l3L0o/qEUtRgdvUBvlkhoWeOVMjMuHNHk0BRBzikzuGDqNmPQbg5ifMEqsHLiIUcQ==}
     engines: {node: '>=14.17'}
@@ -2268,13 +2272,13 @@ snapshots:
       - conventional-commits-parser
       - typescript
 
-  '@anolilab/lint-staged-config@6.0.1(@types/node@24.10.1)(husky@9.1.7)(lint-staged@16.4.0)(prettier@3.8.1)(secretlint@11.4.0)(yaml@2.8.2)':
+  '@anolilab/lint-staged-config@9.0.0(@types/node@24.10.1)(husky@9.1.7)(lint-staged@16.4.0)(prettier@3.8.1)(secretlint@11.4.0)(yaml@2.8.2)':
     dependencies:
       '@visulima/fs': 4.1.0(yaml@2.8.2)
       '@visulima/package': 4.1.7(@types/node@24.10.1)
       husky: 9.1.7
       shell-quote: 1.8.3
-      type-fest: 5.4.4
+      type-fest: 5.5.0
     optionalDependencies:
       lint-staged: 16.4.0
       prettier: 3.8.1
@@ -2809,7 +2813,7 @@ snapshots:
   '@visulima/fs@4.1.0(yaml@2.8.2)':
     dependencies:
       '@visulima/path': 2.0.5
-      type-fest: 5.4.4
+      type-fest: 5.5.0
     optionalDependencies:
       yaml: 2.8.2
 
@@ -3950,14 +3954,14 @@ snapshots:
     dependencies:
       find-up-simple: 1.0.1
       read-pkg: 10.0.0
-      type-fest: 5.4.3
+      type-fest: 5.4.4
 
   read-pkg@10.0.0:
     dependencies:
       '@types/normalize-package-data': 2.4.4
       normalize-package-data: 8.0.0
       parse-json: 8.3.0
-      type-fest: 5.4.3
+      type-fest: 5.4.4
       unicorn-magic: 0.3.0
 
   read-pkg@9.0.1:
@@ -4313,6 +4317,10 @@ snapshots:
       tagged-tag: 1.0.0
 
   type-fest@5.4.4:
+    dependencies:
+      tagged-tag: 1.0.0
+
+  type-fest@5.5.0:
     dependencies:
       tagged-tag: 1.0.0
 
