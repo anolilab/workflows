@@ -8,7 +8,7 @@
         "sort-package-json": "sort-package-json ./package.json"
     },
     "devDependencies": {
-        "@anolilab/commitlint-config": "^9.1.1",
+        "@anolilab/commitlint-config": "^9.4.0",
         "@anolilab/lint-staged-config": "^9.0.0",
         "@anolilab/prettier-config": "^9.1.1",
         "@anolilab/semantic-release-preset": "^13.1.1",
