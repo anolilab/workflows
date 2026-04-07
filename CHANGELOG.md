@@ -1,3 +1,26 @@
+## [12.0.0](https://github.com/anolilab/workflows/compare/v11.3.6...v12.0.0) (2026-04-07)
+
+### ⚠ BREAKING CHANGES
+
+* **deps:** updated dependencies to major versions
+
+Co-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>
+
+### Bug Fixes
+
+* **deps:** update dependency @anolilab/commitlint-config to ^9.4.0 ([#361](https://github.com/anolilab/workflows/issues/361)) ([c9fe95c](https://github.com/anolilab/workflows/commit/c9fe95cbc0a845e897897f3ba75b3acf22ad284b))
+* **deps:** update dependency conventional-changelog-conventionalcommits to v9.3.1 ([#355](https://github.com/anolilab/workflows/issues/355)) ([13285bb](https://github.com/anolilab/workflows/commit/13285bb2b7d3902438abb03f0c7d31a324a498b2))
+* **deps:** update github-actions ([#358](https://github.com/anolilab/workflows/issues/358)) ([5d931ae](https://github.com/anolilab/workflows/commit/5d931aea8fd12635fa42350297019288edf6c642))
+* **deps:** update lodash monorepo to >=4.18.1 (minor) ([#367](https://github.com/anolilab/workflows/issues/367)) ([e12060e](https://github.com/anolilab/workflows/commit/e12060e23fc3c54c6597f9e9e394731e6d39e6a2))
+* **deps:** update patch updates ([#359](https://github.com/anolilab/workflows/issues/359)) ([b249cfb](https://github.com/anolilab/workflows/commit/b249cfbb0d26b16688746e5afdd087bfbb74bb31))
+* **deps:** update pnpm to v10.33.0 ([#354](https://github.com/anolilab/workflows/issues/354)) ([d0a097f](https://github.com/anolilab/workflows/commit/d0a097f6dd266d46afa95838de577e9107c8bf9c))
+* **deps:** update secretlint monorepo to ^11.4.1 ([#356](https://github.com/anolilab/workflows/issues/356)) ([6f532c5](https://github.com/anolilab/workflows/commit/6f532c500cfe608e2cc5ff59413161b7a1294de7))
+* update deps ([7bd468f](https://github.com/anolilab/workflows/commit/7bd468f19485469d7b5b4db019b2f61f10c370b3))
+
+### Miscellaneous Chores
+
+* **deps:** update dependency @anolilab/lint-staged-config to v9 ([#360](https://github.com/anolilab/workflows/issues/360)) ([70bf1ac](https://github.com/anolilab/workflows/commit/70bf1ac5745931faa6d2ca9958f59ee9abcab57f))
+
 ## [11.3.6](https://github.com/anolilab/workflows/compare/v11.3.5...v11.3.6) (2026-03-24)
 
 ### Bug Fixes
