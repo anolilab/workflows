@@ -11,24 +11,24 @@ overrides:
   '@octokit/request@>=9.0.0-beta.1 <9.2.1': '>=10.0.8'
   '@octokit/request-error@>=6.0.0 <6.1.7': '>=7.1.0'
   ajv@>=7.0.0-alpha.0 <8.18.0: '>=8.18.0'
+  brace-expansion@>=4.0.0 <5.0.5: '>=5.0.5'
   brace-expansion@>=1.0.0 <=1.1.11: '>=5.0.5'
   cross-spawn@>=7.0.0 <7.0.5: '>=7.0.6'
+  handlebars@>=4.6.0 <=4.7.8: '>=4.7.9'
+  handlebars@>=4.0.0 <=4.7.8: '>=4.7.9'
+  handlebars@>=4.0.0 <4.7.9: '>=4.7.9'
   js-yaml@>=4.0.0 <4.1.1: '>=4.1.1'
   js-yaml@<3.14.2: '>=4.1.1'
   lodash@>=4.0.0 <=4.17.22: '>=4.18.1'
   lodash-es@>=4.0.0 <=4.17.22: '>=4.18.1'
   micromatch@<4.0.8: '>=4.0.8'
   minimatch@<10.2.1: '>=10.2.4'
-  tmp@<=0.2.3: '>=0.2.5'
-  undici@>=7.0.0 <7.18.2: '>=7.24.6'
-  undici@<6.23.0: '>=7.24.6'
-  handlebars@>=4.0.0 <=4.7.8: '>=4.7.9'
-  brace-expansion@>=4.0.0 <5.0.5: '>=5.0.5'
-  handlebars@>=4.0.0 <4.7.9: '>=4.7.9'
-  picomatch@<2.3.2: '>=2.3.2'
   picomatch@>=4.0.0 <4.0.4: '>=4.0.4'
+  picomatch@<2.3.2: '>=2.3.2'
+  tmp@<=0.2.3: '>=0.2.5'
+  undici@>=7.0.0 <7.18.2: '>=8.0.2'
+  undici@<6.23.0: '>=7.24.6'
   yaml@>=2.0.0 <2.8.3: '>=2.8.3'
-  handlebars@>=4.6.0 <=4.7.8: '>=4.7.9'
 
 importers:
 
@@ -2090,6 +2090,10 @@ packages:
     resolution: {integrity: sha512-Xi4agocCbRzt0yYMZGMA6ApD7gvtUFaxm4ZmeacWI4cZxaF6C+8I8QfofC20NAePiB/IcvZmzkJ7XPa471AEtA==}
     engines: {node: '>=20.18.1'}
 
+  undici@8.0.2:
+    resolution: {integrity: sha512-B9MeU5wuFhkFAuNeA19K2GDFcQXZxq33fL0nRy2Aq30wdufZbyyvxW3/ChaeipXVfy/wUweZyzovQGk39+9k2w==}
+    engines: {node: '>=22.19.0'}
+
   unicode-emoji-modifier-base@1.0.0:
     resolution: {integrity: sha512-yLSH4py7oFH3oG/9K+XWrz1pSi3dfUrWEnInbxMfArOfc1+33BlGPQtLsOYwvdMy11AwUBetYuaRxSPqgkq+8g==}
     engines: {node: '>=4'}
@@ -2692,7 +2696,7 @@ snapshots:
       p-filter: 4.1.0
       semantic-release: 25.0.3(typescript@5.5.3)
       tinyglobby: 0.2.15
-      undici: 7.24.6
+      undici: 8.0.2
       url-join: 5.0.0
     transitivePeerDependencies:
       - supports-color
@@ -4266,6 +4270,8 @@ snapshots:
   undici-types@7.16.0: {}
 
   undici@7.24.6: {}
+
+  undici@8.0.2: {}
 
   unicode-emoji-modifier-base@1.0.0: {}
 
