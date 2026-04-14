@@ -1,3 +1,13 @@
+## [13.0.1](https://github.com/anolilab/workflows/compare/v13.0.0...v13.0.1) (2026-04-14)
+
+### Bug Fixes
+
+* **deps:** update dependency prettier to ^3.8.2 ([#370](https://github.com/anolilab/workflows/issues/370)) ([5097ec1](https://github.com/anolilab/workflows/commit/5097ec1b2370c4737873895e912e14f712183654))
+
+### Continuous Integration
+
+* **deps:** update actions/github-script action to v9 ([#371](https://github.com/anolilab/workflows/issues/371)) ([e32770b](https://github.com/anolilab/workflows/commit/e32770bcd0fa1b4537c107211884d8216fe5be20))
+
 ## [13.0.0](https://github.com/anolilab/workflows/compare/v12.0.0...v13.0.0) (2026-04-11)
 
 ### ⚠ BREAKING CHANGES
