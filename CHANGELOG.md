@@ -1,3 +1,20 @@
+## [13.0.2](https://github.com/anolilab/workflows/compare/v13.0.1...v13.0.2) (2026-04-27)
+
+### Bug Fixes
+
+* **ci:** satisfy actionlint and yamllint for lock-file workflow ([86a3059](https://github.com/anolilab/workflows/commit/86a3059e823cfe21796095372107adefb6a614c8))
+* **deps:** update dependency tmp@<=0.2.3 to >=0.2.5 ([#365](https://github.com/anolilab/workflows/issues/365)) ([f5d310e](https://github.com/anolilab/workflows/commit/f5d310ef1b230bbd783036b45ad9c1291d9119b9))
+* **deps:** update github-actions ([#376](https://github.com/anolilab/workflows/issues/376)) ([14c743e](https://github.com/anolilab/workflows/commit/14c743e4b362735e32f1df2590e9b28c3ad960c7))
+* **deps:** update minor updates to >=6.25.0 ([#366](https://github.com/anolilab/workflows/issues/366)) ([cb71e7f](https://github.com/anolilab/workflows/commit/cb71e7f4d6e42d24215b03169254d780b683b7d2))
+
+### Miscellaneous Chores
+
+* deps update ([61cb728](https://github.com/anolilab/workflows/commit/61cb728610827564a62ff561037d3f69ae5ad5f0))
+
+### Continuous Integration
+
+* **deps:** update pnpm/action-setup action to v6 ([#372](https://github.com/anolilab/workflows/issues/372)) ([eb62071](https://github.com/anolilab/workflows/commit/eb620717b9cd797d6a882d73ab03b0fde6a9df63))
+
 ## [13.0.1](https://github.com/anolilab/workflows/compare/v13.0.0...v13.0.1) (2026-04-14)
 
 ### Bug Fixes
