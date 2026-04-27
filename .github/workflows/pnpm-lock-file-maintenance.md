@@ -22,7 +22,7 @@ Features:
 
 | Secret | Required | Default | Description |
 |--------|----------|---------|-------------|
-| `github-token` | No | `secrets.PAT \|\| secrets.GITHUB_TOKEN` | GitHub token for checkout with write permissions. |
+| `github-token` | No | `secrets.GITHUB_TOKEN` | GitHub token for checkout with write permissions. Pass a PAT here to push to protected branches. |
 
 ## Usage
 
