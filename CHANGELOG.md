@@ -1,3 +1,13 @@
+## [13.1.0](https://github.com/anolilab/workflows/compare/v13.0.2...v13.1.0) (2026-04-27)
+
+### Features
+
+* added node-gyp install option ([485f89f](https://github.com/anolilab/workflows/commit/485f89fd88cab0365741e0d839bcad54e6ebfcdf))
+
+### Miscellaneous Chores
+
+* deps update ([878efc4](https://github.com/anolilab/workflows/commit/878efc4a7c0a6a2d20bc98123332f70579e34bd1))
+
 ## [13.0.2](https://github.com/anolilab/workflows/compare/v13.0.1...v13.0.2) (2026-04-27)
 
 ### Bug Fixes
