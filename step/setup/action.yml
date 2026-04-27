@@ -50,6 +50,10 @@ inputs:
         description: "Install npm packages"
         required: false
         default: "true"
+    install-node-gyp:
+        description: "Install node-gyp globally (required by native modules in pnpm-workspace.yaml#onlyBuiltDependencies; modern npm bundles node-gyp internally but does not expose it on PATH for pnpm)"
+        required: false
+        default: "false"
     skip-playwright:
         description: "Skip Playwright installation"
         required: false
@@ -108,6 +112,16 @@ runs:
           run: |
               echo "npm version: $(npm --version)"
               echo "NODE_AUTH_TOKEN is set: $([[ -n \"$NODE_AUTH_TOKEN\" ]] && echo 'yes' || echo 'no')"
+          env:
+              SKIP_CHECK: "true"
+
+        # Native modules listed in pnpm-workspace.yaml#onlyBuiltDependencies (e.g. nodehun)
+        # invoke `node-gyp rebuild` from their install scripts. Modern npm bundles node-gyp
+        # internally but does not expose it on PATH, so pnpm cannot find it.
+        - name: "Install node-gyp"
+          if: "inputs.install-node-gyp == 'true'"
+          shell: "bash"
+          run: "npm install --global node-gyp"
           env:
               SKIP_CHECK: "true"
 
