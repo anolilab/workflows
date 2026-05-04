@@ -1,3 +1,13 @@
+## [13.1.1](https://github.com/anolilab/workflows/compare/v13.1.0...v13.1.1) (2026-05-04)
+
+### Bug Fixes
+
+* **deps:** update dependency lodash@>=4.0.0 <=4.17.22 to >=4.18.1 ([#381](https://github.com/anolilab/workflows/issues/381)) ([848fe66](https://github.com/anolilab/workflows/commit/848fe66467d9750c4430a760227fb6e4eb8baa6d))
+
+### Miscellaneous Chores
+
+* **deps:** update dependency undici@<6.24.0 to v8 ([#379](https://github.com/anolilab/workflows/issues/379)) ([586b057](https://github.com/anolilab/workflows/commit/586b057a4dfe3733a4b434f36f4de5f69c2e0bbd))
+
 ## [13.1.0](https://github.com/anolilab/workflows/compare/v13.0.2...v13.1.0) (2026-04-27)
 
 ### Features
