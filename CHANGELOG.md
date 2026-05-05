@@ -1,3 +1,9 @@
+## [13.1.2](https://github.com/anolilab/workflows/compare/v13.1.1...v13.1.2) (2026-05-05)
+
+### Bug Fixes
+
+* **deps:** update dependency @anolilab/semantic-release-preset to ^13.4.9 ([#380](https://github.com/anolilab/workflows/issues/380)) ([a3d964d](https://github.com/anolilab/workflows/commit/a3d964da6ecbc29a802648237abf0bd280e65722))
+
 ## [13.1.1](https://github.com/anolilab/workflows/compare/v13.1.0...v13.1.1) (2026-05-04)
 
 ### Bug Fixes
