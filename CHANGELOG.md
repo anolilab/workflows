@@ -1,3 +1,13 @@
+## [13.1.3](https://github.com/anolilab/workflows/compare/v13.1.2...v13.1.3) (2026-05-07)
+
+### Bug Fixes
+
+* **deps:** update commitlint monorepo to ^20.5.3 ([#382](https://github.com/anolilab/workflows/issues/382)) ([72070eb](https://github.com/anolilab/workflows/commit/72070eb83bef3d90776d53ed929650f58d264e67))
+
+### Miscellaneous Chores
+
+* **deps:** update dependency undici@<6.23.0 to v7 ([#377](https://github.com/anolilab/workflows/issues/377)) ([a53f7a1](https://github.com/anolilab/workflows/commit/a53f7a16f5a2746f28e5407e85ed093103a15aba))
+
 ## [13.1.2](https://github.com/anolilab/workflows/compare/v13.1.1...v13.1.2) (2026-05-05)
 
 ### Bug Fixes
