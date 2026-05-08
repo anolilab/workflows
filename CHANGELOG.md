@@ -1,3 +1,19 @@
+## [14.0.0](https://github.com/anolilab/workflows/compare/v13.1.3...v14.0.0) (2026-05-08)
+
+### ⚠ BREAKING CHANGES
+
+* **deps:** updated dependencies to major versions
+
+Co-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>
+
+### Bug Fixes
+
+* **deps:** update dependency undici@<6.24.0 to >=8.2.0 ([#383](https://github.com/anolilab/workflows/issues/383)) ([b8167df](https://github.com/anolilab/workflows/commit/b8167dffce2c62468d0e6ca9f63a2c1068c2c747))
+
+### Miscellaneous Chores
+
+* **deps:** update secretlint monorepo to v13 ([#385](https://github.com/anolilab/workflows/issues/385)) ([a6331a3](https://github.com/anolilab/workflows/commit/a6331a3fe8a92c99f63f9e89ec2a1bfab49e65c8))
+
 ## [13.1.3](https://github.com/anolilab/workflows/compare/v13.1.2...v13.1.3) (2026-05-07)
 
 ### Bug Fixes
