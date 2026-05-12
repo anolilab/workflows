@@ -1,0 +1,11 @@
+# Zizmor static analyzer config.
+# https://docs.zizmor.sh/configuration/
+
+rules:
+    dangerous-triggers:
+        # require-allow-edits needs pull_request_target to read PR metadata with
+        # write-on-parent permissions. No PR-controlled ref is checked out, so
+        # the fork-takeover pattern that makes pull_request_target dangerous
+        # doesn't apply here.
+        ignore:
+            - "require-allow-edits.yml"
