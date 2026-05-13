@@ -3,7 +3,6 @@
     "private": true,
     "type": "module",
     "scripts": {
-        "preinstall": "node verify-node-version.cjs && npx only-allow pnpm",
         "prepare": "is-ci || husky || exit 0",
         "sort-package-json": "sort-package-json ./package.json"
     },
