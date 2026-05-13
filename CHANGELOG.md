@@ -1,3 +1,13 @@
+## [15.0.1](https://github.com/anolilab/workflows/compare/v15.0.0...v15.0.1) (2026-05-13)
+
+### Bug Fixes
+
+* **deps:** update github-actions ([#388](https://github.com/anolilab/workflows/issues/388)) ([c5e6b7e](https://github.com/anolilab/workflows/commit/c5e6b7e3256de132e7952f8b81f45d52ec34fa22))
+
+### Continuous Integration
+
+* **deps:** update actions/dependency-review-action action to v5 ([#389](https://github.com/anolilab/workflows/issues/389)) ([e0ebbd8](https://github.com/anolilab/workflows/commit/e0ebbd8324bc7ae2cc75a096d27f372ca53111f9))
+
 ## [15.0.0](https://github.com/anolilab/workflows/compare/v14.0.0...v15.0.0) (2026-05-13)
 
 ### ⚠ BREAKING CHANGES
