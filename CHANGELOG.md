@@ -1,3 +1,28 @@
+## [15.0.0](https://github.com/anolilab/workflows/compare/v14.0.0...v15.0.0) (2026-05-13)
+
+### ⚠ BREAKING CHANGES
+
+* **deps:** updated dependencies to major versions
+
+Co-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>
+
+### Bug Fixes
+
+* **codecov:** pipe inputs through env vars to prevent template injection ([fb94611](https://github.com/anolilab/workflows/commit/fb94611affbf6743028b0a0b89b8b094cf4df16f))
+* **setup:** close actions/cache auto-save path, harden npm install ([3521008](https://github.com/anolilab/workflows/commit/35210088879bb17d9ada060a9d7cff75f2501eb2))
+* **setup:** run actions/setup-node before pnpm commands ([95f0682](https://github.com/anolilab/workflows/commit/95f068290c1c00bf4829cfb854930041a16f7a10))
+
+### Miscellaneous Chores
+
+* clean up ([4d64c69](https://github.com/anolilab/workflows/commit/4d64c69615fa68e3987c9e6449a359e797bf337e))
+* deps update ([c80b09a](https://github.com/anolilab/workflows/commit/c80b09a1ec1cfaef43ef644f76f9048e6742c263))
+* **deps:** move pnpm overrides to pnpm-workspace.yaml ([0f98169](https://github.com/anolilab/workflows/commit/0f98169fb55f86e4d6d9cbe8fdc2ae027b117610))
+* **deps:** update pnpm to v11 ([#384](https://github.com/anolilab/workflows/issues/384)) ([a8a0538](https://github.com/anolilab/workflows/commit/a8a0538e4eaa7b827620d3ee6311131c9b95f108))
+
+### Continuous Integration
+
+* harden internal workflows against zizmor findings ([546b8cc](https://github.com/anolilab/workflows/commit/546b8cc2fbf10d17ef6b0470be6e9d5ac9284bb2))
+
 ## [14.0.0](https://github.com/anolilab/workflows/compare/v13.1.3...v14.0.0) (2026-05-08)
 
 ### ⚠ BREAKING CHANGES
