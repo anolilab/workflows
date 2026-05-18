@@ -1,3 +1,10 @@
+## [15.0.2](https://github.com/anolilab/workflows/compare/v15.0.1...v15.0.2) (2026-05-18)
+
+### Bug Fixes
+
+* **deps:** update dependency lodash@>=4.0.0 <=4.17.22 to ^4.18.1 ([#394](https://github.com/anolilab/workflows/issues/394)) ([b865d64](https://github.com/anolilab/workflows/commit/b865d646f7262427d51c8c0d56f129f55cd41c2a))
+* **deps:** update minor updates to ^6.25.0 ([#395](https://github.com/anolilab/workflows/issues/395)) ([cd6adeb](https://github.com/anolilab/workflows/commit/cd6adeb7ccee02a396793cf3f598d8d5d5b453b8))
+
 ## [15.0.1](https://github.com/anolilab/workflows/compare/v15.0.0...v15.0.1) (2026-05-13)
 
 ### Bug Fixes
