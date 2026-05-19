@@ -1,3 +1,17 @@
+## [15.1.1](https://github.com/anolilab/workflows/compare/v15.1.0...v15.1.1) (2026-05-19)
+
+### Bug Fixes
+
+* **deps:** update github-actions ([#396](https://github.com/anolilab/workflows/issues/396)) ([3c54b71](https://github.com/anolilab/workflows/commit/3c54b71af67bdd990513c4a17fa2fde078db7b74))
+
+### Miscellaneous Chores
+
+* **deps:** bump secretlint, lint-staged, and pnpm ([9f2fa40](https://github.com/anolilab/workflows/commit/9f2fa40f10b9adff0a56ec67e17008e6daeba97b))
+
+### Code Refactoring
+
+* **node:** rename setup step to node, keep setup as deprecated alias ([8c2a0d8](https://github.com/anolilab/workflows/commit/8c2a0d87a72fef1a2ce31853681d0dde22d5cfe1))
+
 ## [15.1.0](https://github.com/anolilab/workflows/compare/v15.0.2...v15.1.0) (2026-05-19)
 
 ### Features
