@@ -1,3 +1,9 @@
+## [15.1.0](https://github.com/anolilab/workflows/compare/v15.0.2...v15.1.0) (2026-05-19)
+
+### Features
+
+* **rust:** add workspace-aware Rust setup composite action ([b5186be](https://github.com/anolilab/workflows/commit/b5186be20824189ebf6a697ba6474fff296d6a58))
+
 ## [15.0.2](https://github.com/anolilab/workflows/compare/v15.0.1...v15.0.2) (2026-05-18)
 
 ### Bug Fixes
