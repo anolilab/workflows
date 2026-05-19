@@ -31,7 +31,7 @@ configure the following:
 
 ### Steps
 
-- [Node Setup Environment and Resources](./step/setup/action.yml) - sets up the Node.js environment with pnpm, pnpm cache, nx (optional), nx cache (optional) and allocates resources
+- [Node Setup Environment and Resources](./step/node/action.yml) - sets up the Node.js environment with pnpm, pnpm cache, nx (optional), nx cache (optional) and allocates resources (the old `./step/setup` path is kept as a deprecated alias)
 - [Codecov](./step/codecov/action.yml) - uploads coverage reports to Codecov
 
 ### Workflows

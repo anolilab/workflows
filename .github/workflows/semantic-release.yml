@@ -55,7 +55,7 @@ jobs:
 
             - name: "Setup resources and environment"
               id: "setup"
-              uses: "./step/setup"
+              uses: "./step/node"
               with:
                   node-version: "24.x"
                   cache-prefix: "semantic-release"
