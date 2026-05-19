@@ -1,0 +1,122 @@
+name: "Setup Rust toolchain and cache"
+description: "Install the rust-toolchain.toml toolchain, add targets/components/tools, and cache with workspace-aware paths"
+
+inputs:
+    cwd:
+        description: "Directory containing rust-toolchain.toml. Defaults to the repository root"
+        required: false
+        default: "."
+    components:
+        description: "Space separated extra rustup components, e.g. `clippy rustfmt`"
+        required: false
+        default: ""
+    targets:
+        description: "Space or newline separated rustup targets to add, e.g. `aarch64-pc-windows-msvc`"
+        required: false
+        default: ""
+    tools:
+        description: "Comma separated cargo tools installed via taiki-e/install-action, e.g. `cargo-zigbuild`"
+        required: false
+        default: ""
+    restore-cache:
+        description: "Whether to restore the rust cache"
+        required: false
+        default: "true"
+    save-cache:
+        description: "Whether to save the rust cache, e.g. `github.ref_name == 'main'`"
+        required: false
+        default: "false"
+    cache-key:
+        description: "Cache key prefix (Swatinem shared-key)"
+        required: false
+        default: "main"
+    workspaces:
+        description: |
+            Newline separated list of Cargo workspace roots passed to Swatinem/rust-cache.
+            Each entry is `<path>` or `<path> -> <target dir>`. Required for monorepos
+            where Cargo.toml is NOT at the repository root, otherwise `cargo metadata`
+            runs at the root and fails with `could not find Cargo.toml`.
+        required: false
+        default: "."
+    cache-workspace-crates:
+        description: "If `true`, the workspace crates are cached too"
+        required: false
+        default: "false"
+    cache-directories:
+        description: "Extra newline separated directories to cache"
+        required: false
+        default: ""
+
+runs:
+    using: "composite"
+    steps:
+        - name: "Print inputs"
+          shell: "bash"
+          run: |
+              echo "cwd: ${INPUTS_CWD}"
+              echo "components: ${INPUTS_COMPONENTS}"
+              echo "targets: ${INPUTS_TARGETS}"
+              echo "tools: ${INPUTS_TOOLS}"
+              echo "restore-cache: ${INPUTS_RESTORE_CACHE}"
+              echo "save-cache: ${INPUTS_SAVE_CACHE}"
+              echo "cache-key: ${INPUTS_CACHE_KEY}"
+              echo "workspaces: ${INPUTS_WORKSPACES}"
+          env:
+              INPUTS_CWD: "${{ inputs.cwd }}"
+              INPUTS_COMPONENTS: "${{ inputs.components }}"
+              INPUTS_TARGETS: "${{ inputs.targets }}"
+              INPUTS_TOOLS: "${{ inputs.tools }}"
+              INPUTS_RESTORE_CACHE: "${{ inputs.restore-cache }}"
+              INPUTS_SAVE_CACHE: "${{ inputs.save-cache }}"
+              INPUTS_CACHE_KEY: "${{ inputs.cache-key }}"
+              INPUTS_WORKSPACES: "${{ inputs.workspaces }}"
+
+        - name: "Force minimal profile for a faster install"
+          shell: "bash"
+          working-directory: "${{ inputs.cwd }}"
+          run: |
+              if [ -f rust-toolchain.toml ]; then
+                sed -i ${{ (runner.os == 'macOS' && '""') || '' }} -e 's/profile = "default"/profile = "minimal"/g' rust-toolchain.toml
+                cat rust-toolchain.toml
+              fi
+              rustup set profile minimal
+
+        - name: "Add components"
+          if: "inputs.components != ''"
+          shell: "bash"
+          run: "rustup component add ${INPUTS_COMPONENTS}"
+          env:
+              INPUTS_COMPONENTS: "${{ inputs.components }}"
+
+        - name: "Install toolchain from rust-toolchain.toml"
+          shell: "bash"
+          working-directory: "${{ inputs.cwd }}"
+          run: |
+              rustup show
+              git restore . # revert the temporary minimal-profile edit
+
+        - name: "Add targets"
+          if: "inputs.targets != ''"
+          shell: "bash"
+          run: |
+              for target in ${INPUTS_TARGETS//,/ }; do
+                rustup target add "${target}"
+              done
+          env:
+              INPUTS_TARGETS: "${{ inputs.targets }}"
+
+        - name: "Cache on ${{ github.ref_name }}"
+          uses: "Swatinem/rust-cache@c19371144df3bb44fab255c43d04cbc2ab54d1c4" # v2.9.1
+          if: "inputs.restore-cache == 'true'"
+          with:
+              shared-key: "${{ inputs.cache-key }}"
+              save-if: "${{ inputs.save-cache == 'true' }}"
+              workspaces: "${{ inputs.workspaces }}"
+              cache-workspace-crates: "${{ inputs.cache-workspace-crates }}"
+              cache-directories: "${{ inputs.cache-directories }}"
+
+        - name: "Install tools"
+          uses: "taiki-e/install-action@fa0dd4cd0a40696e6f9766370614a5ce482e6aa8" # v2.77.5
+          if: "inputs.tools != ''"
+          with:
+              tool: "${{ inputs.tools }}"
