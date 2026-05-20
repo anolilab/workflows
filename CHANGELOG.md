@@ -1,3 +1,9 @@
+## [15.1.2](https://github.com/anolilab/workflows/compare/v15.1.1...v15.1.2) (2026-05-20)
+
+### Bug Fixes
+
+* **deps:** update patch updates (patch) ([#393](https://github.com/anolilab/workflows/issues/393)) ([b1942c6](https://github.com/anolilab/workflows/commit/b1942c683a46649cf99bb402aa53128a005276f1))
+
 ## [15.1.1](https://github.com/anolilab/workflows/compare/v15.1.0...v15.1.1) (2026-05-19)
 
 ### Bug Fixes
