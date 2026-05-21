@@ -1,3 +1,9 @@
+## [15.3.1](https://github.com/anolilab/workflows/compare/v15.3.0...v15.3.1) (2026-05-21)
+
+### Bug Fixes
+
+* **workflows:** drop pnpm version pin so packageManager wins ([045a2d4](https://github.com/anolilab/workflows/commit/045a2d464dad0661a570c8a3c19f4b32bf9efad9))
+
 ## [15.3.0](https://github.com/anolilab/workflows/compare/v15.2.0...v15.3.0) (2026-05-21)
 
 ### Features
