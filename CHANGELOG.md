@@ -1,3 +1,9 @@
+## [15.3.0](https://github.com/anolilab/workflows/compare/v15.2.0...v15.3.0) (2026-05-21)
+
+### Features
+
+* **workflows:** add extra_includes to test.yml, lint_actionlint + per-step toggles to lint.yml ([3bd9e3b](https://github.com/anolilab/workflows/commit/3bd9e3be8b2c419cf0e9237c1e78ab9a5e68bafa))
+
 ## [15.2.0](https://github.com/anolilab/workflows/compare/v15.1.2...v15.2.0) (2026-05-21)
 
 ### Features
