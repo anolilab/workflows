@@ -38,7 +38,12 @@ on: # yamllint disable-line rule:truthy
                 type: "boolean"
                 default: true
             lint_yaml:
-                description: "Run yaml lint + actionlint on .github/workflows/."
+                description: "Run yaml lint (yamllint) across the repo."
+                required: false
+                type: "boolean"
+                default: true
+            lint_actionlint:
+                description: "Run raven-actions/actionlint against .github/workflows/."
                 required: false
                 type: "boolean"
                 default: true
@@ -251,7 +256,7 @@ jobs:
     lint-workflows:
         if: |
             needs.files-changed.result == 'success'
-            && inputs.lint_yaml != false
+            && inputs.lint_actionlint != false
             && (needs.files-changed.outputs.filters_present != 'true' || needs.files-changed.outputs.yaml_lintable == 'true')
         needs: "files-changed"
         name: "Lint (github workflows)"
@@ -272,27 +277,11 @@ jobs:
                   GIT_AUTHOR_NAME: "GitHub Actions Shell"
                   EMAIL: "github-actions[bot]@users.noreply.github.com"
 
-            # raven-actions/actionlint shells out to `npm install @actions/tool-cache`
-            # which trips on pnpm workspace catalogs. Download the actionlint release
-            # tarball directly and verify it against the published checksum.
-            - name: "Lint github workflows"
-              shell: "bash"
-              run: |
-                  set -euo pipefail
-                  version="1.7.12"
-                  base="https://github.com/rhysd/actionlint/releases/download/v${version}"
-                  tarball="actionlint_${version}_linux_amd64.tar.gz"
-                  checksums="actionlint_${version}_checksums.txt"
-
-                  curl --fail --silent --show-error --location --output "$tarball" "${base}/${tarball}"
-                  curl --fail --silent --show-error --location --output "$checksums" "${base}/${checksums}"
-
-                  grep " ${tarball}\$" "$checksums" | sha256sum --check --status
-
-                  tar -xzf "$tarball" actionlint
-                  rm -f "$tarball" "$checksums"
-
-                  ./actionlint -color -shellcheck=
+            - name: "actionlint"
+              uses: "raven-actions/actionlint@205b530c5d9fa8f44ae9ed59f341a0db994aa6f8" # v2.1.2
+              with:
+                  matcher: true
+                  fail-on-error: true
 
     rust-fmt:
         if: |
