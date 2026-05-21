@@ -1,3 +1,17 @@
+## [15.2.0](https://github.com/anolilab/workflows/compare/v15.1.2...v15.2.0) (2026-05-21)
+
+### Features
+
+* **workflows:** promote codeql/scorecards/dependency-review/lint/test/zizmor to reusable ([8be0b02](https://github.com/anolilab/workflows/commit/8be0b02048a6f379631449661c1341d8d9c882ea))
+
+### Miscellaneous Chores
+
+* **ci:** drop require-allow-edits and pin actions to latest ([767a7c6](https://github.com/anolilab/workflows/commit/767a7c6a69a5833f4cca7ab87c533790880b2cdf))
+
+### Continuous Integration
+
+* **security:** disable setup-node package-manager-cache and pin require-allow-edits ([c319214](https://github.com/anolilab/workflows/commit/c3192147ea94b5a4aff6c6286b02a07ed61dabe2))
+
 ## [15.1.2](https://github.com/anolilab/workflows/compare/v15.1.1...v15.1.2) (2026-05-20)
 
 ### Bug Fixes
