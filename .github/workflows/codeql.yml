@@ -9,6 +9,7 @@
 # the `language` matrix defined below to confirm you have the correct set of
 # supported CodeQL languages.
 #
+# Reusable: this workflow can be called from consumer repos via `workflow_call`.
 name: "CodeQL"
 
 on: # yamllint disable-line rule:truthy
@@ -19,6 +20,28 @@ on: # yamllint disable-line rule:truthy
         branches: ["main"]
     schedule:
         - cron: "0 0 * * 1"
+    workflow_call:
+        inputs:
+            languages:
+                description: "JSON array of CodeQL languages to analyze (e.g. '[\"javascript-typescript\"]')."
+                required: false
+                type: "string"
+                default: "[\"javascript-typescript\"]"
+            branches:
+                description: "JSON array of branches for push/PR triggers (informational; caller wraps the workflow_call)."
+                required: false
+                type: "string"
+                default: "[\"main\"]"
+            schedule_cron:
+                description: "Cron expression for scheduled analysis (informational; caller wraps the workflow_call)."
+                required: false
+                type: "string"
+                default: "0 0 * * 1"
+            runs_on:
+                description: "Runner image for the analyze job."
+                required: false
+                type: "string"
+                default: "ubuntu-latest"
 
 permissions:
     contents: "read"
@@ -27,7 +50,8 @@ jobs:
     analyze:
         name: "Analyze"
 
-        runs-on: "ubuntu-latest"
+        runs-on: "${{ inputs.runs_on || 'ubuntu-latest' }}"
+        timeout-minutes: 30
 
         permissions:
             actions: "read"
@@ -37,13 +61,11 @@ jobs:
         strategy:
             fail-fast: false
             matrix:
-                language: ["javascript", "typescript"]
-                # CodeQL supports [ $supported-codeql-languages ]
-                # Learn more about CodeQL language support at https://aka.ms/codeql-docs/language-support
+                language: "${{ fromJSON(inputs.languages || '[\"javascript-typescript\"]') }}"
 
         steps:
             - name: "Harden Runner"
-              uses: "step-security/harden-runner@a5ad31d6a139d249332a2605b85202e8c0b78450" # v2.19.1
+              uses: "step-security/harden-runner@9af89fc71515a100421586dfdb3dc9c984fbf411" # v2.19.4
               with:
                   egress-policy: "audit"
 
@@ -54,7 +76,7 @@ jobs:
 
             # Initializes the CodeQL tools for scanning.
             - name: "Initialize CodeQL"
-              uses: "github/codeql-action/init@68bde559dea0fdcac2102bfdf6230c5f70eb485e" # v4.35.4
+              uses: "github/codeql-action/init@9e0d7b8d25671d64c341c19c0152d693099fb5ba" # v4.35.5
               with:
                   languages: "${{ matrix.language }}"
                   # If you wish to specify custom queries, you can do so here or in a config file.
@@ -64,7 +86,7 @@ jobs:
             # Autobuild attempts to build any compiled languages  (C/C++, C#, or Java).
             # If this step fails, then you should remove it and run the build manually (see below)
             - name: "Autobuild"
-              uses: "github/codeql-action/autobuild@68bde559dea0fdcac2102bfdf6230c5f70eb485e" # v4.35.4
+              uses: "github/codeql-action/autobuild@9e0d7b8d25671d64c341c19c0152d693099fb5ba" # v4.35.5
 
             # ℹ️ Command-line programs to run using the OS shell.
             # 📚 See https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_idstepsrun
@@ -77,6 +99,6 @@ jobs:
             #   ./location_of_script_within_repo/buildscript.sh
 
             - name: "Perform CodeQL Analysis"
-              uses: "github/codeql-action/analyze@68bde559dea0fdcac2102bfdf6230c5f70eb485e" # v4.35.4
+              uses: "github/codeql-action/analyze@9e0d7b8d25671d64c341c19c0152d693099fb5ba" # v4.35.5
               with:
                   category: "/language:${{matrix.language}}"
