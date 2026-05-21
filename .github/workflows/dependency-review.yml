@@ -6,12 +6,26 @@
 # PRs introducing known-vulnerable packages will be blocked from merging.
 #
 # Source repository: https://github.com/actions/dependency-review-action
+#
+# Reusable: this workflow can be called from consumer repos via `workflow_call`.
 name: "Dependency Review"
 
 on: # yamllint disable-line rule:truthy
     # eslint-disable-next-line yml/no-empty-mapping-value
     pull_request: # yamllint disable-line rule:empty-values
     merge_group: # yamllint disable-line rule:empty-values
+    workflow_call:
+        inputs:
+            fail_on_severity:
+                description: "Minimum severity that fails the check (low | moderate | high | critical)."
+                required: false
+                type: "string"
+                default: "moderate"
+            comment_summary_in_pr:
+                description: "Whether to comment a summary on the PR (always | on-failure | never)."
+                required: false
+                type: "string"
+                default: "on-failure"
 
 permissions:
     contents: "read"
@@ -19,6 +33,10 @@ permissions:
 jobs:
     dependency-review:
         runs-on: "ubuntu-latest"
+        timeout-minutes: 30
+        permissions:
+            contents: "read"
+            pull-requests: "write"
         steps:
             - name: "Harden Runner"
               uses: "step-security/harden-runner@9af89fc71515a100421586dfdb3dc9c984fbf411" # v2.19.4
@@ -36,3 +54,6 @@ jobs:
 
             - name: "Dependency Review"
               uses: "actions/dependency-review-action@a1d282b36b6f3519aa1f3fc636f609c47dddb294" # v5.0.0
+              with:
+                  fail-on-severity: "${{ inputs.fail_on_severity || 'moderate' }}"
+                  comment-summary-in-pr: "${{ inputs.comment_summary_in_pr || 'on-failure' }}"

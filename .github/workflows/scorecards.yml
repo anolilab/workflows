@@ -1,7 +1,8 @@
 # This workflow uses actions that are not certified by GitHub. They are provided
 # by a third-party and are governed by separate terms of service, privacy
 # policy, and support documentation.
-
+#
+# Reusable: this workflow can be called from consumer repos via `workflow_call`.
 name: "Scorecard supply-chain security"
 
 on: # yamllint disable-line rule:truthy
@@ -15,6 +16,18 @@ on: # yamllint disable-line rule:truthy
         - cron: "20 7 * * 2"
     push:
         branches: ["main"]
+    workflow_call:
+        inputs:
+            branch:
+                description: "Default branch to evaluate (informational; push trigger uses 'main' by default)."
+                required: false
+                type: "string"
+                default: "main"
+            publish_results:
+                description: "Publish results to the OpenSSF REST API (public repos only)."
+                required: false
+                type: "boolean"
+                default: true
 
 # Declare default permissions as read only.
 permissions: "read-all"
@@ -23,6 +36,7 @@ jobs:
     analysis:
         name: "Scorecard analysis"
         runs-on: "ubuntu-latest"
+        timeout-minutes: 30
         permissions:
             # Needed to upload the results to code-scanning dashboard.
             security-events: "write"
@@ -60,7 +74,7 @@ jobs:
                   # For private repositories:
                   #   - `publish_results` will always be set to `false`, regardless
                   #     of the value entered here.
-                  publish_results: true
+                  publish_results: "${{ inputs.publish_results == null && true || inputs.publish_results }}"
 
             # Upload the results as artifacts (optional). Commenting out will disable uploads of run results in SARIF
             # format to the repository Actions tab.

@@ -9,6 +9,7 @@
 # the `language` matrix defined below to confirm you have the correct set of
 # supported CodeQL languages.
 #
+# Reusable: this workflow can be called from consumer repos via `workflow_call`.
 name: "CodeQL"
 
 on: # yamllint disable-line rule:truthy
@@ -19,6 +20,28 @@ on: # yamllint disable-line rule:truthy
         branches: ["main"]
     schedule:
         - cron: "0 0 * * 1"
+    workflow_call:
+        inputs:
+            languages:
+                description: "JSON array of CodeQL languages to analyze (e.g. '[\"javascript-typescript\"]')."
+                required: false
+                type: "string"
+                default: "[\"javascript-typescript\"]"
+            branches:
+                description: "JSON array of branches for push/PR triggers (informational; caller wraps the workflow_call)."
+                required: false
+                type: "string"
+                default: "[\"main\"]"
+            schedule_cron:
+                description: "Cron expression for scheduled analysis (informational; caller wraps the workflow_call)."
+                required: false
+                type: "string"
+                default: "0 0 * * 1"
+            runs_on:
+                description: "Runner image for the analyze job."
+                required: false
+                type: "string"
+                default: "ubuntu-latest"
 
 permissions:
     contents: "read"
@@ -27,7 +50,8 @@ jobs:
     analyze:
         name: "Analyze"
 
-        runs-on: "ubuntu-latest"
+        runs-on: "${{ inputs.runs_on || 'ubuntu-latest' }}"
+        timeout-minutes: 30
 
         permissions:
             actions: "read"
@@ -37,9 +61,7 @@ jobs:
         strategy:
             fail-fast: false
             matrix:
-                language: ["javascript", "typescript"]
-                # CodeQL supports [ $supported-codeql-languages ]
-                # Learn more about CodeQL language support at https://aka.ms/codeql-docs/language-support
+                language: "${{ fromJSON(inputs.languages || '[\"javascript-typescript\"]') }}"
 
         steps:
             - name: "Harden Runner"
