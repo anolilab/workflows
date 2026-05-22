@@ -28,11 +28,6 @@ on: # yamllint disable-line rule:truthy
                 required: false
                 type: "string"
                 default: "[]"
-            pnpm_version:
-                description: "DEPRECATED — pnpm version is now derived from packageManager in package.json. This input is ignored."
-                required: false
-                type: "string"
-                default: ""
             test_command:
                 description: "Shell command that runs the test suite."
                 required: false

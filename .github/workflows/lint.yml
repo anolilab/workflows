@@ -57,11 +57,6 @@ on: # yamllint disable-line rule:truthy
                 required: false
                 type: "string"
                 default: "22"
-            pnpm_version:
-                description: "DEPRECATED — pnpm version is now derived from packageManager in package.json. This input is ignored."
-                required: false
-                type: "string"
-                default: ""
             file_filters_path:
                 description: "Path to the dorny/paths-filter filters file."
                 required: false
