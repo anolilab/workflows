@@ -1,3 +1,24 @@
+## [16.0.0](https://github.com/anolilab/workflows/compare/v15.3.1...v16.0.0) (2026-05-22)
+
+### ⚠ BREAKING CHANGES
+
+* **workflows:** pnpm_version input on test.yml and lint.yml has been removed.
+pnpm version is now derived exclusively from packageManager in package.json.
+Callers passing pnpm_version will fail validation — drop the input from your
+consumer workflows.
+
+scorecards.yml: drop the direct triggers (branch_protection_rule, schedule,
+push) from the reusable. Reusables are expected to be invoked only via
+workflow_call from a consumer workflow that owns the triggers, which is how
+all consumer scorecards.yml files are wired. The mixed-trigger setup was the
+cause of startup_failure when called from consumer repos.
+
+Co-Authored-By: Claude Opus 4.7 <noreply@anthropic.com>
+
+### Features
+
+* **workflows:** remove deprecated pnpm_version input; scorecards reusable only via workflow_call ([20b8733](https://github.com/anolilab/workflows/commit/20b8733e71ebbb165d54fe8cede47e225985a58a))
+
 ## [15.3.1](https://github.com/anolilab/workflows/compare/v15.3.0...v15.3.1) (2026-05-21)
 
 ### Bug Fixes
