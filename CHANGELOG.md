@@ -1,3 +1,15 @@
+## [17.0.0](https://github.com/anolilab/workflows/compare/v16.0.0...v17.0.0) (2026-05-23)
+
+### ⚠ BREAKING CHANGES
+
+* **deps:** updated dependencies to major versions
+
+Co-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>
+
+### Miscellaneous Chores
+
+* **deps:** update dependency undici@<6.24.0 to v8 ([#392](https://github.com/anolilab/workflows/issues/392)) ([9f2bcfc](https://github.com/anolilab/workflows/commit/9f2bcfc5735710d722cf3f1e256f4d22e33c71b5))
+
 ## [16.0.0](https://github.com/anolilab/workflows/compare/v15.3.1...v16.0.0) (2026-05-22)
 
 ### ⚠ BREAKING CHANGES
