@@ -94,6 +94,16 @@ runs:
               # with nested category/name folders pass an explicit override.
               glob="${COVERAGE_GLOB:-${PROJECTS_FOLDER}/*/coverage}"
 
+              # Derive layout depth from the glob (path components between
+              # PROJECTS_FOLDER and `/coverage`). Used both to map a coverage
+              # dir back to a unique project key and to map AFFECTED_FILES
+              # entries back to their owning project for affected filtering.
+              glob_body="${glob#"${PROJECTS_FOLDER}"/}"
+              glob_body="${glob_body%/coverage}"
+              IFS='/' read -ra glob_parts <<< "${glob_body}"
+              depth="${#glob_parts[@]}"
+              (( depth < 1 )) && depth=1
+
               # Build the exclude set from whichever input applies. Both
               # inputs accept comma-separated project names; trim whitespace
               # so callers can wrap long lists across lines comfortably.
@@ -104,25 +114,72 @@ runs:
               fi
               IFS=',' read -ra excludes <<< "${raw_excludes}"
 
+              # When use-affected is on, derive the set of affected project
+              # keys from AFFECTED_FILES. A file belongs to a project when
+              # its path is `${PROJECTS_FOLDER}/<depth components>/...`.
+              # Files outside PROJECTS_FOLDER (workflows, root configs) are
+              # ignored — they map to no project and don't trigger uploads.
+              declare -A affected_keys=()
+              affected_filter=0
+              if [[ "${USE_AFFECTED}" == "true" ]]; then
+                  affected_filter=1
+                  # Accept comma, space, newline, or tab as separators.
+                  files_normalized="${AFFECTED_FILES//,/ }"
+                  # shellcheck disable=SC2206 # intentional word-splitting
+                  files_array=(${files_normalized})
+                  for file in "${files_array[@]}"; do
+                      [[ -z "${file}" ]] && continue
+                      [[ "${file}" == "${PROJECTS_FOLDER}/"* ]] || continue
+                      rel="${file#"${PROJECTS_FOLDER}"/}"
+                      IFS='/' read -ra parts <<< "${rel}"
+                      (( ${#parts[@]} >= depth )) || continue
+                      slash_key=""
+                      for (( i=0; i<depth; i++ )); do
+                          slash_key="${slash_key:+${slash_key}/}${parts[i]}"
+                      done
+                      affected_keys["${slash_key}"]=1
+                  done
+                  if (( ${#affected_keys[@]} > 0 )); then
+                      echo "Affected projects (${#affected_keys[@]}): ${!affected_keys[*]}"
+                  else
+                      echo "Affected projects: <none>"
+                  fi
+              fi
+
               uploaded=0
               skipped=0
               # shellcheck disable=SC2086 # intentional word-splitting on the glob
               for cov_dir in ${glob}; do
                   [[ -d "${cov_dir}" ]] || continue
                   pkg_dir="$(dirname "${cov_dir}")"
-                  project="$(basename "${pkg_dir}")"
+                  # Relative path from PROJECTS_FOLDER preserves category
+                  # context for nested layouts (e.g. `utils/foo` vs `foo`).
+                  rel_project="${pkg_dir#"${PROJECTS_FOLDER}"/}"
+                  # Codecov flags/names should avoid `/`; collapse to `-`
+                  # so `packages/utils/foo` becomes the unique key
+                  # `utils-foo` for `-F` and `-n`.
+                  project="${rel_project//\//-}"
+
+                  if (( affected_filter )) && [[ -z "${affected_keys[${rel_project}]+_}" ]]; then
+                      echo "Skipping unaffected project: ${rel_project}"
+                      skipped=$((skipped + 1))
+                      continue
+                  fi
 
                   excluded=0
                   for excl in "${excludes[@]:-}"; do
                       excl_trimmed="$(echo "${excl}" | tr -d '[:space:]')"
-                      if [[ -n "${excl_trimmed}" && "${project}" == "${excl_trimmed}" ]]; then
+                      [[ -z "${excl_trimmed}" ]] && continue
+                      # Accept either separator form so a caller may write
+                      # `utils/foo` or `utils-foo` in the excludes list.
+                      if [[ "${project}" == "${excl_trimmed}" || "${rel_project}" == "${excl_trimmed}" ]]; then
                           excluded=1
                           break
                       fi
                   done
 
                   if (( excluded )); then
-                      echo "Skipping excluded project: ${project}"
+                      echo "Skipping excluded project: ${rel_project}"
                       skipped=$((skipped + 1))
                       continue
                   fi
@@ -136,5 +193,9 @@ runs:
               echo "Codecov uploads: ${uploaded} (skipped ${skipped})"
 
               if (( uploaded == 0 )); then
-                  echo "No coverage directories matched '${glob}' — nothing to upload."
+                  if (( skipped == 0 )); then
+                      echo "No coverage directories matched '${glob}' — nothing to upload."
+                  else
+                      echo "All discovered coverage directories were filtered out — nothing to upload."
+                  fi
               fi
