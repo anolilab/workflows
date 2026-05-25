@@ -16,15 +16,22 @@ inputs:
         description: "The affected files"
         required: false
     exclude-affected-projects:
-        description: "The projects to exclude when use-affected is enabled"
+        description: "The projects to exclude when use-affected is enabled (comma-separated)"
         required: false
     exclude-projects:
-        description: "The projects to exclude when full upload should happen"
+        description: "The projects to exclude when full upload should happen (comma-separated)"
         required: false
     projectsFolder:
         description: "The folder where the projects are located"
         required: false
         default: "packages"
+    coverage-glob:
+        description: |
+            Glob pattern (relative to repo root) used to discover coverage
+            directories. Defaults to ${projectsFolder}/*/coverage. Set to
+            ${projectsFolder}/*/*/coverage for nested category/name layouts.
+        required: false
+        default: ""
 
 runs:
     using: "composite"
@@ -61,43 +68,73 @@ runs:
           shell: "bash"
           run: "sudo chmod +x codecov"
 
-        - name: "Upload affected code coverage to codecov"
-          if: "inputs.use-affected == 'true'"
-          shell: "bash"
-          run: |
-              IFS=$'\n' read -r -d '' -a affected_projects < <(pnpm nx show projects --affected --projects "${PROJECTS_FOLDER}/*" --files="${AFFECTED_FILES}" --exclude="${EXCLUDE_AFFECTED}" && printf '\0')
-
-              # Remove the first two elements of the array, this include infos about the command call
-              unset 'affected_projects[0]'
-              unset 'affected_projects[1]'
-
-              for project in "${affected_projects[@]}"; do
-                echo "Runing codecov in ${project} folder"
-                ./codecov --codecov-yml-path codecov.yml --verbose upload-process --fail-on-error --dir "${PROJECTS_FOLDER}/${project}" -t "${CODECOV_TOKEN}" -F "${project}" -n "${project}-${RUN_ID}"
-              done
-          env:
-              CODECOV_TOKEN: "${{ inputs.codecov-token }}"
-              PROJECTS_FOLDER: "${{ inputs.projectsFolder }}"
-              AFFECTED_FILES: "${{ inputs.affected-files }}"
-              EXCLUDE_AFFECTED: "${{ inputs.exclude-affected-projects }}"
-              RUN_ID: "${{ github.run_id }}"
-
+        # Filesystem walk over `${projectsFolder}/*/coverage` (or the
+        # caller-supplied `coverage-glob`) so we (a) never invoke pnpm —
+        # avoids platform-mismatch warnings poisoning a `read -a` capture
+        # that would otherwise turn warning lines into fake "project"
+        # names, and (b) automatically skip packages that didn't produce
+        # coverage instead of `--fail-on-error`-ing on a non-existent dir.
         - name: "Upload code coverage to codecov"
-          if: "inputs.use-affected == 'false'"
           shell: "bash"
-          run: |
-              IFS=$'\n' read -r -d '' -a exclude_array < <(pnpm nx show projects --projects "${PROJECTS_FOLDER}/*" --exclude="${EXCLUDE_PROJECTS}" && printf '\0')
-
-              # Remove the first two elements of the array, this include infos about the command call
-              unset 'exclude_array[0]'
-              unset 'exclude_array[1]'
-
-              for project in "${exclude_array[@]}"; do
-                  echo "Runing codecov in ${project} folder"
-                  ./codecov --codecov-yml-path codecov.yml --verbose upload-process --fail-on-error --dir "${PROJECTS_FOLDER}/${project}" -t "${CODECOV_TOKEN}" -F "${project}" -n "${project}-${RUN_ID}"
-              done
           env:
               CODECOV_TOKEN: "${{ inputs.codecov-token }}"
               PROJECTS_FOLDER: "${{ inputs.projectsFolder }}"
+              COVERAGE_GLOB: "${{ inputs.coverage-glob }}"
+              EXCLUDE_AFFECTED: "${{ inputs.exclude-affected-projects }}"
               EXCLUDE_PROJECTS: "${{ inputs.exclude-projects }}"
+              USE_AFFECTED: "${{ inputs.use-affected }}"
+              AFFECTED_FILES: "${{ inputs.affected-files }}"
               RUN_ID: "${{ github.run_id }}"
+          run: |
+              set -euo pipefail
+              shopt -s nullglob
+
+              # Resolve the glob to use for coverage discovery. The default
+              # `${PROJECTS_FOLDER}/*/coverage` matches flat layouts; callers
+              # with nested category/name folders pass an explicit override.
+              glob="${COVERAGE_GLOB:-${PROJECTS_FOLDER}/*/coverage}"
+
+              # Build the exclude set from whichever input applies. Both
+              # inputs accept comma-separated project names; trim whitespace
+              # so callers can wrap long lists across lines comfortably.
+              if [[ "${USE_AFFECTED}" == "true" ]]; then
+                  raw_excludes="${EXCLUDE_AFFECTED}"
+              else
+                  raw_excludes="${EXCLUDE_PROJECTS}"
+              fi
+              IFS=',' read -ra excludes <<< "${raw_excludes}"
+
+              uploaded=0
+              skipped=0
+              # shellcheck disable=SC2086 # intentional word-splitting on the glob
+              for cov_dir in ${glob}; do
+                  [[ -d "${cov_dir}" ]] || continue
+                  pkg_dir="$(dirname "${cov_dir}")"
+                  project="$(basename "${pkg_dir}")"
+
+                  excluded=0
+                  for excl in "${excludes[@]:-}"; do
+                      excl_trimmed="$(echo "${excl}" | tr -d '[:space:]')"
+                      if [[ -n "${excl_trimmed}" && "${project}" == "${excl_trimmed}" ]]; then
+                          excluded=1
+                          break
+                      fi
+                  done
+
+                  if (( excluded )); then
+                      echo "Skipping excluded project: ${project}"
+                      skipped=$((skipped + 1))
+                      continue
+                  fi
+
+                  echo "Running codecov in ${pkg_dir}"
+                  ./codecov --codecov-yml-path codecov.yml --verbose upload-process --fail-on-error \
+                      --dir "${pkg_dir}" -t "${CODECOV_TOKEN}" -F "${project}" -n "${project}-${RUN_ID}"
+                  uploaded=$((uploaded + 1))
+              done
+
+              echo "Codecov uploads: ${uploaded} (skipped ${skipped})"
+
+              if (( uploaded == 0 )); then
+                  echo "No coverage directories matched '${glob}' — nothing to upload."
+              fi
