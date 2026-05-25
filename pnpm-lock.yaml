@@ -3153,7 +3153,7 @@ snapshots:
       longest: 2.0.1
       word-wrap: 1.2.5
     optionalDependencies:
-      '@commitlint/load': 20.5.3(@types/node@24.10.1)(typescript@5.5.3)
+      '@commitlint/load': 21.0.1(@types/node@24.10.1)(typescript@5.5.3)
     transitivePeerDependencies:
       - '@types/node'
       - typescript
