@@ -1,3 +1,13 @@
+## [18.0.1](https://github.com/anolilab/workflows/compare/v18.0.0...v18.0.1) (2026-05-25)
+
+### Bug Fixes
+
+* **codecov:** walk filesystem for coverage dirs and tolerate empty runs ([#397](https://github.com/anolilab/workflows/issues/397)) ([0b08785](https://github.com/anolilab/workflows/commit/0b08785a49c308b845358690a1511d69114bee46))
+
+### Miscellaneous Chores
+
+* dedupe pnpm lockfile ([3339874](https://github.com/anolilab/workflows/commit/3339874b5fb4c84af563b4bd3c82889c1e724ceb))
+
 ## [18.0.0](https://github.com/anolilab/workflows/compare/v17.0.0...v18.0.0) (2026-05-23)
 
 ### ⚠ BREAKING CHANGES
