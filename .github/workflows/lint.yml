@@ -272,6 +272,18 @@ jobs:
                   GIT_AUTHOR_NAME: "GitHub Actions Shell"
                   EMAIL: "github-actions[bot]@users.noreply.github.com"
 
+            # raven-actions/actionlint runs `npm install` in the workspace root
+            # to fetch @actions/tool-cache. If package.json declares pnpm
+            # `catalog:` dependencies, npm fails with EUNSUPPORTEDPROTOCOL.
+            # actionlint only reads .github/workflows/*.yml, so hiding the
+            # package.json from npm is safe for this job.
+            - name: "Hide package.json from npm"
+              shell: "bash"
+              run: |
+                  if [ -f package.json ]; then
+                      mv package.json /tmp/package.json.lint-stash
+                  fi
+
             - name: "actionlint"
               uses: "raven-actions/actionlint@205b530c5d9fa8f44ae9ed59f341a0db994aa6f8" # v2.1.2
               with:
