@@ -48,6 +48,7 @@ on: # yamllint disable-line rule:truthy
                 type: "string"
 
 permissions:
+    discussions: "write" # dessant/lock-threads locks inactive discussions by default (discussion-inactive-days: 365)
     issues: "write"
     pull-requests: "write"
 
