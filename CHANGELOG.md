@@ -1,3 +1,15 @@
+## [18.0.2](https://github.com/anolilab/workflows/compare/v18.0.1...v18.0.2) (2026-05-29)
+
+### Bug Fixes
+
+* **deps:** pin dessant/lock-threads to v6.0.2 ([9705d8f](https://github.com/anolilab/workflows/commit/9705d8fb1b70fdd3670b36e9dd1456820ccef30e))
+* **lint:** hide package.json from npm so actionlint works with pnpm catalog: refs ([1dc687e](https://github.com/anolilab/workflows/commit/1dc687e78887af5536dbd0877054fc1c56c5575b))
+* **lock-closed:** grant discussions write permission ([#399](https://github.com/anolilab/workflows/issues/399)) ([fb949a5](https://github.com/anolilab/workflows/commit/fb949a57450041b1d899f1436d17dae2701ba9ec))
+
+### Miscellaneous Chores
+
+* **deps:** apply pnpm audit fixes and dedupe ([dc2b7bc](https://github.com/anolilab/workflows/commit/dc2b7bc4a1ea0b9b0c42811a2a5bb40cfe640953))
+
 ## [18.0.1](https://github.com/anolilab/workflows/compare/v18.0.0...v18.0.1) (2026-05-25)
 
 ### Bug Fixes
