@@ -1,3 +1,9 @@
+## [18.0.3](https://github.com/anolilab/workflows/compare/v18.0.2...v18.0.3) (2026-06-02)
+
+### Bug Fixes
+
+* **deps:** update patch updates (patch) ([#398](https://github.com/anolilab/workflows/issues/398)) ([8e5c519](https://github.com/anolilab/workflows/commit/8e5c5192a8fa75016d3a4d75b8c47f806e7d6b59))
+
 ## [18.0.2](https://github.com/anolilab/workflows/compare/v18.0.1...v18.0.2) (2026-05-29)
 
 ### Bug Fixes
