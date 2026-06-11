@@ -1,3 +1,14 @@
+## [18.0.4](https://github.com/anolilab/workflows/compare/v18.0.3...v18.0.4) (2026-06-11)
+
+### Bug Fixes
+
+* **ci:** drop unsupported node-20 and skip default test when no test script ([65509a0](https://github.com/anolilab/workflows/commit/65509a0beee07a231f6727ef74360ca1e6af92fb))
+
+### Miscellaneous Chores
+
+* **deps:** resolve audit vulnerabilities and dedupe lockfile ([83ce365](https://github.com/anolilab/workflows/commit/83ce3652c013bb474074da79b47437d71df9b35f))
+* **security:** harden pnpm supply-chain config and add dev container ([9cc5554](https://github.com/anolilab/workflows/commit/9cc5554c26f60086a1692722a47ea6cd8f047076))
+
 ## [18.0.3](https://github.com/anolilab/workflows/compare/v18.0.2...v18.0.3) (2026-06-02)
 
 ### Bug Fixes
