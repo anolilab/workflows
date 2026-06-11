@@ -71,3 +71,5 @@ We have a list of [good first issues](https://github.com/visulima/visulima/label
 The anolilab workflows is open-sourced software licensed under the [MIT][license-url]
 
 [license-url]: LICENSE.md "license"
+
+<!-- ci: verify Tests workflow green after node-20 drop + no-test-script skip -->
