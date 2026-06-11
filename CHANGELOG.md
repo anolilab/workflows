@@ -1,3 +1,13 @@
+## [19.0.1](https://github.com/anolilab/workflows/compare/v19.0.0...v19.0.1) (2026-06-11)
+
+### Bug Fixes
+
+* **deps:** update minor updates ([#405](https://github.com/anolilab/workflows/issues/405)) ([322f424](https://github.com/anolilab/workflows/commit/322f424c1bd9566e48249a3bbd48bd4f3e8b94b6))
+
+### Continuous Integration
+
+* default markdown lint to off ([deeefde](https://github.com/anolilab/workflows/commit/deeefde13aff6f325479837ef01affab247e31a3))
+
 ## [19.0.0](https://github.com/anolilab/workflows/compare/v18.0.4...v19.0.0) (2026-06-11)
 
 ### ⚠ BREAKING CHANGES
