@@ -36,7 +36,7 @@ on: # yamllint disable-line rule:truthy
                 description: "Run markdown lint."
                 required: false
                 type: "boolean"
-                default: true
+                default: false
             lint_yaml:
                 description: "Run yaml lint (yamllint) across the repo."
                 required: false
