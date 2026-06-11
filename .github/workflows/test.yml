@@ -14,10 +14,10 @@ on: # yamllint disable-line rule:truthy
     workflow_call:
         inputs:
             node_versions:
-                description: "JSON array of Node.js versions (e.g. '[\"20\", \"22\", \"24\"]')."
+                description: "JSON array of Node.js versions (e.g. '[\"22\", \"24\"]'). Node 20 is unsupported: the pinned pnpm requires node:sqlite (Node >=22)."
                 required: false
                 type: "string"
-                default: "[\"20\", \"22\", \"24\"]"
+                default: "[\"22\", \"24\"]"
             os_matrix:
                 description: "JSON array of runner images (e.g. '[\"ubuntu-latest\", \"macos-15\"]')."
                 required: false
@@ -58,7 +58,7 @@ jobs:
             fail-fast: false
             matrix:
                 os: "${{ fromJSON(inputs.os_matrix || '[\"ubuntu-latest\"]') }}"
-                node: "${{ fromJSON(inputs.node_versions || '[\"20\", \"22\", \"24\"]') }}"
+                node: "${{ fromJSON(inputs.node_versions || '[\"22\", \"24\"]') }}"
                 include: "${{ fromJSON(inputs.extra_includes || '[]') }}"
         runs-on: "${{ matrix.os }}"
         steps:
@@ -118,8 +118,17 @@ jobs:
               shell: "bash"
               env:
                   TEST_COMMAND: "${{ inputs.test_command || 'pnpm test' }}"
+                  IS_DEFAULT_COMMAND: "${{ inputs.test_command == '' || inputs.test_command == null }}"
               run: |
                   set -euo pipefail
+                  # When using the default `pnpm test` and the repo ships no `test`
+                  # script (e.g. a meta/config repo with nothing to test), skip
+                  # instead of hard-failing with ERR_PNPM_NO_SCRIPT. A consumer that
+                  # passes an explicit test_command always runs as-is.
+                  if [ "$IS_DEFAULT_COMMAND" = "true" ] && ! node -e "process.exit(require('./package.json').scripts?.test ? 0 : 1)" 2>/dev/null; then
+                      echo "::notice::No \"test\" script found in package.json; skipping the default test command."
+                      exit 0
+                  fi
                   eval "$TEST_COMMAND"
 
             # Coverage uploads only fire from the first matrix cell to avoid double-counting.
