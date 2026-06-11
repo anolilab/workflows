@@ -1,3 +1,20 @@
+## [19.0.0](https://github.com/anolilab/workflows/compare/v18.0.4...v19.0.0) (2026-06-11)
+
+### ⚠ BREAKING CHANGES
+
+* **deps:** updated dependencies to major versions
+
+Co-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>
+
+### Bug Fixes
+
+* **deps:** update commitlint monorepo to ^21.0.2 ([#400](https://github.com/anolilab/workflows/issues/400)) ([bd83f7d](https://github.com/anolilab/workflows/commit/bd83f7d5cf8ff0227fc067e99f8cb4537935c34f))
+* **deps:** update patch updates to ^17.0.7 ([#401](https://github.com/anolilab/workflows/issues/401)) ([31c9ca5](https://github.com/anolilab/workflows/commit/31c9ca52a2e532ba664c460278676f0c19462974))
+
+### Miscellaneous Chores
+
+* **deps:** update dependency sort-package-json to v4 ([#402](https://github.com/anolilab/workflows/issues/402)) ([f053d6f](https://github.com/anolilab/workflows/commit/f053d6f5d0b68f01399aaf0f68c5c8f16380ec61))
+
 ## [18.0.4](https://github.com/anolilab/workflows/compare/v18.0.3...v18.0.4) (2026-06-11)
 
 ### Bug Fixes
