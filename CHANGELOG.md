@@ -1,3 +1,13 @@
+## [19.0.2](https://github.com/anolilab/workflows/compare/v19.0.1...v19.0.2) (2026-06-15)
+
+### Bug Fixes
+
+* **codecov:** fetch PGP key from cli.codecov.io instead of dead keybase.io ([a97203e](https://github.com/anolilab/workflows/commit/a97203e7e3a3e3f61142ca6e27b5fe36afd6bdc9))
+
+### Miscellaneous Chores
+
+* **deps:** override js-yaml to >=4.1.2 for CI audit advisory ([1fcd03b](https://github.com/anolilab/workflows/commit/1fcd03bd30f54369755fc3e7134c71a9057c9a10))
+
 ## [19.0.1](https://github.com/anolilab/workflows/compare/v19.0.0...v19.0.1) (2026-06-11)
 
 ### Bug Fixes
