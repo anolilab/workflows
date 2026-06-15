@@ -1,3 +1,9 @@
+## [19.0.3](https://github.com/anolilab/workflows/compare/v19.0.2...v19.0.3) (2026-06-15)
+
+### Bug Fixes
+
+* **deps:** update github-actions ([#404](https://github.com/anolilab/workflows/issues/404)) ([60fb583](https://github.com/anolilab/workflows/commit/60fb58333e575daf5818a9c43b16ef3134fef2e4))
+
 ## [19.0.2](https://github.com/anolilab/workflows/compare/v19.0.1...v19.0.2) (2026-06-15)
 
 ### Bug Fixes
