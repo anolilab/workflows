@@ -48,7 +48,7 @@ runs:
 
         - name: "Verify Codecov integrity get GPG"
           shell: "bash"
-          run: "curl https://keybase.io/codecovsecurity/pgp_keys.asc | gpg --no-default-keyring --keyring trustedkeys.gpg --import"
+          run: "curl --fail --silent --show-error --retry 5 --retry-all-errors https://cli.codecov.io/pgp_keys.asc | gpg --no-default-keyring --keyring trustedkeys.gpg --import"
 
         - name: "Get Codecov SHAsums"
           shell: "bash"
