@@ -1,3 +1,9 @@
+## [19.0.4](https://github.com/anolilab/workflows/compare/v19.0.3...v19.0.4) (2026-06-15)
+
+### Bug Fixes
+
+* **codecov:** use codecovsecops keybase account for PGP key ([e5f62a6](https://github.com/anolilab/workflows/commit/e5f62a6345d5cb7b41840c846d2178b9e92a0682))
+
 ## [19.0.3](https://github.com/anolilab/workflows/compare/v19.0.2...v19.0.3) (2026-06-15)
 
 ### Bug Fixes
