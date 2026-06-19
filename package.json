@@ -22,7 +22,7 @@
         "lint-staged": "^17.0.7",
         "prettier": "^3.8.3",
         "secretlint": "13.0.2",
-        "semantic-release": "^25.0.3",
+        "semantic-release": "^25.0.5",
         "sort-package-json": "^4.0.0"
     },
     "packageManager": "pnpm@11.5.3",
