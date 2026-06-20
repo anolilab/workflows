@@ -1,3 +1,27 @@
+## [20.0.0](https://github.com/anolilab/workflows/compare/v19.0.4...v20.0.0) (2026-06-20)
+
+### ⚠ BREAKING CHANGES
+
+* **deps:** updated dependencies to major versions
+* **deps:** updated dependencies to major versions
+
+### Bug Fixes
+
+* **deps:** override undici to patched versions to resolve audit advisories ([36faed5](https://github.com/anolilab/workflows/commit/36faed5d7b1def60d87dbc39ed9b0964b1b06eca))
+* **deps:** update github-actions ([56af144](https://github.com/anolilab/workflows/commit/56af14420cf3c94af116ea7641acf73d66f7df92))
+* **deps:** update minor updates ([6b54508](https://github.com/anolilab/workflows/commit/6b545080adcb3db50ad11dc57fc6969406aa9d5f))
+* **deps:** update patch updates ([#407](https://github.com/anolilab/workflows/issues/407)) ([5831408](https://github.com/anolilab/workflows/commit/5831408882742a936f0a248a74b21459ecf74c01))
+* **deps:** update prettier to ^3.8.4 ([505d6d0](https://github.com/anolilab/workflows/commit/505d6d04f02f0aeec0a2b28483627502f0fe7061))
+* **deps:** update semantic-release to ^25.0.5 ([85324a3](https://github.com/anolilab/workflows/commit/85324a3562535fdee57614fb3e7c19b8554088af))
+
+### Miscellaneous Chores
+
+* **deps:** lock file maintenance ([4250ff6](https://github.com/anolilab/workflows/commit/4250ff61002317c484a8b91222da0367aec318a7))
+* **deps:** regenerate lockfile after applying renovate updates ([9bebebd](https://github.com/anolilab/workflows/commit/9bebebdd4ade2b68499a1c003301b5601fb3cc9d))
+* **deps:** update dependency fast-uri@<=3.1.0 to v4 ([82458a3](https://github.com/anolilab/workflows/commit/82458a3bf7865f7d1e0f0f959fdc7ead22f7c600))
+* **deps:** update dependency fast-uri@<=3.1.1 to v4 ([f193088](https://github.com/anolilab/workflows/commit/f19308855633e412d5be3cc341c0cd0a1d317041))
+* update pnpm to 11.8.0 ([ea7cde6](https://github.com/anolilab/workflows/commit/ea7cde69992b97b6f8a4b1ebc9a611b32edfbd5b))
+
 ## [19.0.4](https://github.com/anolilab/workflows/compare/v19.0.3...v19.0.4) (2026-06-15)
 
 ### Bug Fixes
