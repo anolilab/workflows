@@ -1,3 +1,9 @@
+## [20.0.1](https://github.com/anolilab/workflows/compare/v20.0.0...v20.0.1) (2026-06-20)
+
+### Bug Fixes
+
+* **setup:** default npm-version to latest to avoid broken 11.6.x audit signatures ([38d66e8](https://github.com/anolilab/workflows/commit/38d66e873898428f913af66b7e2a50206a4c371a))
+
 ## [20.0.0](https://github.com/anolilab/workflows/compare/v19.0.4...v20.0.0) (2026-06-20)
 
 ### ⚠ BREAKING CHANGES
