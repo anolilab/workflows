@@ -26,14 +26,14 @@ importers:
         specifier: ^10.0.1
         version: 10.0.1(@commitlint/cli@21.0.2(@types/node@24.10.1)(conventional-commits-filter@5.0.0)(conventional-commits-parser@6.3.0)(typescript@5.5.3))(@types/node@24.10.1)(conventional-commits-filter@5.0.0)(conventional-commits-parser@6.3.0)(typescript@5.5.3)
       '@anolilab/lint-staged-config':
-        specifier: ^11.0.9
-        version: 11.0.9(@types/node@24.10.1)(husky@9.1.7)(lint-staged@17.0.7)(prettier@3.8.4)(secretlint@13.0.2)(yaml@2.9.0)
+        specifier: ^11.0.10
+        version: 11.0.10(@types/node@24.10.1)(husky@9.1.7)(lint-staged@17.0.8)(prettier@3.8.4)(secretlint@13.0.2)(yaml@2.9.0)
       '@anolilab/prettier-config':
         specifier: ^10.0.1
         version: 10.0.1(prettier@3.8.4)
       '@anolilab/semantic-release-preset':
-        specifier: ^13.4.16
-        version: 13.4.16(semantic-release@25.0.5(typescript@5.5.3))(yaml@2.9.0)
+        specifier: ^13.4.17
+        version: 13.4.17(semantic-release@25.0.5(typescript@5.5.3))(yaml@2.9.0)
       '@commitlint/cli':
         specifier: ^21.0.2
         version: 21.0.2(@types/node@24.10.1)(conventional-commits-filter@5.0.0)(conventional-commits-parser@6.3.0)(typescript@5.5.3)
@@ -59,8 +59,8 @@ importers:
         specifier: ^4.1.0
         version: 4.1.0
       lint-staged:
-        specifier: ^17.0.7
-        version: 17.0.7
+        specifier: ^17.0.8
+        version: 17.0.8
       prettier:
         specifier: ^3.8.4
         version: 3.8.4
@@ -95,8 +95,8 @@ packages:
     peerDependencies:
       '@commitlint/cli': ^17.6.5 || ^18.x || ^19.x || ^20.0.0
 
-  '@anolilab/lint-staged-config@11.0.9':
-    resolution: {integrity: sha512-dGOxsja5ZFoxpvZ71bptqsRglZ5FMqA1lgDPx73u4kzGyatGTX4o8Y+0EOUrYPIprypOVOuWuihrrboK7e//Sg==}
+  '@anolilab/lint-staged-config@11.0.10':
+    resolution: {integrity: sha512-jFAlSA6lrd9FrxBUs+T1C4VlN/rRryZr95ifglQFU3iPfl2k4fmh7VPs3+VP07kHhGS7JrE5F0i8P7cGLYfYCA==}
     engines: {node: '>=22.12.0 <=25.*'}
     hasBin: true
     peerDependencies:
@@ -134,16 +134,16 @@ packages:
     peerDependencies:
       prettier: 3.8.3
 
-  '@anolilab/semantic-release-clean-package-json@5.5.13':
-    resolution: {integrity: sha512-5r6gpFMzuLZKyXcI1HPmAvYah68WDZzhHfxRlwNkpKyE+bPAyUNN71KAv+5mAHjaYOvGwae/2EH5+PVE8qNG/A==}
+  '@anolilab/semantic-release-clean-package-json@5.5.14':
+    resolution: {integrity: sha512-Z8SjV7LuQBE2HWCTWsvpOKIAuP0Gddwi3rBzmjv2uwpbtoMeFwPcNWg+kTjGdIpqz5rHX5hNJrgFeUko+XzMXA==}
     engines: {node: ^22.14.0 || >=24.10.0}
 
-  '@anolilab/semantic-release-preset@13.4.16':
-    resolution: {integrity: sha512-e9sQ4pthrvL2r99VzlBxfS21I084uOgYz1Gp37MRY1HTHTlN8mk62Kv5Kmnqudt8EPp3ZOPq1nnlJn0z8vV4gA==}
+  '@anolilab/semantic-release-preset@13.4.17':
+    resolution: {integrity: sha512-E10oa1CABGGI8dnp+AU07SpvsNfE8Ry8LqEaetfER0ZF1CpbS+xCGmWrVPESBKyiyzBEcrz2W/qrBGfdfNgTMQ==}
     engines: {node: ^22.14.0 || >=24.10.0}
     os: [darwin, linux, win32]
     peerDependencies:
-      '@anolilab/semantic-release-pnpm': 8.1.15
+      '@anolilab/semantic-release-pnpm': 8.1.16
       '@semantic-release/npm': 13.1.5
       semantic-release: 25.0.3
       semantic-release-yarn: ^3.0.2
@@ -1315,8 +1315,8 @@ packages:
   lines-and-columns@1.2.4:
     resolution: {integrity: sha512-7ylylesZQ/PV29jhEDl3Ufjo6ZX7gCqJr5F7PKrqc93v7fzSymt1BpwEU8nAUXs8qzzvqhbjhK5QZg6Mt/HkBg==}
 
-  lint-staged@17.0.7:
-    resolution: {integrity: sha512-JrSobt+tW3rH8IOMi8tDZd3foorM5yPEkLD/V2NxobgHrFfHWGee4MOLVuZeScgxftEwbHrPHIFA/ZL+nUJeuA==}
+  lint-staged@17.0.8:
+    resolution: {integrity: sha512-B2P/d+jVW0UXOQ0MVMLrB/9ydA1P+zz6jYfdrbbEd9ur3S2rcbduFWKiUCC02Sm5hbC8nrm7y24WuYMG54HfxA==}
     engines: {node: '>=22.22.1'}
     hasBin: true
 
@@ -2225,7 +2225,7 @@ snapshots:
       - conventional-commits-parser
       - typescript
 
-  '@anolilab/lint-staged-config@11.0.9(@types/node@24.10.1)(husky@9.1.7)(lint-staged@17.0.7)(prettier@3.8.4)(secretlint@13.0.2)(yaml@2.9.0)':
+  '@anolilab/lint-staged-config@11.0.10(@types/node@24.10.1)(husky@9.1.7)(lint-staged@17.0.8)(prettier@3.8.4)(secretlint@13.0.2)(yaml@2.9.0)':
     dependencies:
       '@visulima/fs': 4.1.0(yaml@2.9.0)
       '@visulima/package': 4.1.7(@types/node@24.10.1)
@@ -2233,7 +2233,7 @@ snapshots:
       shell-quote: 1.8.4
       type-fest: 5.6.0
     optionalDependencies:
-      lint-staged: 17.0.7
+      lint-staged: 17.0.8
       prettier: 3.8.4
       secretlint: 13.0.2
     transitivePeerDependencies:
@@ -2244,7 +2244,7 @@ snapshots:
     dependencies:
       prettier: 3.8.4
 
-  '@anolilab/semantic-release-clean-package-json@5.5.13(yaml@2.9.0)':
+  '@anolilab/semantic-release-clean-package-json@5.5.14(yaml@2.9.0)':
     dependencies:
       '@semantic-release/error': 4.0.0
       '@visulima/fs': 4.1.0(yaml@2.9.0)
@@ -2253,9 +2253,9 @@ snapshots:
     transitivePeerDependencies:
       - yaml
 
-  '@anolilab/semantic-release-preset@13.4.16(semantic-release@25.0.5(typescript@5.5.3))(yaml@2.9.0)':
+  '@anolilab/semantic-release-preset@13.4.17(semantic-release@25.0.5(typescript@5.5.3))(yaml@2.9.0)':
     dependencies:
-      '@anolilab/semantic-release-clean-package-json': 5.5.13(yaml@2.9.0)
+      '@anolilab/semantic-release-clean-package-json': 5.5.14(yaml@2.9.0)
       '@semantic-release/changelog': 6.0.3(semantic-release@25.0.5(typescript@5.5.3))
       '@semantic-release/commit-analyzer': 13.0.1(semantic-release@25.0.5(typescript@5.5.3))
       '@semantic-release/exec': 7.1.0(semantic-release@25.0.5(typescript@5.5.3))
@@ -3585,7 +3585,7 @@ snapshots:
 
   lines-and-columns@1.2.4: {}
 
-  lint-staged@17.0.7:
+  lint-staged@17.0.8:
     dependencies:
       listr2: 10.2.1
       picomatch: 4.0.4
