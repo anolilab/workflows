@@ -371,7 +371,7 @@ jobs:
 
             - name: "Restore pnpm store"
               id: "pnpm-cache"
-              uses: "actions/cache/restore@27d5ce7f107fe9357f9df03efb73ab90386fccae" # v5.0.5
+              uses: "actions/cache/restore@2c8a9bd7457de244a408f35966fab2fb45fda9c8" # v6.0.0
               with:
                   path: "${{ steps.pnpm-store.outputs.path }}"
                   key: "pnpm-store-${{ runner.os }}-${{ hashFiles('pnpm-lock.yaml') }}"
@@ -384,7 +384,7 @@ jobs:
             # Only write back to the shared cache from trusted refs.
             - name: "Save pnpm store"
               if: "github.event_name == 'push' && steps.pnpm-cache.outputs.cache-hit != 'true'"
-              uses: "actions/cache/save@27d5ce7f107fe9357f9df03efb73ab90386fccae" # v5.0.5
+              uses: "actions/cache/save@2c8a9bd7457de244a408f35966fab2fb45fda9c8" # v6.0.0
               with:
                   path: "${{ steps.pnpm-store.outputs.path }}"
                   key: "${{ steps.pnpm-cache.outputs.cache-primary-key }}"
