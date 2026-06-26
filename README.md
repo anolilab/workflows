@@ -33,6 +33,7 @@ configure the following:
 
 - [Node Setup Environment and Resources](./step/node/action.yml) - sets up the Node.js environment with pnpm, pnpm cache, nx (optional), nx cache (optional) and allocates resources (the old `./step/setup` path is kept as a deprecated alias)
 - [Codecov](./step/codecov/action.yml) - uploads coverage reports to Codecov
+- [Checkout with retry](./step/checkout-with-retry/action.yml) - `actions/checkout` wrapped in a two-shot retry to ride out the transient HTTP 401 that `secrets.GITHUB_TOKEN` can return mid-checkout
 
 ### Workflows
 

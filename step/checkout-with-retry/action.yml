@@ -1,0 +1,45 @@
+name: "Checkout with retry"
+description: >-
+    actions/checkout wrapped in a two-shot retry to ride out the transient HTTP
+    401 that secrets.GITHUB_TOKEN can return mid-checkout.
+inputs:
+    repository:
+        description: "Repository name with owner. Defaults to the current repository."
+        required: false
+        default: "${{ github.repository }}"
+    ref:
+        description: "Branch, tag or SHA to check out. Defaults to the triggering ref."
+        required: false
+        default: ""
+    fetch-depth:
+        description: "Number of commits to fetch. 0 fetches all history."
+        required: false
+        default: "1"
+    persist-credentials:
+        description: "Whether to persist the token in the local git config."
+        required: false
+        default: "false"
+runs:
+    using: "composite"
+    steps:
+        - name: "Git checkout"
+          id: "checkout"
+          continue-on-error: true
+          uses: "actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0" # v7.0.0
+          with:
+              repository: "${{ inputs.repository }}"
+              ref: "${{ inputs.ref }}"
+              fetch-depth: "${{ inputs.fetch-depth }}"
+              persist-credentials: "${{ inputs.persist-credentials }}"
+        - name: "Wait before retrying checkout"
+          if: "steps.checkout.outcome == 'failure'"
+          shell: "bash"
+          run: "sleep 15"
+        - name: "Git checkout (retry)"
+          if: "steps.checkout.outcome == 'failure'"
+          uses: "actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0" # v7.0.0
+          with:
+              repository: "${{ inputs.repository }}"
+              ref: "${{ inputs.ref }}"
+              fetch-depth: "${{ inputs.fetch-depth }}"
+              persist-credentials: "${{ inputs.persist-credentials }}"
