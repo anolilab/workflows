@@ -1,3 +1,9 @@
+## [20.1.0](https://github.com/anolilab/workflows/compare/v20.0.4...v20.1.0) (2026-06-26)
+
+### Features
+
+* **step:** add checkout-with-retry composite action ([6c16895](https://github.com/anolilab/workflows/commit/6c16895f4c3b5273b373656988505d1a8264e78b))
+
 ## [20.0.4](https://github.com/anolilab/workflows/compare/v20.0.3...v20.0.4) (2026-06-26)
 
 ### Bug Fixes
