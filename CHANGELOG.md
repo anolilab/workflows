@@ -1,3 +1,15 @@
+## [20.0.4](https://github.com/anolilab/workflows/compare/v20.0.3...v20.0.4) (2026-06-26)
+
+### Bug Fixes
+
+* **deps:** update github-actions ([#415](https://github.com/anolilab/workflows/issues/415)) ([7a0f268](https://github.com/anolilab/workflows/commit/7a0f268f697a8bc92e4c9e4754ab628034c29c99))
+* **deps:** update pnpm to v11.9.0 ([#423](https://github.com/anolilab/workflows/issues/423)) ([233ef3f](https://github.com/anolilab/workflows/commit/233ef3ff2d64776d077fc632d72e02cbe514e868))
+
+### Continuous Integration
+
+* **deps:** update actions/cache action to v6 ([#424](https://github.com/anolilab/workflows/issues/424)) ([8b8ecdf](https://github.com/anolilab/workflows/commit/8b8ecdfceaf68f2ae5c0492a2c5fa837b33fb5c0))
+* **deps:** update actions/checkout action to v7 ([#419](https://github.com/anolilab/workflows/issues/419)) ([58bf331](https://github.com/anolilab/workflows/commit/58bf3316370d2f360af64c7154a4b5043ebb6131))
+
 ## [20.0.3](https://github.com/anolilab/workflows/compare/v20.0.2...v20.0.3) (2026-06-24)
 
 ### Bug Fixes
