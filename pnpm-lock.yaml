@@ -62,7 +62,7 @@ importers:
         specifier: ^17.0.8
         version: 17.0.8
       prettier:
-        specifier: ^3.8.5
+        specifier: ^3.9.1
         version: 3.9.3
       secretlint:
         specifier: 13.0.2
