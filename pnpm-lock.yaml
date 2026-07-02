@@ -47,8 +47,8 @@ importers:
         specifier: ^4.3.2
         version: 4.3.2(@types/node@24.10.1)(typescript@5.5.3)
       conventional-changelog-conventionalcommits:
-        specifier: 9.3.1
-        version: 9.3.1
+        specifier: 10.2.0
+        version: 10.2.0
       cross-env:
         specifier: ^10.1.0
         version: 10.1.0
@@ -340,6 +340,10 @@ packages:
         optional: true
       conventional-commits-parser:
         optional: true
+
+  '@conventional-changelog/template@1.2.0':
+    resolution: {integrity: sha512-12qHxvlKjHmP0PQ+17EREgC7lWyLwbph1RKcZQZ7k7ZWGmrxfxC9gadHGfvzr0g0u8BhiBGg3tks93txodlyRQ==}
+    engines: {node: '>=22'}
 
   '@epic-web/invariant@1.0.0':
     resolution: {integrity: sha512-lrTPqgvfFQtR/eY/qkIzp98OGdNJu0m5ji3q/nJI8v3SXkRKEnWiOxMmbvcSoAIzv/cGiuvRy57k4suKQSAdwA==}
@@ -808,6 +812,10 @@ packages:
   conventional-changelog-angular@8.3.0:
     resolution: {integrity: sha512-DOuBwYSqWzfwuRByY9O4oOIvDlkUCTDzfbOgcSbkY+imXXj+4tmrEFao3K+FxemClYfYnZzsvudbwrhje9VHDA==}
     engines: {node: '>=18'}
+
+  conventional-changelog-conventionalcommits@10.2.0:
+    resolution: {integrity: sha512-UtlM9GqolY7OmlQh5L/UEVoKsTUpTgUVy1PU8JN5gl5Ydaejb7WRklGliG1SKPxxj7hzA173eG3Kt5fYWE2pmg==}
+    engines: {node: '>=22'}
 
   conventional-changelog-conventionalcommits@9.3.1:
     resolution: {integrity: sha512-dTYtpIacRpcZgrvBYvBfArMmK2xvIpv2TaxM0/ZI5CBtNUzvF2x0t15HsbRABWprS6UPmvj+PzHVjSx4qAVKyw==}
@@ -2569,6 +2577,8 @@ snapshots:
       conventional-commits-filter: 5.0.0
       conventional-commits-parser: 6.3.0
 
+  '@conventional-changelog/template@1.2.0': {}
+
   '@epic-web/invariant@1.0.0': {}
 
   '@inquirer/ansi@1.0.2': {}
@@ -3135,6 +3145,10 @@ snapshots:
   conventional-changelog-angular@8.3.0:
     dependencies:
       compare-func: 2.0.0
+
+  conventional-changelog-conventionalcommits@10.2.0:
+    dependencies:
+      '@conventional-changelog/template': 1.2.0
 
   conventional-changelog-conventionalcommits@9.3.1:
     dependencies:
