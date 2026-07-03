@@ -139,7 +139,7 @@ runs:
         # actions/cache@v5 auto-saves at job exit regardless of permissions:
         # block — switching to /restore + a gated /save closes that path by design.
         - name: "Restore pnpm store cache"
-          uses: "actions/cache/restore@2c8a9bd7457de244a408f35966fab2fb45fda9c8" # v6.0.0
+          uses: "actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9" # v6.1.0
           id: "pnpm-store-cache"
           with:
               path: "${{ steps.pnpm-config.outputs.STORE_PATH }}"
@@ -161,7 +161,7 @@ runs:
         - name: "Restore node_modules cache"
           if: "inputs.enable-node-modules-cache == 'true'"
           id: "node-modules-cache"
-          uses: "actions/cache/restore@2c8a9bd7457de244a408f35966fab2fb45fda9c8" # v6.0.0
+          uses: "actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9" # v6.1.0
           with:
               path: "/tmp/node_modules.tar.lz4"
               key: "pnpm-nm-cache-${{ inputs.cache-prefix }}-${{ runner.os }}-${{ inputs.node-version }}-${{ hashFiles('**/pnpm-lock.yaml') }}"
@@ -181,7 +181,7 @@ runs:
         - name: "Check for Nx cache"
           if: "inputs.enable-nx-cache == 'true'"
           id: "nx-cache"
-          uses: "actions/cache@2c8a9bd7457de244a408f35966fab2fb45fda9c8" # v6.0.0
+          uses: "actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9" # v6.1.0
           with:
               path: "/tmp/nx_cache.tar.lz4"
               key: "cache-nx-${{ inputs.cache-prefix }}-${{ runner.os }}-${{ inputs.node-version }}-${{ hashFiles('pnpm-lock.yaml') }}-${{ github.sha }}"
@@ -214,7 +214,7 @@ runs:
         # poisoned fork build can't push entries the next main build will pick up.
         - name: "Save pnpm store cache"
           if: "inputs.install-packages == 'true' && github.event_name == 'push' && steps.pnpm-store-cache.outputs.cache-hit != 'true'"
-          uses: "actions/cache/save@2c8a9bd7457de244a408f35966fab2fb45fda9c8" # v6.0.0
+          uses: "actions/cache/save@55cc8345863c7cc4c66a329aec7e433d2d1c52a9" # v6.1.0
           with:
               path: "${{ steps.pnpm-config.outputs.STORE_PATH }}"
               key: "${{ steps.pnpm-store-cache.outputs.cache-primary-key }}"
@@ -237,7 +237,7 @@ runs:
         # Same trusted-ref gating for the node_modules tarball cache.
         - name: "Save node_modules cache"
           if: "inputs.enable-node-modules-cache == 'true' && inputs.install-packages == 'true' && github.event_name == 'push' && steps.node-modules-cache.outputs.cache-hit != 'true'"
-          uses: "actions/cache/save@2c8a9bd7457de244a408f35966fab2fb45fda9c8" # v6.0.0
+          uses: "actions/cache/save@55cc8345863c7cc4c66a329aec7e433d2d1c52a9" # v6.1.0
           with:
               path: "/tmp/node_modules.tar.lz4"
               key: "${{ steps.node-modules-cache.outputs.cache-primary-key }}"

@@ -95,7 +95,7 @@ jobs:
 
             - name: "Restore pnpm store"
               id: "pnpm-cache"
-              uses: "actions/cache/restore@2c8a9bd7457de244a408f35966fab2fb45fda9c8" # v6.0.0
+              uses: "actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9" # v6.1.0
               with:
                   path: "${{ steps.pnpm-store.outputs.path }}"
                   key: "pnpm-store-${{ runner.os }}-node${{ matrix.node }}-${{ hashFiles('pnpm-lock.yaml') }}"
@@ -109,7 +109,7 @@ jobs:
             # Only write back to the shared cache from trusted refs (push to main, not PRs/forks).
             - name: "Save pnpm store"
               if: "github.event_name == 'push' && steps.pnpm-cache.outputs.cache-hit != 'true'"
-              uses: "actions/cache/save@2c8a9bd7457de244a408f35966fab2fb45fda9c8" # v6.0.0
+              uses: "actions/cache/save@55cc8345863c7cc4c66a329aec7e433d2d1c52a9" # v6.1.0
               with:
                   path: "${{ steps.pnpm-store.outputs.path }}"
                   key: "${{ steps.pnpm-cache.outputs.cache-primary-key }}"
@@ -135,7 +135,7 @@ jobs:
             # `strategy.job-index == 0` is the lowest combination (lowest node x lowest os).
             - name: "Upload coverage to Codecov"
               if: "inputs.coverage == true && strategy.job-index == 0"
-              uses: "anolilab/workflows/step/codecov@58bf3316370d2f360af64c7154a4b5043ebb6131" # main
+              uses: "anolilab/workflows/step/codecov@7d86f5451bc5e671c0910428ee71e79ebadaf94e" # main
               with:
                   codecov-token: "${{ secrets.codecov_token }}"
 
