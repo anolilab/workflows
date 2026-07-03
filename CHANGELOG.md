@@ -1,3 +1,19 @@
+## [20.2.0](https://github.com/anolilab/workflows/compare/v20.1.3...v20.2.0) (2026-07-03)
+
+### Features
+
+* add reusable slop-detection workflow ([e7d12bb](https://github.com/anolilab/workflows/commit/e7d12bb4c90275cf35c77b376653e40f4ec806a4))
+
+### Bug Fixes
+
+* **deps:** update dependency prettier to ^3.9.4 ([17be211](https://github.com/anolilab/workflows/commit/17be211f8a62a4c84c6fbef0add26d5f0ab39769))
+* **deps:** update github-actions ([#425](https://github.com/anolilab/workflows/issues/425)) ([4e6edd7](https://github.com/anolilab/workflows/commit/4e6edd7cee60c0f45dc5ca865094fe49596b5467))
+* **deps:** update minor updates (minor) ([#426](https://github.com/anolilab/workflows/issues/426)) ([b931d50](https://github.com/anolilab/workflows/commit/b931d50343f4dea4404ecc008de7811db9d30c4d))
+
+### Miscellaneous Chores
+
+* Update FUNDING.yml ([1802d48](https://github.com/anolilab/workflows/commit/1802d488db5c52006080c11fdf6b7e420f5ed1ea))
+
 ## [20.1.3](https://github.com/anolilab/workflows/compare/v20.1.2...v20.1.3) (2026-07-03)
 
 ### Bug Fixes
