@@ -1,0 +1,157 @@
+# Note: this is a shared pipeline used by other repositories.
+# Docs: https://docs.github.com/en/actions/using-workflows/reusing-workflows
+#
+# Detects spam / low-quality ("slop") issues and pull requests using two
+# complementary actions:
+#   - MatteoGabriele/agentscan-action: broadly inspects the author's past behavior.
+#   - peakoss/anti-slop: specifically inspects the current issue / pull request.
+#
+# SECURITY: the CALLING workflow must trigger on `pull_request_target` (so it has
+# write access to label/close PRs opened from forks) and MUST NOT check out the
+# repository. This reusable workflow never checks out code, so no fork-controlled
+# ref is ever executed. See the companion `slop-detection.md` for a caller example.
+
+name: "Slop Detection"
+
+on: # yamllint disable-line rule:truthy
+    workflow_call:
+        inputs:
+            target-repo:
+                description: "The repo to run this action on. This is to prevent actions from running on forks unless intended."
+                required: true
+                type: "string"
+            run-agentscan:
+                description: "Run the AgentScan job (author-behavior analysis)."
+                default: true
+                required: false
+                type: "boolean"
+            run-anti-slop:
+                description: "Run the Anti Slop job (per-PR analysis)."
+                default: true
+                required: false
+                type: "boolean"
+            auto-close:
+                description: "AgentScan: automatically close issues / PRs that match a close classification."
+                default: true
+                required: false
+                type: "boolean"
+            auto-close-classifications:
+                description: "AgentScan: comma-separated classifications that trigger an auto-close."
+                default: "automation"
+                required: false
+                type: "string"
+            skip-comment-on-organic:
+                description: "AgentScan: do not comment when the author looks organic."
+                default: true
+                required: false
+                type: "boolean"
+            label-automation:
+                description: "AgentScan: label applied to accounts classified as automation."
+                default: "spam:automated-account"
+                required: false
+                type: "string"
+            label-community-flagged:
+                description: "AgentScan: label applied to community-flagged accounts."
+                default: "spam:community-flagged"
+                required: false
+                type: "string"
+            label-mixed:
+                description: "AgentScan: label applied to accounts with mixed signals."
+                default: "spam:mixed-signals"
+                required: false
+                type: "string"
+            close-pr:
+                description: "Anti Slop: close the pull request when it exceeds the failure threshold."
+                default: true
+                required: false
+                type: "boolean"
+            lock-pr:
+                description: "Anti Slop: lock the pull request after closing it."
+                default: false
+                required: false
+                type: "boolean"
+            exempt-label:
+                description: "Anti Slop: pull requests carrying this label are skipped."
+                default: "spam:exempt"
+                required: false
+                type: "string"
+            failure-add-pr-labels:
+                description: "Anti Slop: comma-separated labels added when the failure threshold is exceeded."
+                default: "spam:likely-slop"
+                required: false
+                type: "string"
+            max-failures:
+                description: "Anti Slop: number of low-quality signals required before the PR is treated as slop."
+                default: 4
+                required: false
+                type: "number"
+            failure-pr-message:
+                description: "Anti Slop: comment posted on a pull request that is closed as slop."
+                default: |
+                    Thanks for the contribution. This PR was automatically closed because
+                    it matched multiple low-quality/spam signals.
+
+                    If this was a mistake, please comment with more context or ask a
+                    maintainer to add the `spam:exempt` label before reopening.
+                required: false
+                type: "string"
+
+permissions: {}
+
+jobs:
+    agentscan:
+        name: "AgentScan"
+        if: "github.repository == inputs.target-repo && inputs.run-agentscan"
+        runs-on: "ubuntu-latest"
+        permissions:
+            contents: "read"
+            issues: "write"
+            pull-requests: "write"
+        steps:
+            - name: "Harden Runner"
+              uses: "step-security/harden-runner@9af89fc71515a100421586dfdb3dc9c984fbf411" # v2.19.4
+              with:
+                  egress-policy: "audit"
+
+            - name: "Cache AgentScan analysis"
+              uses: "actions/cache@caa296126883cff596d87d8935842f9db880ef25" # v5
+              with:
+                  path: ".agentscan-cache"
+                  key: "agentscan-cache-${{ github.actor }}"
+                  restore-keys: "agentscan-cache-"
+
+            - name: "AgentScan"
+              uses: "MatteoGabriele/agentscan-action@12a5f6092ac9c5e524045fa4ee34a5943cd38f39" # main
+              with:
+                  auto-close-classifications: "${{ inputs.auto-close-classifications }}"
+                  auto-close: "${{ inputs.auto-close }}"
+                  cache-path: ".agentscan-cache"
+                  github-token: "${{ secrets.GITHUB_TOKEN }}"
+                  label-automation: "${{ inputs.label-automation }}"
+                  label-community-flagged: "${{ inputs.label-community-flagged }}"
+                  label-mixed: "${{ inputs.label-mixed }}"
+                  skip-comment-on-organic: "${{ inputs.skip-comment-on-organic }}"
+
+    anti-slop:
+        name: "Anti Slop"
+        if: "github.repository == inputs.target-repo && inputs.run-anti-slop && github.event_name == 'pull_request_target'"
+        runs-on: "ubuntu-latest"
+        permissions:
+            contents: "read"
+            issues: "read"
+            pull-requests: "write"
+        steps:
+            - name: "Harden Runner"
+              uses: "step-security/harden-runner@9af89fc71515a100421586dfdb3dc9c984fbf411" # v2.19.4
+              with:
+                  egress-policy: "audit"
+
+            - name: "Anti Slop"
+              uses: "peakoss/anti-slop@57858eead489d08b255fab2af45a506c2ca6eab2" # v0.3.0
+              with:
+                  close-pr: "${{ inputs.close-pr }}"
+                  exempt-label: "${{ inputs.exempt-label }}"
+                  failure-add-pr-labels: "${{ inputs.failure-add-pr-labels }}"
+                  failure-pr-message: "${{ inputs.failure-pr-message }}"
+                  max-failures: "${{ inputs.max-failures }}"
+                  lock-pr: "${{ inputs.lock-pr }}"

@@ -50,6 +50,7 @@ configure the following:
 - [semantic-pull-request](./.github/workflows/semantic-pull-request.yml) ([docs](./.github/workflows/semantic-pull-request.md)) - This action will check if the pull request title follows the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) specification.
 - [semantic-release](./.github/workflows/semantic-release.yml) - Automates version management and package publishing
 - [set-default-labels](./.github/workflows/set-default-labels.yml) ([docs](./.github/workflows/set-default-labels.md)) - sets default labels on issues and PRs
+- [slop-detection](./.github/workflows/slop-detection.yml) ([docs](./.github/workflows/slop-detection.md)) - detects spam / low-quality ("slop") issues and PRs via AgentScan and anti-slop
 - [stale-issues](./.github/workflows/stale-issues.yml) ([docs](./.github/workflows/stale-issues.md)) - closes stale issues
 
 ## Contributing
