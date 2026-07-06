@@ -1,3 +1,14 @@
+## [20.2.1](https://github.com/anolilab/workflows/compare/v20.2.0...v20.2.1) (2026-07-06)
+
+### Bug Fixes
+
+* **deps:** update github-actions ([#433](https://github.com/anolilab/workflows/issues/433)) ([eb1616e](https://github.com/anolilab/workflows/commit/eb1616eed6a8de1f7def8f28cc6310025066a55d))
+* **deps:** update minor updates to ^8.6.0 ([#434](https://github.com/anolilab/workflows/issues/434)) ([259b286](https://github.com/anolilab/workflows/commit/259b2864bfadb50946c4786ccc955695b464b326))
+
+### Continuous Integration
+
+* **deps:** update actions/cache action to v6 ([#435](https://github.com/anolilab/workflows/issues/435)) ([1072c73](https://github.com/anolilab/workflows/commit/1072c739cd1263415014b51431d6850cb5440a73))
+
 ## [20.2.0](https://github.com/anolilab/workflows/compare/v20.1.3...v20.2.0) (2026-07-03)
 
 ### Features
