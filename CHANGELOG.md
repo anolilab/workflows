@@ -1,3 +1,9 @@
+## [20.2.2](https://github.com/anolilab/workflows/compare/v20.2.1...v20.2.2) (2026-07-07)
+
+### Bug Fixes
+
+* **deps:** update commitlint monorepo to ^21.2.0 ([#432](https://github.com/anolilab/workflows/issues/432)) ([d3b9b98](https://github.com/anolilab/workflows/commit/d3b9b98134ab4c34395e042bcd8d2a3813b7a848))
+
 ## [20.2.1](https://github.com/anolilab/workflows/compare/v20.2.0...v20.2.1) (2026-07-06)
 
 ### Bug Fixes
