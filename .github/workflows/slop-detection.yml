@@ -121,7 +121,7 @@ jobs:
                   restore-keys: "agentscan-cache-"
 
             - name: "AgentScan"
-              uses: "MatteoGabriele/agentscan-action@c357c0985e0d5ae9220fa0adda1a170831eebd81" # main
+              uses: "MatteoGabriele/agentscan-action@4eebb5210583641a015146ea52b6b92e1df14ed7" # main
               with:
                   auto-close-classifications: "${{ inputs.auto-close-classifications }}"
                   auto-close: "${{ inputs.auto-close }}"
