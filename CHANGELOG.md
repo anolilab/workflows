@@ -1,3 +1,9 @@
+## [20.2.3](https://github.com/anolilab/workflows/compare/v20.2.2...v20.2.3) (2026-07-08)
+
+### Bug Fixes
+
+* **deps:** update dependency @anolilab/lint-staged-config to ^11.0.11 ([#437](https://github.com/anolilab/workflows/issues/437)) ([a4ca02f](https://github.com/anolilab/workflows/commit/a4ca02f7172924b8ea9761d37d2bdd68ae2748b5))
+
 ## [20.2.2](https://github.com/anolilab/workflows/compare/v20.2.1...v20.2.2) (2026-07-07)
 
 ### Bug Fixes
