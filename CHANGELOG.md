@@ -1,3 +1,10 @@
+## [20.2.4](https://github.com/anolilab/workflows/compare/v20.2.3...v20.2.4) (2026-07-09)
+
+### Bug Fixes
+
+* **deps:** update github-actions ([#436](https://github.com/anolilab/workflows/issues/436)) ([561a542](https://github.com/anolilab/workflows/commit/561a54257113a4bd1346bf10a022063faca27680))
+* **deps:** update minor updates ([#438](https://github.com/anolilab/workflows/issues/438)) ([7b3cac9](https://github.com/anolilab/workflows/commit/7b3cac92806e771d0dd4c84bc7c3b8c8e0000cda))
+
 ## [20.2.3](https://github.com/anolilab/workflows/compare/v20.2.2...v20.2.3) (2026-07-08)
 
 ### Bug Fixes
