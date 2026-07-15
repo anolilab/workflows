@@ -1,3 +1,9 @@
+## [20.2.6](https://github.com/anolilab/workflows/compare/v20.2.5...v20.2.6) (2026-07-15)
+
+### Bug Fixes
+
+* **deps:** update dependency @commitlint/cli to ^21.2.1 ([#441](https://github.com/anolilab/workflows/issues/441)) ([b608d7f](https://github.com/anolilab/workflows/commit/b608d7ffaa90a32b59281e647252e2f134e5f600))
+
 ## [20.2.5](https://github.com/anolilab/workflows/compare/v20.2.4...v20.2.5) (2026-07-09)
 
 ### Bug Fixes
