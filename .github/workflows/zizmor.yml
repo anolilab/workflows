@@ -47,7 +47,7 @@ jobs:
                   persist-credentials: false
 
             - name: "Install zizmor"
-              uses: "taiki-e/install-action@43aecc8d72668fbcfe75c31400bc4f890f1c5853" # v2.83.2
+              uses: "taiki-e/install-action@ed67fa35ac944f3a9b33f12c4dd43b6f31a47e20" # v2.83.3
               with:
                   tool: "zizmor"
 
@@ -61,7 +61,7 @@ jobs:
 
             - name: "Upload SARIF file"
               if: "always()"
-              uses: "github/codeql-action/upload-sarif@99df26d4f13ea111d4ec1a7dddef6063f76b97e9" # v4.37.0
+              uses: "github/codeql-action/upload-sarif@7188fc363630916deb702c7fdcf4e481b751f97a" # v4.37.1
               with:
                   sarif_file: "results.sarif"
                   category: "zizmor"
