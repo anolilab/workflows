@@ -1,3 +1,9 @@
+## [20.2.12](https://github.com/anolilab/workflows/compare/v20.2.11...v20.2.12) (2026-07-20)
+
+### Bug Fixes
+
+* **deps:** update dependency semantic-release to ^25.0.7 ([#444](https://github.com/anolilab/workflows/issues/444)) ([a130fc3](https://github.com/anolilab/workflows/commit/a130fc35b1cdbe892d5c3aed968b75ddf552931d))
+
 ## [20.2.11](https://github.com/anolilab/workflows/compare/v20.2.10...v20.2.11) (2026-07-20)
 
 ### Bug Fixes
