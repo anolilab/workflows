@@ -1,3 +1,5 @@
+## [21.0.0](https://github.com/anolilab/workflows/compare/v20.2.12...v21.0.0) (2026-07-20)
+
 ## [20.2.12](https://github.com/anolilab/workflows/compare/v20.2.11...v20.2.12) (2026-07-20)
 
 ### Bug Fixes
