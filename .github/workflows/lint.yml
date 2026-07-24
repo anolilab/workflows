@@ -89,7 +89,7 @@ jobs:
                   egress-policy: "audit"
 
             - name: "Git checkout"
-              uses: "actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0" # v7.0.0
+              uses: "actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1" # v7.0.1
               with:
                   persist-credentials: false
 
@@ -134,7 +134,7 @@ jobs:
                   egress-policy: "audit"
 
             - name: "Git checkout"
-              uses: "actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0" # v7.0.0
+              uses: "actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1" # v7.0.1
               with:
                   persist-credentials: false
                   fetch-depth: 0
@@ -149,7 +149,7 @@ jobs:
 
             - name: "Setup resources and environment"
               id: "setup"
-              uses: "anolilab/workflows/step/node@2833b4246f993dafe50b6a793de4c060f99e6dc8" # main
+              uses: "anolilab/workflows/step/node@d1dd8f0d24d4758e2d4a3322fa11d5609e2d446b" # main
               with:
                   node-version: "${{ inputs.node_version || '22' }}"
                   install-node-gyp: "true"
@@ -188,7 +188,7 @@ jobs:
                   egress-policy: "audit"
 
             - name: "Git checkout"
-              uses: "actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0" # v7.0.0
+              uses: "actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1" # v7.0.1
               with:
                   persist-credentials: false
                   fetch-depth: 0
@@ -203,7 +203,7 @@ jobs:
 
             - name: "Setup resources and environment"
               id: "setup"
-              uses: "anolilab/workflows/step/node@2833b4246f993dafe50b6a793de4c060f99e6dc8" # main
+              uses: "anolilab/workflows/step/node@d1dd8f0d24d4758e2d4a3322fa11d5609e2d446b" # main
               with:
                   node-version: "${{ inputs.node_version || '22' }}"
                   install-node-gyp: "true"
@@ -233,7 +233,7 @@ jobs:
                   egress-policy: "audit"
 
             - name: "Git checkout"
-              uses: "actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0" # v7.0.0
+              uses: "actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1" # v7.0.1
               with:
                   persist-credentials: false
               env:
@@ -264,7 +264,7 @@ jobs:
                   egress-policy: "audit"
 
             - name: "Git checkout"
-              uses: "actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0" # v7.0.0
+              uses: "actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1" # v7.0.1
               with:
                   persist-credentials: false
               env:
@@ -306,7 +306,7 @@ jobs:
                   egress-policy: "audit"
 
             - name: "Git checkout"
-              uses: "actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0" # v7.0.0
+              uses: "actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1" # v7.0.1
               with:
                   persist-credentials: false
 
@@ -346,7 +346,7 @@ jobs:
                   egress-policy: "audit"
 
             - name: "Git checkout"
-              uses: "actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0" # v7.0.0
+              uses: "actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1" # v7.0.1
               with:
                   persist-credentials: false
               env:

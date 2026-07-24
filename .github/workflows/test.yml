@@ -68,7 +68,7 @@ jobs:
                   egress-policy: "audit"
 
             - name: "Git checkout"
-              uses: "actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0" # v7.0.0
+              uses: "actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1" # v7.0.1
               with:
                   persist-credentials: false
                   fetch-depth: 0
@@ -135,7 +135,7 @@ jobs:
             # `strategy.job-index == 0` is the lowest combination (lowest node x lowest os).
             - name: "Upload coverage to Codecov"
               if: "inputs.coverage == true && strategy.job-index == 0"
-              uses: "anolilab/workflows/step/codecov@2833b4246f993dafe50b6a793de4c060f99e6dc8" # main
+              uses: "anolilab/workflows/step/codecov@d1dd8f0d24d4758e2d4a3322fa11d5609e2d446b" # main
               with:
                   codecov-token: "${{ secrets.codecov_token }}"
 
