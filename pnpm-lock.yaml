@@ -27,10 +27,10 @@ importers:
   .:
     devDependencies:
       '@anolilab/commitlint-config':
-        specifier: ^10.0.2
+        specifier: ^10.1.0
         version: 10.1.0(@commitlint/cli@21.2.1(@types/node@24.10.1)(conventional-commits-parser@7.0.1)(typescript@5.5.3))(@types/node@24.10.1)(conventional-commits-parser@7.0.1)(typescript@5.5.3)
       '@anolilab/lint-staged-config':
-        specifier: ^11.0.12
+        specifier: ^11.1.2
         version: 11.1.2(husky@9.1.7)(json5@2.2.3)(lint-staged@17.2.0)(prettier@3.9.6)(secretlint@13.0.4(supports-color@10.2.2))(yaml@2.9.0)
       '@anolilab/prettier-config':
         specifier: ^10.0.2
@@ -63,7 +63,7 @@ importers:
         specifier: ^4.1.0
         version: 4.1.0
       lint-staged:
-        specifier: ^17.1.1
+        specifier: ^17.2.0
         version: 17.2.0
       prettier:
         specifier: ^3.9.6
@@ -1913,10 +1913,6 @@ packages:
     resolution: {integrity: sha512-TeTSQ6H5YHvpqVwBRcnLDCBnDOHWYu7IvGbHT6N8AOymcr9PJGjc1GTtiWZTYg0NCgYwvnYWEkVChQAr9bjfwA==}
     engines: {node: '>=16'}
 
-  type-fest@5.6.0:
-    resolution: {integrity: sha512-8ZiHFm91orbSAe2PSAiSVBVko18pbhbiB3U9GglSzF/zCGkR+rxpHx6sEMCUm4kxY4LjDIUGgCfUMtwfZfjfUA==}
-    engines: {node: '>=20'}
-
   type-fest@5.8.0:
     resolution: {integrity: sha512-YGYEVz3Fm5iy/AybuA0oyNFq7H4CgQNfRp/qfe8nurE1kuCeNm3/vfm9X4Mtl+qLyaKJUh5xrFZwogr41SMjYA==}
     engines: {node: '>=20'}
@@ -3642,14 +3638,14 @@ snapshots:
     dependencies:
       find-up-simple: 1.0.1
       read-pkg: 10.1.0
-      type-fest: 5.6.0
+      type-fest: 5.8.0
 
   read-pkg@10.1.0:
     dependencies:
       '@types/normalize-package-data': 2.4.4
       normalize-package-data: 8.0.0
       parse-json: 8.3.0
-      type-fest: 5.6.0
+      type-fest: 5.8.0
       unicorn-magic: 0.4.0
 
   read-pkg@9.0.1:
@@ -3973,10 +3969,6 @@ snapshots:
   type-fest@2.19.0: {}
 
   type-fest@4.41.0: {}
-
-  type-fest@5.6.0:
-    dependencies:
-      tagged-tag: 1.0.0
 
   type-fest@5.8.0:
     dependencies:
