@@ -149,7 +149,7 @@ jobs:
 
             - name: "Setup resources and environment"
               id: "setup"
-              uses: "anolilab/workflows/step/node@f23d1a26a185dd61d3178fd53a1897b5156c6724" # main
+              uses: "anolilab/workflows/step/node@f235b33ebebf860ee9b33ce2ecf7513b14f5f768" # main
               with:
                   node-version: "${{ inputs.node_version || '22' }}"
                   install-node-gyp: "true"
@@ -203,7 +203,7 @@ jobs:
 
             - name: "Setup resources and environment"
               id: "setup"
-              uses: "anolilab/workflows/step/node@f23d1a26a185dd61d3178fd53a1897b5156c6724" # main
+              uses: "anolilab/workflows/step/node@f235b33ebebf860ee9b33ce2ecf7513b14f5f768" # main
               with:
                   node-version: "${{ inputs.node_version || '22' }}"
                   install-node-gyp: "true"
