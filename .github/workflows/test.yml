@@ -63,7 +63,7 @@ jobs:
         runs-on: "${{ matrix.os }}"
         steps:
             - name: "Harden Runner"
-              uses: "step-security/harden-runner@bf7454d06d71f1098171f2acdf0cd4708d7b5920" # v2.20.0
+              uses: "step-security/harden-runner@b09bb98e06d4d774595224525879c09bc6e98c40" # v2.20.1
               with:
                   egress-policy: "audit"
 
@@ -135,7 +135,7 @@ jobs:
             # `strategy.job-index == 0` is the lowest combination (lowest node x lowest os).
             - name: "Upload coverage to Codecov"
               if: "inputs.coverage == true && strategy.job-index == 0"
-              uses: "anolilab/workflows/step/codecov@86585c445ec8b3a40d9435c4a519eda84b961687" # main
+              uses: "anolilab/workflows/step/codecov@f792b69a3ca60ddd99a10c98cfc86dc673a59dd3" # main
               with:
                   codecov-token: "${{ secrets.codecov_token }}"
 
@@ -147,7 +147,7 @@ jobs:
         timeout-minutes: 5
         steps:
             - name: "Harden Runner"
-              uses: "step-security/harden-runner@bf7454d06d71f1098171f2acdf0cd4708d7b5920" # v2.20.0
+              uses: "step-security/harden-runner@b09bb98e06d4d774595224525879c09bc6e98c40" # v2.20.1
               with:
                   egress-policy: "audit"
 
