@@ -10,7 +10,7 @@ minimumReleaseAgeExclude:
   - brace-expansion@1.1.16 || 5.0.8
   - js-yaml@5.2.2
 overrides:
-  brace-expansion@<1.1.16: ^1.1.18
+  brace-expansion@<1.1.16: ^5.0.9
   brace-expansion@<=5.0.7: ^5.0.9
   fast-uri@<=3.1.0: ^4.1.2
   fast-uri@<=3.1.1: ^4.1.2
@@ -23,6 +23,6 @@ overrides:
   shell-quote@>=1.1.0 <=1.8.3: ^1.10.0
   tmp@<0.2.6: ^0.2.7
   undici@<6.23.0: ^7.29.0
-  undici@<6.24.0: ^8.9.0
-  undici@>=7.0.0 <7.28.0: ^8.9.0
-  undici@>=8.0.0 <8.5.0: ^8.9.0
+  undici@<6.24.0: ^8.10.0
+  undici@>=7.0.0 <7.28.0: ^8.10.0
+  undici@>=8.0.0 <8.5.0: ^8.10.0
