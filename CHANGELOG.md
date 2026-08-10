@@ -1,3 +1,5 @@
+## [22.0.1](https://github.com/anolilab/workflows/compare/v22.0.0...v22.0.1) (2026-08-10)
+
 ## [22.0.0](https://github.com/anolilab/workflows/compare/v21.0.5...v22.0.0) (2026-08-10)
 
 ## [21.0.5](https://github.com/anolilab/workflows/compare/v21.0.4...v21.0.5) (2026-08-05)
