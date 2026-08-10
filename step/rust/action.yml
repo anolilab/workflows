@@ -106,7 +106,7 @@ runs:
               INPUTS_TARGETS: "${{ inputs.targets }}"
 
         - name: "Cache on ${{ github.ref_name }}"
-          uses: "Swatinem/rust-cache@c19371144df3bb44fab255c43d04cbc2ab54d1c4" # v2.9.1
+          uses: "Swatinem/rust-cache@6323deb102c322ba6fcbdcafc7e3dddab59af2b6" # v2.9.2
           if: "inputs.restore-cache == 'true'"
           with:
               shared-key: "${{ inputs.cache-key }}"
@@ -116,7 +116,7 @@ runs:
               cache-directories: "${{ inputs.cache-directories }}"
 
         - name: "Install tools"
-          uses: "taiki-e/install-action@67729d5c413db75907f0ad1e39bb04b9c868ff60" # v2.85.7
+          uses: "taiki-e/install-action@91ddec75689c4c78665b598d188dc821c5a43e5c" # v2.85.9
           if: "inputs.tools != ''"
           with:
               tool: "${{ inputs.tools }}"

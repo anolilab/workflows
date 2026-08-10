@@ -37,7 +37,7 @@ jobs:
             security-events: "write"
         steps:
             - name: "Harden Runner"
-              uses: "step-security/harden-runner@bf7454d06d71f1098171f2acdf0cd4708d7b5920" # v2.20.0
+              uses: "step-security/harden-runner@b09bb98e06d4d774595224525879c09bc6e98c40" # v2.20.1
               with:
                   egress-policy: "audit"
 
@@ -47,7 +47,7 @@ jobs:
                   persist-credentials: false
 
             - name: "Install zizmor"
-              uses: "taiki-e/install-action@67729d5c413db75907f0ad1e39bb04b9c868ff60" # v2.85.7
+              uses: "taiki-e/install-action@91ddec75689c4c78665b598d188dc821c5a43e5c" # v2.85.9
               with:
                   tool: "zizmor"
 
