@@ -1,3 +1,9 @@
+## [22.0.4](https://github.com/anolilab/workflows/compare/v22.0.3...v22.0.4) (2026-08-19)
+
+### Bug Fixes
+
+* **deps:** pin conventional-changelog-conventionalcommits to v9 ([1386c3c](https://github.com/anolilab/workflows/commit/1386c3c63f3e28917f3e592f04a5af99c815b275))
+
 ## [22.0.3](https://github.com/anolilab/workflows/compare/v22.0.2...v22.0.3) (2026-08-18)
 
 ## [22.0.2](https://github.com/anolilab/workflows/compare/v22.0.1...v22.0.2) (2026-08-10)
