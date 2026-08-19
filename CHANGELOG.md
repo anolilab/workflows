@@ -1,3 +1,10 @@
+## [22.0.5](https://github.com/anolilab/workflows/compare/v22.0.4...v22.0.5) (2026-08-19)
+
+### Bug Fixes
+
+* **deps:** update github-actions ([#480](https://github.com/anolilab/workflows/issues/480)) ([506523e](https://github.com/anolilab/workflows/commit/506523eeaa7298145ea0d8634ac950f994079f90))
+* **deps:** update minor updates ([#481](https://github.com/anolilab/workflows/issues/481)) ([8084cf8](https://github.com/anolilab/workflows/commit/8084cf8b58c3e73bc535a29837472f14b90f1d91))
+
 ## [22.0.4](https://github.com/anolilab/workflows/compare/v22.0.3...v22.0.4) (2026-08-19)
 
 ### Bug Fixes
