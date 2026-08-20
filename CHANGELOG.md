@@ -1,3 +1,13 @@
+## [22.0.6](https://github.com/anolilab/workflows/compare/v22.0.5...v22.0.6) (2026-08-20)
+
+### Bug Fixes
+
+* **deps:** update pnpm to v11.22.0 ([#487](https://github.com/anolilab/workflows/issues/487)) ([2e20c10](https://github.com/anolilab/workflows/commit/2e20c109592a4150e2c7cfeea17fd5c7987199dd))
+
+### Miscellaneous Chores
+
+* **deps:** lock file maintenance ([#482](https://github.com/anolilab/workflows/issues/482)) ([3b19004](https://github.com/anolilab/workflows/commit/3b19004b78e44c5ac7b40c223588a37a0435716b))
+
 ## [22.0.5](https://github.com/anolilab/workflows/compare/v22.0.4...v22.0.5) (2026-08-19)
 
 ### Bug Fixes
