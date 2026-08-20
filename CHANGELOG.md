@@ -1,3 +1,15 @@
+## [23.0.0](https://github.com/anolilab/workflows/compare/v22.0.6...v23.0.0) (2026-08-20)
+
+### ⚠ BREAKING CHANGES
+
+* **deps:** updated dependencies to major versions
+
+Co-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>
+
+### Miscellaneous Chores
+
+* **deps:** update dependency @anolilab/lint-staged-config to v12 ([#489](https://github.com/anolilab/workflows/issues/489)) ([0624538](https://github.com/anolilab/workflows/commit/062453846aec1aa642fa489d2b29f3802bc770a8))
+
 ## [22.0.6](https://github.com/anolilab/workflows/compare/v22.0.5...v22.0.6) (2026-08-20)
 
 ### Bug Fixes
