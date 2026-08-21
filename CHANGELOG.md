@@ -1,3 +1,9 @@
+## [23.0.1](https://github.com/anolilab/workflows/compare/v23.0.0...v23.0.1) (2026-08-21)
+
+### Bug Fixes
+
+* **deps:** update dependency @anolilab/commitlint-config to ^10.1.1 ([#491](https://github.com/anolilab/workflows/issues/491)) ([b2029e1](https://github.com/anolilab/workflows/commit/b2029e1ffd5b1a57f8d0ca2cce4ec8a72fd83b4e))
+
 ## [23.0.0](https://github.com/anolilab/workflows/compare/v22.0.6...v23.0.0) (2026-08-20)
 
 ### ⚠ BREAKING CHANGES
