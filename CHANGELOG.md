@@ -1,3 +1,9 @@
+## [23.0.3](https://github.com/anolilab/workflows/compare/v23.0.2...v23.0.3) (2026-09-01)
+
+### Bug Fixes
+
+* **deps:** update secretlint monorepo to ^13.0.5 ([#495](https://github.com/anolilab/workflows/issues/495)) ([cc31dfb](https://github.com/anolilab/workflows/commit/cc31dfb08e21c9c63526c646cb1f2a1e3a1a921c))
+
 ## [23.0.2](https://github.com/anolilab/workflows/compare/v23.0.1...v23.0.2) (2026-08-27)
 
 ### Bug Fixes
