@@ -34,6 +34,13 @@ jobs:
         runs-on: "ubuntu-latest"
         timeout-minutes: 30
         permissions:
+            # `actions/checkout` needs this. Omitting it works on a PUBLIC repo,
+            # where an unauthenticated clone succeeds anyway — but on a private
+            # one git reports the repo as absent:
+            #   fatal: repository 'https://github.com/<owner>/<repo>/' not found
+            # which reads as a wrong URL rather than a missing scope. `zizmor`
+            # then produces no `results.sarif` and the upload step fails too.
+            contents: "read"
             security-events: "write"
         steps:
             - name: "Harden Runner"

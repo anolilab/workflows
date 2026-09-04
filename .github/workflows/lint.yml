@@ -75,6 +75,17 @@ jobs:
         name: "Detect what files changed"
         runs-on: "ubuntu-24.04"
         timeout-minutes: 3
+        permissions:
+            contents: "read"
+            # `dorny/paths-filter` does not diff git for a `pull_request` event —
+            # it calls `GET /repos/{owner}/{repo}/pulls/{number}/files`. Without
+            # this the call returns `Resource not accessible by integration`, this
+            # job fails, every lint job downstream is skipped, and
+            # `test-required-check` exits 1. A caller cannot supply it: a called
+            # workflow may only REDUCE the caller's permissions, so granting
+            # `pull-requests: read` on the calling job has no effect while this
+            # job inherits the narrower workflow-level block above.
+            pull-requests: "read"
         outputs:
             frontend_lintable: "${{ steps.changes.outputs.frontend_lintable }}"
             markdown_lintable: "${{ steps.changes.outputs.markdown_lintable }}"

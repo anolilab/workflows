@@ -26,6 +26,9 @@ on: # yamllint disable-line rule:truthy
                 type: "string"
 
 permissions:
+    # `actions/checkout` needs this; without it the job fails on a private repo
+    # with `fatal: repository '...' not found`. See the note in `zizmor.yml`.
+    contents: "read"
     # Issues and related comments, assignees, labels, and milestones.
     issues: "write"
 
