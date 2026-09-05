@@ -1,3 +1,11 @@
+## [23.0.5](https://github.com/anolilab/workflows/compare/v23.0.4...v23.0.5) (2026-09-05)
+
+### Bug Fixes
+
+* **deps:** update github-actions ([#488](https://github.com/anolilab/workflows/issues/488)) ([593b416](https://github.com/anolilab/workflows/commit/593b416b171beb13b9b84806ff877de495fa1b2c))
+* **deps:** update patch updates to ^8.10.1 ([#496](https://github.com/anolilab/workflows/issues/496)) ([f0a80c6](https://github.com/anolilab/workflows/commit/f0a80c62575d91619f5c07a8c626f53a0145d61a))
+* **workflows:** declare the permissions these jobs' actions actually need ([#497](https://github.com/anolilab/workflows/issues/497)) ([c25805b](https://github.com/anolilab/workflows/commit/c25805b8ca67c907ac5f5c2c88188cf5ad561cad))
+
 ## [23.0.4](https://github.com/anolilab/workflows/compare/v23.0.3...v23.0.4) (2026-09-03)
 
 ### Bug Fixes
