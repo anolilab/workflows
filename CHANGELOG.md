@@ -1,3 +1,10 @@
+## [23.0.7](https://github.com/anolilab/workflows/compare/v23.0.6...v23.0.7) (2026-09-06)
+
+### Bug Fixes
+
+* **scorecards:** analyse only the default branch when several are pushed ([#500](https://github.com/anolilab/workflows/issues/500)) ([1d2834f](https://github.com/anolilab/workflows/commit/1d2834fe34a15bd35bf49a1b1071a8b71e8d6319))
+* **setup:** only skip the npm upgrade on an engine-only failure ([#499](https://github.com/anolilab/workflows/issues/499)) ([f9132d9](https://github.com/anolilab/workflows/commit/f9132d9678fa604dbc71b428e788e149124d66e2))
+
 ## [23.0.6](https://github.com/anolilab/workflows/compare/v23.0.5...v23.0.6) (2026-09-06)
 
 ### Bug Fixes
