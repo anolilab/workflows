@@ -25,6 +25,12 @@ permissions:
 jobs:
     analysis:
         name: "Scorecard analysis"
+        # Scorecard supports push and schedule on the default branch only: both
+        # publish_results and the Branch-Protection check require it. Consumers list
+        # every release branch they use in their push trigger (main, master, alpha,
+        # beta), so drop the runs that come from a branch which is not the default
+        # instead of letting them fail or publish nothing.
+        if: "github.event_name != 'push' || github.ref_name == github.event.repository.default_branch"
         runs-on: "ubuntu-latest"
         timeout-minutes: 30
         permissions:
