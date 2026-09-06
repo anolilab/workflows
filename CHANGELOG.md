@@ -1,3 +1,9 @@
+## [23.0.6](https://github.com/anolilab/workflows/compare/v23.0.5...v23.0.6) (2026-09-06)
+
+### Bug Fixes
+
+* **setup:** keep the bundled npm when npm@latest cannot run on the matrix node ([#498](https://github.com/anolilab/workflows/issues/498)) ([5209205](https://github.com/anolilab/workflows/commit/5209205aae2114bfa6f2fbd24813293836a206cc))
+
 ## [23.0.5](https://github.com/anolilab/workflows/compare/v23.0.4...v23.0.5) (2026-09-05)
 
 ### Bug Fixes
