@@ -103,20 +103,30 @@ runs:
           if: "inputs.upgrade-npm-version == 'true'"
           shell: "bash"
           run: |
-              if npm install --global "npm@${NPM_VERSION}" 2> "${RUNNER_TEMP}/npm-upgrade.log"; then
+              log="${RUNNER_TEMP}/npm-upgrade.log"
+
+              if npm install --global "npm@${NPM_VERSION}" 2> "${log}"; then
                   exit 0
               fi
 
               # npm@latest drops Node.js majors as they go end-of-life (npm@12 requires
               # node ^22.22.2 || ^24.15.0 || >=26). On a test matrix that still covers
               # those majors the upgrade is impossible rather than broken, so keep the
-              # bundled npm and carry on. Every other npm failure still fails the job.
-              if grep -q "EBADENGINE" "${RUNNER_TEMP}/npm-upgrade.log"; then
+              # bundled npm and carry on.
+              #
+              # Only an engine-*only* failure is tolerated. Collect every error code npm
+              # reported and continue when EBADENGINE is the sole one; a run that hit
+              # EBADENGINE alongside anything else (a registry 403, EACCES, a corrupt
+              # cache) still fails the job rather than hiding behind the engine message.
+              codes="$(grep -oE '^npm error code [A-Za-z0-9_-]+' "${log}" | awk '{ print $4 }' | sort -u | tr '\n' ' ')"
+              codes="${codes% }"
+
+              if [ "${codes}" = "EBADENGINE" ]; then
                   echo "::warning::npm@${NPM_VERSION} does not support $(node --version); keeping npm $(npm --version)"
                   exit 0
               fi
 
-              cat "${RUNNER_TEMP}/npm-upgrade.log" >&2
+              cat "${log}" >&2
               exit 1
           env:
               SKIP_CHECK: "true"
