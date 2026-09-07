@@ -1,3 +1,9 @@
+## [24.0.1](https://github.com/anolilab/workflows/compare/v24.0.0...v24.0.1) (2026-09-07)
+
+### Bug Fixes
+
+* **deps:** update patch updates ([#504](https://github.com/anolilab/workflows/issues/504)) ([b993b3c](https://github.com/anolilab/workflows/commit/b993b3cc07607de59910939e431779c0779045cd))
+
 ## [24.0.0](https://github.com/anolilab/workflows/compare/v23.0.7...v24.0.0) (2026-09-07)
 
 ### ⚠ BREAKING CHANGES
