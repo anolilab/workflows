@@ -1,3 +1,21 @@
+## [24.0.0](https://github.com/anolilab/workflows/compare/v23.0.7...v24.0.0) (2026-09-07)
+
+### ⚠ BREAKING CHANGES
+
+* **deps:** updated dependencies to major versions
+
+Co-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>
+
+### Bug Fixes
+
+* **deps:** update patch updates to ^4.1.4 ([#501](https://github.com/anolilab/workflows/issues/501)) ([d907dee](https://github.com/anolilab/workflows/commit/d907dee1a23af500723611808bd17ea836fa00d8))
+* **deps:** update taiki-e/install-action action to v2.87.4 ([#502](https://github.com/anolilab/workflows/issues/502)) ([173d290](https://github.com/anolilab/workflows/commit/173d2907264534c7d7a35ef8c25928697d1ae13a))
+
+### Miscellaneous Chores
+
+* **deps:** lock file maintenance ([#492](https://github.com/anolilab/workflows/issues/492)) ([105251f](https://github.com/anolilab/workflows/commit/105251f2e46e424be320ca852f2170e56c56d258))
+* **deps:** update pnpm to v12 ([#503](https://github.com/anolilab/workflows/issues/503)) ([f709296](https://github.com/anolilab/workflows/commit/f70929638c51e4f1668a82b6d30fd99a2139fff3))
+
 ## [23.0.7](https://github.com/anolilab/workflows/compare/v23.0.6...v23.0.7) (2026-09-06)
 
 ### Bug Fixes
