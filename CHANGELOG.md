@@ -1,3 +1,9 @@
+## [24.0.2](https://github.com/anolilab/workflows/compare/v24.0.1...v24.0.2) (2026-09-11)
+
+### Bug Fixes
+
+* **deps:** update pnpm to v12.4.0 ([#507](https://github.com/anolilab/workflows/issues/507)) ([ed4b04c](https://github.com/anolilab/workflows/commit/ed4b04c3795b4a5caa23380d3510d66627a1dc06))
+
 ## [24.0.1](https://github.com/anolilab/workflows/compare/v24.0.0...v24.0.1) (2026-09-07)
 
 ### Bug Fixes
