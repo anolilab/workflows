@@ -160,7 +160,7 @@ jobs:
 
             - name: "Setup resources and environment"
               id: "setup"
-              uses: "anolilab/workflows/step/node@f792b69a3ca60ddd99a10c98cfc86dc673a59dd3" # main
+              uses: "anolilab/workflows/step/node@9b64c8cea7da5e06a9d9fd6c741619172607037f" # main
               with:
                   node-version: "${{ inputs.node_version || '22' }}"
                   install-node-gyp: "true"
@@ -214,7 +214,7 @@ jobs:
 
             - name: "Setup resources and environment"
               id: "setup"
-              uses: "anolilab/workflows/step/node@f792b69a3ca60ddd99a10c98cfc86dc673a59dd3" # main
+              uses: "anolilab/workflows/step/node@9b64c8cea7da5e06a9d9fd6c741619172607037f" # main
               with:
                   node-version: "${{ inputs.node_version || '22' }}"
                   install-node-gyp: "true"
@@ -365,7 +365,7 @@ jobs:
                   GIT_AUTHOR_NAME: "GitHub Actions Shell"
                   EMAIL: "github-actions[bot]@users.noreply.github.com"
 
-            - uses: "pnpm/action-setup@0977fd99725f1db4007ccb2928dbb4e90d06cc86" # v6.0.10
+            - uses: "pnpm/action-setup@ea17c68df8912ef543352723c149a84f56e3d413" # v6.1.0
               with:
                   run_install: false
 
