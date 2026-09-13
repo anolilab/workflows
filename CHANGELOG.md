@@ -1,3 +1,10 @@
+## [24.0.3](https://github.com/anolilab/workflows/compare/v24.0.2...v24.0.3) (2026-09-13)
+
+### Bug Fixes
+
+* **deps:** update github-actions ([#506](https://github.com/anolilab/workflows/issues/506)) ([aeada81](https://github.com/anolilab/workflows/commit/aeada81bcdbd1305562015408a44ac45d43b10db))
+* **deps:** update patch updates ([#505](https://github.com/anolilab/workflows/issues/505)) ([99cbdf0](https://github.com/anolilab/workflows/commit/99cbdf0e92cb586a48515bc03de924f4c9935503))
+
 ## [24.0.2](https://github.com/anolilab/workflows/compare/v24.0.1...v24.0.2) (2026-09-11)
 
 ### Bug Fixes
