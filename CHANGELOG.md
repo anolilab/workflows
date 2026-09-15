@@ -1,3 +1,13 @@
+## [24.0.4](https://github.com/anolilab/workflows/compare/v24.0.3...v24.0.4) (2026-09-15)
+
+### Bug Fixes
+
+* **deps:** update patch updates ([#509](https://github.com/anolilab/workflows/issues/509)) ([649a7c7](https://github.com/anolilab/workflows/commit/649a7c7066e28dee9b5b35de4c0cb05190fafe29))
+
+### Miscellaneous Chores
+
+* **deps:** lock file maintenance ([#508](https://github.com/anolilab/workflows/issues/508)) ([ba3b8a3](https://github.com/anolilab/workflows/commit/ba3b8a3c77aee854f163c5b17e71b1912b27b6c4))
+
 ## [24.0.3](https://github.com/anolilab/workflows/compare/v24.0.2...v24.0.3) (2026-09-13)
 
 ### Bug Fixes
