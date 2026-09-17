@@ -167,8 +167,8 @@ overrides:
   brace-expansion@<=5.0.7: ^5.0.9
   fast-uri@<=3.1.0: ^4.1.4
   fast-uri@<=3.1.1: ^4.1.4
-  js-yaml@<=4.1.1: '>=5.4.1'
-  js-yaml@>=5.0.0 <=5.2.1: ^5.4.1
+  js-yaml@<=4.1.1: '>=5.4.2'
+  js-yaml@>=5.0.0 <=5.2.1: ^5.4.2
   lodash@<=4.17.23: ^4.17.24
   lodash@>=4.0.0 <=4.17.22: ^4.18.1
   lodash@>=4.0.0 <=4.17.23: ^4.17.24
@@ -194,8 +194,8 @@ importers:
         specifier: ^10.0.3
         version: 10.0.3(prettier@3.9.6)
       '@anolilab/semantic-release-preset':
-        specifier: ^13.4.24
-        version: 13.4.24(@semantic-release/npm@13.1.5(semantic-release@25.0.9(supports-color@10.2.2)(typescript@7.0.2)))(json5@2.2.3)(semantic-release@25.0.9(supports-color@10.2.2)(typescript@7.0.2))(supports-color@10.2.2)(yaml@2.9.1)
+        specifier: ^13.4.25
+        version: 13.4.26(@semantic-release/npm@13.1.5(semantic-release@25.0.9(supports-color@10.2.2)(typescript@7.0.2)))(json5@2.2.3)(semantic-release@25.0.9(supports-color@10.2.2)(typescript@7.0.2))(supports-color@10.2.2)(yaml@2.9.1)
       '@commitlint/cli':
         specifier: ^21.2.2
         version: 21.2.2(@types/node@26.5.1)(conventional-commits-parser@7.1.2)(typescript@7.0.2)
@@ -296,16 +296,16 @@ packages:
     peerDependencies:
       prettier: 3.9.6
 
-  '@anolilab/semantic-release-clean-package-json@5.5.19':
-    resolution: {integrity: sha512-fzZbCercvz8pflapuKRq66/HcV3BNqI1ZlaxyJn+VlQJNAXiaFxnob8whgWMnMbuatKN7GWYjR24LsQ9l++eHw==}
+  '@anolilab/semantic-release-clean-package-json@5.5.21':
+    resolution: {integrity: sha512-Am8US/zVvVBJJeM+8NpS4mr3/MpFFVtngmWG9spS5f4JJCTZ+KgbdaOMCLbvS7ewrbCeeIhgXUsuHANsDaHNBw==}
     engines: {node: ^22.14.0 || >=24.10.0}
 
-  '@anolilab/semantic-release-preset@13.4.24':
-    resolution: {integrity: sha512-vzMO12JDR+BEx9XC2prUZ4DMFjJc1ekj+rVceq/7gZXbCLqFOt9z/levMQe5bsk7jycLvi6KYUOo5FkEDKYjyA==}
+  '@anolilab/semantic-release-preset@13.4.26':
+    resolution: {integrity: sha512-LuUtxCxGFGd8WdO+PUQShi1CX1htJHuLACsyyIpg6eWX7402fMMnv0huorSH8eQrJPe3lSJdkgI0vpP4tPJNRA==}
     engines: {node: ^22.14.0 || >=24.10.0}
     os: [darwin, linux, win32]
     peerDependencies:
-      '@anolilab/semantic-release-pnpm': 8.1.23
+      '@anolilab/semantic-release-pnpm': 8.1.25
       '@semantic-release/npm': 13.1.5
       semantic-release: 25.0.9
       semantic-release-yarn: ^3.0.2
@@ -1550,8 +1550,8 @@ packages:
     resolution: {integrity: sha512-SFNOvSJ+Dgf/9An904Yx+CgSlIPCkIpao4qo51lpee25TIRejdH3rhR4EZMGoNx3/TP3O+wzWuiTFl4sqbltzA==}
     hasBin: true
 
-  js-yaml@5.4.1:
-    resolution: {integrity: sha512-28R/k+NAjeuf7+CKlTxWZVExJGwVVLwY06DgEnOMz2gEpfNkDcD7QvyiVPT0xy0XXhU8vHsd4Ot42OOPdJG7dQ==}
+  js-yaml@5.4.2:
+    resolution: {integrity: sha512-m+aqu+LwO1O6sIopafj8HUVl5aawITwZQe/yHpMCKjaWBaA/d07B/QdMb3529REftiU+RMMHL3Vlsw3hON7vWg==}
     hasBin: true
 
   json-parse-better-errors@1.0.2:
@@ -2477,7 +2477,7 @@ snapshots:
     dependencies:
       prettier: 3.9.6
 
-  '@anolilab/semantic-release-clean-package-json@5.5.19(json5@2.2.3)(yaml@2.9.1)':
+  '@anolilab/semantic-release-clean-package-json@5.5.21(json5@2.2.3)(yaml@2.9.1)':
     dependencies:
       '@semantic-release/error': 4.0.0
       '@visulima/fs': 5.1.0(json5@2.2.3)(yaml@2.9.1)
@@ -2491,9 +2491,9 @@ snapshots:
       - smol-toml
       - yaml
 
-  '@anolilab/semantic-release-preset@13.4.24(@semantic-release/npm@13.1.5(semantic-release@25.0.9(supports-color@10.2.2)(typescript@7.0.2)))(json5@2.2.3)(semantic-release@25.0.9(supports-color@10.2.2)(typescript@7.0.2))(supports-color@10.2.2)(yaml@2.9.1)':
+  '@anolilab/semantic-release-preset@13.4.26(@semantic-release/npm@13.1.5(semantic-release@25.0.9(supports-color@10.2.2)(typescript@7.0.2)))(json5@2.2.3)(semantic-release@25.0.9(supports-color@10.2.2)(typescript@7.0.2))(supports-color@10.2.2)(yaml@2.9.1)':
     dependencies:
-      '@anolilab/semantic-release-clean-package-json': 5.5.19(json5@2.2.3)(yaml@2.9.1)
+      '@anolilab/semantic-release-clean-package-json': 5.5.21(json5@2.2.3)(yaml@2.9.1)
       '@semantic-release/changelog': 7.0.0(semantic-release@25.0.9(supports-color@10.2.2)(typescript@7.0.2))
       '@semantic-release/commit-analyzer': 13.0.1(semantic-release@25.0.9(supports-color@10.2.2)(typescript@7.0.2))(supports-color@10.2.2)
       '@semantic-release/exec': 7.1.0(semantic-release@25.0.9(supports-color@10.2.2)(typescript@7.0.2))(supports-color@10.2.2)
@@ -3335,7 +3335,7 @@ snapshots:
     dependencies:
       env-paths: 2.2.1
       import-fresh: 3.3.1
-      js-yaml: 5.4.1
+      js-yaml: 5.4.2
       parse-json: 5.2.0
     optionalDependencies:
       typescript: 7.0.2
@@ -3781,7 +3781,7 @@ snapshots:
     dependencies:
       argparse: 2.0.1
 
-  js-yaml@5.4.1:
+  js-yaml@5.4.2:
     dependencies:
       argparse: 2.0.1
 
@@ -4076,7 +4076,7 @@ snapshots:
   rc-config-loader@4.1.4(supports-color@10.2.2):
     dependencies:
       debug: 4.4.3(supports-color@10.2.2)
-      js-yaml: 5.4.1
+      js-yaml: 5.4.2
       json5: 2.2.3
       require-from-string: 2.0.2
     transitivePeerDependencies:
