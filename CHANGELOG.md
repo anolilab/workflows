@@ -1,3 +1,9 @@
+## [24.0.6](https://github.com/anolilab/workflows/compare/v24.0.5...v24.0.6) (2026-09-23)
+
+### Bug Fixes
+
+* **deps:** update dependency prettier to ^3.9.8 ([#514](https://github.com/anolilab/workflows/issues/514)) ([9a4d0f4](https://github.com/anolilab/workflows/commit/9a4d0f4e4feffea48026909a3e618516220bbfb2))
+
 ## [24.0.5](https://github.com/anolilab/workflows/compare/v24.0.4...v24.0.5) (2026-09-17)
 
 ### Bug Fixes
