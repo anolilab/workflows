@@ -19,13 +19,13 @@
         "cross-env": "^10.1.0",
         "husky": "^9.1.7",
         "is-ci": "^4.1.0",
-        "lint-staged": "^17.5.1",
+        "lint-staged": "^17.6.0",
         "prettier": "^3.9.9",
         "secretlint": "13.0.5",
         "semantic-release": "^25.0.9",
         "sort-package-json": "^4.0.0"
     },
-    "packageManager": "pnpm@12.4.2",
+    "packageManager": "pnpm@12.8.1",
     "engines": {
         "node": ">=22.13 <=25.*"
     }
