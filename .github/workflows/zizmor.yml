@@ -58,13 +58,26 @@ jobs:
               with:
                   tool: "zizmor"
 
-            # `tee` keeps the exit code from zizmor (vs `>` which always returns 0),
-            # so a finding at or above --min-severity fails the PR check.
+            # Two invocations, because one cannot do both jobs:
+            #   --format sarif exits 0 regardless of findings (SARIF is meant to be
+            #   uploaded, not to gate), and `cmd > file` / `cmd | tee file` both
+            #   discard the exit code unless `pipefail` is set.
+            # The plain run supplies the gate; the SARIF run supplies the upload.
             - name: "Run zizmor"
               env:
                   GH_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
                   MIN_SEVERITY: "${{ inputs.min_severity || 'medium' }}"
-              run: "zizmor --min-severity \"$MIN_SEVERITY\" --format sarif . | tee results.sarif"
+              shell: "bash"
+              run: |
+                  set -o pipefail
+                  zizmor --min-severity "$MIN_SEVERITY" --format plain . | tee zizmor.log
+
+            - name: "Generate SARIF report"
+              if: "always()"
+              env:
+                  GH_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+                  MIN_SEVERITY: "${{ inputs.min_severity || 'medium' }}"
+              run: "zizmor --min-severity \"$MIN_SEVERITY\" --format sarif . > results.sarif"
 
             - name: "Upload SARIF file"
               if: "always()"

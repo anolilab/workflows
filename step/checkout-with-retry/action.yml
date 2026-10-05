@@ -25,6 +25,7 @@ runs:
         - name: "Git checkout"
           id: "checkout"
           continue-on-error: true
+          # zizmor: ignore[artipacked] -- persist-credentials comes from an input defaulting to "false"
           uses: "actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1" # v7.0.1
           with:
               repository: "${{ inputs.repository }}"
@@ -37,6 +38,7 @@ runs:
           run: "sleep 15"
         - name: "Git checkout (retry)"
           if: "steps.checkout.outcome == 'failure'"
+          # zizmor: ignore[artipacked] -- persist-credentials comes from an input defaulting to "false"
           uses: "actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1" # v7.0.1
           with:
               repository: "${{ inputs.repository }}"
