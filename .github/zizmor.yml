@@ -1,5 +1,12 @@
 # Zizmor static analyzer config.
 # https://docs.zizmor.sh/configuration/
+#
+# checkout-with-retry's two artipacked findings are suppressed inline rather
+# than here. They pass persist-credentials through a composite input whose
+# declared default is "false", and zizmor cannot resolve composite input
+# defaults, so it reads the pass-through as unset and assumes the
+# actions/checkout default of true. This `rules:` form only accepts workflow
+# filenames, not composite action paths, so it cannot express that case.
 
 rules:
     dangerous-triggers:

@@ -50,6 +50,7 @@ jobs:
               uses: "actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1" # v7.0.1
               with:
                   token: "${{ secrets.github-token || secrets.GITHUB_TOKEN }}"
+                  persist-credentials: false
               env:
                   GIT_COMMITTER_NAME: "GitHub Actions Shell"
                   GIT_AUTHOR_NAME: "GitHub Actions Shell"
@@ -57,7 +58,7 @@ jobs:
 
             - name: "Setup resources and environment"
               id: "setup"
-              uses: "anolilab/workflows/step/setup@9b64c8cea7da5e06a9d9fd6c741619172607037f" # main
+              uses: "anolilab/workflows/step/setup@9b64c8cea7da5e06a9d9fd6c741619172607037f" # v24.0.1
               with:
                   node-version: "${{ inputs.node-version }}"
                   cache-prefix: "lock-file-update"
