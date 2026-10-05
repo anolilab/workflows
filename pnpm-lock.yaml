@@ -204,7 +204,7 @@ importers:
         version: 21.2.3
       '@secretlint/secretlint-rule-preset-recommend':
         specifier: ^13.0.6
-        version: 13.0.6
+        version: 13.0.7
       commitizen:
         specifier: ^4.3.2
         version: 4.3.2(@types/node@26.6.4)(typescript@7.0.2)
@@ -550,8 +550,8 @@ packages:
   '@secretlint/resolver@13.0.6':
     resolution: {integrity: sha512-HHTfCjEZvChOFebJ/JBpsqCM/q8hmS6qZq80xbQdVEsdjMmTcTX8E/uvYkOuyozuLCWePpJCnZ6nIxceSvYoog==}
 
-  '@secretlint/secretlint-rule-preset-recommend@13.0.6':
-    resolution: {integrity: sha512-5OdYoPKs7LznSY/mFgpJlSY8ayF+clq0gdfOE0ERVfvUifmIDz0yG/d1ij3wZmfpyOw33tk12zUcDZqrXHFodA==}
+  '@secretlint/secretlint-rule-preset-recommend@13.0.7':
+    resolution: {integrity: sha512-hfdYra+ZB6RmviEApxeL/YCx4ovBtpj0d9c+uhlCZaCikObjb8Sb8yqBN6g8/9tt7qD7LXGE3k9RtVvGK1fNVw==}
     engines: {node: '>=22.0.0'}
 
   '@secretlint/source-creator@13.0.6':
@@ -824,8 +824,8 @@ packages:
       yaml:
         optional: true
 
-  '@visulima/fs@6.0.21':
-    resolution: {integrity: sha512-wsuHCfe7xYV/WNBR5BzBtuI5NPTxyqD4RkHeswyuyvejxv5CwrAJ1g7PuRAcGyptocl6NfWzbVMyjXLTWvz31A==}
+  '@visulima/fs@6.0.25':
+    resolution: {integrity: sha512-eEI37rFX/M+d4UUfNwB1i8Ip732IY2ax9ifwrF2xVUNbR63N/rYIXXN6zd2HMKJNp1PHGrh31Hz688mBsKzPAQ==}
     engines: {node: ^22.14.0 || >=24.10.0}
     os: [darwin, linux, win32]
     peerDependencies:
@@ -846,8 +846,8 @@ packages:
       smol-toml:
         optional: true
 
-  '@visulima/package@5.0.34':
-    resolution: {integrity: sha512-IU2EJ0uOqc+HdmpPbRI75atCQdFqHEqrkUKaF9mfgRiu6TpAPoSJnwli5DuDgpUxyH1WZutkKkGFwMAkXJ83zQ==}
+  '@visulima/package@5.0.38':
+    resolution: {integrity: sha512-XZWW8JtsPXzPniOSQSN22s7tYo+jDTVktP8rwwpaGhbTBheUyPmFDZSJneONz5iW18O1gqcZZ8TIm4xwbCnrXA==}
     engines: {node: ^22.14.0 || >=24.10.0}
     os: [darwin, linux, win32]
 
@@ -1434,8 +1434,8 @@ packages:
   ieee754@1.2.1:
     resolution: {integrity: sha512-dcyqhDvX1C46lXZcVqCpK+FtMRQVdIMN6/Df5js2zouUsqG7I6sFxitIC+7KYK29KdXOLHdu9zL4sFnoVQnqaA==}
 
-  ignore@7.0.11:
-    resolution: {integrity: sha512-YChdK5txDjwGUvgR7oCJcLGkwi3LDh8Zx8tS7ndYciLEg/oOCL26VUBSUEtgS7EjiybcBqFxh5j0rAdDX7/bbg==}
+  ignore@7.0.12:
+    resolution: {integrity: sha512-/8UvqAPU9DGTI9k4mxtf49U37Isfwr8Uts96+SBHIkFxPJnHS0Ew4f00sM4Scd8V8EjM0jUNtVDdv1kPdt35lg==}
     engines: {node: '>= 4'}
 
   import-fresh@3.3.1:
@@ -2072,8 +2072,8 @@ packages:
     resolution: {integrity: sha512-7++dFhtcx3353uBaq8DDR4NuxBetBzC7ZQOhmTQInHEd6bSrXdiEyzCvG07Z44UYdLShWUyXt5M/yhz8ekcb1A==}
     engines: {node: '>=8'}
 
-  shell-quote@1.11.0:
-    resolution: {integrity: sha512-JdxDPD0DBTyu08pq0kPC0xSNet/qsU07qT6IsX1AS8oO2ICNRY4ldNa8OAI6PuwAH8tG3lxEhbqmyp4Dw4036g==}
+  shell-quote@1.12.0:
+    resolution: {integrity: sha512-PcByqNyT/38F2kDNi006HAMRJaULuBzq/FOsw3qdZvX/GA9W/jamDaRskgHjubHiftXK5sIFxLNkvrXUwcof6Q==}
     engines: {node: '>= 0.4'}
 
   signal-exit@3.0.7:
@@ -2473,9 +2473,9 @@ snapshots:
   '@anolilab/lint-staged-config@12.0.1(husky@9.1.7)(json5@2.2.3)(lint-staged@17.6.0)(prettier@3.9.9)(secretlint@13.0.6(supports-color@10.2.2))(yaml@2.9.1)':
     dependencies:
       '@visulima/fs': 5.0.5(json5@2.2.3)(yaml@2.9.1)
-      '@visulima/package': 5.0.34
+      '@visulima/package': 5.0.38
       husky: 9.1.7
-      shell-quote: 1.11.0
+      shell-quote: 1.12.0
       type-fest: 5.8.0
     optionalDependencies:
       lint-staged: 17.6.0
@@ -2842,7 +2842,7 @@ snapshots:
 
   '@secretlint/resolver@13.0.6': {}
 
-  '@secretlint/secretlint-rule-preset-recommend@13.0.6': {}
+  '@secretlint/secretlint-rule-preset-recommend@13.0.7': {}
 
   '@secretlint/source-creator@13.0.6':
     dependencies:
@@ -2853,7 +2853,7 @@ snapshots:
 
   '@secretlint/walker@13.0.6':
     dependencies:
-      ignore: 7.0.11
+      ignore: 7.0.12
       picomatch: 4.0.7
 
   '@semantic-release/changelog@7.0.0(semantic-release@25.0.9(supports-color@10.2.2)(typescript@7.0.2))':
@@ -3106,16 +3106,16 @@ snapshots:
       json5: 2.2.3
       yaml: 2.9.1
 
-  '@visulima/fs@6.0.21(json5@2.2.3)':
+  '@visulima/fs@6.0.25(json5@2.2.3)':
     dependencies:
       '@visulima/path': 4.0.0
     optionalDependencies:
       json5: 2.2.3
 
-  '@visulima/package@5.0.34':
+  '@visulima/package@5.0.38':
     dependencies:
       '@antfu/install-pkg': 2.1.0
-      '@visulima/fs': 6.0.21(json5@2.2.3)
+      '@visulima/fs': 6.0.25(json5@2.2.3)
       '@visulima/path': 4.0.0
       json5: 2.2.3
       normalize-package-data: 9.0.0
@@ -3714,7 +3714,7 @@ snapshots:
 
   ieee754@1.2.1: {}
 
-  ignore@7.0.11: {}
+  ignore@7.0.12: {}
 
   import-fresh@3.3.1:
     dependencies:
@@ -4273,7 +4273,7 @@ snapshots:
 
   shebang-regex@3.0.0: {}
 
-  shell-quote@1.11.0: {}
+  shell-quote@1.12.0: {}
 
   signal-exit@3.0.7: {}
 
