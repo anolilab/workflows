@@ -135,7 +135,7 @@ jobs:
             # `strategy.job-index == 0` is the lowest combination (lowest node x lowest os).
             - name: "Upload coverage to Codecov"
               if: "inputs.coverage == true && strategy.job-index == 0"
-              uses: "anolilab/workflows/step/codecov@9b64c8cea7da5e06a9d9fd6c741619172607037f" # main
+              uses: "anolilab/workflows/step/codecov@9b64c8cea7da5e06a9d9fd6c741619172607037f" # v24.0.1
               with:
                   codecov-token: "${{ secrets.codecov_token }}"
 
