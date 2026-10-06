@@ -13,7 +13,7 @@
         "@anolilab/semantic-release-preset": "^13.4.32",
         "@commitlint/cli": "^21.2.3",
         "@commitlint/config-conventional": "^21.2.3",
-        "@secretlint/secretlint-rule-preset-recommend": "^13.0.6",
+        "@secretlint/secretlint-rule-preset-recommend": "^13.0.7",
         "commitizen": "^4.3.2",
         "conventional-changelog-conventionalcommits": "9.3.1",
         "cross-env": "^10.1.0",
@@ -21,11 +21,11 @@
         "is-ci": "^4.1.0",
         "lint-staged": "^17.6.0",
         "prettier": "^3.9.9",
-        "secretlint": "13.0.6",
+        "secretlint": "13.0.7",
         "semantic-release": "^25.0.9",
         "sort-package-json": "^4.0.0"
     },
-    "packageManager": "pnpm@12.8.2",
+    "packageManager": "pnpm@12.9.0",
     "engines": {
         "node": ">=22.13 <=25.*"
     }

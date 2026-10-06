@@ -26,3 +26,9 @@ overrides:
   undici@<6.24.0: ^8.11.2
   undici@>=7.0.0 <7.28.0: ^8.11.2
   undici@>=8.0.0 <8.5.0: ^8.11.2
+
+auditConfig:
+  ignoreGhsas:
+    # braces stack exhaustion (GHSA-vfj7-8cjw-p6xm) has no patched release: the
+    # advisory covers <=3.0.3 and 3.0.3 is the latest published version.
+    - GHSA-vfj7-8cjw-p6xm
