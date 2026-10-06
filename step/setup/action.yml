@@ -35,9 +35,9 @@ inputs:
         required: false
         default: "true"
     run-signatures-audit:
-        description: "Run the npm audit signatures after we run pnpm install"
+        description: "Run the npm audit signatures after we run pnpm install. Off by default: npm's registry metadata repeatedly mis-resolves transitive platform packages (e.g. @esbuild/aix-ppc64@0.0.0), failing clean trees."
         required: false
-        default: "true"
+        default: "false"
     npm-version:
         description: "The npm version to use"
         required: false
