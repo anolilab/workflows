@@ -1,3 +1,17 @@
+## [24.0.9](https://github.com/anolilab/workflows/compare/v24.0.8...v24.0.9) (2026-10-06)
+
+### Bug Fixes
+
+* **deps:** combine open Renovate updates ([#528](https://github.com/anolilab/workflows/issues/528)) ([70ae688](https://github.com/anolilab/workflows/commit/70ae688ead17212afdedb72da86110e036dc4575))
+* **deps:** update anolilab/workflows action to v24.0.8 ([#522](https://github.com/anolilab/workflows/issues/522)) ([6c4f7b8](https://github.com/anolilab/workflows/commit/6c4f7b8cf4709be7844078880f912b8f23bf4a92))
+* disable the npm signatures audit by default ([#527](https://github.com/anolilab/workflows/issues/527)) ([f7d83c3](https://github.com/anolilab/workflows/commit/f7d83c3b8a42fb0c1464445d5217bf1f9bb3156f))
+* **zizmor:** make the reusable workflow's security gate actually fail ([b244eb6](https://github.com/anolilab/workflows/commit/b244eb6691522ac7f7d488c38aaba52c4f0e7061))
+
+### Miscellaneous Chores
+
+* **deps:** combine open Renovate dependency updates ([#525](https://github.com/anolilab/workflows/issues/525)) ([5947cc0](https://github.com/anolilab/workflows/commit/5947cc07e3921bfffa94169dfc012d650e197603))
+* **deps:** consolidate pending dependency updates ([#519](https://github.com/anolilab/workflows/issues/519)) ([e057004](https://github.com/anolilab/workflows/commit/e057004d316f89598a8a6dc2e75b4d98bfa1364b))
+
 ## [24.0.8](https://github.com/anolilab/workflows/compare/v24.0.7...v24.0.8) (2026-10-02)
 
 ### Bug Fixes
