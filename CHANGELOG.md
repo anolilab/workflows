@@ -1,3 +1,9 @@
+## [24.0.10](https://github.com/anolilab/workflows/compare/v24.0.9...v24.0.10) (2026-10-07)
+
+### Bug Fixes
+
+* **deps:** update taiki-e/install-action action to v2.87.24 ([#530](https://github.com/anolilab/workflows/issues/530)) ([1970f0b](https://github.com/anolilab/workflows/commit/1970f0b225ac7592e933332a8dd614d7e1aa7b80))
+
 ## [24.0.9](https://github.com/anolilab/workflows/compare/v24.0.8...v24.0.9) (2026-10-06)
 
 ### Bug Fixes
