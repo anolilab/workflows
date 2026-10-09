@@ -84,7 +84,8 @@ runs:
         - name: "Add components"
           if: "inputs.components != ''"
           shell: "bash"
-          run: "rustup component add ${INPUTS_COMPONENTS}"
+          run: |
+              rustup component add "${INPUTS_COMPONENTS}"
           env:
               INPUTS_COMPONENTS: "${{ inputs.components }}"
 
