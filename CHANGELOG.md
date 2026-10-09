@@ -1,3 +1,19 @@
+## [24.1.0](https://github.com/anolilab/workflows/compare/v24.0.10...v24.1.0) (2026-10-09)
+
+### Features
+
+* **lint:** switch workflow linting to jactionlint ([#535](https://github.com/anolilab/workflows/issues/535)) ([26b476a](https://github.com/anolilab/workflows/commit/26b476a3fcd44efdc18b8972dfd61ddb9fc52a81))
+
+### Bug Fixes
+
+* **deps:** override handlebars to the patched 4.7.10 ([#536](https://github.com/anolilab/workflows/issues/536)) ([edfc521](https://github.com/anolilab/workflows/commit/edfc52153de8507cd22609fb7b72f9795fc1b7a4))
+* **deps:** update github-actions ([#533](https://github.com/anolilab/workflows/issues/533)) ([fb7742b](https://github.com/anolilab/workflows/commit/fb7742b6ee3a4f007154d3331ef7d60df11b1219))
+* **deps:** update patch updates (patch) ([#529](https://github.com/anolilab/workflows/issues/529)) ([0b6ba93](https://github.com/anolilab/workflows/commit/0b6ba934bf4063dffda266f724e7a0c560d2b5d2))
+* **deps:** update patch updates (patch) ([#534](https://github.com/anolilab/workflows/issues/534)) ([90d33ce](https://github.com/anolilab/workflows/commit/90d33ce7c15f3eb48465c907007ed342887aa4b9))
+* **deps:** update pnpm to v12.10.0 ([#524](https://github.com/anolilab/workflows/issues/524)) ([fca64fa](https://github.com/anolilab/workflows/commit/fca64fa87b59445fe2413c799a99e96fe562e0a9))
+* **deps:** update step-security/harden-runner action to v2.22.0 ([#532](https://github.com/anolilab/workflows/issues/532)) ([1eb0b0c](https://github.com/anolilab/workflows/commit/1eb0b0ccb88fec2cf43a2ecde4a42a86540ad0c4))
+* **deps:** update taiki-e/install-action action to v2.87.25 ([#531](https://github.com/anolilab/workflows/issues/531)) ([cd7c39f](https://github.com/anolilab/workflows/commit/cd7c39fb677ac64ed9a1864270999b8a44ea8f02))
+
 ## [24.0.10](https://github.com/anolilab/workflows/compare/v24.0.9...v24.0.10) (2026-10-07)
 
 ### Bug Fixes
