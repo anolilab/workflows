@@ -43,10 +43,15 @@ on: # yamllint disable-line rule:truthy
                 type: "boolean"
                 default: true
             lint_actionlint:
-                description: "Run raven-actions/actionlint against .github/workflows/."
+                description: "Run jactionlint (jdx/jactionlint) against .github/workflows/."
                 required: false
                 type: "boolean"
                 default: true
+            actionlint_profile:
+                description: "jactionlint rule profile: correctness (actionlint parity), default or pedantic."
+                required: false
+                type: "string"
+                default: "correctness"
             lint_rust:
                 description: "Run cargo fmt --check on every Cargo.toml in the workspace."
                 required: false
@@ -283,23 +288,10 @@ jobs:
                   GIT_AUTHOR_NAME: "GitHub Actions Shell"
                   EMAIL: "github-actions[bot]@users.noreply.github.com"
 
-            # raven-actions/actionlint runs `npm install` in the workspace root
-            # to fetch @actions/tool-cache. If package.json declares pnpm
-            # `catalog:` dependencies, npm fails with EUNSUPPORTEDPROTOCOL.
-            # actionlint only reads .github/workflows/*.yml, so hiding the
-            # package.json from npm is safe for this job.
-            - name: "Hide package.json from npm"
-              shell: "bash"
-              run: |
-                  if [ -f package.json ]; then
-                      mv package.json /tmp/package.json.lint-stash
-                  fi
-
-            - name: "actionlint"
-              uses: "raven-actions/actionlint@3d39aea434753780c3b3d4a1a31c854b4dbf49d7" # v2.2.0
+            - name: "jactionlint"
+              uses: "jdx/jactionlint@2462f925040c2aa1c88714dc85bc12d869cc4998" # v2.0.2
               with:
-                  matcher: true
-                  fail-on-error: true
+                  profile: "${{ inputs.actionlint_profile || 'correctness' }}"
 
     rust-fmt:
         if: |

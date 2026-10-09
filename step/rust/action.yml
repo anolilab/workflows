@@ -84,7 +84,10 @@ runs:
         - name: "Add components"
           if: "inputs.components != ''"
           shell: "bash"
-          run: "rustup component add ${INPUTS_COMPONENTS}"
+          run: |
+              # The input is space-separated (e.g. "clippy rustfmt"): split it into one argument per component.
+              read -r -a components <<< "${INPUTS_COMPONENTS}"
+              rustup component add "${components[@]}"
           env:
               INPUTS_COMPONENTS: "${{ inputs.components }}"
 
