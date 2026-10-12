@@ -81,9 +81,12 @@ runs:
           run: "corepack enable"
 
         - name: "Setup pnpm"
-          uses: "pnpm/action-setup@ea17c68df8912ef543352723c149a84f56e3d413" # v6.1.0
+          # pnpm/setup installs pnpm v11+ as the self-contained native binary, so Windows
+          # never runs the bootstrap-then-self-update path that pnpm/action-setup uses.
+          uses: "pnpm/setup@a0881977cd8ea73b1ed212236c99ca10dcc80cf4" # v3.1.1
           with:
-              run_install: false
+              install: "false"
+              node-version-file: "false"
 
         - name: 'Expose pnpm config(s) through "$GITHUB_OUTPUT"' # yamllint disable-line rule:quoted-strings
           id: "pnpm-config"
