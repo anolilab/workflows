@@ -13,7 +13,7 @@ It labels each pull request with its size, so a reviewer sees the weight before 
 | `size:XL`  | 500–999       |
 | `size:XXL` | 1,000+        |
 
-Test files do not count (`__tests__/`, `test/`, `tests/`, `e2e/`, `*.test.*`, `*.spec.*`, `*.browser.*`, `*.integration.*`), unless the pull request changes nothing else. Paths matching `ignore-paths` do not count either. The labels are created on first use.
+Test files do not count (`__tests__/`, `test/`, `tests/`, `e2e/`, `*.test.*`, `*.spec.*`, `*.browser.*`, `*.integration.*`, `test_*.py`, `*_test.py`, `*_test.go`), unless the pull request changes nothing else. Paths matching `ignore-paths` do not count either. The labels are created on first use.
 
 ## ⚠️ Security
 

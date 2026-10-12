@@ -66,7 +66,11 @@ jobs:
                           .map((line) => line.trim())
                           .filter(Boolean)
                           .map((pattern) => new RegExp(pattern));
-                      const isTest = (path) => /(^|\/)(__tests__|tests?|e2e)\//.test(path) || /\.(test|spec|browser|integration)\./.test(path);
+                      const isTest = (path) =>
+                          /(^|\/)(__tests__|tests?|e2e)\//.test(path) ||
+                          /\.(test|spec|browser|integration)\./.test(path) ||
+                          /(^|\/)test_[^/]*\.py$/.test(path) ||
+                          /_test\.(py|go)$/.test(path);
 
                       const { owner, repo } = context.repo;
                       const issue_number = context.payload.pull_request.number;

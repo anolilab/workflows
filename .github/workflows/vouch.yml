@@ -44,6 +44,23 @@ jobs:
               with:
                   egress-policy: "audit"
 
+            # `check-user` treats a trust file it cannot fetch as an empty one and answers
+            # `unknown`, which would replace a correct `vouch:trusted` with
+            # `vouch:unvouched`. Fail before any label changes unless the file is
+            # readable, or absent: a repository without a list has nobody vouched.
+            - name: "Check the trust file is readable"
+              uses: "actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3" # v9.0.0
+              env:
+                  VOUCHED_FILE: "${{ inputs.vouched-file }}"
+              with:
+                  script: |
+                      try {
+                          await github.rest.repos.getContent({ ...context.repo, path: process.env.VOUCHED_FILE });
+                      } catch (error) {
+                          if (error.status !== 404) throw error;
+                          core.info(`${process.env.VOUCHED_FILE} does not exist; nobody is vouched.`);
+                      }
+
             - name: "Check the PR author"
               id: "vouch"
               uses: "mitchellh/vouch/action/check-user@d66fa29a64600490892131ad87597c30c91fcac4" # v1
