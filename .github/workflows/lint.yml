@@ -100,7 +100,7 @@ jobs:
             filters_present: "${{ steps.filters-check.outputs.present }}"
         steps:
             - name: "Harden Runner"
-              uses: "step-security/harden-runner@351661ca32ac09a36dc5ee2d536e3128f2a3c8ed" # v2.22.0
+              uses: "step-security/harden-runner@ccd8616d44fd3846e67624a50d5aad6d37bf2d25" # v2.22.1
               with:
                   egress-policy: "audit"
 
@@ -145,7 +145,7 @@ jobs:
         timeout-minutes: 30
         steps:
             - name: "Harden Runner"
-              uses: "step-security/harden-runner@351661ca32ac09a36dc5ee2d536e3128f2a3c8ed" # v2.22.0
+              uses: "step-security/harden-runner@ccd8616d44fd3846e67624a50d5aad6d37bf2d25" # v2.22.1
               with:
                   egress-policy: "audit"
 
@@ -165,7 +165,7 @@ jobs:
 
             - name: "Setup resources and environment"
               id: "setup"
-              uses: "anolilab/workflows/step/node@25cafd41e9f1411f92488ded9b59b9bb356905c0" # v24.0.9
+              uses: "anolilab/workflows/step/node@b338ef3e3435901b0368f00f8d7d414b0c59a51b" # v24.0.10
               with:
                   node-version: "${{ inputs.node_version || '22' }}"
                   install-node-gyp: "true"
@@ -199,7 +199,7 @@ jobs:
         timeout-minutes: 30
         steps:
             - name: "Harden Runner"
-              uses: "step-security/harden-runner@351661ca32ac09a36dc5ee2d536e3128f2a3c8ed" # v2.22.0
+              uses: "step-security/harden-runner@ccd8616d44fd3846e67624a50d5aad6d37bf2d25" # v2.22.1
               with:
                   egress-policy: "audit"
 
@@ -219,7 +219,7 @@ jobs:
 
             - name: "Setup resources and environment"
               id: "setup"
-              uses: "anolilab/workflows/step/node@25cafd41e9f1411f92488ded9b59b9bb356905c0" # v24.0.9
+              uses: "anolilab/workflows/step/node@b338ef3e3435901b0368f00f8d7d414b0c59a51b" # v24.0.10
               with:
                   node-version: "${{ inputs.node_version || '22' }}"
                   install-node-gyp: "true"
@@ -244,7 +244,7 @@ jobs:
         timeout-minutes: 30
         steps:
             - name: "Harden Runner"
-              uses: "step-security/harden-runner@351661ca32ac09a36dc5ee2d536e3128f2a3c8ed" # v2.22.0
+              uses: "step-security/harden-runner@ccd8616d44fd3846e67624a50d5aad6d37bf2d25" # v2.22.1
               with:
                   egress-policy: "audit"
 
@@ -275,7 +275,7 @@ jobs:
         timeout-minutes: 30
         steps:
             - name: "Harden Runner"
-              uses: "step-security/harden-runner@351661ca32ac09a36dc5ee2d536e3128f2a3c8ed" # v2.22.0
+              uses: "step-security/harden-runner@ccd8616d44fd3846e67624a50d5aad6d37bf2d25" # v2.22.1
               with:
                   egress-policy: "audit"
 
@@ -304,7 +304,7 @@ jobs:
         timeout-minutes: 30
         steps:
             - name: "Harden Runner"
-              uses: "step-security/harden-runner@351661ca32ac09a36dc5ee2d536e3128f2a3c8ed" # v2.22.0
+              uses: "step-security/harden-runner@ccd8616d44fd3846e67624a50d5aad6d37bf2d25" # v2.22.1
               with:
                   egress-policy: "audit"
 
@@ -344,7 +344,7 @@ jobs:
         timeout-minutes: 30
         steps:
             - name: "Harden Runner"
-              uses: "step-security/harden-runner@351661ca32ac09a36dc5ee2d536e3128f2a3c8ed" # v2.22.0
+              uses: "step-security/harden-runner@ccd8616d44fd3846e67624a50d5aad6d37bf2d25" # v2.22.1
               with:
                   egress-policy: "audit"
 
@@ -362,7 +362,7 @@ jobs:
                   run_install: false
 
             - name: "Use Node.js"
-              uses: "actions/setup-node@820762786026740c76f36085b0efc47a31fe5020" # v7.0.0
+              uses: "actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1" # v7.1.0
               with:
                   node-version: "${{ inputs.node_version || '22' }}"
 
@@ -409,7 +409,7 @@ jobs:
             # If any jobs we depend on fail, we will fail since this is a required check
             # NOTE: A timeout is considered a failure
             - name: "Harden Runner"
-              uses: "step-security/harden-runner@351661ca32ac09a36dc5ee2d536e3128f2a3c8ed" # v2.22.0
+              uses: "step-security/harden-runner@ccd8616d44fd3846e67624a50d5aad6d37bf2d25" # v2.22.1
               with:
                   egress-policy: "audit"
 
