@@ -1,3 +1,12 @@
+## [24.1.1](https://github.com/anolilab/workflows/compare/v24.1.0...v24.1.1) (2026-10-12)
+
+### Bug Fixes
+
+* **deps:** update github-actions ([#540](https://github.com/anolilab/workflows/issues/540)) ([c973601](https://github.com/anolilab/workflows/commit/c9736010656b0d7673e1db8e13fb645870c31d10))
+* **deps:** update patch updates ([#538](https://github.com/anolilab/workflows/issues/538)) ([a3ce508](https://github.com/anolilab/workflows/commit/a3ce5089cda58b9d45fb283290ee983552205068))
+* **deps:** update pnpm to v12.11.1 ([#541](https://github.com/anolilab/workflows/issues/541)) ([70241e1](https://github.com/anolilab/workflows/commit/70241e195f18e667d8ae2e2355c8f7646ff785e8))
+* **setup:** install pnpm with pnpm/setup ([#539](https://github.com/anolilab/workflows/issues/539)) ([056e198](https://github.com/anolilab/workflows/commit/056e19811003e2bda8981e33e64355bc4784c20c))
+
 ## [24.1.0](https://github.com/anolilab/workflows/compare/v24.0.10...v24.1.0) (2026-10-09)
 
 ### Features
