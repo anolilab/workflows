@@ -1,0 +1,112 @@
+# Note: this is a shared pipeline used by other repositories.
+# Docs: https://docs.github.com/en/actions/using-workflows/reusing-workflows
+#
+# Labels a pull request `size:XS` … `size:XXL` from the lines it changes, so a
+# reviewer sees the weight before opening it. Tests never count (a test-only
+# pull request counts its tests), nor do the paths in `ignore-paths`.
+#
+# SECURITY: the CALLING workflow must trigger on `pull_request_target` (so it can
+# label pull requests from forks) and MUST NOT check out the repository. This
+# reusable workflow reads the file list from the API and never checks out code,
+# so no fork-controlled ref is ever executed. See the companion `pr-size.md` for a
+# caller example.
+
+name: "PR Size"
+
+on: # yamllint disable-line rule:truthy
+    workflow_call:
+        inputs:
+            target-repo:
+                description: "The repo to run this action on. This is to prevent actions from running on forks unless intended."
+                required: true
+                type: "string"
+            ignore-paths:
+                description: "Newline-separated regular expressions; a changed file whose path matches one does not count."
+                required: false
+                type: "string"
+                default: |
+                    (^|/)(pnpm-lock\.yaml|package-lock\.json|yarn\.lock)$
+                    (^|/)(dist|coverage)/
+
+permissions:
+    contents: "read"
+
+jobs:
+    pr-size:
+        name: "PR size"
+        if: "github.repository == inputs.target-repo"
+        runs-on: "ubuntu-latest"
+        timeout-minutes: 5
+        permissions:
+            contents: "read"
+            issues: "write" # to create the labels
+            pull-requests: "write" # to read the files and apply the label
+        steps:
+            - name: "Harden Runner"
+              uses: "step-security/harden-runner@9af89fc71515a100421586dfdb3dc9c984fbf411" # v2.19.4
+              with:
+                  egress-policy: "audit"
+
+            - name: "Sync the size label"
+              uses: "actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3" # v9.0.0
+              env:
+                  IGNORE_PATHS: "${{ inputs.ignore-paths }}"
+              with:
+                  script: |
+                      const sizes = [
+                          { name: "size:XS", color: "0e8a16", below: 10 },
+                          { name: "size:S", color: "5ebd3e", below: 30 },
+                          { name: "size:M", color: "fbca04", below: 100 },
+                          { name: "size:L", color: "fe7d37", below: 500 },
+                          { name: "size:XL", color: "d93f0b", below: 1000 },
+                          { name: "size:XXL", color: "b60205", below: Infinity },
+                      ];
+                      const ignored = (process.env.IGNORE_PATHS ?? "")
+                          .split("\n")
+                          .map((line) => line.trim())
+                          .filter(Boolean)
+                          .map((pattern) => new RegExp(pattern));
+                      const isTest = (path) =>
+                          /(^|\/)(__tests__|tests?|e2e)\//.test(path) ||
+                          /\.(test|spec|browser|integration)\./.test(path) ||
+                          /(^|\/)test_[^/]*\.py$/.test(path) ||
+                          /_test\.(py|go)$/.test(path);
+
+                      const { owner, repo } = context.repo;
+                      const issue_number = context.payload.pull_request.number;
+                      const files = await github.paginate(github.rest.pulls.listFiles, { owner, repo, pull_number: issue_number, per_page: 100 });
+
+                      let code = 0;
+                      let tests = 0;
+
+                      for (const file of files) {
+                          if (ignored.some((pattern) => pattern.test(file.filename))) continue;
+                          if (isTest(file.filename)) tests += file.changes;
+                          else code += file.changes;
+                      }
+
+                      const lines = code === 0 ? tests : code;
+                      const next = sizes.find((size) => lines < size.below).name;
+
+                      for (const { name, color } of sizes) {
+                          try {
+                              await github.rest.issues.createLabel({ owner, repo, name, color, description: "Size of the change, tests and generated files excluded." });
+                          } catch (error) {
+                              // 422: the label already exists.
+                              if (error.status !== 422) throw error;
+                          }
+                      }
+
+                      const { data: current } = await github.rest.issues.listLabelsOnIssue({ owner, repo, issue_number, per_page: 100 });
+
+                      for (const { name } of current) {
+                          if (name !== next && sizes.some((size) => size.name === name)) {
+                              await github.rest.issues.removeLabel({ owner, repo, issue_number, name });
+                          }
+                      }
+
+                      if (!current.some((label) => label.name === next)) {
+                          await github.rest.issues.addLabels({ owner, repo, issue_number, labels: [next] });
+                      }
+
+                      core.info(`PR #${issue_number}: ${code} code lines, ${tests} test lines -> ${next}`);

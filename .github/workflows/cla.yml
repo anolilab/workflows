@@ -1,0 +1,105 @@
+# Note: this is a shared pipeline used by other repositories.
+# Docs: https://docs.github.com/en/actions/using-workflows/reusing-workflows
+#
+# Fails a pull request whose description lacks the Contributor License Agreement
+# confirmation, and tells the author what to add. Bots and collaborators with
+# write access are exempt.
+#
+# SECURITY: the CALLING workflow must trigger on `pull_request_target` (so the
+# sticky comment works on pull requests from forks) and MUST NOT check out the
+# repository. This reusable workflow never checks out code and only reads the
+# event payload, so no fork-controlled ref is ever executed. See the companion
+# `cla.md` for a caller example.
+
+name: "CLA"
+
+on: # yamllint disable-line rule:truthy
+    workflow_call:
+        inputs:
+            target-repo:
+                description: "The repo to run this action on. This is to prevent actions from running on forks unless intended."
+                required: true
+                type: "string"
+            cla-text:
+                description: "The confirmation sentence a pull request description must contain."
+                required: false
+                type: "string"
+                default: "By submitting this pull request, I confirm that my contribution is made under the terms of the project's license and that you can use, modify, copy, and redistribute this contribution under those terms."
+
+permissions:
+    contents: "read"
+
+jobs:
+    cla:
+        name: "CLA"
+        # A merge queue run has no pull request to read, and the pull request
+        # already passed this check to get queued. A skipped required check counts
+        # as passed. The skip is decided here, not in the caller, so the check
+        # keeps one name on both events.
+        if: "github.repository == inputs.target-repo && github.event_name != 'merge_group'"
+        runs-on: "ubuntu-latest"
+        timeout-minutes: 5
+        permissions:
+            contents: "read"
+            pull-requests: "write" # to post the sticky comment with instructions
+        steps:
+            - name: "Harden Runner"
+              uses: "step-security/harden-runner@9af89fc71515a100421586dfdb3dc9c984fbf411" # v2.19.4
+              with:
+                  egress-policy: "audit"
+
+            - name: "Validate the PR description"
+              id: "check_cla"
+              uses: "actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3" # v9.0.0
+              env:
+                  CLA_TEXT: "${{ inputs.cla-text }}"
+              with:
+                  script: |
+                      const claText = process.env.CLA_TEXT;
+                      const pullRequest = context.payload.pull_request;
+                      const author = pullRequest.user.login;
+
+                      // Renovate and friends have nobody to sign for them.
+                      if (pullRequest.user.type === "Bot") {
+                          core.info(`Skipping: ${author} is a bot.`);
+                          return;
+                      }
+
+                      // Maintainers contribute under their own agreement with the project.
+                      const { data } = await github.rest.repos.getCollaboratorPermissionLevel({
+                          owner: context.repo.owner,
+                          repo: context.repo.repo,
+                          username: author,
+                      });
+
+                      if (["admin", "maintain", "write"].includes(data.permission)) {
+                          core.info(`Skipping: ${author} has ${data.permission} access.`);
+                          return;
+                      }
+
+                      if (!(pullRequest.body ?? "").includes(claText)) {
+                          core.setFailed("The pull request description does not include the CLA confirmation.");
+                      }
+
+            - name: "Comment with CLA instructions"
+              if: "failure() && steps.check_cla.outcome == 'failure'"
+              uses: "marocchino/sticky-pull-request-comment@0ea0beb66eb9baf113663a64ec522f60e49231c0" # v3.0.4
+              with:
+                  header: "cla-check"
+                  message: |
+                      Hey there and thank you for your contribution! 👋🏼
+
+                      Before we can merge this pull request, we need you to confirm the
+                      Contributor License Agreement (CLA). Please add the following line
+                      to your **pull request description** and the check re-runs automatically:
+
+                      > ${{ inputs.cla-text }}
+
+            - name: "Clear the CLA comment"
+              if: "success()"
+              uses: "marocchino/sticky-pull-request-comment@0ea0beb66eb9baf113663a64ec522f60e49231c0" # v3.0.4
+              # Clearing a stale comment must never turn a passing check red.
+              continue-on-error: true
+              with:
+                  header: "cla-check"
+                  delete: true
