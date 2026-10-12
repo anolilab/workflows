@@ -1,3 +1,13 @@
+## [24.2.0](https://github.com/anolilab/workflows/compare/v24.1.1...v24.2.0) (2026-10-12)
+
+### Features
+
+* add vouch, cla and pr-size reusable workflows ([#542](https://github.com/anolilab/workflows/issues/542)) ([7ee934e](https://github.com/anolilab/workflows/commit/7ee934e8bbbd4a06ef0b39e2c3a97f84be8d29da))
+
+### Miscellaneous Chores
+
+* **deps:** combine open Renovate updates ( PRs) ([#543](https://github.com/anolilab/workflows/issues/543)) ([a880e9e](https://github.com/anolilab/workflows/commit/a880e9e92526e9daccd424e9f42d8e9fdb655e1c))
+
 ## [24.1.1](https://github.com/anolilab/workflows/compare/v24.1.0...v24.1.1) (2026-10-12)
 
 ### Bug Fixes
