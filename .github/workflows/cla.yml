@@ -44,7 +44,7 @@ jobs:
             pull-requests: "write" # to post the sticky comment with instructions
         steps:
             - name: "Harden Runner"
-              uses: "step-security/harden-runner@9af89fc71515a100421586dfdb3dc9c984fbf411" # v2.19.4
+              uses: "step-security/harden-runner@ccd8616d44fd3846e67624a50d5aad6d37bf2d25" # v2.22.1
               with:
                   egress-policy: "audit"
 
@@ -83,7 +83,7 @@ jobs:
 
             - name: "Comment with CLA instructions"
               if: "failure() && steps.check_cla.outcome == 'failure'"
-              uses: "marocchino/sticky-pull-request-comment@0ea0beb66eb9baf113663a64ec522f60e49231c0" # v3.0.4
+              uses: "marocchino/sticky-pull-request-comment@5770ad5eb8f42dd2c4f34da00c94c5381e49af88" # v3.0.5
               with:
                   header: "cla-check"
                   message: |
@@ -97,7 +97,7 @@ jobs:
 
             - name: "Clear the CLA comment"
               if: "success()"
-              uses: "marocchino/sticky-pull-request-comment@0ea0beb66eb9baf113663a64ec522f60e49231c0" # v3.0.4
+              uses: "marocchino/sticky-pull-request-comment@5770ad5eb8f42dd2c4f34da00c94c5381e49af88" # v3.0.5
               # Clearing a stale comment must never turn a passing check red.
               continue-on-error: true
               with:
