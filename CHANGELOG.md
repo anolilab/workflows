@@ -1,3 +1,15 @@
+## [24.2.2](https://github.com/anolilab/workflows/compare/v24.2.1...v24.2.2) (2026-10-13)
+
+### Bug Fixes
+
+* **deps:** update github-actions ([60d172d](https://github.com/anolilab/workflows/commit/60d172de8fdadc4520377b0b170c57bc4bc090d6))
+* **deps:** update patch updates ([97765e1](https://github.com/anolilab/workflows/commit/97765e1f75e26dee35eed4f0cf1e673a44ea6a2f))
+
+### Miscellaneous Chores
+
+* **deps:** merge renovate branch github-actions ([32cd02a](https://github.com/anolilab/workflows/commit/32cd02ac74e16245363c247ea17d8b95e13130f8))
+* **deps:** merge renovate branch patch-patch-updates ([37f2033](https://github.com/anolilab/workflows/commit/37f203358faa6334b29da6ffc7d9c5b6e3bdaa9d))
+
 ## [24.2.1](https://github.com/anolilab/workflows/compare/v24.2.0...v24.2.1) (2026-10-13)
 
 ### Bug Fixes
