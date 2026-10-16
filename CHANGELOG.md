@@ -1,3 +1,17 @@
+## [25.0.0](https://github.com/anolilab/workflows/compare/v24.2.2...v25.0.0) (2026-10-16)
+
+### ⚠ BREAKING CHANGES
+
+* **deps:** updated dependencies to major versions
+
+* chore(deps): regenerate lockfile
+
+* chore(ci): remove unused slop-detection workflow
+
+### Miscellaneous Chores
+
+* **deps:** combine open Renovate updates (4 PRs) ([#550](https://github.com/anolilab/workflows/issues/550)) ([3b1c644](https://github.com/anolilab/workflows/commit/3b1c644e6f587d51428f989df68d2358399b1b52))
+
 ## [24.2.2](https://github.com/anolilab/workflows/compare/v24.2.1...v24.2.2) (2026-10-13)
 
 ### Bug Fixes
