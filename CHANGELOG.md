@@ -1,3 +1,9 @@
+## [25.0.1](https://github.com/anolilab/workflows/compare/v25.0.0...v25.0.1) (2026-10-17)
+
+### Bug Fixes
+
+* **lock-file-maintenance:** persist checkout credentials so git-auto-commit can push ([#555](https://github.com/anolilab/workflows/issues/555)) ([5d2adf5](https://github.com/anolilab/workflows/commit/5d2adf5f87ae60d1a4b3a2a2a4c11b487f6efd08))
+
 ## [25.0.0](https://github.com/anolilab/workflows/compare/v24.2.2...v25.0.0) (2026-10-16)
 
 ### ⚠ BREAKING CHANGES
