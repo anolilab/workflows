@@ -45,7 +45,6 @@ configure the following:
 - [greetings](./.github/workflows/greetings.yml) - Greets new contributors
 - [lint](./.github/workflows/lint.yml) - Lints code using ESLint and Prettier
 - [lock-closed](./.github/workflows/lock-closed.yml) ([docs](./.github/workflows/lock-closed.md)) - locks issues and PRs that have been closed for more than a year
-- [pnpm-lock-file-maintenance](./.github/workflows/pnpm-lock-file-maintenance.yml) ([docs](./.github/workflows/pnpm-lock-file-maintenance.md)) - validates if the PR title has a defined semantic title
 - [pr-size](./.github/workflows/pr-size.yml) ([docs](./.github/workflows/pr-size.md)) - labels a PR `size:XS` to `size:XXL` from the lines it changes
 - [require-allow-edits](./.github/workflows/require-allow-edits.yml) - Requires 'allow edits' from maintainers on PRs from forks
 - [scorecards](./.github/workflows/scorecards.yml) - Generates a security scorecard for the repository
