@@ -165,7 +165,7 @@ jobs:
 
             - name: "Setup resources and environment"
               id: "setup"
-              uses: "anolilab/workflows/step/node@fb7a881926480723026a1deaa587ceaaaee7bf12" # v24.2.0
+              uses: "anolilab/workflows/step/node@c69dbdcdfb274e317a1ca7a17b3457b19cbae527" # v24.2.2
               with:
                   node-version: "${{ inputs.node_version || '22' }}"
                   install-node-gyp: "true"
@@ -219,7 +219,7 @@ jobs:
 
             - name: "Setup resources and environment"
               id: "setup"
-              uses: "anolilab/workflows/step/node@fb7a881926480723026a1deaa587ceaaaee7bf12" # v24.2.0
+              uses: "anolilab/workflows/step/node@c69dbdcdfb274e317a1ca7a17b3457b19cbae527" # v24.2.2
               with:
                   node-version: "${{ inputs.node_version || '22' }}"
                   install-node-gyp: "true"
@@ -289,7 +289,7 @@ jobs:
                   EMAIL: "github-actions[bot]@users.noreply.github.com"
 
             - name: "jactionlint"
-              uses: "jdx/jactionlint@a0bb9f012b6b5760c17c9ccd040001d08002a10e" # v2.1.0
+              uses: "jdx/jactionlint@1027f0a131ab98bc7e191d995bfa15dbed5bbf8f" # v2.2.0
               with:
                   profile: "${{ inputs.actionlint_profile || 'correctness' }}"
 
