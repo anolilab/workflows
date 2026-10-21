@@ -1,3 +1,13 @@
+## [25.0.2](https://github.com/anolilab/workflows/compare/v25.0.1...v25.0.2) (2026-10-21)
+
+### Bug Fixes
+
+* **deps:** update github-actions ([#554](https://github.com/anolilab/workflows/issues/554)) ([c8409c9](https://github.com/anolilab/workflows/commit/c8409c97d639c5deef1274b13f7006e30f12ac73))
+
+### Continuous Integration
+
+* remove lock file maintenance job ([f6b025c](https://github.com/anolilab/workflows/commit/f6b025cd9cae64da25969809c6e37340e2097b57))
+
 ## [25.0.1](https://github.com/anolilab/workflows/compare/v25.0.0...v25.0.1) (2026-10-17)
 
 ### Bug Fixes
