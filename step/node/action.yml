@@ -13,7 +13,15 @@ inputs:
     enable-nx-cache:
         description: "Enable nx cache"
         required: false
-        default: "true"
+        default: "false"
+    enable-vis-cache:
+        description: "Persist the @visulima/vis task cache between runs. Restored on every run, saved only on push events. Sets VIS_CACHE_DIRECTORY for the rest of the job."
+        required: false
+        default: "false"
+    vis-cache-dir:
+        description: "Directory to cache for enable-vis-cache. Defaults to <runner.temp>/vis-cache. Set it to match vis.config's taskRunner.cacheDirectory if the repo sets one, since that wins over VIS_CACHE_DIRECTORY."
+        required: false
+        default: ""
     enable-node-modules-cache:
         description: "Cache node_modules, might speed up link step (invalidated lock/os/node-version/branch)"
         required: false
@@ -198,6 +206,52 @@ runs:
           if: "inputs.enable-node-modules-cache == 'true' && steps.nx-cache.outputs.cache-hit == 'true'"
           shell: "bash"
           run: "lz4 -d /tmp/nx_cache.tar.lz4 | tar -xf - ;" # decompress nx cache
+
+        # vis' default cache dir is node_modules/.cache/vis, which would end up in the
+        # node_modules tarball above; pin it outside the repo instead.
+        - name: "Resolve vis cache directory"
+          if: "inputs.enable-vis-cache == 'true'"
+          id: "vis-cache-dir"
+          shell: "bash"
+          # The value is the caller's own input or RUNNER_TEMP, never event data, and a
+          # newline (the only way to smuggle a second variable in) is refused below.
+          run: | # zizmor: ignore[github-env]
+              dir="${VIS_CACHE_DIR_INPUT:-${RUNNER_TEMP}/vis-cache}"
+              if [[ "${dir}" == *$'\n'* || "${dir}" == *$'\r'* ]]; then
+                  echo "::error::vis-cache-dir must be a single line"
+                  exit 1
+              fi
+              echo "VIS_CACHE_DIRECTORY=${dir}" >> "$GITHUB_ENV"
+              echo "path=${dir}" >> "$GITHUB_OUTPUT"
+          env:
+              VIS_CACHE_DIR_INPUT: "${{ inputs.vis-cache-dir }}"
+
+        # The vis cache is filled by the caller's tasks after this composite returns, so
+        # a /save step here would store an empty directory. On push (trusted refs) we use
+        # actions/cache, whose post-step saves at job end; every other event, PRs and
+        # forks included, only restores. merge_group is left out on purpose: a cache
+        # saved on a gh-readonly-queue ref is readable by that ref alone.
+        # github.job is in the key so parallel jobs sharing a cache-prefix don't race
+        # for one key (only the first save wins); matrix legs need distinct prefixes.
+        - name: "Restore and save vis cache"
+          if: "inputs.enable-vis-cache == 'true' && github.event_name == 'push'"
+          uses: "actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9" # v6.1.0
+          with:
+              path: "${{ steps.vis-cache-dir.outputs.path }}"
+              key: "vis-cache-${{ inputs.cache-prefix }}-${{ runner.os }}-${{ inputs.node-version }}-${{ steps.cache-rotation.outputs.YEAR_MONTH }}-${{ github.job }}-${{ hashFiles('**/pnpm-lock.yaml') }}-${{ github.sha }}"
+              restore-keys: |
+                  vis-cache-${{ inputs.cache-prefix }}-${{ runner.os }}-${{ inputs.node-version }}-${{ steps.cache-rotation.outputs.YEAR_MONTH }}-${{ github.job }}-${{ hashFiles('**/pnpm-lock.yaml') }}-
+                  vis-cache-${{ inputs.cache-prefix }}-${{ runner.os }}-${{ inputs.node-version }}-${{ steps.cache-rotation.outputs.YEAR_MONTH }}-${{ github.job }}-
+
+        - name: "Restore vis cache"
+          if: "inputs.enable-vis-cache == 'true' && github.event_name != 'push'"
+          uses: "actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9" # v6.1.0
+          with:
+              path: "${{ steps.vis-cache-dir.outputs.path }}"
+              key: "vis-cache-${{ inputs.cache-prefix }}-${{ runner.os }}-${{ inputs.node-version }}-${{ steps.cache-rotation.outputs.YEAR_MONTH }}-${{ github.job }}-${{ hashFiles('**/pnpm-lock.yaml') }}-${{ github.sha }}"
+              restore-keys: |
+                  vis-cache-${{ inputs.cache-prefix }}-${{ runner.os }}-${{ inputs.node-version }}-${{ steps.cache-rotation.outputs.YEAR_MONTH }}-${{ github.job }}-${{ hashFiles('**/pnpm-lock.yaml') }}-
+                  vis-cache-${{ inputs.cache-prefix }}-${{ runner.os }}-${{ inputs.node-version }}-${{ steps.cache-rotation.outputs.YEAR_MONTH }}-${{ github.job }}-
 
         - name: "Verify the node packages of vulnerabilities"
           if: "inputs.run-npm-audit == 'true'"
