@@ -1,3 +1,17 @@
+## [26.0.0](https://github.com/anolilab/workflows/compare/v25.0.7...v26.0.0) (2026-10-29)
+
+### ⚠ BREAKING CHANGES
+
+* **node:** enable-nx-cache now defaults to "false". Callers that rely on
+the Nx cache must pass enable-nx-cache: "true".
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01TzYLd1V9AaVcVwmJaonqgh
+
+### Features
+
+* **node:** add a vis task cache ([#568](https://github.com/anolilab/workflows/issues/568)) ([0dc3b57](https://github.com/anolilab/workflows/commit/0dc3b5797a5b826eac76e920340f39d465cab388))
+
 ## [25.0.7](https://github.com/anolilab/workflows/compare/v25.0.6...v25.0.7) (2026-10-27)
 
 ### Bug Fixes
