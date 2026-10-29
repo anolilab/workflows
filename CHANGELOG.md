@@ -1,3 +1,24 @@
+## [26.0.1](https://github.com/anolilab/workflows/compare/v26.0.0...v26.0.1) (2026-10-29)
+
+### Bug Fixes
+
+* **deps:** update github-actions ([#563](https://github.com/anolilab/workflows/issues/563)) ([44114ae](https://github.com/anolilab/workflows/commit/44114ae4fe24c1b0b18f8326ab66b00fb6850b4e))
+* **node:** save caches on same-repo pull requests too ([#570](https://github.com/anolilab/workflows/issues/570)) ([2d4f1b4](https://github.com/anolilab/workflows/commit/2d4f1b4fcc1bfe61097ae02eb4940b91a4780fca))
+
+### Documentation
+
+* **node:** shorten the action's comments ([#569](https://github.com/anolilab/workflows/issues/569)) ([bffaec4](https://github.com/anolilab/workflows/commit/bffaec49a13c0c4358be5c271d3cb6e167532109))
+
+### Miscellaneous Chores
+
+* **deps:** update dependency @anolilab/commitlint-config to v11 ([#564](https://github.com/anolilab/workflows/issues/564)) ([8ab456f](https://github.com/anolilab/workflows/commit/8ab456f6a0aadfd72f43ff40fdfafbd775d584a6))
+* **deps:** update dependency @anolilab/prettier-config to v11 ([#566](https://github.com/anolilab/workflows/issues/566)) ([13ad964](https://github.com/anolilab/workflows/commit/13ad9646fff254f9dd609b9ad382934d5a068a83))
+
+### Continuous Integration
+
+* **deps:** update anolilab/workflows action to v25 ([#558](https://github.com/anolilab/workflows/issues/558)) ([561a1fb](https://github.com/anolilab/workflows/commit/561a1fbddbc95727a328de6c2cb4c234a8922bc1))
+* **deps:** update dependency ubuntu to v26 ([#559](https://github.com/anolilab/workflows/issues/559)) ([f48ca69](https://github.com/anolilab/workflows/commit/f48ca692f5c0bc5827532ce39f5916f604996f17))
+
 ## [26.0.0](https://github.com/anolilab/workflows/compare/v25.0.7...v26.0.0) (2026-10-29)
 
 ### ⚠ BREAKING CHANGES
