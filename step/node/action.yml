@@ -78,8 +78,7 @@ runs:
           uses: "actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1" # v7.1.0
           with:
               node-version: "${{ inputs.node-version }}"
-              # Disable implicit package-manager caching: the automatic logic can
-              # change over time and we manage the pnpm store cache ourselves below.
+              # We cache the pnpm store ourselves below.
               package-manager-cache: "false"
 
         - name: "Enable Corepack"
@@ -89,8 +88,7 @@ runs:
           run: "corepack enable"
 
         - name: "Setup pnpm"
-          # pnpm/setup installs pnpm v11+ as the self-contained native binary, so Windows
-          # never runs the bootstrap-then-self-update path that pnpm/action-setup uses.
+          # Native pnpm binary: no bootstrap-then-self-update step on Windows.
           uses: "pnpm/setup@a0881977cd8ea73b1ed212236c99ca10dcc80cf4" # v3.1.1
           with:
               install: "false"
@@ -105,12 +103,11 @@ runs:
 
         - name: "Clear NODE_AUTH_TOKEN for OIDC"
           shell: "bash"
-          # actions/setup-node sets a placeholder NODE_AUTH_TOKEN that blocks OIDC
-          # See: https://github.com/actions/setup-node/issues/1440
+          # setup-node's placeholder NODE_AUTH_TOKEN blocks OIDC (actions/setup-node#1440).
           run: |
               echo "NODE_AUTH_TOKEN=" >> "$GITHUB_ENV"
 
-        # @see: npm install -g npm@latest is necessary to make provenance available. More info: https://docs.npmjs.com/generating-provenance-statements
+        # Latest npm is needed for provenance: https://docs.npmjs.com/generating-provenance-statements
         - name: "Upgrade npm to ${{ inputs.npm-version }} version"
           if: "inputs.upgrade-npm-version == 'true'"
           shell: "bash"
@@ -132,9 +129,7 @@ runs:
           env:
               SKIP_CHECK: "true"
 
-        # Native modules listed in pnpm-workspace.yaml#onlyBuiltDependencies (e.g. nodehun)
-        # invoke `node-gyp rebuild` from their install scripts. Modern npm bundles node-gyp
-        # internally but does not expose it on PATH, so pnpm cannot find it.
+        # Native modules run `node-gyp rebuild`; npm bundles node-gyp but not on PATH.
         - name: "Install node-gyp"
           if: "inputs.install-node-gyp == 'true'"
           shell: "bash"
@@ -148,9 +143,7 @@ runs:
           run: |
               echo "YEAR_MONTH=$(/bin/date -u "+%Y%m")" >> "$GITHUB_OUTPUT"
 
-        # Split into restore + save so PR runs read the cache but never write to it.
-        # actions/cache@v5 auto-saves at job exit regardless of permissions:
-        # block — switching to /restore + a gated /save closes that path by design.
+        # Restore here, save only on trusted refs below (actions/cache would auto-save on PRs).
         - name: "Restore pnpm store cache"
           uses: "actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9" # v6.1.0
           id: "pnpm-store-cache"
@@ -163,8 +156,7 @@ runs:
         - name: "Download and build lz4"
           if: "runner.os == 'Windows'"
           shell: "powershell"
-          # The path written to GITHUB_PATH is derived from `(Get-Item .).FullName`,
-          # i.e. the workspace cwd — not from any user-controllable input.
+          # GITHUB_PATH gets the workspace cwd, never user input.
           run: | # zizmor: ignore[github-env]
               Invoke-WebRequest https://github.com/lz4/lz4/releases/download/v1.9.4/lz4_win64_v1_9_4.zip -OutFile lz4-1.9.4.zip
               Expand-Archive -Path ".\lz4-1.9.4.zip" -DestinationPath ".\lz4-1.9.4" -Force
@@ -186,11 +178,8 @@ runs:
           shell: "bash"
           run: "lz4 -d /tmp/node_modules.tar.lz4 | tar -xf - ;" # decompress node_modules
 
-        # nx-cache stays on actions/cache (auto-save) because the tarball is written
-        # by the caller after this composite returns — there's no point inside this
-        # action where we could attach a matching /save step. Callers who want
-        # trusted-ref-only nx caching should pass enable-nx-cache=false and wire
-        # their own actions/cache/restore + actions/cache/save pair.
+        # Auto-saving actions/cache: the caller writes the tarball after this action ends.
+        # For trusted-ref-only saving, disable this and add your own restore/save pair.
         - name: "Check for Nx cache"
           if: "inputs.enable-nx-cache == 'true'"
           id: "nx-cache"
@@ -207,14 +196,12 @@ runs:
           shell: "bash"
           run: "lz4 -d /tmp/nx_cache.tar.lz4 | tar -xf - ;" # decompress nx cache
 
-        # vis' default cache dir is node_modules/.cache/vis, which would end up in the
-        # node_modules tarball above; pin it outside the repo instead.
+        # Keep the vis cache out of node_modules (and its tarball cache).
         - name: "Resolve vis cache directory"
           if: "inputs.enable-vis-cache == 'true'"
           id: "vis-cache-dir"
           shell: "bash"
-          # The value is the caller's own input or RUNNER_TEMP, never event data, and a
-          # newline (the only way to smuggle a second variable in) is refused below.
+          # Value is the caller's input or RUNNER_TEMP; newlines are refused.
           run: | # zizmor: ignore[github-env]
               dir="${VIS_CACHE_DIR_INPUT:-${RUNNER_TEMP}/vis-cache}"
               if [[ "${dir}" == *$'\n'* || "${dir}" == *$'\r'* ]]; then
@@ -226,13 +213,9 @@ runs:
           env:
               VIS_CACHE_DIR_INPUT: "${{ inputs.vis-cache-dir }}"
 
-        # The vis cache is filled by the caller's tasks after this composite returns, so
-        # a /save step here would store an empty directory. On push (trusted refs) we use
-        # actions/cache, whose post-step saves at job end; every other event, PRs and
-        # forks included, only restores. merge_group is left out on purpose: a cache
-        # saved on a gh-readonly-queue ref is readable by that ref alone.
-        # github.job is in the key so parallel jobs sharing a cache-prefix don't race
-        # for one key (only the first save wins); matrix legs need distinct prefixes.
+        # vis fills the cache after this action ends, so save via actions/cache's post-step,
+        # on push only; other events (PRs, forks, merge_group) just restore.
+        # github.job keeps parallel jobs with one cache-prefix from racing for one key.
         - name: "Restore and save vis cache"
           if: "inputs.enable-vis-cache == 'true' && github.event_name == 'push'"
           uses: "actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9" # v6.1.0
@@ -268,9 +251,7 @@ runs:
               "SKIP_CHECK": "true" # is used to skip the check for the node version
               "HUSKY": 0 # disable husky hooks on ci
 
-        # Save the pnpm store only from trusted refs (push to a protected branch).
-        # PRs — including forks — restore the cache but never write to it, so a
-        # poisoned fork build can't push entries the next main build will pick up.
+        # Save only on push, so a fork PR can't poison the cache main builds read.
         - name: "Save pnpm store cache"
           if: "inputs.install-packages == 'true' && github.event_name == 'push' && steps.pnpm-store-cache.outputs.cache-hit != 'true'"
           uses: "actions/cache/save@55cc8345863c7cc4c66a329aec7e433d2d1c52a9" # v6.1.0
