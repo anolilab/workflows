@@ -143,7 +143,16 @@ runs:
           run: |
               echo "YEAR_MONTH=$(/bin/date -u "+%Y%m")" >> "$GITHUB_OUTPUT"
 
-        # Restore here, save only on trusted refs below (actions/cache would auto-save on PRs).
+        # Saves happen on push and on same-repo PRs. A PR's cache is scoped to that PR, so
+        # it can't reach the base branch; fork PRs never save.
+        - name: "Cache save policy"
+          id: "cache-policy"
+          shell: "bash"
+          run: echo "save=${SAVE}" >> "$GITHUB_OUTPUT"
+          env:
+              SAVE: "${{ github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository) }}"
+
+        # Restore here, save below per the cache save policy (actions/cache would auto-save on fork PRs).
         - name: "Restore pnpm store cache"
           uses: "actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9" # v6.1.0
           id: "pnpm-store-cache"
@@ -213,11 +222,11 @@ runs:
           env:
               VIS_CACHE_DIR_INPUT: "${{ inputs.vis-cache-dir }}"
 
-        # vis fills the cache after this action ends, so save via actions/cache's post-step,
-        # on push only; other events (PRs, forks, merge_group) just restore.
+        # vis fills the cache after this action ends, so save via actions/cache's post-step
+        # when the save policy allows; other events (fork PRs, merge_group) just restore.
         # github.job keeps parallel jobs with one cache-prefix from racing for one key.
         - name: "Restore and save vis cache"
-          if: "inputs.enable-vis-cache == 'true' && github.event_name == 'push'"
+          if: "inputs.enable-vis-cache == 'true' && steps.cache-policy.outputs.save == 'true'"
           uses: "actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9" # v6.1.0
           with:
               path: "${{ steps.vis-cache-dir.outputs.path }}"
@@ -227,7 +236,7 @@ runs:
                   vis-cache-${{ inputs.cache-prefix }}-${{ runner.os }}-${{ inputs.node-version }}-${{ steps.cache-rotation.outputs.YEAR_MONTH }}-${{ github.job }}-
 
         - name: "Restore vis cache"
-          if: "inputs.enable-vis-cache == 'true' && github.event_name != 'push'"
+          if: "inputs.enable-vis-cache == 'true' && steps.cache-policy.outputs.save != 'true'"
           uses: "actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9" # v6.1.0
           with:
               path: "${{ steps.vis-cache-dir.outputs.path }}"
@@ -251,9 +260,8 @@ runs:
               "SKIP_CHECK": "true" # is used to skip the check for the node version
               "HUSKY": 0 # disable husky hooks on ci
 
-        # Save only on push, so a fork PR can't poison the cache main builds read.
         - name: "Save pnpm store cache"
-          if: "inputs.install-packages == 'true' && github.event_name == 'push' && steps.pnpm-store-cache.outputs.cache-hit != 'true'"
+          if: "inputs.install-packages == 'true' && steps.cache-policy.outputs.save == 'true' && steps.pnpm-store-cache.outputs.cache-hit != 'true'"
           uses: "actions/cache/save@55cc8345863c7cc4c66a329aec7e433d2d1c52a9" # v6.1.0
           with:
               path: "${{ steps.pnpm-config.outputs.STORE_PATH }}"
@@ -274,9 +282,8 @@ runs:
           shell: "bash"
           run: "tar -cf - node_modules | lz4 > /tmp/node_modules.tar.lz4" # compress node_modules
 
-        # Same trusted-ref gating for the node_modules tarball cache.
         - name: "Save node_modules cache"
-          if: "inputs.enable-node-modules-cache == 'true' && inputs.install-packages == 'true' && github.event_name == 'push' && steps.node-modules-cache.outputs.cache-hit != 'true'"
+          if: "inputs.enable-node-modules-cache == 'true' && inputs.install-packages == 'true' && steps.cache-policy.outputs.save == 'true' && steps.node-modules-cache.outputs.cache-hit != 'true'"
           uses: "actions/cache/save@55cc8345863c7cc4c66a329aec7e433d2d1c52a9" # v6.1.0
           with:
               path: "/tmp/node_modules.tar.lz4"
