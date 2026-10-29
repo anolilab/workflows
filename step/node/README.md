@@ -26,6 +26,6 @@ The directory to cache. vis defaults to `node_modules/.cache/vis`, which would b
 - run: "pnpm exec vis run test"
 ```
 
-### `enable-nx-cache` (default `"true"`)
+### `enable-nx-cache` (default `"false"`)
 
 Restores and saves `/tmp/nx_cache.tar.lz4` with `actions/cache`. The caller writes that tarball. It saves on every event; callers that want trusted-ref-only Nx caching should turn it off and wire their own `actions/cache/restore` + `actions/cache/save` pair.

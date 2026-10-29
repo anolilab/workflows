@@ -13,7 +13,7 @@ inputs:
     enable-nx-cache:
         description: "Enable nx cache"
         required: false
-        default: "true"
+        default: "false"
     enable-vis-cache:
         description: "Persist the @visulima/vis task cache between runs. Restored on every run, saved only on push events. Sets VIS_CACHE_DIRECTORY for the rest of the job."
         required: false
@@ -213,8 +213,14 @@ runs:
           if: "inputs.enable-vis-cache == 'true'"
           id: "vis-cache-dir"
           shell: "bash"
-          run: |
+          # The value is the caller's own input or RUNNER_TEMP, never event data, and a
+          # newline (the only way to smuggle a second variable in) is refused below.
+          run: | # zizmor: ignore[github-env]
               dir="${VIS_CACHE_DIR_INPUT:-${RUNNER_TEMP}/vis-cache}"
+              if [[ "${dir}" == *$'\n'* || "${dir}" == *$'\r'* ]]; then
+                  echo "::error::vis-cache-dir must be a single line"
+                  exit 1
+              fi
               echo "VIS_CACHE_DIRECTORY=${dir}" >> "$GITHUB_ENV"
               echo "path=${dir}" >> "$GITHUB_OUTPUT"
           env:
