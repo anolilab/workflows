@@ -195,8 +195,8 @@ importers:
         specifier: ^11.0.0
         version: 11.0.0(prettier@3.9.10)
       '@anolilab/semantic-release-preset':
-        specifier: ^13.4.37
-        version: 13.4.37(@semantic-release/npm@13.2.0(semantic-release@25.0.9(supports-color@10.2.2)(typescript@7.0.2)))(json5@2.2.3)(semantic-release@25.0.9(supports-color@10.2.2)(typescript@7.0.2))(supports-color@10.2.2)(yaml@2.9.1)
+        specifier: ^13.4.38
+        version: 13.4.38(@semantic-release/npm@13.2.0(semantic-release@25.0.9(supports-color@10.2.2)(typescript@7.0.2)))(json5@2.2.3)(semantic-release@25.0.9(supports-color@10.2.2)(typescript@7.0.2))(supports-color@10.2.2)(yaml@2.9.1)
       '@commitlint/cli':
         specifier: ^21.2.4
         version: 21.2.4(conventional-commits-parser@7.1.3)(typescript@7.0.2)
@@ -301,12 +301,12 @@ packages:
     resolution: {integrity: sha512-dQfpxkB8UqKaa4xlBXB88a0ZSrR3AI78YC8zfKWjC87Nx2tsyZjw9Q+QVJr76iEFvR78fWsO96VHzxkni1R7bA==}
     engines: {node: ^22.14.0 || >=24.10.0}
 
-  '@anolilab/semantic-release-preset@13.4.37':
-    resolution: {integrity: sha512-gMmAZwRCSeAkireX5Pz94ux+21kXWPD5VT9LyV6Elwn2TnWrfn03ylMvfWZDAO+uoie6/0m3NQFOYVB9IQnEIA==}
+  '@anolilab/semantic-release-preset@13.4.38':
+    resolution: {integrity: sha512-AU3qY6WyPsCUP8Os7A01OxqUxR6Rqf87kXnMvvUfzx2zg309ttAu+RAncz99sfg7Rry86x74yoUmIPBcvasW5g==}
     engines: {node: ^22.14.0 || >=24.10.0}
     os: [darwin, linux, win32]
     peerDependencies:
-      '@anolilab/semantic-release-pnpm': 8.1.35
+      '@anolilab/semantic-release-pnpm': 8.1.36
       '@semantic-release/npm': 13.2.0
       semantic-release: 25.0.9
       semantic-release-yarn: ^3.0.2
@@ -2495,7 +2495,7 @@ snapshots:
       - smol-toml
       - yaml
 
-  '@anolilab/semantic-release-preset@13.4.37(@semantic-release/npm@13.2.0(semantic-release@25.0.9(supports-color@10.2.2)(typescript@7.0.2)))(json5@2.2.3)(semantic-release@25.0.9(supports-color@10.2.2)(typescript@7.0.2))(supports-color@10.2.2)(yaml@2.9.1)':
+  '@anolilab/semantic-release-preset@13.4.38(@semantic-release/npm@13.2.0(semantic-release@25.0.9(supports-color@10.2.2)(typescript@7.0.2)))(json5@2.2.3)(semantic-release@25.0.9(supports-color@10.2.2)(typescript@7.0.2))(supports-color@10.2.2)(yaml@2.9.1)':
     dependencies:
       '@anolilab/semantic-release-clean-package-json': 5.5.28(json5@2.2.3)(yaml@2.9.1)
       '@semantic-release/changelog': 7.0.0(semantic-release@25.0.9(supports-color@10.2.2)(typescript@7.0.2))
