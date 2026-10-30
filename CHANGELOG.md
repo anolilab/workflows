@@ -1,3 +1,9 @@
+## [26.0.3](https://github.com/anolilab/workflows/compare/v26.0.2...v26.0.3) (2026-10-30)
+
+### Bug Fixes
+
+* **deps:** update dependency @anolilab/semantic-release-preset to ^13.4.38 ([#571](https://github.com/anolilab/workflows/issues/571)) ([60bd384](https://github.com/anolilab/workflows/commit/60bd38449bf776db4f0e2f4d9917849c9c742853))
+
 ## [26.0.2](https://github.com/anolilab/workflows/compare/v26.0.1...v26.0.2) (2026-10-29)
 
 ### Bug Fixes
