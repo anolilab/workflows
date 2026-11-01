@@ -218,8 +218,8 @@ runs:
                   cache-nx-${{ inputs.cache-prefix }}-${{ runner.os }}-${{ inputs.node-version }}-${{ hashFiles('pnpm-lock.yaml') }}-
                   cache-nx-${{ inputs.cache-prefix }}-${{ runner.os }}-${{ inputs.node-version }}-
 
-        - name: "Restore node_modules"
-          if: "inputs.enable-node-modules-cache == 'true' && steps.nx-cache.outputs.cache-hit == 'true'"
+        - name: "Restore Nx cache"
+          if: "inputs.enable-nx-cache == 'true' && steps.nx-cache.outputs.cache-hit == 'true'"
           shell: "bash"
           run: "lz4 -d /tmp/nx_cache.tar.lz4 | tar -xf - ;" # decompress nx cache
 
