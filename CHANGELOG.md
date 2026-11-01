@@ -1,3 +1,10 @@
+## [26.0.5](https://github.com/anolilab/workflows/compare/v26.0.4...v26.0.5) (2026-11-01)
+
+### Bug Fixes
+
+* **deps:** unblock the release on the dev-only minimatch advisory ([#577](https://github.com/anolilab/workflows/issues/577)) ([4aeae7e](https://github.com/anolilab/workflows/commit/4aeae7ec814f69f995c5f70ee03eeba6c93d77de)), closes [#576](https://github.com/anolilab/workflows/issues/576)
+* extract the Nx cache under its own gate ([#576](https://github.com/anolilab/workflows/issues/576)) ([00a4042](https://github.com/anolilab/workflows/commit/00a4042fe75aa8fd74529ec5e9b07df0155c5c84))
+
 ## [26.0.4](https://github.com/anolilab/workflows/compare/v26.0.3...v26.0.4) (2026-10-30)
 
 ### Bug Fixes
