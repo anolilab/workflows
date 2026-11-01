@@ -33,3 +33,9 @@ auditConfig:
     # braces stack exhaustion (GHSA-vfj7-8cjw-p6xm) has no patched release: the
     # advisory covers <=3.0.3 and 3.0.3 is the latest published version.
     - GHSA-vfj7-8cjw-p6xm
+    # minimatch glob-parts amplification (GHSA-g3hv-75wg-m249) reaches us only
+    # through commitizen -> glob@7, which calls `minimatch(path, options)` and
+    # needs minimatch ^3. The patched line is 11.x with no 3.x backport, and
+    # overriding glob 7 onto minimatch 11 breaks that call. Dev-only, in a repo
+    # that publishes nothing to npm.
+    - GHSA-g3hv-75wg-m249
