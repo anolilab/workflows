@@ -1,3 +1,19 @@
+## [26.0.6](https://github.com/anolilab/workflows/compare/v26.0.5...v26.0.6) (2026-11-03)
+
+### Bug Fixes
+
+* **deps:** update github-actions ([#578](https://github.com/anolilab/workflows/issues/578)) ([bff96a7](https://github.com/anolilab/workflows/commit/bff96a7d244613b77442c42e84724d7dc255745e))
+* **deps:** update pnpm to v12.16.1 ([#575](https://github.com/anolilab/workflows/issues/575)) ([22182e4](https://github.com/anolilab/workflows/commit/22182e46cecb322a361db0399a4623bba40ddab4))
+* **step:** pass -c to lz4 so cache restore works on ubuntu-26.04 ([#580](https://github.com/anolilab/workflows/issues/580)) ([c61e9da](https://github.com/anolilab/workflows/commit/c61e9da4eb2edd307a55c9f6c2b745465944149c))
+
+### Miscellaneous Chores
+
+* **deps:** update dependency @anolilab/lint-staged-config to v14 ([#565](https://github.com/anolilab/workflows/issues/565)) ([9a9f0ce](https://github.com/anolilab/workflows/commit/9a9f0cee5622ee45dcbbc75d9b7d0c4d3545fd42))
+
+### Continuous Integration
+
+* **deps:** update anolilab/workflows action to v26 ([#579](https://github.com/anolilab/workflows/issues/579)) ([2883c31](https://github.com/anolilab/workflows/commit/2883c312d90ec0ba74595bf2fbedba9ae06b06ca))
+
 ## [26.0.5](https://github.com/anolilab/workflows/compare/v26.0.4...v26.0.5) (2026-11-01)
 
 ### Bug Fixes
