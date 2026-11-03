@@ -200,7 +200,7 @@ runs:
         - name: "Restore node_modules"
           if: "inputs.enable-node-modules-cache == 'true' && steps.node-modules-cache.outputs.cache-hit == 'true'"
           shell: "bash"
-          run: "lz4 -d /tmp/node_modules.tar.lz4 | tar -xf - ;" # decompress node_modules
+          run: "lz4 -dc /tmp/node_modules.tar.lz4 | tar -xf -" # decompress node_modules
 
         # nx-cache stays on actions/cache (auto-save) because the tarball is written
         # by the caller after this composite returns — there's no point inside this
@@ -221,7 +221,7 @@ runs:
         - name: "Restore Nx cache"
           if: "inputs.enable-nx-cache == 'true' && steps.nx-cache.outputs.cache-hit == 'true'"
           shell: "bash"
-          run: "lz4 -d /tmp/nx_cache.tar.lz4 | tar -xf - ;" # decompress nx cache
+          run: "lz4 -dc /tmp/nx_cache.tar.lz4 | tar -xf -" # decompress nx cache
 
         - name: "Verify the node packages of vulnerabilities"
           if: "inputs.run-npm-audit == 'true'"
@@ -261,7 +261,7 @@ runs:
         - name: "Prepare node_modules cache"
           if: "inputs.enable-node-modules-cache == 'true' && inputs.install-packages == 'true'"
           shell: "bash"
-          run: "tar -cf - node_modules | lz4 > /tmp/node_modules.tar.lz4" # compress node_modules
+          run: "tar -cf - node_modules | lz4 -c > /tmp/node_modules.tar.lz4" # compress node_modules
 
         # Same trusted-ref gating for the node_modules tarball cache.
         - name: "Save node_modules cache"
