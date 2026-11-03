@@ -100,7 +100,7 @@ jobs:
             filters_present: "${{ steps.filters-check.outputs.present }}"
         steps:
             - name: "Harden Runner"
-              uses: "step-security/harden-runner@dc2769abcc0fcfbadfc1df54081c1608579ef6b2" # v2.22.2
+              uses: "step-security/harden-runner@46b06cea07f9e64621fdf066ba77ac6915163d43" # v2.22.3
               with:
                   egress-policy: "audit"
 
@@ -145,7 +145,7 @@ jobs:
         timeout-minutes: 30
         steps:
             - name: "Harden Runner"
-              uses: "step-security/harden-runner@dc2769abcc0fcfbadfc1df54081c1608579ef6b2" # v2.22.2
+              uses: "step-security/harden-runner@46b06cea07f9e64621fdf066ba77ac6915163d43" # v2.22.3
               with:
                   egress-policy: "audit"
 
@@ -199,7 +199,7 @@ jobs:
         timeout-minutes: 30
         steps:
             - name: "Harden Runner"
-              uses: "step-security/harden-runner@dc2769abcc0fcfbadfc1df54081c1608579ef6b2" # v2.22.2
+              uses: "step-security/harden-runner@46b06cea07f9e64621fdf066ba77ac6915163d43" # v2.22.3
               with:
                   egress-policy: "audit"
 
@@ -244,7 +244,7 @@ jobs:
         timeout-minutes: 30
         steps:
             - name: "Harden Runner"
-              uses: "step-security/harden-runner@dc2769abcc0fcfbadfc1df54081c1608579ef6b2" # v2.22.2
+              uses: "step-security/harden-runner@46b06cea07f9e64621fdf066ba77ac6915163d43" # v2.22.3
               with:
                   egress-policy: "audit"
 
@@ -275,7 +275,7 @@ jobs:
         timeout-minutes: 30
         steps:
             - name: "Harden Runner"
-              uses: "step-security/harden-runner@dc2769abcc0fcfbadfc1df54081c1608579ef6b2" # v2.22.2
+              uses: "step-security/harden-runner@46b06cea07f9e64621fdf066ba77ac6915163d43" # v2.22.3
               with:
                   egress-policy: "audit"
 
@@ -289,7 +289,7 @@ jobs:
                   EMAIL: "github-actions[bot]@users.noreply.github.com"
 
             - name: "jactionlint"
-              uses: "jdx/jactionlint@a65ab044e916760429068fe5794b8306abdfcbb9" # v2.3.0
+              uses: "jdx/jactionlint@baa8d685e2b27ff5821558c9eeabb2051c1da61b" # v2.4.0
               with:
                   profile: "${{ inputs.actionlint_profile || 'correctness' }}"
 
@@ -304,7 +304,7 @@ jobs:
         timeout-minutes: 30
         steps:
             - name: "Harden Runner"
-              uses: "step-security/harden-runner@dc2769abcc0fcfbadfc1df54081c1608579ef6b2" # v2.22.2
+              uses: "step-security/harden-runner@46b06cea07f9e64621fdf066ba77ac6915163d43" # v2.22.3
               with:
                   egress-policy: "audit"
 
@@ -344,7 +344,7 @@ jobs:
         timeout-minutes: 30
         steps:
             - name: "Harden Runner"
-              uses: "step-security/harden-runner@dc2769abcc0fcfbadfc1df54081c1608579ef6b2" # v2.22.2
+              uses: "step-security/harden-runner@46b06cea07f9e64621fdf066ba77ac6915163d43" # v2.22.3
               with:
                   egress-policy: "audit"
 
@@ -409,7 +409,7 @@ jobs:
             # If any jobs we depend on fail, we will fail since this is a required check
             # NOTE: A timeout is considered a failure
             - name: "Harden Runner"
-              uses: "step-security/harden-runner@dc2769abcc0fcfbadfc1df54081c1608579ef6b2" # v2.22.2
+              uses: "step-security/harden-runner@46b06cea07f9e64621fdf066ba77ac6915163d43" # v2.22.3
               with:
                   egress-policy: "audit"
 
