@@ -1,3 +1,14 @@
+## [26.0.7](https://github.com/anolilab/workflows/compare/v26.0.6...v26.0.7) (2026-11-07)
+
+### Bug Fixes
+
+* **deps:** update anolilab/workflows action to v26.0.5 ([#582](https://github.com/anolilab/workflows/issues/582)) ([469e548](https://github.com/anolilab/workflows/commit/469e548237f5d34bc68fee6f5211087e2e811b5a))
+* **deps:** update dependency @anolilab/semantic-release-preset to ^13.4.39 ([#583](https://github.com/anolilab/workflows/issues/583)) ([50c1c1b](https://github.com/anolilab/workflows/commit/50c1c1b276e605378968bf1fe69c0bb86bff4ef7))
+* **deps:** update github-actions ([#581](https://github.com/anolilab/workflows/issues/581)) ([be43fb5](https://github.com/anolilab/workflows/commit/be43fb5169a013ee83576d4e54cc56d5244ce2cf))
+* **deps:** update github-actions ([#584](https://github.com/anolilab/workflows/issues/584)) ([2ed47a5](https://github.com/anolilab/workflows/commit/2ed47a541cc5c2508a23b94f8947cda82a330c0f))
+* **deps:** update pnpm to v12.17.0 ([#585](https://github.com/anolilab/workflows/issues/585)) ([f7991a2](https://github.com/anolilab/workflows/commit/f7991a2f4dde53d1950f42a976159c7e899d6eea))
+* **deps:** update secretlint monorepo to ^13.1.0 ([#573](https://github.com/anolilab/workflows/issues/573)) ([04fca3c](https://github.com/anolilab/workflows/commit/04fca3c1baf286499fb64dc625a8522e5d5fda52))
+
 ## [26.0.6](https://github.com/anolilab/workflows/compare/v26.0.5...v26.0.6) (2026-11-03)
 
 ### Bug Fixes
