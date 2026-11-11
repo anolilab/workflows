@@ -1,3 +1,9 @@
+## [26.0.8](https://github.com/anolilab/workflows/compare/v26.0.7...v26.0.8) (2026-11-11)
+
+### Bug Fixes
+
+* **deps:** update patch updates ([#587](https://github.com/anolilab/workflows/issues/587)) ([774a500](https://github.com/anolilab/workflows/commit/774a500c45964757c9f72e0140080dfb6b1e344c))
+
 ## [26.0.7](https://github.com/anolilab/workflows/compare/v26.0.6...v26.0.7) (2026-11-07)
 
 ### Bug Fixes
