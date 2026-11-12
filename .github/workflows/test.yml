@@ -63,7 +63,7 @@ jobs:
         runs-on: "${{ matrix.os }}"
         steps:
             - name: "Harden Runner"
-              uses: "step-security/harden-runner@46b06cea07f9e64621fdf066ba77ac6915163d43" # v2.22.3
+              uses: "step-security/harden-runner@1d88384fd173af6ecb012dfd0264a306b711241a" # v2.22.4
               with:
                   egress-policy: "audit"
 
@@ -78,7 +78,7 @@ jobs:
                   EMAIL: "github-actions[bot]@users.noreply.github.com"
 
             - name: "Setup pnpm"
-              uses: "pnpm/action-setup@ea17c68df8912ef543352723c149a84f56e3d413" # v6.1.0
+              uses: "pnpm/action-setup@73e46992e05b19abd31f2f3c20e0e7370d762115" # v6.1.1
               with:
                   run_install: false
 
@@ -135,7 +135,7 @@ jobs:
             # `strategy.job-index == 0` is the lowest combination (lowest node x lowest os).
             - name: "Upload coverage to Codecov"
               if: "inputs.coverage == true && strategy.job-index == 0"
-              uses: "anolilab/workflows/step/codecov@1f3a7f7e561f7690fe19dea5d2ed225def53c908" # v26.0.6
+              uses: "anolilab/workflows/step/codecov@76fa179df6611c539ec8d5161f867a0e9b7138de" # v26.0.7
               with:
                   codecov-token: "${{ secrets.codecov_token }}"
 
@@ -147,7 +147,7 @@ jobs:
         timeout-minutes: 5
         steps:
             - name: "Harden Runner"
-              uses: "step-security/harden-runner@46b06cea07f9e64621fdf066ba77ac6915163d43" # v2.22.3
+              uses: "step-security/harden-runner@1d88384fd173af6ecb012dfd0264a306b711241a" # v2.22.4
               with:
                   egress-policy: "audit"
 
