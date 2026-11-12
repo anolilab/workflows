@@ -1,3 +1,10 @@
+## [26.0.9](https://github.com/anolilab/workflows/compare/v26.0.8...v26.0.9) (2026-11-12)
+
+### Bug Fixes
+
+* **deps:** update github-actions ([#586](https://github.com/anolilab/workflows/issues/586)) ([22b55b0](https://github.com/anolilab/workflows/commit/22b55b0af712352c8861b131b120eb1611d6ee3c))
+* **deps:** update pnpm to v12.18.0 ([#588](https://github.com/anolilab/workflows/issues/588)) ([6d533f2](https://github.com/anolilab/workflows/commit/6d533f29b45fa41030bc5ce2b42c89869a9b7e25))
+
 ## [26.0.8](https://github.com/anolilab/workflows/compare/v26.0.7...v26.0.8) (2026-11-11)
 
 ### Bug Fixes
