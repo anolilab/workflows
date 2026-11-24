@@ -190,10 +190,10 @@ importers:
         version: 11.0.0(@commitlint/cli@21.2.4(conventional-commits-parser@7.1.3)(typescript@7.0.2))(@types/node@26.6.5)(conventional-commits-parser@7.1.3)(typescript@7.0.2)
       '@anolilab/lint-staged-config':
         specifier: ^14.0.0
-        version: 14.0.0(@visulima/yaml@2.0.0)(husky@9.1.7)(json5@2.2.3)(lint-staged@17.6.0)(prettier@3.9.10)(secretlint@13.1.0(supports-color@10.2.2))
+        version: 14.0.0(@visulima/yaml@2.0.0)(husky@9.1.7)(json5@2.2.3)(lint-staged@17.6.0)(prettier@3.10.1)(secretlint@13.1.0(supports-color@10.2.2))
       '@anolilab/prettier-config':
         specifier: ^11.0.0
-        version: 11.0.0(prettier@3.9.10)
+        version: 11.0.0(prettier@3.10.1)
       '@anolilab/semantic-release-preset':
         specifier: ^13.4.39
         version: 13.4.39(@semantic-release/npm@13.2.0(semantic-release@25.0.9(supports-color@10.2.2)(typescript@7.0.2)))(@visulima/yaml@2.0.0)(json5@2.2.3)(semantic-release@25.0.9(supports-color@10.2.2)(typescript@7.0.2))(supports-color@10.2.2)
@@ -225,8 +225,8 @@ importers:
         specifier: ^17.6.0
         version: 17.6.0
       prettier:
-        specifier: ^3.9.10
-        version: 3.9.10
+        specifier: ^3.10.1
+        version: 3.10.1
       secretlint:
         specifier: 13.1.0
         version: 13.1.0(supports-color@10.2.2)
@@ -1889,8 +1889,8 @@ packages:
     resolution: {integrity: sha512-Nc3IT5yHzflTfbjgqWcCPpo7DaKy4FnpB0l/zCAW0Tc7jxAiuqSxHasntB3D7887LSrA93kDJ9IXovxJYxyLCA==}
     engines: {node: '>=4'}
 
-  prettier@3.9.10:
-    resolution: {integrity: sha512-skGHTH1Yb9QvaTC4hWnRTzEYtCpApF0UMBPz+t/0ZPzP8ihefo/btKd+QA7pUE0fEwA1SbS/NmhyEcstdXOIdA==}
+  prettier@3.10.1:
+    resolution: {integrity: sha512-70vp3ZUYoPlFbF9uiTdXHUUCGEIp7d4+6p+8DYbkm2jP7x/3i/paXVF6dopSI3zd/CEitrZN1rc4i85xWmmXlg==}
     engines: {node: '>=14'}
     hasBin: true
 
@@ -2407,7 +2407,7 @@ snapshots:
       - conventional-commits-parser
       - typescript
 
-  '@anolilab/lint-staged-config@14.0.0(@visulima/yaml@2.0.0)(husky@9.1.7)(json5@2.2.3)(lint-staged@17.6.0)(prettier@3.9.10)(secretlint@13.1.0(supports-color@10.2.2))':
+  '@anolilab/lint-staged-config@14.0.0(@visulima/yaml@2.0.0)(husky@9.1.7)(json5@2.2.3)(lint-staged@17.6.0)(prettier@3.10.1)(secretlint@13.1.0(supports-color@10.2.2))':
     dependencies:
       '@visulima/fs': 7.0.0(@visulima/yaml@2.0.0)(json5@2.2.3)
       '@visulima/package': 6.0.0
@@ -2416,7 +2416,7 @@ snapshots:
       type-fest: 5.10.0
     optionalDependencies:
       lint-staged: 17.6.0
-      prettier: 3.9.10
+      prettier: 3.10.1
       secretlint: 13.1.0(supports-color@10.2.2)
     transitivePeerDependencies:
       - '@visulima/yaml'
@@ -2425,9 +2425,9 @@ snapshots:
       - jsonc-parser
       - smol-toml
 
-  '@anolilab/prettier-config@11.0.0(prettier@3.9.10)':
+  '@anolilab/prettier-config@11.0.0(prettier@3.10.1)':
     dependencies:
-      prettier: 3.9.10
+      prettier: 3.10.1
 
   '@anolilab/semantic-release-clean-package-json@5.5.29(@visulima/yaml@2.0.0)(json5@2.2.3)':
     dependencies:
@@ -4009,7 +4009,7 @@ snapshots:
 
   pluralize@8.0.0: {}
 
-  prettier@3.9.10: {}
+  prettier@3.10.1: {}
 
   pretty-ms@9.3.1:
     dependencies:
