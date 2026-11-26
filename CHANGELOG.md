@@ -1,3 +1,9 @@
+## [26.0.11](https://github.com/anolilab/workflows/compare/v26.0.10...v26.0.11) (2026-11-26)
+
+### Bug Fixes
+
+* **deps:** update dependency prettier to ^3.10.1 ([#591](https://github.com/anolilab/workflows/issues/591)) ([5c14df3](https://github.com/anolilab/workflows/commit/5c14df36194037be10fda97519d76f8b19dcf0a6))
+
 ## [26.0.10](https://github.com/anolilab/workflows/compare/v26.0.9...v26.0.10) (2026-11-17)
 
 ### Bug Fixes
