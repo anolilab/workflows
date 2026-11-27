@@ -10,8 +10,8 @@ minimumReleaseAgeExclude:
   - brace-expansion@1.1.16 || 5.0.8
   - js-yaml@5.2.2
 overrides:
-  brace-expansion@<1.1.16: ^5.0.13
-  brace-expansion@<=5.0.7: ^5.0.13
+  brace-expansion@<1.1.16: ^5.1.0
+  brace-expansion@<=5.0.7: ^5.1.0
   fast-uri@<=3.1.0: ^4.2.3
   fast-uri@<=3.1.1: ^4.2.3
   handlebars@<=4.7.9: ">=4.7.10"
@@ -24,9 +24,9 @@ overrides:
   shell-quote@>=1.1.0 <=1.8.3: ^1.12.0
   tmp@<0.2.6: ^0.2.7
   undici@<6.23.0: ^7.30.2
-  undici@<6.24.0: ^8.12.4
-  undici@>=7.0.0 <7.28.0: ^8.12.4
-  undici@>=8.0.0 <8.5.0: ^8.12.4
+  undici@<6.24.0: ^8.13.1
+  undici@>=7.0.0 <7.28.0: ^8.13.1
+  undici@>=8.0.0 <8.5.0: ^8.13.1
 
 auditConfig:
   ignoreGhsas:
