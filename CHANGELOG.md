@@ -1,3 +1,9 @@
+## [26.0.12](https://github.com/anolilab/workflows/compare/v26.0.11...v26.0.12) (2026-11-27)
+
+### Bug Fixes
+
+* **deps:** update dependency lint-staged to ^17.6.2 ([#593](https://github.com/anolilab/workflows/issues/593)) ([29b57f4](https://github.com/anolilab/workflows/commit/29b57f4105f4bd6efab3f8d326cb48944eb55a9a))
+
 ## [26.0.11](https://github.com/anolilab/workflows/compare/v26.0.10...v26.0.11) (2026-11-26)
 
 ### Bug Fixes
