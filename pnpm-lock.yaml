@@ -190,7 +190,7 @@ importers:
         version: 11.0.0(@commitlint/cli@21.2.4(conventional-commits-parser@7.1.3)(typescript@7.0.2))(@types/node@26.6.5)(conventional-commits-parser@7.1.3)(typescript@7.0.2)
       '@anolilab/lint-staged-config':
         specifier: ^14.0.0
-        version: 14.0.0(@visulima/yaml@2.0.0)(husky@9.1.7)(json5@2.2.3)(lint-staged@17.6.0)(prettier@3.10.1)(secretlint@13.1.0(supports-color@10.2.2))
+        version: 14.0.0(@visulima/yaml@2.0.0)(husky@9.1.7)(json5@2.2.3)(lint-staged@17.6.2)(prettier@3.10.1)(secretlint@13.1.0(supports-color@10.2.2))
       '@anolilab/prettier-config':
         specifier: ^11.0.0
         version: 11.0.0(prettier@3.10.1)
@@ -222,8 +222,8 @@ importers:
         specifier: ^4.1.0
         version: 4.1.0
       lint-staged:
-        specifier: ^17.6.0
-        version: 17.6.0
+        specifier: ^17.6.2
+        version: 17.6.2
       prettier:
         specifier: ^3.10.1
         version: 3.10.1
@@ -1535,8 +1535,8 @@ packages:
   lines-and-columns@1.2.4:
     resolution: {integrity: sha512-7ylylesZQ/PV29jhEDl3Ufjo6ZX7gCqJr5F7PKrqc93v7fzSymt1BpwEU8nAUXs8qzzvqhbjhK5QZg6Mt/HkBg==}
 
-  lint-staged@17.6.0:
-    resolution: {integrity: sha512-nOhBfYkZEwkFtNzD5pK9s9LkcWoxJ+whLzEnhqi9nl7zTB5n7tg8+9iYgMGx2Wm3VlLu8cbNj0RACzY+nWi5iQ==}
+  lint-staged@17.6.2:
+    resolution: {integrity: sha512-c/JaXaXmleubmKUwwp4OAcq55RV9Z3HTUNdqdqPh2srtmP9Of3bcR6o00GoWDUye+9JhMuoYkhYqAVPIOZKcsw==}
     engines: {node: '>=22.22.1'}
     hasBin: true
 
@@ -2070,9 +2070,9 @@ packages:
   stream-combiner2@1.1.1:
     resolution: {integrity: sha512-3PnJbYgS56AeWgtKF5jtJRT6uFJe56Z0Hc5Ngg/6sI6rIt8iiMBTa9cvdyFfpMQjaVHr8dusbNeFGIIonxOvKw==}
 
-  string-argv@0.3.2:
-    resolution: {integrity: sha512-aqD2Q0144Z+/RqG52NeHEkZauTAUWJO8c6yTftGJKO3Tja5tUgIfmIl6kExvhtxSDP7fXB6DvzkfMpCd/F3G+Q==}
-    engines: {node: '>=0.6.19'}
+  string-argv@0.4.0:
+    resolution: {integrity: sha512-UOtaksJ3SK3KLHba2i9I27fvuZNfBlImDP5wKsCOxCDMRDNxlipCe8rmnUAaDpqlQ93upnA0SzF2pjWhttozSA==}
+    engines: {node: '>=16.20.0'}
 
   string-width@4.2.3:
     resolution: {integrity: sha512-wKyQRQpjJ0sIp62ErSZdGsjMJWsap5oRNihHhu6G7JVO/9jIB6UyevL+tXuOqrng8j/cxKTWyWUwvSTriiZz/g==}
@@ -2407,7 +2407,7 @@ snapshots:
       - conventional-commits-parser
       - typescript
 
-  '@anolilab/lint-staged-config@14.0.0(@visulima/yaml@2.0.0)(husky@9.1.7)(json5@2.2.3)(lint-staged@17.6.0)(prettier@3.10.1)(secretlint@13.1.0(supports-color@10.2.2))':
+  '@anolilab/lint-staged-config@14.0.0(@visulima/yaml@2.0.0)(husky@9.1.7)(json5@2.2.3)(lint-staged@17.6.2)(prettier@3.10.1)(secretlint@13.1.0(supports-color@10.2.2))':
     dependencies:
       '@visulima/fs': 7.0.0(@visulima/yaml@2.0.0)(json5@2.2.3)
       '@visulima/package': 6.0.0
@@ -2415,7 +2415,7 @@ snapshots:
       shell-quote: 1.12.0
       type-fest: 5.10.0
     optionalDependencies:
-      lint-staged: 17.6.0
+      lint-staged: 17.6.2
       prettier: 3.10.1
       secretlint: 13.1.0(supports-color@10.2.2)
     transitivePeerDependencies:
@@ -3751,10 +3751,10 @@ snapshots:
 
   lines-and-columns@1.2.4: {}
 
-  lint-staged@17.6.0:
+  lint-staged@17.6.2:
     dependencies:
       picomatch: 4.0.7
-      string-argv: 0.3.2
+      string-argv: 0.4.0
       tinyexec: 1.3.1
     optionalDependencies:
       yaml: 2.9.1
@@ -4234,7 +4234,7 @@ snapshots:
       duplexer2: 0.1.4
       readable-stream: 2.3.8
 
-  string-argv@0.3.2: {}
+  string-argv@0.4.0: {}
 
   string-width@4.2.3:
     dependencies:
